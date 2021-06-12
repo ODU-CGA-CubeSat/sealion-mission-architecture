@@ -1,5 +1,5 @@
 baseURL = "https://odu-cga-cubesat.github.io/flight-software"
-title = "ODU/CGA Flight Software"
+title = "ODU/CGA CubeSat Flight Software"
 theme = "geekdoc"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
