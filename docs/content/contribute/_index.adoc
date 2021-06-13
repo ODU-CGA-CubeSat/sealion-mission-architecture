@@ -1,0 +1,12 @@
+
+---
+title: "Contribute"
+weight: 5
+---
+
+The ODU/CGA CubeSat Flight Software is an open-source project and relies on its community to continuously improve.
+
+Contributions can come from a wide range of skills and expertise. Every contribution, however small, is valued.
+
+As an open source project, we welcome contribution in a variety of forms, including taking part in discussions, filing bug reports, proposing improvements, as well as contributing code or documentation.
+
