@@ -35,7 +35,7 @@ Once you've cloned the repo & installed docker, run the `buildDocs.sh` script in
 
 [source,bash]
 ----
-./buildDoc.sh
+./buildDocs.sh
 ----
 
 === Running local server
