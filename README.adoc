@@ -21,7 +21,6 @@ You will need https://git-scm.com/[git] to clone the project contents and https:
 
 Clone the https://github.com/odu-cga-cubesat/flight-software[flight software repo]. Don't forget to use `--recurse-submodules` flag, or else you won't pull down some of the code you need to generate a working site.
 
-+
 [source,bash]
 ----
 git clone --recurse-submodules https://github.com/odu-cga-cubesat/flight-software.git
@@ -34,7 +33,6 @@ Note: If you accidentally cloned without using `--recurse-submodules`, you can r
 
 Once you've cloned the repo & installed docker, run the `buildDocs.sh` script in the project root directory (Note: Linux users may need to prepend this command `sudo`). This will build a docker image, as well as install node modules, needed to locally run the `flight-software` Hugo webserver. Once the image is built and stored on your machine, you do not need to rerun this step. You can view all locally installed images by running `docker images`.
 
-+
 [source,bash]
 ----
 ./buildDoc.sh
@@ -44,7 +42,6 @@ Once you've cloned the repo & installed docker, run the `buildDocs.sh` script in
 
 Run the `serve.sh` script in the project root directory (Note: Linux users may need to prepend this command `sudo`). By default, your site will be available at `+http://localhost:1313/flight-software+`.
 
-+
 [source,bash]
 ----
 ./serve.sh
