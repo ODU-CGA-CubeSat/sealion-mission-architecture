@@ -1,9 +1,11 @@
-name: Build w/ Hugo & deploy to GitHub Pages
+name: Build docs w/ Hugo & deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'docs/**'
 
 jobs:
   deploy:
