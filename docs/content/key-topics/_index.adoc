@@ -4,4 +4,61 @@ title: "Key Topics"
 weight: 2
 ---
 
-Coming soon...
+The following is a list of all satellite applications that were developed to facilitate the mission and a description of their basic functionality: 
+
+title: "Adcs driver"
+weight: 3
+---
+
+Responsible for converting commands from command ingest to a form that can be used by the adcs application.
+
+
+title: "Adcs tlm (Adcs Telemetry)"
+weight: 3
+---
+
+The ADCS writes telemetry at a 4Hz rate, which is too much for the OBC to process. The ADCS telemetry app is therefore responsible for parsing adcs telemetry on command so that mission operators can still assess the health of the hardware
+
+title: "ci (Command Injest) "
+weight: 3
+---
+
+Interprets commands given through a schedule file and sends out those commands in accordance with the times set within the schedule. In addition, CI has a feature that allows commands to be executed immediatley in case of an emergency.
+
+title: "Camera Manager & Driver Applications "
+weight: 3
+---
+
+The camera manager acts as the go between operations commands and the driver.
+The Camera Driver is responsible for processing commands that are specific to the payload. This includes: taking images, transferring images to the flash memory, and collecting other telemetry from the camera during imaging passes that is necessary to understand the state of the payload at the time of imaging, such as getting the temperature of the Focal Plane Array. 
+
+title: "eps mgr (EPS Manager) "
+weight: 3
+---
+
+The eps manager is responsible for both the operations handling and lower level processing of commands. It performs no smart functionality or power management. It simply does as it’s told and records telemetry. It does however check on whether or not a power rail has turned off or on by checking that the rail’s voltage is within a ‘reasonable’ range from expected.
+
+title: "gpio lib
+ "
+weight: 3
+---
+Handles switching between gathering data from the payload or the ADCS, as both devices share the same UART line
+
+title: "GPS Driver and Manager Applications "
+weight: 3
+---
+
+The GPS manager acts as the go between operations commands and the driver. Commands are passed to this, and processed in the driver
+The GPS driver application handles the execution of all commands and collects telemetry from the GPS module. This includes collecting the time and position from the GPS satellites and all GPS housekeeping information. Finally, the driver handles parsing the output from the GPS to only collect the information that is needed. 
+
+title: "Telemetry Applicatoin "
+weight: 3
+---
+
+Regularly retrieves telemetry information from the other hardware control apps and writes that data to a file which can later be downlinked and processed by the mission operations team. 
+The telemetry application also handles writing status logs, which are meant to divulge events that occur during operations. For example, when a command fails to process, this event is written to the most recent status log so that operators can assess whether anything went wrong during an imaging flyby. All status logs are titled based on the date and time of day at which information was written so that it is easy to collect status logs based on when imaging passes or other operations were scheduled. 
+
+title: "UHF Manager Application"
+weight: 3
+---
+Processes all communications events and hands off data to command ingest when necessary. Also responsible for the heartbeat transmissions.
