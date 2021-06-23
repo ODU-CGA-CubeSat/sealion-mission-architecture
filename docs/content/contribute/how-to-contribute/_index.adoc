@@ -1,0 +1,29 @@
+
+---
+title: "How to contribute"
+weight: 2
+description: >
+  How to contribute the ODU/CGA CubeSat flight software
+---
+
+Contributions to the ODU/CGA CubeSat flight software can come in a variety of forms. This document identifies 3 forms of contribution... subject-matter expertise, technical writing, and code.
+
+== Contribute as a subject-matter expert
+
+A subject-matter expert (SME) or domain expert is a person who is an authority in a particular area or topic.
+SMEs work with technical writers to validate the content of the documentation.
+
+SMEs can primarily contribute by link:./contributing-to-discussions[Contributing to discussions].
+
+== Contribute as a technical writer
+
+A technical writer is a person who maintains the state of the documentation. Technical writers work with users, developers, and/or subject-matter experts in order to document the intended design and behavior of the codebase, to maintain a consistent format, style, and tone, as well as to verify the contents readablility and usability.
+
+Technical writers can primarily contribute by link:./contributing-to-documentation[Contributing to documentation].
+
+== Contribute as a developer
+
+A developer is a person who impements the codebase, as specified by the documentation. Developers should refer to the documentation to implement and test the intended design and behavior of the software in development.
+
+Developers can primarily contribute by both link:./contributing-to-documentation[Contributing to documentation] and link:./contributing-to-code[Contributing to code].
+
