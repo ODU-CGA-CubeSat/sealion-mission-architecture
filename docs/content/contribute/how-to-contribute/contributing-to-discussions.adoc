@@ -1,0 +1,43 @@
+
+---
+title: "Contributing to discussions"
+weight: 1
+description: >
+  How to contribute to discussions & issues
+---
+
+The https://github.com/odu-cga-cubesat/flight-software/discussions[Discussions] and https://github.com/odu-cga-cubesat/flight-software/issues[Issues] sections help fascilitate invaluable feedback and discourse in the development and maintainability of the ODU/CGA CubeSat flight software.
+
+== Opening a discussion
+
+Discussions can include general topics, ideas, and Q&A.
+
+To open a new discussion,
+
+. On GitHub, navigate to the ODU/CGA CubeSat flight software repository and click https://github.com/odu-cga-cubesat/flight-software/discussions[Discussions].
+. Click *New discussion*.
+. Select a discussion category from the drop-down menu.
+. Specify a title for the discussion topic, e.g., _Design constraints of mission concept_.
+. Write a brief description of the scope of the discussion, e.g., _This discussion is to capture design constraints of the mission concept_.
+. Click *Start discussion*.
+
+See https://docs.github.com/en/discussions/quickstart#creating-a-new-discussion[Creating a new discussion].
+
+== Opening an issue
+
+https://github.com/odu-cga-cubesat/flight-software/issues[Issues] specify tasks that allow maintainers to capture & resolve missing or incorrect content, as well as implement new features or bug fixes.
+Some issues are grouped by https://github.com/odu-cga-cubesat/flight-software/milestones[Milestones] - a collection of issues that relate to a specific deliverable, s.a., a https://github.com/odu-cga-cubesat/flight-software/releases[Release].
+Issues are tagged https://github.com/odu-cga-cubesat/flight-software/labels[Labels] in order to identify their associated domain.
+
+To open an issue,
+
+. On GitHub, navigate to the ODU/CGA CubeSat flight software repository and click https://github.com/odu-cga-cubesat/flight-software/issues[Issues]
+. Click *New issue*.
+. Specify a title for the issue topic. A good issue title should start with a verb, e.g., _add 'Contributing to discussions' page_.
+. Write a brief description of the scope of the issue, e.g., _This page should read like a how-to guide for contributing to discussions_.
+. Click *Submit new issue*.
+
+Note: Maintainers of the repository should tag issues with their appropriate https://github.com/odu-cga-cubesat/flight-software/labels[Label], https://github.com/odu-cga-cubesat/flight-software/milestones[Milestones] and/or https://github.com/ODU-CGA-CubeSat/flight-software/projects[Project].
+
+See https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue[Creating an issue].
+
