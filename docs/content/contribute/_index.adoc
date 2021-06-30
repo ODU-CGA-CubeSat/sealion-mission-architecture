@@ -10,3 +10,31 @@ Contributions can come from a wide range of skills and expertise. Every contribu
 
 As an open source project, we welcome contribution in a variety of forms, including taking part in discussions, filing bug reports, proposing improvements, as well as contributing code or documentation.
 
+
+
+Here are the following ways you can contribute:
+
+Ways to access the source files: 
+
+:hide-uri-scheme: 
+
+https://github.com/ODU-CGA-CubeSat/flight-software
+
+or 
+
+:hide-uri-scheme: 
+
+https://odu-cga-cubesat.github.io/flight-software/
+
+
+Next step is to fork the main branch 
+
+image::https://upload.wikimedia.org/wikipedia/commons/9/99/Forkimg.png[]
+
+
+
+The following link contains details about the Asciidoctor Docs:
+
+:hide-uri-scheme: 
+
+https://asciidoctor.org
