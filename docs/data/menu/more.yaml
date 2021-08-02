@@ -1,9 +1,0 @@
-more:
-  - name: Releases
-    ref: "https://github.com/odu-cga-cubesat/flight-software/releases"
-    external: true
-    icon: "gdoc_download"
-  - name: "View Source"
-    ref: "https://github.com/odu-cga-cubesat/flight-software"
-    external: true
-    icon: "gdoc_github"
