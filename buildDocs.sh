@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
 
-# first, copy over any extra shortcodes, like the pdf embedded shortcode
-# https://stackoverflow.com/questions/793858/how-to-mkdir-only-if-a-directory-does-not-already-exist
+# Install node_modules, if not already installed
+if [ ! -r ./node_modules ]; then
+    docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'cd m30mlTools && npm ci'
+fi
 
-if [ ! -r ./docs/themes/geekdoc/node_modules ]; then
-    docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/hugo-asciidoctor-plantuml:0.82.0-alpine 'cd docs/themes/geekdoc && npm ci'
+# Make dist/ directory, if none exists
+if [ ! -r ./dist ]; then
+    docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'mkdir dist/'
 fi
-if [ ! -r ./docs/themes/geekdoc/build ]; then
-    docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/hugo-asciidoctor-plantuml:0.82.0-alpine 'cd docs/themes/geekdoc && npx gulp default'
-fi
-if [ ! -r ./docs/public ]; then
-    docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/hugo-asciidoctor-plantuml:0.82.0-alpine 'cd docs && hugo --minify -v --destination public'
-fi
+
+# Build the unified model
+docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'node m30mlTools/buildUnifiedModel.js && mv dist/architecture.yaml dist/architecture.yml'
+
+# generate architecture.adoc from (liquid) template
+docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/asciidoctor-extended:liquidoc 'bundle exec liquidoc -d dist/architecture.yml -t templates/mission-conops.adoc.liquid -o dist/architecture.adoc'
+
+# generate html & pdf documents
+docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/asciidoctor-extended:liquidoc 'asciidoctor dist/architecture.adoc -r asciidoctor-diagram -o dist/index.html'

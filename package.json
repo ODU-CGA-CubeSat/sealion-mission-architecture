@@ -1,0 +1,19 @@
+{
+    "name": "odu-cga-mission-conops",
+    "version": "0.1.0",
+    "description": "Old Dominion University (ODU) & Coast Guard Academy (CGA) CubeSat Misssion Concept of Operations (ConOps)",
+    "keywords": [
+        "cubesat",
+        "mission-conops",
+        "model-based-systems-engineering"
+    ],
+    "repository": "https://github.com/ODU-CGA-CubeSat/mission-conops.git",
+    "homepage": "https://ODU-CGA-CubeSat.github.io/mission-conops",
+    "author": "Sean Marquez <capsulecorplab@gmail.com> & contributors",
+    "license": "MIT",
+    "dependencies": {
+        "js-yaml": "^3.12.0",
+        "liquidjs": "^6.1.1",
+        "minimist": "^1.2.0"
+    }
+}

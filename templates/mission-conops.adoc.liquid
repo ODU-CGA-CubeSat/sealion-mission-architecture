@@ -1,0 +1,30 @@
+= {{package.description}}
+:revnumber: v{{package.version}}
+:toc: left
+
+== Stakeholder Needs
+ 
+The {{package.description}} is guided by a series of stakeholder needs, listed below.
+
+{% for need in 1-StakeholderNeeds %}
+.Stakeholder Need {{need.id}}: {{need.name}}
+****
+{{need.statement}}
+**** 
+{% endfor %}
+
+== User Stories
+
+The {{package.description}}'s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.
+
+{% for us in 2-UserStories %}
+=== User Story {{us.id}}: {{us.name}}
+
+****
+As a *{{us.actor}}* I want to *{{us.behavior}}* so that I can *{{us.rationale}}*.
+****
+
+*Example:* {{us.example}}
+
+{% endfor %}
+

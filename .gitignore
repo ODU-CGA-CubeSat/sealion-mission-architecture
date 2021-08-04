@@ -1,7 +1,11 @@
+# node modules
 node_modules/
 
+# bundler
+_build
+
 # build script generated files
-public/
+dist/
 
 # github action keys
 gh-pages*
