@@ -5,7 +5,9 @@ on:
     branches:
       - main
     paths:
-      - 'docs/**'
+      - 'architecture/**'
+      - 'templates/**'
+      - 'buildDocs.sh'
 
 jobs:
   deploy:
