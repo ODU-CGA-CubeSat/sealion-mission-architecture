@@ -1,7 +1,7 @@
 {
-    "name": "odu-cga-mission-conops",
+    "name": "sealion",
     "version": "0.1.0",
-    "description": "Old Dominion University (ODU) & Coast Guard Academy (CGA) CubeSat Misssion Concept of Operations (ConOps)",
+    "description": "SeaLion Mission Concept of Operations (ConOps)",
     "keywords": [
         "cubesat",
         "mission-conops",
