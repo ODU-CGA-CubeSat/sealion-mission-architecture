@@ -1,6 +1,6 @@
-= ODU/CGA CubeSat Mission ConOps
+= SeaLion Mission ConOps
 
-This repository (repo) contains the source code & documentation for the Old Dominion University (ODU) & Coast Guard Academy (CGA) CubeSat Misssion's Concept of Operations (ConOps).
+This repository (repo) contains the source code & documentation for the SeaLion Mission Concept of Operations (ConOps) - a joint CubeSat mission between Old Dominion University (ODU) & Coast Guard Academy (CGA).
 
 The repo contains an architecture, modeled using the Mach30 modeling language (https://github.com/Mach30/m30ml[m30ml]), for specifying references, stakeholder needs, user stories, & data structures for fascilitating traceability of design decisions within the Mission ConOps (s.a., the packet definition used for carrying telemetry data).
 The repo itself is also structured as a https://mach30.github.io/dof/#_component[DOF-component] for defining the contents of the Mission ConOps as a collection of nested subcomponents, component interfaces, and component functions for generating bill of materials (BOMs), assembly instructions, and/or usage documentation.
@@ -24,7 +24,7 @@ You will need https://git-scm.com/[git] to clone the project contents and https:
 
 === Cloning the repo
 
-Clone the https://github.com/odu-cga-cubesat/mission-conops[ODU/CGA CubeSat Mission ConOps repo]. Don't forget to use `--recurse-submodules` flag, or else you won't pull down some of the code you need to generate a working site.
+Clone the https://github.com/odu-cga-cubesat/mission-conops[SeaLion Mission ConOps repo]. Don't forget to use `--recurse-submodules` flag, or else you won't pull down some of the code you need to generate a working site.
 
 [source,bash]
 ----
