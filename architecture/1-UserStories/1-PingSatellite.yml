@@ -1,0 +1,7 @@
+id: 1
+name: Ping Satellite
+actor: Ground Station Operator 
+behavior: Ping satellite
+rationale: Establish communication link with satellite
+derivedFrom: {{derivedFrom}}
+example: Ping the satellite in order to establish UHF communication link with Virgina ground station
