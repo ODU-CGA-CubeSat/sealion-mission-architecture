@@ -1,0 +1,54 @@
+:toc:
+:toclevels: 3
+:repo-title: https://github.com/ODU-CGA-CubeSat/mission-conops[SeaLion Mission ConOps]
+
+= Maintainer's Guide
+
+toc::[]
+
+This guide is intended for contributors tagged as **reviewers on a pull request** or have **triage**, **write**, or **maintainer** roles on the {repo-title} repo.
+
+== Workflow
+
+We use the https://guides.github.com/introduction/flow[github flow] for managing this repository.
+At a glance, this means:
+
+- a **main** branch.
+  This branch MUST be releasable at all times.
+  New branches should be created from this branch.
+  Pull requests made to this branch should be linked to one or more issues.
+
+== Issue triage process
+
+Issues are tracked using the GitHub issue tracker. See https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart[Quickstart for GitHub Issues].
+
+Issue triaging responsibilities include:
+
+- **Labeling Issue**. Labels are used to identify a category, in order to narrow the scope and subject matter of an open issue. See https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart#adding-labels[Adding labels].
+- **Resolving duplicates**. Newly reported duplicate issues can be resolved using the `duplicate` label.
+- **Adding to a milestone**. Issues can be included as part of an existing milestone. See https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart#adding-milestones[Adding milestones].
+- **Adding to a project**. Issues can be included as part of an existing project. See https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart#adding-the-issue-to-a-project[Adding the issue to a project].
+- **Communicating**. Contributors are encouraged to engage conversation in the form of comments on an issue. See https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart#communicating[Communicating].
+
+== Pull request review process
+
+Pull request reviewers are responsible for:
+
+- Ensuring a pull request is linked to one or more issues. See https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue[Linking a pull request to an issue].
+- Ensuring the contents of a pull request conforms to the link:CONTRIBUTORS.adoc#content-style-guide[Content style guide].
+- Ensuring the contents of a pull request adequately resolves its linked issues.
+- Ensuring the link:package.json#L3[version] number reflects any updates to the link:architecture/[] or link:components/[]. See link:CONTRIBUTORS.adoc#semantic-versioning[Semantic versioning]. 
+- Providing **comments**, **approval**, or **request for changes**. See https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews[About pull request reviews].
+
+== Merge process
+
+A pull request can be merged once it has been approved by one or more reviewer.
+
+== Release process
+
+Releases are decided by the maintainers, such as upon completion of a milestone. See https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository[Managing releases in a repository]
+
+== Tagging
+
+Commits with updates to the link:package.json#L3[version] should be tagged with a tag name corresponding to its version number. See link:CONTRIBUTORS.adoc#semantic-versioning[Semantic versioning] and https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/managing-tags[Managing tags]. 
+
