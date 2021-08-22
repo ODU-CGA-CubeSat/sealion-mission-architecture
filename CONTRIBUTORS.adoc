@@ -16,3 +16,7 @@ A technical writer is a person who maintains the state of the documentation. Tec
 
 Technical writers can primarily contribute by link:{doc-name}#contributing-to-documentation[Contributing to documentation].
 
+== Contributing to discussions
+
+The https://github.com/odu-cga-cubesat/mission-conops/discussions[Discussions] and https://github.com/odu-cga-cubesat/mission-conops/issues[Issues] sections help facilitate invaluable feedback and discourse in the development and maintainability of the ODU/CGA CubeSat flight software.
+
