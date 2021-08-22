@@ -1,6 +1,7 @@
 = Contributor's guide
 :doc-name: CONTRIBUTORS.adoc
 :project-name: SeaLion Mission ConOps
+:github-repo: https://github.com/odu-cga-cubesat/mission-conops
 
 Contributions to the {project-name} can come in a variety of roles. This document is intendend to provide guidelines for 2 types of contributors: subject-matter experts and technical writers.
 
@@ -19,5 +20,5 @@ Technical writers can primarily contribute by link:{doc-name}#contributing-to-do
 
 == Contributing to discussions
 
-The https://github.com/odu-cga-cubesat/mission-conops/discussions[Discussions] and https://github.com/odu-cga-cubesat/mission-conops/issues[Issues] sections help facilitate invaluable feedback and discourse in the development and maintainability of the {project-name}
+The {github-repo}/discussions[Discussions] and {github-repo}/issues[Issues] sections help facilitate invaluable feedback and discourse in the development and maintainability of the {project-name}
 
