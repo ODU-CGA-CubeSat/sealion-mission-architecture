@@ -22,3 +22,18 @@ Technical writers can primarily contribute by link:{doc-name}#contributing-to-do
 
 The {github-repo}/discussions[Discussions] and {github-repo}/issues[Issues] sections help facilitate invaluable feedback and discourse in the development and maintainability of the {project-name}
 
+=== Opening a discussion
+
+Discussions can include general topics, ideas, and Q&A.
+
+To open a new discussion,
+
+. On GitHub, navigate to the {project-name} repository and click {github-repo}/discussions[Discussions].
+. Click *New discussion*.
+. Select a discussion category from the drop-down menu.
+. Specify a title for the discussion topic, e.g., _Alternative Mission ConOps_.
+. Write a brief description of the scope of the discussion, e.g., _This discussion is for brainstorming alternative mission concept of operations_.
+. Click *Start discussion*.
+
+See https://docs.github.com/en/discussions/quickstart#creating-a-new-discussion[Creating a new discussion].
+
