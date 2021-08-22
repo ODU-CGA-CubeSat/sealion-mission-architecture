@@ -37,3 +37,18 @@ To open a new discussion,
 
 See https://docs.github.com/en/discussions/quickstart#creating-a-new-discussion[Creating a new discussion].
 
+== Opening an issue
+
+{github-repo}/issues[Issues] specify tasks that allow maintainers to capture & resolve missing or incorrect content, as well as implement new features or bug fixes in the documentation build tools.
+Some issues are grouped by {github-repo}/milestones[Milestones] - a collection of issues that relate to a specific deliverable. Completed milestones are tagged as a {github-repo}/releases[Release].
+
+To open an issue,
+
+. On GitHub, navigate to the {project-name} repository and click {github-repo}/issues[Issues]
+. Click *New issue*.
+. Specify a title for the issue topic. A good issue title should start with a verb, e.g., _add CubeSat Design Specification as a reference in architecture_.
+. Write a brief description of the scope of the issue, e.g., _architecture/0-References directory should include a reference for the latest CubeSat Design Specification document_.
+. Click *Submit new issue*.
+
+See https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue[Creating an issue].
+
