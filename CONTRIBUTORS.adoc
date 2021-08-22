@@ -12,7 +12,7 @@ SMEs can primarily contribute by link:{doc-name}#contributing-to-discussions[Con
 
 == Contribute as a technical writer
 
-A technical writer is a person who maintains the state of the documentation. Technical writers work with users, developers, and/or SMEs in order to document the intended design and behavior of the codebase, to maintain a consistent format, style, and tone, as well as to verify the contents readablility and usability.
+A technical writer is a person who maintains the state of the documentation. Technical writers work with users, developers, and/or SMEs in order to document the intended design and behavior of the codebase, to maintain a consistent format, style, and tone, as well as to verify the contents readability and usability.
 
 Technical writers can primarily contribute by link:{doc-name}#contributing-to-documentation[Contributing to documentation].
 
