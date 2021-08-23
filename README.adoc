@@ -43,4 +43,4 @@ Once you've cloned the repo & installed docker, run the `buildDocs.sh` script in
 ./buildDocs.sh
 ----
 
-Once you run this step, you can locally view the documentation by opening `dist/index.html` in a web browser.
+Once you run this step, you can locally view the documentation by opening `dist/index.html` in a web browser or by opening `dist/mission-conops.pdf` in a pdf viewer.
