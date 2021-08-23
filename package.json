@@ -1,6 +1,7 @@
 {
     "name": "sealion",
     "version": "0.3.0",
+
     "description": "SeaLion Mission Concept of Operations (ConOps)",
     "keywords": [
         "cubesat",
