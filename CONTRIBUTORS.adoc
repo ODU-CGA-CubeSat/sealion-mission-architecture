@@ -1,4 +1,6 @@
 = Contributor's guide
+:toc:
+:toclevels: 3
 :doc-name: CONTRIBUTORS.adoc
 :project-name: SeaLion Mission ConOps
 :github-repo: https://github.com/odu-cga-cubesat/mission-conops
