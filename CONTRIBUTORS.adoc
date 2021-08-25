@@ -44,8 +44,8 @@ See https://docs.github.com/en/discussions/quickstart#creating-a-new-discussion[
 Contributions to documentation can include, but not limited to, creating, updating, and/or reviewing content for the {project-name}.
 We use a https://www.writethedocs.org/guide/docs-as-code/[docs-as-code] approach and the https://guides.github.com/introduction/flow/[GitHub flow] workflow to fascilitate these contributions.
 To decide what you can contribute, read through the list of {github-repo}/issues[Issues] and comment on the issue if you'd either like to work on the particular issue or require additional clarity on the issue.
-Contributors are also welcome to link:{doc-name}#opening-an-issue[open an issue] as well as help with link:MAINTAINERS.adoc#reviewing-a-pull-request[reviewing a pull request].
 Once you decide which issue you'd like to work on, you can link:{doc-name}#submitting-a-pull-request[submit a pull request].
+Contributors are also welcome to link:{doc-name}#opening-an-issue[open an issue] as well as help with link:MAINTAINERS.adoc#reviewing-a-pull-request[reviewing a pull request].
 
 == Opening an issue
 
