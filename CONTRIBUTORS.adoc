@@ -86,3 +86,14 @@ Yaml files in `architecture/` should subside in `0-References/`, `1-StakeholderN
 
 `package.json` files for components in the `components` directory (and subdirectories) should conform to the specification for a https://mach30.github.io/dof/#_component[DOF-Component].
 
+== Semantic versioning
+
+We use semantic versioning (https://semver.org/[semver]) for denoting changes/updates to the {project-name} under `version` in the link:{github-repo}/package.json[package.json]. Given the version number *MAJOR*.*MINOR*.*PATCH*, increment the:
+
+. *MAJOR* version when you make incompatible API changes.
+e.g., removing or renaming a file or folder in the `architecture/` or `components/` directory
+. *MINOR* version when you add functionality in a backwards compatible manner.
+e.g., adding a file or folder in the `architecture/` or `components/` directory, and
+. *PATCH* version when you make backwards compatible bug fixes.
+e.g., updating the contents of a file in the `architecture/` or `components/` directory
+
