@@ -1,0 +1,44 @@
+name: Satellite Health Data Packet
+purpose: Data structure for satellite health data packet.
+template: |
+  imux: {{imux}}
+  imuy: {{imuy}}
+  imuz: {{imuz}}
+  imuTemperature: {{imuTemperature}}
+  batteryVoltage: {{batteryVoltage}}
+  batteryCurrent: {{batteryCurrent}}
+  batteryBusCurrent: {{batteryBusCurrent}}
+  batteryCurrentDirection: {{batteryCurrentDirection}}
+  batteryTemperature: {{batteryTemperature}}
+  battery12VBusCurrent: {{battery12VBusCurrent}}
+  battery5VBusCurrent: {{battery5VBusCurrent}}
+  battery3dot3VBusCurrent: {{battery3dot3VBusCurrent}}
+  transmitterCurrent: {{transmitterCurrent}}
+  receiverCurrent: {{receiverCurrent}}
+  timeStamp: {{timeStamp}}
+  bootCount: {{bootCount}}
+  bootTime: {{bootTime}}
+  onBoardComputerTemperature: {{onBoardComputerTemperature}}
+  processorTemperature: {{processorTemperature}}
+  operationalStatusOfEquipment: {{operationalStatusOfEquipment}}
+  redundancyStatus: {{redundancyStatus}}
+  attitudeData: {{attitudeData}}
+  lattitude: {{lattitude}}
+  longitude: {{longitude}}
+elements:
+  - key: imux
+    type: float
+    itemType: ''
+    description: Inertial measurement unit of relative motion to respective to the x-axis.
+    derivedFrom: ''
+  - key: imuy
+    type: float
+    itemType: ''
+    description: Inertial measurement unit of relative motion to respective to the y-axis.
+    derivedFrom: ''
+  - key: imuz
+    type: float
+    itemType: ''
+    description: Inertial measurement unit of relative motion to respective to the z-axis.
+    derivedFrom: ''
+derivedFrom: {{derivedFrom}}
