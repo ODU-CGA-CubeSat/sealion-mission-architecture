@@ -75,3 +75,13 @@ Note: If you haven't been added as a collaborator to the link:{github-repo}[{pro
 . If you're not yet ready for a review, mark the PR as _Draft_ to indicate it's a work in progress. Continue updating your doc and pushing your changes until you're happy with the content.
 . When you're ready for a review, mark the PR as _Ready for review_.
 
+== Content style guide
+
+=== Architecture
+
+Yaml files in `architecture/` should subside in `0-References/`, `1-StakeholderNeeds`, or `2-UserStories`, `3-Datastructures` and be prependend with a number, followed by a dash and the content name in https://wiki.c2.com/?PascalCase[Pascal Case]. e.g., `2-CubeSatDesignSpecificationRev13.yml` 
+
+=== Components
+
+`package.json` files for components in the `components` directory (and subdirectories) should conform to the specification for a https://mach30.github.io/dof/#_component[DOF-Component].
+
