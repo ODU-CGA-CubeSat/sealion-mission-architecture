@@ -30,15 +30,15 @@ Issue triaging responsibilities include:
 - **Adding to a project**. Issues can be included as part of an existing project. See https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart#adding-the-issue-to-a-project[Adding the issue to a project].
 - **Communicating**. Contributors are encouraged to engage conversation in the form of comments on an issue. See https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart#communicating[Communicating].
 
-== Pull request review process
+== Reviewing a pull request
 
-Pull request reviewers are responsible for:
+To review a pull request,
 
-- Ensuring a pull request is linked to one or more issues. See https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue[Linking a pull request to an issue].
-- Ensuring the contents of a pull request conforms to the link:CONTRIBUTORS.adoc#content-style-guide[Content style guide].
-- Ensuring the contents of a pull request adequately resolves its linked issues.
-- Ensuring the link:package.json#L3[version] number reflects any updates to the link:architecture/[] or link:components/[]. See link:CONTRIBUTORS.adoc#semantic-versioning[Semantic versioning]. 
-- Providing **comments**, **approval**, or **request for changes**. See https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews[About pull request reviews].
+. Verify that the pull request is linked to one or more issues. See https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue[Linking a pull request to an issue].
+. Verify that the contents of a pull request conforms to the link:CONTRIBUTORS.adoc#content-style-guide[Content style guide].
+. Verify that the contents of a pull request adequately resolves its linked issues.
+. Verify that the link:package.json#L3[version] number reflects any updates to the link:architecture/[] or link:components/[]. See link:CONTRIBUTORS.adoc#semantic-versioning[Semantic versioning].
+. Provide **comments**, **approval**, or **request for changes**. See https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews[About pull request reviews].
 
 == Merge process
 
