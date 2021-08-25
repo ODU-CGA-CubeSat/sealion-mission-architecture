@@ -59,3 +59,19 @@ To open an issue,
 . Click *Submit new issue*.
 
 See https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue[Creating an issue].
+
+== Submitting a pull request
+
+A https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests[pull request] is a proposal for changes to a https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches[branch].
+
+To submit a pull request,
+
+. https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository#creating-a-branch[Create a new branch] in the link:{github-repo}[{project-name}] repo.
+The branch name should be prepended with its associated issue label followed by a `/`, followed by a `dash-separated` description of the changes to be made, followed by its associated issue number, e.g., `feature/add-tricoder-with-touchscreen-docs-1701`. If no such issue exists, link:{doc-name}#opening-an-issue[open an issue].
+
+Note: If you haven't been added as a collaborator to the link:{github-repo}[{project-name}] repo, you will need to either https://docs.github.com/en/get-started/quickstart/fork-a-repo[fork] the repo or contact the repo admin to request write access.
+
+. Commit your changes and create a pull request (PR). Be sure to include a closing keyword followed by the associated issue number in the PR description, e.g., `closes #1701`. If the pull request closes multiple issues, add a closing keyword for each issue. (See https://docs.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords[closing issues using keywords].
+. If you're not yet ready for a review, mark the PR as _Draft_ to indicate it's a work in progress. Continue updating your doc and pushing your changes until you're happy with the content.
+. When you're ready for a review, mark the PR as _Ready for review_.
+
