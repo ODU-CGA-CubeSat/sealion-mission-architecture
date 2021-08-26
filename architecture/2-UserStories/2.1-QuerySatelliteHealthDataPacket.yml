@@ -2,7 +2,7 @@ id: 2.1
 name: Query Satellite Health Data Packet
 actor: Ground Station Operator 
 behavior: Send satellite health data packet downlink command
-rationale: Acquire satellite health data packet
+rationale: Request satellite health data packet
 derivedFrom:
-- "2-AcquireSatelliteHealthDataPacket.yml"
-example: Send satellite health data packet downlink command in order to acquire mission data of the IP and DeCS payloads
+- "2-ViewSatelliteHealthDataPacket.yml"
+example: Send satellite health data packet downlink command in order to aquire satellite health data packet downlink
