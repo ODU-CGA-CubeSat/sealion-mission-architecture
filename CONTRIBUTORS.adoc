@@ -80,7 +80,7 @@ The branch name should be prepended with its associated issue label followed by 
 
 === Architecture
 
-Yaml files in `architecture/` should subside in `0-References/`, `1-StakeholderNeeds`, or `2-UserStories`, `3-Datastructures` and be prependend with a number, followed by a dash and the content name in https://wiki.c2.com/?PascalCase[Pascal Case]. e.g., `2-CubeSatDesignSpecificationRev13.yml` 
+Content in `architecture/` should be consistent with the https://github.com/Mach30/m30ml[Mach30 modeling language (m30ml)]. YAML files specified in m30ml should subside in the `0-References/`, `1-StakeholderNeeds`, `2-UserStories`, or `3-Datastructures` directory, and be prependend with a number, followed by a dash, the content name in https://wiki.c2.com/?PascalCase[Pascal Case], and a `.yaml` . e.g., `2-CubeSatDesignSpecificationRev13.yaml`.
 
 === Components
 
