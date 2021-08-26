@@ -2,7 +2,7 @@ id: 2.2
 name: Listen for Satellite Beacon
 actor: Ground Station Operator 
 behavior: Open ground station beacon monitor
-rationale: Validate that satellite is operating nominally
+rationale: View satellite health data packet
 derivedFrom:
-- "2-AquireSatelliteHealthDataPacket.yml"
+- "2-ViewSatelliteHealthDataPacket.yml"
 example: Open ground station beacon monitor to listen for satellite health data packet downlink
