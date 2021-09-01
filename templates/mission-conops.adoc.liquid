@@ -19,6 +19,17 @@ The {{architecture.package.description}} is guided by a series of stakeholder ne
 ****
 {{need.statement}}
 **** 
+
+{% if need.derivedFrom.length > 0 %}
+==== *Reference:*
+
+{% for derivedFromItem in need.derivedFrom %}
+{% if architecture['elements'][derivedFromItem].url %}
+* {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
+{% endif %}
+{% endfor %}
+{% endif %}
+
 {% endfor %}
 
 == User Stories
