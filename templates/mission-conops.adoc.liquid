@@ -1,4 +1,5 @@
 = {{architecture.package.description}}
+:doc-name: mission-conops.adoc
 :revnumber: v{{architecture.package.version}}
 :toc: left
 
@@ -15,7 +16,7 @@ endif::[]
 The {{architecture.package.description}} is guided by a series of stakeholder needs, listed below.
 
 {% for need in architecture['1-StakeholderNeeds'] %}
-=== Stakeholder Need {{need.id}}: {{need.name}}
+=== {{need.id}}: {{need.name}}
 ****
 {{need.statement}}
 **** 
@@ -37,7 +38,7 @@ The {{architecture.package.description}} is guided by a series of stakeholder ne
 The {{architecture.package.description}}'s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.
 
 {% for us in architecture['2-UserStories'] %}
-=== User Story {{us.id}}: {{us.name}}
+=== {{us.id}}: {{us.name}}
 
 ****
 As a *{{us.actor}}* I want to *{{us.behavior}}* so that I can *{{us.rationale}}*.
@@ -55,7 +56,7 @@ As a *{{us.actor}}* I want to *{{us.behavior}}* so that I can *{{us.rationale}}*
 * {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
 {% endif %}
 {% if architecture['elements'][derivedFromItem].statement %}
-* {{architecture['elements'][derivedFromItem].name}}
+* xref:{doc-name}#_{{architecture['elements'][derivedFromItem].id | downcase | replace: " ", "_" | replace: ".", "_"}}_{{architecture['elements'][derivedFromItem].name | downcase | replace: " ", "_"}}[{{architecture['elements'][derivedFromItem].name}}]
 {% endif %}
 {% endfor %}
 {% endif %}
