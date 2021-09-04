@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+skinparam linetype polyline
+
+/'
+skinparam linetype ortho
+'/
+
+frame "uc [ {{architecture.package.description}} Use Case Diagram ]" {
+
+    rectangle gs as "Ground Station" {
+
+        {% for us in architecture['2-UserStories'] %}
+        ({{us.rationale}})
+        {% endfor %}
+
+    }
+
+    {% for us in architecture['2-UserStories'] %}
+    :{{us.actor}}: -- ({{us.rationale}})
+    {% endfor %}
+
+}
+@enduml
