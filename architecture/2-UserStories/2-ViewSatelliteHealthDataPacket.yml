@@ -7,4 +7,4 @@ derivedFrom:
 - "1-StakeholderNeeds/1.2-Primary_Mission_Objective-A2.yml"
 - "1-StakeholderNeeds/1.3-Primary_Mission_Objective-A3.yml"
 - "1-StakeholderNeeds/3.3-Tertiary_Mission_Objective-C3.yml"
-example: View satellite satellite health data packet in order to validate the mission data of the IP and DeCS payloads
+example: View satellite health data packet in order to validate the mission data of the IP and DeCS payloads
