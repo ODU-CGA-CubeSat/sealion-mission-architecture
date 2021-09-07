@@ -1,4 +1,4 @@
-id: 2.2
+id: 2.1
 name: Listen for Satellite Beacon
 actor: Ground Station Operator 
 behavior: Open ground station beacon monitor
