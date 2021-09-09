@@ -1,4 +1,4 @@
-name: Build docs w/ Hugo & deploy to GitHub Pages
+name: Build docs & deploy to GitHub Pages
 
 on:
   push:
