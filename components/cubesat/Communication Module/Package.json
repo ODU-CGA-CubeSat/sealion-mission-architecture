@@ -1,0 +1,12 @@
+name: {{Communication Module}}
+version: {{0.1.0}}
+description: {{UHF and S-Band Transceiver for ground communication}}
+license: {{MIT}}
+author: {{Bhagatji Jimesh jbhag001@odu.edu & contributors }}
+dependencies: {{dependencies}}
+components: {{components}}
+parts: {{1}}
+functions: {{Telecommand and telemetry}}
+tools: {{tools}}
+precautions: {{precautions}}
+assemblySteps: {{assemblySteps}}
