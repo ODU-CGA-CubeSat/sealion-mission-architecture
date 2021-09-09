@@ -1,1 +1,12 @@
-
+name: {{Structure}}
+version: {{0.1.0}}
+description: {{Structure is custom designed by ODU as per PSD CubeSat design specification}}
+license: {{MIT}}
+author: {{Bhagatji Jimesh jbhag001@odu.edu & contributors}}
+dependencies: {{dependencies}}
+components: {{components}}
+parts: {{1}}
+functions: {{To rigidly hold all the subsystem}}
+tools: {{tools}}
+precautions: {{precautions}}
+assemblySteps: {{assemblySteps}}
