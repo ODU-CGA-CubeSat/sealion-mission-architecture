@@ -9,6 +9,10 @@ Full documentation is available on https://odu-cga-cubesat.github.io/mission-con
 
 This project follows a https://www.writethedocs.org/guide/docs-as-code/[docs-as-code] & https://www.writethedocs.org/videos/portland/2019/lessons-learned-in-a-year-of-docs-driven-development-jessica-parsons/[docs-driven development] approach, using the https://asciidoctor.org/docs/what-is-asciidoc/[asciidoc] markup language.
 
+== Contribute
+
+Want to contribute? Checkout our link:CONTRIBUTORS.adoc[Contributor's guide]!
+
 == View the documentation locally
 
 You can build the documentation site on a local desktop:
@@ -43,4 +47,4 @@ Once you've cloned the repo & installed docker, run the `buildDocs.sh` script in
 ./buildDocs.sh
 ----
 
-Once you run this step, you can locally view the documentation by opening `dist/index.html` in a web browser.
+Once you run this step, you can locally view the documentation by opening `dist/index.html` in a web browser or by opening `dist/mission-conops.pdf` in a pdf viewer.
