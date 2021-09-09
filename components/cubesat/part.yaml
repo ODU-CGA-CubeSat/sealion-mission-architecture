@@ -1,0 +1,54 @@
+structure:
+  id: structure
+  description: Stucture
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - custom
+  selectedOption: 0
+  notes: 'Structure of the CubeSat'
+battery:
+  id: battery
+  description: Battery
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - EaglePicher LCF-137
+  selectedOption: 0
+  notes: 'Battery of the CubeSat'
+eps_and_interface_board:
+  id: eps_and_interface_board
+  description: EPS and Interface Board
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - custom
+  selectedOption: 0
+  notes: 'EPS and Interface Board of the CubeSat'
+obc:
+  id: obc
+  description: OBC
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - NanoMind A3200
+  selectedOption: 0
+  notes: 'OBC of the CubeSat'
+dock:
+  id: dock
+  description: Dock
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - NanoDoc DMC-3
+  selectedOption: 0
+  notes: 'Dock of the CubeSat'
+uhf_transceiver:
+  id: uhf_transceiver
+  description: UHF Transceiver
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - NanoCom AX100
+  selectedOption: 0
+  notes: 'UHF Transceiver of the CubeSat'
