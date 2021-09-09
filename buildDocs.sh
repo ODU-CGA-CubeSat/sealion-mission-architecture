@@ -10,6 +10,11 @@ if [ ! -r ./m30mlTools/node_modules ]; then
     docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'cd m30mlTools && npm ci'
 fi
 
+# Install dof-helpers/node_modules, if not already installed
+if [ ! -r ./dof-helpers/node_modules ]; then
+    docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'cd dof-helpers && npm ci'
+fi
+
 # Make dist/ directory, if none exists
 if [ ! -r ./dist ]; then
     mkdir dist/
