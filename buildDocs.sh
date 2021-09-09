@@ -2,7 +2,7 @@
 
 # Install node_modules, if not already installed
 if [ ! -r ./node_modules ]; then
-    docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'cd m30mlTools && npm ci'
+    docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'npm ci'
 fi
 
 # Make dist/ directory, if none exists
