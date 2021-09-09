@@ -52,3 +52,75 @@ uhf_transceiver:
   - NanoCom AX100
   selectedOption: 0
   notes: 'UHF Transceiver of the CubeSat'
+s-band_transceiver:
+  id: s-band_transceiver
+  description: S-Band Transceiver
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - NanoCom AX2150
+  selectedOption: 0
+  notes: 'S_Band Transceiver of the CubeSat'
+magnetometer:
+  id: magnetometer
+  description: Magnetometer
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - HMR2300-D21-232
+  selectedOption: 0
+  notes: 'Magnetometer Transceiver of the CubeSat'
+imu:
+  id: imu
+  description: IMU
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - Analog Devices ADIS16400BMLZ
+  selectedOption: 0
+  notes: 'IMU of the CubeSat'
+gps:
+  id: gps
+  description: GPS
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - NovAtel OEM-719
+  selectedOption: 0
+  notes: 'GPS of the CubeSat'
+sun_sensor:
+  id: sun_sensor
+  description: Sun Sensor
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - FSS100
+  selectedOption: 0
+  notes: 'Sun Sensor of the CubeSat'
+deco:
+  id: deco
+  description: Deco
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - custom
+  selectedOption: 0
+  notes: 'Deco of the CubeSat'  
+vir-s:
+  id: vir-s
+  description: VIR-S
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - custom
+  selectedOption: 0
+  notes: 'VIR-S of the CubeSat'
+impedence_probe:
+  id: impedence_probe
+  description: Impedence Probe
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - custom
+  selectedOption: 0
+  notes: 'Impedence Probe of the CubeSat'
