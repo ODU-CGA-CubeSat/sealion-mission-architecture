@@ -122,4 +122,5 @@ elements:
     itemType: ''
     description: Longitude coordinate of the satellite.
     derivedFrom: ''
-derivedFrom: {{derivedFrom}}
+derivedFrom:
+- "2-UserStories/2-ViewSatelliteHealthDataPacket.yaml"
