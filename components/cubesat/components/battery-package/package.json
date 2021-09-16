@@ -1,6 +1,9 @@
-name: battery-package
-version:0.1.0
-description: Components related to battery
-license: MIT
-author: Bhagatji Jimesh jbhag001@odu.edu & contributors
-dependencies: dependencies
+{
+    "name": "battery-package",
+    "version": "0.1.0",
+    "description": "Components related to battery",
+    "license": "MIT",
+    "author": "Bhagatji Jimesh jbhag001@odu.edu & contributors",
+    "dependencies": {
+    }
+}
