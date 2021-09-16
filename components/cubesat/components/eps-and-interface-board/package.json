@@ -1,7 +1,9 @@
-  
-name: eps-and-interface-board
-version: 0.1.0
-description: Custom designed EPS and interface board for non-rechargeable batteries for small satellite in LEO 
-license: MIT
-author: Bhagatji Jimesh jbhag001@odu.edu & contributors 
-dependencies: dependencies
+{
+    "name": "eps-and-interface-board",
+    "version": "0.1.0",
+    "description": "Custom designed EPS and interface board for non-rechargeable batteries for small satellite in LEO",
+    "license": "MIT",
+    "author": "Bhagatji Jimesh jbhag001@odu.edu & contributors",
+    "dependencies": {
+    }
+}
