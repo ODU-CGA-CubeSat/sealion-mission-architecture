@@ -1,4 +1,4 @@
 id: 1.4
 name: "Primary Mission Objective A4"
 statement: "The SeaLion mission shall adhere to CubeSat standards as per CDS Rev. 13"
-derivedFrom: 0-References/2-CubeSatDesignSpecificationRev.13.yml
+derivedFrom: 0-References/2-CubeSatDesignSpecificationRev.13.yaml
