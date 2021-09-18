@@ -4,7 +4,7 @@ actor: Ground Station Operator
 behavior: View satellite health data packet
 rationale: Validate that satellite is operating nominally
 derivedFrom:
-- "1-StakeholderNeeds/1.2-Primary_Mission_Objective-A2.yaml"
-- "1-StakeholderNeeds/1.3-Primary_Mission_Objective-A3.yaml"
-- "1-StakeholderNeeds/3.3-Tertiary_Mission_Objective-C3.yaml"
+- "1-StakeholderNeeds/1.2-PrimaryMissionObjective-A2.yaml"
+- "1-StakeholderNeeds/1.3-PrimaryMissionObjective-A3.yaml"
+- "1-StakeholderNeeds/3.3-TertiaryMissionObjective-C3.yaml"
 example: View satellite health data packet in order to validate the mission data of the IP and DeCS payloads
