@@ -1,0 +1,7 @@
+id: 2.2
+name: View ADS
+actor: Ground Station Operator 
+behavior: Determine location
+rationale: Determine location
+derivedFrom: 2-UserStories/2-ViewSatelliteHealthDataPacket.yaml"
+example: View ADS to determine the satellites location
