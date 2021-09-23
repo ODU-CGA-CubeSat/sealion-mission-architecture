@@ -106,10 +106,10 @@ a|{% for reference in field.derivedFrom %}
 {% endfor %}
 |===
 
-{% if us.derivedFrom.length > 0 %}
+{% if ds.derivedFrom.length > 0 %}
 ==== *Derived From:*
 
-{% for derivedFromItem in us.derivedFrom %}
+{% for derivedFromItem in ds.derivedFrom %}
 {% if architecture['elements'][derivedFromItem].url %}
 * {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
 {% endif %}
