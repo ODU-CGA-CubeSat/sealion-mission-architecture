@@ -98,7 +98,7 @@ elements:
     description: The time stamp when the computer last booted.
     derivedFrom: ''
   - key: operational_status_of_equipment
-    type: float
+    type: string
     itemType: ''
     description: The operation status of the equipment.
     derivedFrom: ''
