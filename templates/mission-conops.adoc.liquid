@@ -48,10 +48,10 @@ As a *{{us.actor}}* I want to *{{us.behavior}}* so that I can *{{us.rationale}}*
 
 {{us.example}}
 
-{% if ds.derivedFrom.length > 0 %}
+{% if us.derivedFrom.length > 0 %}
 ==== *Derived From:*
 
-{% for derivedFromItem in ds.derivedFrom %}
+{% for derivedFromItem in us.derivedFrom %}
 {% if architecture['elements'][derivedFromItem].url %}
 * {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
 {% endif %}
