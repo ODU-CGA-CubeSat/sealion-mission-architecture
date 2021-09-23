@@ -83,7 +83,7 @@ elements:
     description: The temperature of the processor. Units in Kelvin.
     derivedFrom: ''
   - key: time_stamp
-    type: float
+    type: string
     itemType: ''
     description: Time stamp of the last transmission.
     derivedFrom: ''
