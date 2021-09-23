@@ -93,7 +93,7 @@ elements:
     description: Number of times the computer has rebooted.
     derivedFrom: ''
   - key: boot_time
-    type: float
+    type: string
     itemType: ''
     description: The time stamp when the computer last booted.
     derivedFrom: ''
