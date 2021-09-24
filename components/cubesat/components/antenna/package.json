@@ -1,0 +1,9 @@
+{
+    "name": "antenna",
+    "version": "0.1.0",
+    "description": "UHF and S-Band Antenna",
+    "license": "MIT",
+    "author": "Bhagatji Jimesh jbhag001@odu.edu & contributors",
+    "dependencies": {
+    }
+}

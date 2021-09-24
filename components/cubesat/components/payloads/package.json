@@ -1,0 +1,9 @@
+{
+    "name": "payload",
+    "version": "0.1.0",
+    "description": "DeCo Paylaod and Two CGA Payload",
+    "license": "MIT",
+    "author": "Bhagatji Jimesh jbhag001@odu.edu & contributors",
+    "dependencies": {
+    }
+}
