@@ -1,0 +1,27 @@
+@startuml
+skinparam linetype polyline
+
+/'
+left to right direction
+skinparam linetype ortho
+'/
+
+frame "uc [ {{architecture.description}} Component Composition Tree ]" {
+
+{% for component_hash in architecture.components %}
+  {% for component in component_hash %}
+    {% if component.description %}
+    ["{{component.description}}"]
+    {% for subcomponent_hash in component.components %}
+      {% for subcomponent in subcomponent_hash %}
+        {% if subcomponent.description %}
+        ["{{component.description}}"] +-- ["{{subcomponent.description}}"]
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+}
+@enduml
