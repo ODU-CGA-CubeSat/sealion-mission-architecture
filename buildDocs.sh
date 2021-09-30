@@ -29,6 +29,9 @@ docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extend
 # generate use-case-diagrams.puml from liquid template
 docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/use-case-diagram.puml.liquid --out=dist/use-case-diagram.puml'
 
+# generate component-tree.puml from liquid template
+docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'node m30mlTools/generateDoc.js --unifiedModel=dist/component.yaml --template=templates/component-tree.puml.liquid --out=dist/component-tree.puml'
+
 # generate mission-conops.adoc from liquid template
 docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/mission-conops.adoc.liquid --out=dist/mission-conops.adoc'
 
