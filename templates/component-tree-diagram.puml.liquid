@@ -12,10 +12,17 @@ frame "{{architecture.description}} Component Tree Diagram" {
   {% for component in component_hash %}
     {% if component.description %}
     ["{{component.description}}"]
-    {% for subcomponent_hash in component.components %}
-      {% for subcomponent in subcomponent_hash %}
-        {% if subcomponent.description %}
-        ["{{component.description}}"] +-- ["{{subcomponent.description}}"]
+    {% for subsystem_hash in component.components %}
+      {% for subsystem in subsystem_hash %}
+        {% if subsystem.description %}
+        ["{{component.description}}"] +-- ["{{subsystem.description}}"]
+        {% for subsystemcomponent_hash in subsystem.components %}
+          {% for subsystemcomponent in subsystemcomponent_hash %}
+            {% if subsystemcomponent.description %}
+            ["{{subsystem.description}}"] +-- ["{{subsystemcomponent.description}}"]
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
         {% endif %}
       {% endfor %}
     {% endfor %}
