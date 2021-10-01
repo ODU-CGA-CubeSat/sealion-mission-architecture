@@ -3,6 +3,5 @@ name: Listen for Satellite Beacon
 actor: Ground Station Operator 
 behavior: Open ground station beacon monitor
 rationale: View satellite health data packet
-derivedFrom:
-- "2-UserStories/2-ViewSatelliteHealthDataPacket.yaml"
+derivedFrom: ''
 example: Open ground station beacon monitor to listen for satellite health data packet downlink
