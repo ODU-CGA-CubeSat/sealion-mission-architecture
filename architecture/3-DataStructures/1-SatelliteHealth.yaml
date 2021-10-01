@@ -7,6 +7,12 @@ template: |
   imu_magnetometer_x: {{imu_magnetometer_x}}
   imu_magnetometer_y: {{imu_magnetometer_y}}
   imu_magnetometer_z: {{imu_magnetometer_z}}
+  sun_sensor_pitch_pos: {{sun_sensor_pitch_pos}}
+  sun_sensor_pitch_neg: {{sun_sensor_pitch_neg}}
+  sun_sensor_yaw_pos: {{sun_sensor_yaw_pos}}
+  sun_sensor_yaw_neg: {{sun_sensor_yaw_neg}}
+  sun_sensor_roll_pos: {{sun_sensor_roll_pos}}
+  sun_sensor_roll_neg: {{sun_sensor_roll_neg}}
   temperature_imu: {{temperature_imu}}
   temperature_battery: {{temperature_battery}}
   temperature_on_board_computer: {{temperature_on_board_computer}}
@@ -52,6 +58,36 @@ elements:
     itemType: ''
     description: The magnetic field strength with respective to the z-axis in the IMU's reference frame.
     derivedFrom: ''
+  - key: sun_sensor_pitch_pos
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to positive pitch angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: sun_sensor_pitch_neg
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to negative pitch angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: sun_sensor_yaw_pos
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to positive yaw angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: sun_sensor_yaw_neg
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to negative yaw angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: sun_sensor_roll_pos
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to positive roll angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: sun_sensor_roll_neg
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to negative roll angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
   - key: battery_voltage
     type: float
     itemType: ''
