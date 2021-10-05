@@ -1,7 +1,7 @@
 {
-    "name": "ados-system-sensors",
+    "name": "sealion-antenna",
     "version": "0.1.0",
-    "description": "Sensors used for Attitude & Orbital Determination System (AODS) Sensors",
+    "description": "Sealion UHF and S-Band antenna",
     "license": "MIT",
     "author": "Bhagatji Jimesh jbhag001@odu.edu & contributors",
     "dependencies": {
