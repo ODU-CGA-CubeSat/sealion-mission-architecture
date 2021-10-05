@@ -1,7 +1,7 @@
 {
-    "name": "communication-module",
+    "name": "sealion-communication-module",
     "version": "0.1.0",
-    "description": "UHF and S-Band Transceiver for ground communication",
+    "description": "Sealion Communication Module",
     "license": "MIT",
     "author": "Bhagatji Jimesh jbhag001@odu.edu & contributors", 
     "dependencies": {

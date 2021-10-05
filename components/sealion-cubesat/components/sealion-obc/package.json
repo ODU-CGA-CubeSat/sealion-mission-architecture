@@ -1,7 +1,7 @@
 {
-    "name": "antenna",
+    "name": "sealion-obc",
     "version": "0.1.0",
-    "description": "UHF and S-Band Antenna",
+    "description": "Sealion On-Board Computer (OBC)",
     "license": "MIT",
     "author": "Bhagatji Jimesh jbhag001@odu.edu & contributors",
     "dependencies": {

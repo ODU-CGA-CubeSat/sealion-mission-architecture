@@ -1,7 +1,7 @@
 {
-    "name": "obc-board",
+    "name": "sealion-power-module",
     "version": "0.1.0",
-    "description": "OBC",
+    "description": "Sealion Power Module",
     "license": "MIT",
     "author": "Bhagatji Jimesh jbhag001@odu.edu & contributors",
     "dependencies": {
