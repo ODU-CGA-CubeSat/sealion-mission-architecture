@@ -1,0 +1,9 @@
+{
+    "name": "sealion-odu-payload",
+    "version": "0.1.0",
+    "description": "Sealion Old Dominion University (ODU) Payload",
+    "license": "MIT",
+    "author": "Bhagatji Jimesh jbhag001@odu.edu & contributors",
+    "dependencies": {
+    }
+}
