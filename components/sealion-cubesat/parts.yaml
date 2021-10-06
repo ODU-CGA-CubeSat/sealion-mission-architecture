@@ -1,0 +1,72 @@
+structure:
+  id: structure
+  description: Stucture
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-structure
+  selectedOption: 0
+  notes: ''
+power-module:
+  id: power-module
+  description: Power Module
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-power-module
+  selectedOption: 0
+  notes: ''
+communication-module:
+  id: communication-module
+  description: Communication Module
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-communication-module
+  selectedOption: 0
+  notes: ''
+obc:
+  id: obc
+  description: OBC
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-obc
+  selectedOption: 0
+  notes: ''
+odu-payload:
+  id: odu-payload
+  description: ODU Payload
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-odu-payload
+  selectedOption: 0
+  notes: ''
+cga-payload:
+  id: cga-payload
+  description: CGA Payload
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-cga-payload
+  selectedOption: 0
+  notes: ''
+aods-sensors:
+  id: aods-sensors
+  description: AODS Sensors
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-aods-sensors
+  selectedOption: 0
+  notes: ''
+antenna:
+  id: antenna
+  description: Antenna
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-antenna
+  selectedOption: 0
+  notes: ''
