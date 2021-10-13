@@ -103,7 +103,7 @@ elements:
     description: The operation status of the equipment.
     derivedFrom: ''
   - key: redundancy_status
-    type: float
+    type: string
     itemType: ''
     description: The redundancy status of the satellite.
     derivedFrom: ''
