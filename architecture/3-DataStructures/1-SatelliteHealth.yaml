@@ -88,7 +88,7 @@ elements:
     description: Time stamp of the last transmission.
     derivedFrom: ''
   - key: boot_count
-    type: float
+    type: integer
     itemType: ''
     description: Number of times the computer has rebooted.
     derivedFrom: ''
