@@ -4,4 +4,4 @@ actor: Ground Station Operator
 behavior: Open ground station beacon monitor
 rationale: View satellite health data packet
 derivedFrom: ''
-example: Open ground station beacon monitor to view raw ADS data (sun sensors, magnetometer, gyro, GPS, and RTC) from satellite health data packet downlink
+example: Open ground station beacon monitor to view raw ADS data (sun sensors, magnetometer, gyro, GPS, and RTC) from satellite health data packet downlink for local verification/validation of onboard ADS computations
