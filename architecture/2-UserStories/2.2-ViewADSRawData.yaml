@@ -5,4 +5,4 @@ behavior: View satellite health data packet
 rationale: Locally verify/validate onboard ADS computations
 derivedFrom:
 - "2-UserStories/2-ViewSatelliteHealthDataPacket.yaml"
-example: Open ground station beacon monitor to view raw ADS data (sun sensors, magnetometer, gyro, GPS, and RTC) from satellite health data packet downlink for local verification/validation of onboard ADS computations
+example: Open ground station beacon monitor to view raw ADS sensor data (sun sensors, magnetometer, gyro, GPS, and RTC) from satellite health data packet downlink for local verification/validation of onboard ADS computations
