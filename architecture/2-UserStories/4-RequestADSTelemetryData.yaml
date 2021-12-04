@@ -1,8 +1,0 @@
-id: 4
-name: Request ADS Telemetry Data
-actor: Ground Station Operator
-behavior: Request satellite telemetry data packet
-rationale: Locally verify/validate onboard ADS computations
-derivedFrom:
-- "2-UserStories/2.2-ViewADSRawData.yaml"
-example: Request satellite ADS telemetry packet for local verification/validation of onboard ADS computations
