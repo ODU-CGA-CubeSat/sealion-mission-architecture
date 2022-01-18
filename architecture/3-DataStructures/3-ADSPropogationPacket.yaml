@@ -1,5 +1,5 @@
-name: Satellite ADS Packet
-purpose: Data structure for satellite ADS data packet from ground station operator's viewpoint.
+name: Satellite ADS prop Packet
+purpose: Data structure for satellite ADS propogation data packet from ground station operator's viewpoint.
 template: |
   imu_gyro_x: {{imu_gyro_x}}
   imu_gyro_y: {{imu_gyro_y}}
@@ -14,9 +14,9 @@ template: |
   sun_sensor_roll_pos: {{sun_sensor_roll_pos}}
   sun_sensor_roll_neg: {{sun_sensor_roll_neg}}
   time_stamp: {{time_stamp}}
-  altitude_data: {{altitude_data}}
-  lattitude: {{lattitude}}
-  longitude: {{longitude}}
+  altitude_data_prop: {{altitude_data}}
+  lattitude_prop: {{lattitude}}
+  longitude_prop: {{longitude}}
 elements:
   - key: imu_gyro_x
     type: float
@@ -83,20 +83,20 @@ elements:
     itemType: ''
     description: Time stamp of the last transmission.
     derivedFrom: ''
-  - key: altitude_data
+  - key: altitude_data_prop
     type: float
     itemType: ''
-    description: The altitude data of the satellite.
+    description: The altitude data of the satellite from propogation.
     derivedFrom: ''
-  - key: lattitude
+  - key: lattitude_prop
     type: float
     itemType: ''
-    description: Lattitude coordinate of the satellite.
+    description: Lattitude coordinate of the satellite from propogation.
     derivedFrom: ''
-  - key: longitude
+  - key: longitude_prop
     type: float
     itemType: ''
-    description: Longitude coordinate of the satellite.
+    description: Longitude coordinate of the satellite from propogation.
     derivedFrom: ''
 derivedFrom:
 - "2-UserStories/4.2-RequestSatelliteADSPacket.yaml"
