@@ -1,7 +1,7 @@
 {
-    "name": "sealion",
+    "name": "sealion-mission-architecture",
     "version": "3.0.1",
-    "description": "SeaLion Mission Concept of Operations (ConOps)",
+    "description": "SeaLion Mission Architecture",
     "keywords": [
         "cubesat",
         "mission-conops",
