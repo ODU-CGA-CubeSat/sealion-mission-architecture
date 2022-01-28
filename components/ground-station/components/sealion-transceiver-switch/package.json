@@ -4,12 +4,12 @@
     "description": "SeaLion Transceiver Switch",
     "keywords": [
         "cubesat",
-        "mission-conops",
+        "mission-architecture",
         "model-based-systems-engineering",
 		"ground-station"
     ],
-    "repository": "https://github.com/ODU-CGA-CubeSat/mission-conops.git",
-    "homepage": "https://ODU-CGA-CubeSat.github.io/mission-conops",
+    "repository": "https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture.git",
+    "homepage": "https://ODU-CGA-CubeSat.github.io/sealion-mission-architecture",
     "author": "Patrick Clark <pclar001@odu.edu> & contributors",
     "license": "MIT",
     "dependencies": {
