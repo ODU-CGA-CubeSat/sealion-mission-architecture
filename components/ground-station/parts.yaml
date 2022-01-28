@@ -1,0 +1,27 @@
+sdr:
+  id: sdr
+  description: SDR
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-sdr
+  selectedOption: 0
+  notes: ''
+host-computer:
+  id: host-computer
+  description: Host Computer
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-host-computer
+  selectedOption: 0
+  notes: ''
+transceiver-switch:
+  id: transceiver-switch
+  description: Transceiver Switch
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-transceiver-switch
+  selectedOption: 0
+  notes: ''  
