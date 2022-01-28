@@ -1,0 +1,9 @@
+sealion-transceiver-switch:
+  id: sealion-transceiver-switch
+  description: SeaLion Transceiver Switch
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-transceiver-switch
+  selectedOption: 0
+  notes: ''
