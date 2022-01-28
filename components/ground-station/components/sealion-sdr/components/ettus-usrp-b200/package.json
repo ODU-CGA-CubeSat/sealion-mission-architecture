@@ -10,7 +10,7 @@
     ],
     "repository": "https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture.git",
     "homepage": "https://ODU-CGA-CubeSat.github.io/sealion-mission-architecture",
-    "author": "Kevin Chiu <kchiu002@odu.edu> & contributors",
+    "author": "Patrick Clark <pclar001@odu.edu> & contributors",
     "license": "MIT",
     "dependencies": {
     }
