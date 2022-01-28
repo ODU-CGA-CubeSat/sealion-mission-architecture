@@ -1,0 +1,9 @@
+sealion-host-computer:
+  id: sealion-host-computer
+  description: SeaLion Host Computer
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - dell-optiplex-work-station
+  selectedOption: 0
+  notes: ''

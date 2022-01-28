@@ -1,0 +1,17 @@
+{
+    "name": "dell-optiplex-work-station",
+    "version": "0.1.0",
+    "description": "Dell Optiplex Work Station",
+    "keywords": [
+        "cubesat",
+        "mission-architecture",
+        "model-based-systems-engineering",
+		"ground-station"
+    ],
+    "repository": "https://github.com/ODU-CGA-CubeSat/sealoin-mission-architecture.git",
+    "homepage": "https://ODU-CGA-CubeSat.github.io/sealion-mission-architecture",
+    "author": "Patrick Clark <pclar001@odu.edu> & contributors",
+    "license": "MIT",
+    "dependencies": {
+    }
+}

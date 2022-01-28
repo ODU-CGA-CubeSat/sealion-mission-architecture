@@ -1,0 +1,10 @@
+sdr:
+  id: sdr
+  description: Software Defined Radio
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - ettus-usrp-b200
+  - ettus-usrp-n200
+  selectedOption: 0
+  notes: 'Selection 0 is tentative.'
