@@ -5,4 +5,4 @@ behavior: Request satellite health data packet
 rationale: View satellite health data packet
 derivedFrom:
 - "2-UserStories/4-RequestTelemetryData.yaml"
-example: Request satellite health data
+example: Request satellite health data packet to verify or validate ADOS sensor & GPS data is within nominal range and/or corresponds to expected orbit profile
