@@ -1,8 +1,0 @@
-id: 4.2
-name: Request Satellite ADS Packet
-actor: Ground Station Operator 
-behavior: Request satellite attitude data
-rationale: Locally verify/validate onboard ADS computations
-derivedFrom:
-- "2-UserStories/4-RequestTelemetryData.yaml"
-example: Request satellite ADS sensor data and computations for local verification/validation of onboard ADS
