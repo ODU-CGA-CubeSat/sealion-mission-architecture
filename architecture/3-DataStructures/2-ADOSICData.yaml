@@ -99,4 +99,4 @@ elements:
     description: Longitude coordinate of the satellite from GPS.
     derivedFrom: ''
 derivedFrom:
-- "2-UserStories/4.2-RequestSatelliteADSPacket.yaml"
+- "4.1-RequestSatelliteHealthData.yaml"
