@@ -1,5 +1,5 @@
 name: Satellite Health Data Packet
-purpose: Data structure for satellite health data packet used for beacon and ADOS verification
+purpose: Data structure for satellite health data packet used for beacon and AODS verification
 template: |
   imu_gyro_x: {{imu_gyro_x}}
   imu_gyro_y: {{imu_gyro_y}}
