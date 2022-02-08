@@ -1,5 +1,5 @@
-name: Satellite ADOS Sensor Data
-purpose: Data structure for satellite ADOS sensor data used for attitude determination or incremental orbit propogation
+name: Satellite AODS Sensor Data
+purpose: Data structure for satellite AODS sensor data used for attitude determination or incremental orbit propogation
 template: |
   imu_gyro_x: {{imu_gyro_x}}
   imu_gyro_y: {{imu_gyro_y}}
@@ -81,4 +81,4 @@ elements:
     description: Time stamp of the last transmission.
     derivedFrom: ''
 derivedFrom:
-- "2-UserStories/4.2-RequestSatelliteADOSSensorData.yaml"
+- "2-UserStories/4.2-RequestSatelliteAODSSensorData.yaml"
