@@ -1,5 +1,5 @@
-name: Satellite ADOS IC Data
-purpose: Data structure for satellite ADOS initial conditions data packet used for attitude determination and orbit propagation
+name: Satellite AODS IC Data
+purpose: Data structure for satellite AODS initial conditions data packet used for attitude determination and orbit propagation
 template: |
   imu_gyro_x: {{imu_gyro_x}}
   imu_gyro_y: {{imu_gyro_y}}
