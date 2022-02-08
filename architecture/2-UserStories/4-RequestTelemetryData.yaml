@@ -2,6 +2,6 @@ id: 4
 name: Request Telemetry Data
 actor: Ground Station Operator
 behavior: Request satellite telemetry data packets
-rationale: Locally verify/validate onboard ADS computations
+rationale: Locally verify/validate onboard AODS computations
 derivedFrom: ""
-example: Request satellite telemetry packets for local verification/validation of onboard ADS computations
+example: Request satellite telemetry packets for local verification/validation of onboard AODS computations
