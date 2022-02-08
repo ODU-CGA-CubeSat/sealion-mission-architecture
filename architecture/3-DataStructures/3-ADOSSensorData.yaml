@@ -81,4 +81,4 @@ elements:
     description: Time stamp of the last transmission.
     derivedFrom: ''
 derivedFrom:
-- "2-UserStories/4.2-RequestSatelliteADSPacket.yaml"
+- "2-UserStories/4.2-RequestSatelliteADOSSensorData.yaml"
