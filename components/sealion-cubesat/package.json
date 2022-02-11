@@ -1,7 +1,7 @@
 {
     "name": "sealion-cubesat",
     "version": "0.1.0",
-    "description": "CubeSat",
+    "description": "Sealion Cubesat",
     "keywords": [
         "cubesat",
         "mission-conops",
