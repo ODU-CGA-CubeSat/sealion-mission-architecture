@@ -1,0 +1,7 @@
+id: 5.0
+name: Payload Scheduler
+actor: Ground Station Operator 
+behavior: Schedule data recording at specfic orbital location
+rationale: Recording data for future transmission
+derivedFrom: []
+example: 

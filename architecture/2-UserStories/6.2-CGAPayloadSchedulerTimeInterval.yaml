@@ -1,0 +1,8 @@
+id: 5.2
+name: CGA Payload Scheduler
+actor: Ground Station Operator 
+behavior: Schedule data recording at specfic time interval 
+rationale: Recording data for future transmission
+derivedFrom: []
+example: 
+- Ex1 Schedule data recording at specfic time interval  for CGA Payload?

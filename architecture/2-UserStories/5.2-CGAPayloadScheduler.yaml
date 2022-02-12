@@ -1,9 +1,0 @@
-id: 5.2
-name: CGA Payload Scheduler
-actor: Ground Station Operator 
-behavior: Schedule data recording at specfic time interval (or orbital location)
-rationale: Recording data for future transmission
-derivedFrom: []
-example: 
-- Ex1 Schedule data recording at 4min -10min (for a given orbital location) for CGA Payload?
-- Ex2 Schedule data recording at specfic time interval (or orbital location) for CGA Payload?

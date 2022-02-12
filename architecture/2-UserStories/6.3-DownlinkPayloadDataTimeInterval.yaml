@@ -1,0 +1,8 @@
+id: 5.3
+name: Downlink Payload Data Time Interval
+actor: Ground Station Operator 
+behavior: Transmit time interval schedulered satellite recorded data to ground station  
+rationale: Vacant on-board memory for more data
+derivedFrom: []
+example: 
+- Ex1 Start downlink time interval schedulered payload Data once the satellite is in line of sight

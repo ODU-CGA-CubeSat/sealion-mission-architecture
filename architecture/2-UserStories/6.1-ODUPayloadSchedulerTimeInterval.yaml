@@ -1,0 +1,8 @@
+id: 5.1
+name: ODU Payload Scheduler
+actor: Ground Station Operator 
+behavior: Schedule data recording at specfic time interval (or orbital location)
+rationale: Recording data for future transmission
+derivedFrom: []
+example: 
+- Ex1 Schedule data recording at specfic time interval  for ODU Payload?
