@@ -1,0 +1,10 @@
+- summary: Assemble {{parts.sealion-cubesat.description}}
+  requiredParts:
+    - structure
+    - power-module
+    - communication-module
+    - obc
+    - odu-payload
+    - cga-payload
+  requiredTools: []
+  details: ''
