@@ -1,0 +1,14 @@
+- summary: Assemble {{parts.sealion-structure.description}}
+  requiredParts:
+    - plate
+    - rail
+    - screw
+  requiredTools:
+    - screwdriver
+  details: |
+    . Place the first *{{parts.plate.descriptionSelected}}* on flat surface
+    . Place a *{{parts.rail.descriptionSelected}}* on mounting point on *{{parts.plate.descriptionSelected}}*
+    . Screw the *{{parts.screw.descriptionSelected}}* in mounting holes to secure the *{{parts.rail.descriptionSelected}}* and *{{parts.plate.descriptionSelected}}* together
+    . Repeat the previous two steps for all remaining *{{parts.rail.descriptionSelected}}*
+    . Place the second *{{parts.plate.descriptionSelected}}* on top of the mounted *{{parts.rail.descriptionSelected}}* and aling the mounting holes
+    . Screw the *{{parts.screw.descriptionSelected}}* into the mounting holes to secure the *{{parts.rail.descriptionSelected}}* and *{{parts.plate.descriptionSelected}}* together

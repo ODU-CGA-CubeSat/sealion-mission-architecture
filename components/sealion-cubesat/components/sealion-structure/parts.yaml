@@ -1,0 +1,27 @@
+plate:
+  id: plate
+  description: Plate
+  quantity: 2
+  quantityUnits: unit
+  options:
+  - sealion-plate
+  selectedOption: 0
+  notes: ''
+rail:
+  id: rail
+  description: Rail
+  quantity: 8
+  quantityUnits: unit
+  options:
+  - sealion-rail
+  selectedOption: 0
+  notes: ''
+screw:
+  id: screw
+  description: Screw
+  quantity: 16
+  quantityUnits: unit
+  options:
+  - screw
+  selectedOption: 0
+  notes: ''
