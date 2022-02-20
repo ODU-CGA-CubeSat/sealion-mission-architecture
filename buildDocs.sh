@@ -20,6 +20,10 @@ if [ ! -r ./dist ]; then
     mkdir dist/
 fi
 
+# copy operating-mode-as-fsm.puml to dist/...
+echo "copy operating-mode-as-fsm.puml to dist/..."
+docker run --rm -v $PWD:/src -w /src node bash -c 'cp ./components/sealion-cubesat/components/sealion-obc/components/dilophos/fsw-architecture/operating-mode-as-fsm.puml dist/'
+
 # generate dist/component.yaml & symlink to architecture/ directory
 docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'node dof-helpers/parseComponent.js && mkdir architecture/4-Components && ln -srv dist/component.yaml architecture/4-Components'
 
@@ -46,8 +50,6 @@ docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/asciidoctor-extended
 docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'rm -rf architecture/4-Components'
 
 # Generate presentation.html
-echo "copy operating-mode-as-fsm.puml to dist/..."
-docker run --rm -v $PWD:/src -w /src node bash -c 'cp ./components/sealion-cubesat/components/sealion-obc/components/dilophos/fsw-architecture/operating-mode-as-fsm.puml dist/'
 echo "Generating presentation.adoc..."
 docker run --rm -v $PWD:/src -w /src node node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/presentation.adoc.liquid --out=dist/presentation.adoc
 echo "Generating presentation.html..."
