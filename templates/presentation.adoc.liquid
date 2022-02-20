@@ -1,11 +1,12 @@
-= {{architecture.package.description}}
+= Flight Software Systems Architecture for the Sealion Mission
+:presentation_title: Flight Software Systems Architecture for the Sealion Mission
 :revnumber: v{{architecture.package.version}}
 
 by Robert Borowicz, Patrick Clark, Kevin Chiu, Gonzalo Fernandez Mediavilla, Bhagatji Jimesh, Sean Marquez, Payal Nandi, Joseph Siciliano, & Gus Williams
 
 == Stakeholder Needs
  
-The {{architecture.package.description}} is guided by a series of stakeholder needs...
+The {presentation_title} is guided by a series of stakeholder needs...
 
 {% for need in architecture['1-StakeholderNeeds'] %}
 === {{need.id}}: {{need.name}}
@@ -27,7 +28,7 @@ The {{architecture.package.description}} is guided by a series of stakeholder ne
 
 == User Stories
 
-The {{architecture.package.description}}'s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.
+The {presentation_title}'s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.
 
 {% for us in architecture['2-UserStories'] %}
 === {{us.id}}: {{us.name}}
@@ -63,7 +64,7 @@ include::./use-case-diagram.puml[User Stories as Use Case Diagram]
 ....
 
 == Data Structures
-This section covers each data structure type in the *{{architecture.package.description}}*.
+This section covers each data structure type in the *{presentation_title}*.
 
 {% for ds in architecture['3-DataStructures'] %}
 === {{ds.name}}
