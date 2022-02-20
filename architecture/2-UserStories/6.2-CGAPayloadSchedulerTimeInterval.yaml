@@ -1,4 +1,4 @@
-id: 5.2
+id: 6.2
 name: CGA Payload Scheduler
 actor: Ground Station Operator 
 behavior: Schedule data recording at specfic time interval 
