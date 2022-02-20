@@ -3,7 +3,7 @@
 :toclevels: 3
 :doc-name: CONTRIBUTORS.adoc
 :project-name: SeaLion Mission ConOps
-:github-repo: https://github.com/odu-cga-cubesat/mission-conops
+:github-repo: https://github.com/odu-cga-cubesat/sealion-mission-architecture
 :important-caption: :heavy_exclamation_mark:
 
 Contributions to the {project-name} can come in a variety of roles. This document is intendend to provide guidelines for 2 types of contributors: subject-matter experts and technical writers.

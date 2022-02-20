@@ -4,11 +4,11 @@
     "description": "Sealion Cubesat",
     "keywords": [
         "cubesat",
-        "mission-conops",
+        "sealion-mission-architecture",
         "model-based-systems-engineering"
     ],
-    "repository": "https://github.com/ODU-CGA-CubeSat/mission-conops.git",
-    "homepage": "https://ODU-CGA-CubeSat.github.io/mission-conops",
+    "repository": "https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture.git",
+    "homepage": "https://ODU-CGA-CubeSat.github.io/sealion-mission-architecture",
     "author": "Kevin Chiu <kchiu002@odu.edu> & contributors",
     "license": "MIT",
     "dependencies": {

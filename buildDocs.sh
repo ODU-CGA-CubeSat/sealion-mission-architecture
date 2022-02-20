@@ -29,18 +29,18 @@ docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extend
 # generate use-case-diagrams.puml from liquid template
 docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/use-case-diagram.puml.liquid --out=dist/use-case-diagram.puml'
 
-# generate mission-conops.adoc from liquid template
-docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/mission-conops.adoc.liquid --out=dist/mission-conops.adoc'
+# generate sealion-mission-architecture.adoc from liquid template
+docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/sealion-mission-architecture.adoc.liquid --out=dist/sealion-mission-architecture.adoc'
 
 # generate pdf-theme.yml from liquid template
 docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:liquidoc 'bundle exec liquidoc -d dist/architecture.yml -t templates/pdf-theme.yml.liquid -o dist/pdf-theme.yml'
 #docker run --rm --volume "$PWD:/src" -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'bundle exec liquidoc -d dist/architecture.yml -t templates/pdf-theme.yml.liquid -o dist/pdf-theme.yml'
 
 # generate index.html
-docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/asciidoctor-extended:2.0.10-alpine 'asciidoctor dist/mission-conops.adoc -r asciidoctor-diagram -o dist/index.html'
+docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/asciidoctor-extended:2.0.10-alpine 'asciidoctor dist/sealion-mission-architecture.adoc -r asciidoctor-diagram -o dist/index.html'
 
-# generate mission-conops.pdf
-docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/asciidoctor-extended:2.0.10-alpine 'asciidoctor dist/mission-conops.adoc -o dist/mission-conops.pdf -r asciidoctor-pdf -r asciidoctor-diagram -b pdf -a pdf-theme=dist/pdf-theme.yml'
+# generate sealion-mission-architecture.pdf
+docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/asciidoctor-extended:2.0.10-alpine 'asciidoctor dist/sealion-mission-architecture.adoc -o dist/sealion-mission-architecture.pdf -r asciidoctor-pdf -r asciidoctor-diagram -b pdf -a pdf-theme=dist/pdf-theme.yml'
 
 # remove architecture/4-Components
 docker run --rm --volume $PWD:/src -w "/src" capsulecorplab/asciidoctor-extended:asciidocsy-nodejs 'rm -rf architecture/4-Components'
