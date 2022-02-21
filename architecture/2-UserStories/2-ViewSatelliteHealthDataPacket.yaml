@@ -1,10 +1,7 @@
 id: 2
 name: View Satellite Health Data Packet
 actor: Ground Station Operator 
-behavior: View satellite health data packet
-rationale: Validate that satellite is operating nominally
-derivedFrom:
-- "1-StakeholderNeeds/1.2-PrimaryMissionObjective-A2.yaml"
-- "1-StakeholderNeeds/1.3-PrimaryMissionObjective-A3.yaml"
-- "1-StakeholderNeeds/3.3-TertiaryMissionObjective-C3.yaml"
-example: View satellite health data packet in order to validate the mission data of the IP and DeCS payloads
+behavior: view satellite health data packet
+rationale: validate that satellite is operating nominally
+derivedFrom: []
+example: View satellite health data packet to verify or validate AODS sensor & GPS data is within nominal range and/or corresponds to expected orbit profile

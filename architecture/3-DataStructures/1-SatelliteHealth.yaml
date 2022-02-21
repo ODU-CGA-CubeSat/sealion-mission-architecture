@@ -1,126 +1,31 @@
 name: Satellite Health Data Packet
-purpose: Data structure for satellite health data packet from ground station operator's viewpoint.
+purpose: Data structure for satellite health data packet used for beacon telemetry
 template: |
-  imu_gyro_x: {{imu_gyro_x}}
-  imu_gyro_y: {{imu_gyro_y}}
-  imu_gyro_z: {{imu_gyro_z}}
-  imu_magnetometer_x: {{imu_magnetometer_x}}
-  imu_magnetometer_y: {{imu_magnetometer_y}}
-  imu_magnetometer_z: {{imu_magnetometer_z}}
-  temperature_imu: {{temperature_imu}}
-  temperature_battery: {{temperature_battery}}
-  temperature_on_board_computer: {{temperature_on_board_computer}}
-  temperature_processor: {{temperature_processor}}
-  battery_voltage: {{battery_voltage}}
-  battery_current: {{battery_current}}
-  time_stamp: {{time_stamp}}
-  boot_count: {{boot_count}}
-  boot_time: {{boot_time}}
-  operational_status_of_equipment: {{operational_status_of_equipment}}
-  redundancy_status: {{redundancy_status}}
-  altitude_data: {{altitude_data}}
-  lattitude: {{lattitude}}
-  longitude: {{longitude}}
+  call_sign: {{call_sign}}
+  battery_health: {{battery_health}}
+  mode: {{mode}}
+  tle_data: {{tle_data}}
 elements:
-  - key: imu_gyro_x
-    type: float
-    itemType: ''
-    description: The angular rate of the body with to respective to the x-axis in the IMU's reference frame.
-    derivedFrom: ''
-  - key: imu_gyro_y
-    type: float
-    itemType: ''
-    description: The angular rate of the body with to respective to the y-axis in the IMU's reference frame.
-    derivedFrom: ''
-  - key: imu_gyro_z
-    type: float
-    itemType: ''
-    description: The angular rate of the body with to respective to the z-axis in the IMU's reference frame.
-    derivedFrom: ''
-  - key: imu_magnetometer_x
-    type: float
-    itemType: ''
-    description: The magnetic field strength with respective to the x-axis in the IMU's reference frame.
-    derivedFrom: ''
-  - key: imu_magnetometer_y
-    type: float
-    itemType: ''
-    description: The magnetic field strength with respective to the y-axis in the IMU's reference frame.
-    derivedFrom: ''
-  - key: imu_magnetometer_z
-    type: float
-    itemType: ''
-    description: The magnetic field strength with respective to the z-axis in the IMU's reference frame.
-    derivedFrom: ''
-  - key: battery_voltage
-    type: float
-    itemType: ''
-    description: Voltage of the battery. Units in volts.
-    derivedFrom: ''
-  - key: battery_current
-    type: float
-    itemType: ''
-    description: Current draw of the battery. Units in milliamps.
-    derivedFrom: ''
-  - key: temperature_imu
-    type: float
-    itemType: ''
-    description: The temperature of the IMU. Units in Kelvin.
-    derivedFrom: ''
-  - key: temperature_battery
-    type: float
-    itemType: ''
-    description: The temperature of the battery. Units in Kelvin.
-    derivedFrom: ''
-  - key: temperature_on_board_computer
-    type: float
-    itemType: ''
-    description: The temperature of the on board computer. Untis in Kelvin.
-    derivedFrom: ''
-  - key: temperature_processor
-    type: float
-    itemType: ''
-    description: The temperature of the processor. Units in Kelvin.
-    derivedFrom: ''
-  - key: time_stamp
+  - key: call_sign
     type: string
     itemType: ''
-    description: Time stamp of the last transmission.
+    description: Identifying call sign for the Sealion mission.
     derivedFrom: ''
-  - key: boot_count
+  - key: battery_health
+    type: float
+    itemType: ''
+    description: Percent value indicating the remaining charge of the batteries.
+    derivedFrom: ''
+  - key: mode
     type: integer
     itemType: ''
-    description: Number of times the computer has rebooted.
+    description: "Integer value indicating current mission mode. 0 = Safe, 1 = mission mode 1, 2 = mission mode 2, 3 = mission mode 3."
     derivedFrom: ''
-  - key: boot_time
-    type: string
+  - key: tle_data
+    type: 3-DataStructures/4-TLE.yaml
     itemType: ''
-    description: The time stamp when the computer last booted.
-    derivedFrom: ''
-  - key: operational_status_of_equipment
-    type: string
-    itemType: ''
-    description: The operation status of the equipment.
-    derivedFrom: ''
-  - key: redundancy_status
-    type: string
-    itemType: ''
-    description: The redundancy status of the satellite.
-    derivedFrom: ''
-  - key: altitude_data
-    type: float
-    itemType: ''
-    description: The altitude data of the satellite.
-    derivedFrom: ''
-  - key: lattitude
-    type: float
-    itemType: ''
-    description: Lattitude coordinate of the satellite.
-    derivedFrom: ''
-  - key: longitude
-    type: float
-    itemType: ''
-    description: Longitude coordinate of the satellite.
+    description: TLE data from orbit propogator at time of beacon.
     derivedFrom: ''
 derivedFrom:
 - "2-UserStories/2-ViewSatelliteHealthDataPacket.yaml"
+- "2-UserStories/4.1-RequestSatelliteHealthData.yaml"
