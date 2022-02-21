@@ -1,5 +1,5 @@
 name: TLE
-purpose: Data structure for the first line of the TLE data
+purpose: Data structure for the TLE data
 template: |
   tle_line_1: {{tle_line_1}}
   tle_line_2: {{tle_line_2}}
