@@ -22,7 +22,7 @@ elements:
     description: "Integer value indicating current mission mode. 0 = Safe, 1 = mission mode 1, 2 = mission mode 2, 3 = mission mode 3."
     derivedFrom: ''
   - key: tle_data
-    type: tle_now.yaml
+    type: 3-DataStructures/4-TLE.yaml
     itemType: ''
     description: TLE data from orbit propogator at time of beacon.
     derivedFrom: ''
