@@ -1,0 +1,84 @@
+name: TLE Line 1
+purpose: Data structure for the first line of the TLE data
+template: |
+  line_number: {{line_number}}
+  satellite_number: {{satellite_number}}
+  classification: {{classification}}
+  international_designator_1: {{international_designator_1}}
+  international_designator_2: {{international_designator_2}}
+  epoch_year: {{epoch_year}}
+  epoch: {{epoch}}
+  first_dt: {{first_dt}}
+  second_dt: {{second_dt}}
+  bstar: {{bstar}}
+  eph_type: {{eph_type}}
+  element_number: {{element_number}}
+  checksum: {{checksum}}
+elements:
+  - key: line_number
+    type: string
+    itemType: ''
+    description: Indicates which line of TLE data is for 
+    derivedFrom: ''
+  - key: satellite_number
+    type: string
+    itemType: ''
+    description: Satellite number
+    derivedFrom: ''
+  - key: classification
+    type: string
+    itemType: ''
+    description: Classification of satellite
+    derivedFrom: ''
+  - key: international_designator_1
+    type: string
+    itemType: ''
+    description: International designator 1 (last two digits of launch year) 
+    derivedFrom: ''
+  - key: international_designator_2
+    type: string
+    itemType: ''
+    description: International designator 2 (launch number of the year) 
+    derivedFrom: ''
+  - key: epoch_year
+    type: string
+    itemType: ''
+    description: Epoch year (last two digits of year) 
+    derivedFrom: ''
+  - key: epoch
+    type: string
+    itemType: ''
+    description: Epoch (day of the year and fractional portion of the day) 
+    derivedFrom: ''
+  - key: first_dt
+    type: string
+    itemType: ''
+    description: First time derivative of the mean motion 
+    derivedFrom: ''
+  - key: second_dt
+    type: string
+    itemType: ''
+    description: Second time derivative of the mean motion (leading decimal point assumed)
+    derivedFrom: ''
+  - key: bstar
+    type: string
+    itemType: ''
+    description: BSTAR drag term (leading decimal point assumed) 
+    derivedFrom: ''
+  - key: eph_type
+    type: string
+    itemType: ''
+    description: Ephemeris type 
+    derivedFrom: ''
+  - key: element_number
+    type: string
+    itemType: ''
+    description: Element number 
+    derivedFrom: ''
+  - key: checksum
+    type: string
+    itemType: ''
+    description: "Checksum (modulo 10) (letters, blanks, periods, plus signs = 0; minus signs = 1)"
+    derivedFrom: ''
+derivedFrom:
+- "0-References/8-TwoLineElementData.yaml"
