@@ -3,5 +3,7 @@ name: Deployable Composite Structure (DeCS) Payload Scheduler
 actor: Ground Station Operator 
 behavior: Schedule data recording at specfic time interval (or orbital location)
 rationale: Recording data for future transmission
-derivedFrom: []
+derivedFrom:
+- "1-StakeholderNeeds/2.2-SecondaryMissionObjective-B1.yaml"
+- "1-StakeholderNeeds/3.3-TertiaryMissionObjective-C3.yaml"
 example: Schedule data recording at specfic time interval  for Deployable Composite Structure Payload
