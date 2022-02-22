@@ -5,4 +5,4 @@ behavior: Schedule data recording at specfic time interval
 rationale: Recording data for future transmission
 derivedFrom:
 - "1-StakeholderNeeds/1.5-PrimaryMissionObjective-A5.yaml"
-example: Schedule data recording at specfic time interval  for Impedance Probe Payload
+example: Schedule data recording at specfic time interval for Impedance Probe Payload
