@@ -1,7 +1,7 @@
 id: 5.2
-name: CGA Payload Scheduler
+name: Impedance Probe Payload Scheduler
 actor: Ground Station Operator 
 behavior: Schedule data recording at specfic orbital location
 rationale: Recording data for future transmission
 derivedFrom: []
-example: Schedule data recording at specfic orbital location to another orbital location for CGA Payload
+example: Schedule data recording at specfic orbital location to another orbital location for impedance probe payload
