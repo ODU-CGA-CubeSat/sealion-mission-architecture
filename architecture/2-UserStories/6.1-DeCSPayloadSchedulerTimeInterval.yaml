@@ -1,7 +1,7 @@
 id: 6.1
-name: ODU Payload Scheduler
+name: Deployable Composite Structure (DeCS) Payload Scheduler
 actor: Ground Station Operator 
 behavior: Schedule data recording at specfic time interval (or orbital location)
 rationale: Recording data for future transmission
 derivedFrom: []
-example: Schedule data recording at specfic time interval  for ODU Payload?
+example: Schedule data recording at specfic time interval  for Deployable Composite Structure Payload
