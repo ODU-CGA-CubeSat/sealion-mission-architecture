@@ -3,5 +3,6 @@ name: Multi-spectral Sensor Scheduler
 actor: Ground Station Operator 
 behavior: Schedule data recording at specfic orbital location
 rationale: Recording data for future transmission
-derivedFrom: []
+derivedFrom:
+- "1-StakeholderNeeds/2.1-SecondaryMissionObjective-B1.yaml"
 example: Schedule data recording at specfic orbital location to another orbital location for Multi-spectral Sensor payload
