@@ -1,4 +1,4 @@
-id: 6.3
+id: 6.4
 name: Downlink Payload Data Time Interval
 actor: Ground Station Operator 
 behavior: Transmit time interval schedulered satellite recorded data to ground station  
