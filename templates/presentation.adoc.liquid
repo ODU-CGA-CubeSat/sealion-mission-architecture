@@ -1,19 +1,24 @@
-= {{architecture.package.description}}
-:revnumber: v{{architecture.package.version}}
-:toc: left
+= Flight Software Systems Architecture for the Sealion Mission
+:presentation_title: Flight Software Systems Architecture for the Sealion Mission
 
-ifndef::backend-pdf[]
-image:https://img.shields.io/badge/License-MIT-yellow.svg[MIT License, link=https://opensource.org/licenses/MIT]
-image:https://img.shields.io/badge/Contribute%20on-GitHub-orange[Contribute on GitHub, link={{architecture.package.repository}}]
-image:https://img.shields.io/badge/Download%20-PDF-blue[Download PDF, link={{architecture.package.homepage}}/{{architecture.package.name}}.pdf]
-image:https://img.shields.io/badge/View%20-Presentation-green[Download PDF, link={{architecture.package.homepage}}/presentation.html]
-endif::[]
+v{{architecture.package.version}}
 
-<<<
+by Robert Borowicz, Patrick Clark, Kevin Chiu, Gonzalo Fernandez Mediavilla, Bhagatji Jimesh, Sean Marquez, Payal Nandi, Joseph Siciliano, & Gus Williams
+
+== Homepage
+
+{{architecture.package.homepage}}
+
+== Design Philosophy
+
+The {presentation_title} follows a https://www.writethedocs.org/guide/docs-as-code/[docs-as-code] & https://www.writethedocs.org/videos/portland/2019/lessons-learned-in-a-year-of-docs-driven-development-jessica-parsons/[docs-driven development] approach, as to ensure:
+
+* Documentation and development are tightly coupled.
+* No requirement or feature goes undocumented.
 
 == Stakeholder Needs
  
-The {{architecture.package.description}} is guided by a series of stakeholder needs, listed below.
+The {presentation_title} is guided by a series of stakeholder needs...
 
 {% for need in architecture['1-StakeholderNeeds'] %}
 === {{need.id}}: {{need.name}}
@@ -35,7 +40,7 @@ The {{architecture.package.description}} is guided by a series of stakeholder ne
 
 == User Stories
 
-The {{architecture.package.description}}'s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.
+The {presentation_title}'s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.
 
 {% for us in architecture['2-UserStories'] %}
 === {{us.id}}: {{us.name}}
@@ -71,19 +76,18 @@ include::./use-case-diagram.puml[User Stories as Use Case Diagram]
 ....
 
 == Data Structures
-This section covers each data structure type in the *{{architecture.package.description}}*.
+This section covers each data structure type in the *{presentation_title}*.
 
 {% for ds in architecture['3-DataStructures'] %}
 === {{ds.name}}
 *Purpose:* {{ds.purpose}}
 
-.{{ds.name}} Template
+=== {{ds.name}} Template
 ----
 {{ds.template}}
 ----
 
-.{{ds.name}} Specification
-[cols="1,1,1,5,1"]
+=== {{ds.name}} Specification
 |===
 |Field |Type |Item Type |Description |Source
 
