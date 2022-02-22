@@ -1,6 +1,6 @@
 :toc:
 :toclevels: 3
-:repo-title: https://github.com/ODU-CGA-CubeSat/mission-conops[SeaLion Mission ConOps]
+:repo-title: https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture[SeaLion Mission ConOps]
 
 = Maintainer's Guide
 
