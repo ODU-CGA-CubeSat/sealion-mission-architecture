@@ -10,10 +10,11 @@
 * Create Finite State Machine
 * Add dilophos (flight software repository) as a submodule to sealion-obc components
 * Correct name changes and verbiage in mission objectives
-* Satellite Health Data Packet editted
-* Satellite AODS IC Data template added
-* Satellite AODS Sensor Data template added
+* Edit Satellite Health Data Packet
+* Add Satellite AODS IC Data template
+* Add Satellite AODS Sensor Data template
 * User stories as Use Case Diagram added
+* Add users stories for Payload Scheduler
 * Create presenation slides for CDR
 * Create PDF for CDR
 
