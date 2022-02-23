@@ -56,7 +56,7 @@ As a *{{us.actor}}* I want to *{{us.behavior}}* so that I can *{{us.rationale}}*
 * {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
 {% endif %}
 {% if architecture['elements'][derivedFromItem].name %}
-* xref:{doc-name}#_{{architecture['elements'][derivedFromItem].id | downcase | replace: " ", "_" | replace: ".", "_"}}_{{architecture['elements'][derivedFromItem].name | downcase | replace: " ", "_"}}[{{architecture['elements'][derivedFromItem].name}}]
+* xref:{{architecture.package.name}}#_{{architecture['elements'][derivedFromItem].id | downcase | replace: " ", "_" | replace: ".", "_"}}_{{architecture['elements'][derivedFromItem].name | downcase | replace: " ", "_"}}[{{architecture['elements'][derivedFromItem].name}}]
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -115,7 +115,7 @@ a|{% for reference in field.derivedFrom %}
 * {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
 {% endif %}
 {% if architecture['elements'][derivedFromItem].name %}
-* xref:{doc-name}#_{{architecture['elements'][derivedFromItem].id | downcase | replace: " ", "_" | replace: ".", "_"}}_{{architecture['elements'][derivedFromItem].name | downcase | replace: " ", "_"}}[{{architecture['elements'][derivedFromItem].name}}]
+* xref:{{architecture.package.name}}#_{{architecture['elements'][derivedFromItem].id | downcase | replace: " ", "_" | replace: ".", "_"}}_{{architecture['elements'][derivedFromItem].name | downcase | replace: " ", "_"}}[{{architecture['elements'][derivedFromItem].name}}]
 {% endif %}
 {% endfor %}
 {% endif %}
