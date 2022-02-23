@@ -1,8 +1,8 @@
 id: 5.2
 name: Impedance Probe Payload Scheduler
 actor: Ground Station Operator 
-behavior: Schedule data recording at specfic orbital location
-rationale: Recording data for future transmission
+behavior: schedule data collection to occur at specfied orbital position
+rationale: allow satellite mission modes to autonomously record data
 derivedFrom:
 - "1-StakeholderNeeds/1.5-PrimaryMissionObjective-A5.yaml"
 example: Schedule data recording at specfic orbital location to another orbital location for impedance probe payload
