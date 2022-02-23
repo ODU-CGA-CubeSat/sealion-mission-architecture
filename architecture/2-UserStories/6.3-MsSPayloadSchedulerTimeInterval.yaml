@@ -1,0 +1,8 @@
+id: 6.3
+name: Multi-spectral Sensor Payload Scheduler
+actor: Ground Station Operator 
+behavior: schedule data recording at specfic time interval 
+rationale: allow satellite mission modes to autonomously record data
+derivedFrom:
+- "1-StakeholderNeeds/2.1-SecondaryMissionObjective-B1.yaml"
+example: Schedule data recording at specfic time interval for Multi-spectral Sensor Payload

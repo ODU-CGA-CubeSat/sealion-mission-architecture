@@ -1,0 +1,8 @@
+id: 5.4
+name: Downlink Payload Data
+actor: Ground Station Operator 
+behavior: transmit scheduled satellite recorded payload data to ground station  
+rationale: vacant on-board memory for more data
+derivedFrom:
+- "1-StakeholderNeeds/1.3-PrimaryMissionObjective-A3.yaml"
+example: Start downlink scheduled payload data once the satellite is in line of sight
