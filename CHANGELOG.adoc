@@ -1,0 +1,44 @@
+=== Release 4.0.0 - Critical Design Review (CDR)
+
+* Rename components to be mission specific to Sealion
+* Update name to "sealion-cubesat" in package.json
+* Create user stories for ADS
+* Add reference for Two-Line Element (TLE) Data
+* TLE Line data templates added
+* Update package name to from "Sealion Mission Concept of Operations (ConOps)" to "Sealion Mission Architecture"
+* Specify subcomponents for Ground Station
+* Create Finite State Machine
+* Add dilophos (flight software repository) as a submodule to sealion-obc components
+* Correct name changes and verbiage in mission objectives
+* Edit Satellite Health Data Packet
+* Add Satellite AODS IC Data template
+* Add Satellite AODS Sensor Data template
+* User stories as Use Case Diagram added
+* Add users stories for Payload Scheduler
+* Create presenation slides for CDR
+* Create PDF for CDR
+
+=== Release 3.0.1
+
+* Added template for generating use-case diagram
+* Add Space Systems Engineering 14th Edition as reference
+* Update element types in Satellite Health Data Packet changed from float to string or integer
+
+=== Release 3.0.0
+
+* Rename VIR-s to Ms-S
+* Add references for Ground Data System and Mission Operations
+* Rename all files and references from .yml to .yaml
+* Corrections to Stakeholder Needs
+
+=== Release 2.0.0
+
+* Change snake_case to PascalCase
+* Update and rename components/cubesat/Payloads/package.json to components/cubesat/payloads/package.json
+* Define CubeSat subcomponents
+* Update mission objectives and add user stories for Satellite Health Data Packet
+* Specify data structure for Satellite Health Data Packet
+
+=== Release 1.0.0
+
+* This is the initial release of the Sealion Mission Architecture. See license file for terms of use.
