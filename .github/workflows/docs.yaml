@@ -9,6 +9,7 @@ on:
       - 'templates/**'
       - 'buildDocs.sh'
       - 'package.json'
+      - '.github/workflows/**'
 
 jobs:
   deploy:
