@@ -2,7 +2,7 @@ id: 6.2
 name: Impedance Probe Payload Scheduler
 actor: Ground Station Operator 
 behavior: schedule data recording at specfic time interval 
-rationale: recording data for future transmission
-derivedFrom:
+rationale: allow satellite mission modes to autonomously record
+dataderivedFrom:
 - "1-StakeholderNeeds/1.5-PrimaryMissionObjective-A5.yaml"
 example: Schedule data recording at specfic time interval for Impedance Probe Payload
