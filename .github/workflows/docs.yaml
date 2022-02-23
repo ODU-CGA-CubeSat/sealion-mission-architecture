@@ -8,6 +8,7 @@ on:
       - 'architecture/**'
       - 'templates/**'
       - 'buildDocs.sh'
+      - 'package.json'
 
 jobs:
   deploy:
