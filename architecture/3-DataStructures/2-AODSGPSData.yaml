@@ -1,0 +1,30 @@
+name: Satellite GPS Data
+purpose: Data structure for GPS data used for orbit propagation
+template: |
+  time_stamp: {{time_stamp}}
+  altitude_data_GPS: {{altitude_data}}
+  lattitude_GPS: {{lattitude}}
+  longitude_GPS: {{longitude}}
+elements:
+  - key: time_stamp
+    type: string
+    itemType: ''
+    description: Time stamp when GPS data was acquired.
+    derivedFrom: ''
+  - key: altitude_data_GPS
+    type: float
+    itemType: ''
+    description: The altitude data of the satellite from GPS.
+    derivedFrom: ''
+  - key: lattitude_GPS
+    type: float
+    itemType: ''
+    description: Lattitude coordinate of the satellite from GPS.
+    derivedFrom: ''
+  - key: longitude_GPS
+    type: float
+    itemType: ''
+    description: Longitude coordinate of the satellite from GPS.
+    derivedFrom: ''
+derivedFrom:
+- "4.1-RequestSatelliteHealthData.yaml"
