@@ -1,0 +1,7 @@
+id: 3.0
+name: Send Request to Set Interrupt Timer
+actor: Ground Station Operator
+behavior: send a request to set count value at which interrupt timers (s.a., beacon, GPS ping, or orbit propagator) are triggered
+rationale: finetune parameters for attitude or orbit analysis or to conserve power
+derivedFrom: []
+example: Update beacon rate to transmit every 30 minutes to conserve power
