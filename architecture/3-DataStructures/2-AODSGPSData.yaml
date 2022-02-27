@@ -26,5 +26,4 @@ elements:
     itemType: ''
     description: Longitude coordinate of the satellite from GPS.
     derivedFrom: ''
-derivedFrom:
-- "4.1-RequestSatelliteHealthData.yaml"
+derivedFrom: []
