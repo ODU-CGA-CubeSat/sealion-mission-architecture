@@ -27,5 +27,5 @@ elements:
     description: TLE data from orbit propogator at time of beacon.
     derivedFrom: ''
 derivedFrom:
-- "2-UserStories/2-ViewSatelliteHealthDataPacket.yaml"
+- "2-UserStories/2-ViewBeaconData.yaml"
 - "2-UserStories/4.1-RequestSatelliteHealthData.yaml"
