@@ -1,7 +1,0 @@
-id: 3.0
-name: Update Beacon Rate
-actor: Ground Station Operator 
-behavior: Update Beacon Rate
-rationale: Conserve power budget
-derivedFrom: []
-example: Update beacon rate to transmit every 30 minutes to conserve power
