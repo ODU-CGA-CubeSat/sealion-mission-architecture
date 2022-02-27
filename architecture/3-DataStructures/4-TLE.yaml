@@ -5,12 +5,12 @@ template: |
   tle_line_2: {{tle_line_2}}
 elements:
   - key: tle_line_1
-    type: 3-DataStructures/5-TLELine1.yaml
+    type: TLELine1
     itemType: ''
     description: Data for TLE line 1
     derivedFrom: ''
   - key: tle_line_2
-    type: 3-DataStructures/6-TLELine2.yaml
+    type: TLELine2
     itemType: ''
     description: Data for TLE line 2
     derivedFrom: ''
