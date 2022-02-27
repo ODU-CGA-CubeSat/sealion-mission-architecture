@@ -1,7 +1,7 @@
 id: 2
 name: View Satellite Beacon Data
 actor: Ground Station Operator
-behavior: view satellite beacon data
+behavior: view satellite beacon data (alternating between health & mission) data, received via UHF
 rationale: verify that satellite is operating nominally
 derivedFrom: []
 example: View satellite beacon data (health or mission data) to verify TLE's correspond with expected orbit profile and/or to validate that a mission mode was successful
