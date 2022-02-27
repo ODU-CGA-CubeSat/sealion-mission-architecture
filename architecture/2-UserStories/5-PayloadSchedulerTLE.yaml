@@ -1,7 +1,0 @@
-id: 5.0
-name: Payload Scheduler
-actor: Ground Station Operator 
-behavior: schedule data collection to occur at specfied orbital position
-rationale: allow satellite mission modes to autonomously record data
-derivedFrom: []
-example: ''

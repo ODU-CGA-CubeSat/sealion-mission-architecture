@@ -1,9 +1,0 @@
-id: 6.1
-name: Deployable Composite Structure (DeCS) Payload Scheduler
-actor: Ground Station Operator 
-behavior: schedule data recording at specfic time interval
-rationale: allow satellite mission modes to autonomously record data
-derivedFrom:
-- "1-StakeholderNeeds/2.2-SecondaryMissionObjective-B2.yaml"
-- "1-StakeholderNeeds/3.3-TertiaryMissionObjective-C3.yaml"
-example: Schedule data recording at specfic time interval  for Deployable Composite Structure Payload
