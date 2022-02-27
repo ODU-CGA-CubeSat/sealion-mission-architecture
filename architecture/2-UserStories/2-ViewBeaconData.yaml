@@ -12,4 +12,4 @@ derivedFrom:
 - "1-StakeholderNeeds/3.1-TertiaryMissionObjective-C1.yaml"
 - "1-StakeholderNeeds/3.2-TertiaryMissionObjective-C2.yaml"
 - "1-StakeholderNeeds/3.3-TertiaryMissionObjective-C3.yaml"
-example: View satellite beacon data (health or mission data) to verify TLE's correspond with expected orbit profile and/or to validate that a mission mode was successful
+example: View satellite beacon data (health or mission data) to verify that TLE's correspond with expected orbit profile and/or to validate that a mission mode was successful
