@@ -4,12 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'architecture/**'
-      - 'templates/**'
-      - 'buildDocs.sh'
-      - 'package.json'
-      - '.github/workflows/**'
 
 jobs:
   deploy:
