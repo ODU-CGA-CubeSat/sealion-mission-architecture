@@ -1,8 +1,0 @@
-id: 4.2
-name: Request Satellite AODS Sensor Data
-actor: Ground Station Operator
-behavior: request satellite AODS sensor data
-rationale: verify AODS sensor data yields nominal parameters
-derivedFrom:
-- "2-UserStories/4-RequestTelemetryData.yaml"
-example: Request satellite AODS sensor data for verifying AODS sensor data corresponds with a known magnetic field, light source, and/or change in orientation w.r.t. satellites body frame of reference
