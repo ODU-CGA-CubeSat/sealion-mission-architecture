@@ -1,3 +1,29 @@
+=== Release 5.0.0 - Critical Design Review (CDR)
+
+* Update dilophos to v0.1.0
+* Add battery temperature data to health packet 
+* Add user story for requesting mission data
+* Add user story 4.2 in derivedFrom in MissionData
+* Replace user story 4.2 w/ request for mission data
+* Add data structure for mission data
+* Update verbiage in user story 4.1 example
+* Add user story for requesting downlink via s-band
+* Shorten example for user story 4.1
+* Append detail to TLE data structure purpose
+* Replace AODS IC with AODS GPS Data
+* Fix tle_line_1 & tle_line_2 type in TLE
+* Fix tle_data type in SatelliteHealth datastructure
+* Update derivedFrom in ViewBeaconData user story
+* Append detail to behavior in user story 2
+* Remove user story 2.1
+* Update derivedFrom in health data structure
+* Update beacon to refer to health or mission data
+* Replace payload user stories for scheduling with updating mission mode duration
+* Update user story 3 to include any interrupt timer
+* Bump major version no. in package.json
+* Add user story for requesting to set MM duration
+* Remove user stories 5-6 for payload scheduler
+
 === Release 4.0.0 - Critical Design Review (CDR)
 
 * Rename components to be mission specific to Sealion
