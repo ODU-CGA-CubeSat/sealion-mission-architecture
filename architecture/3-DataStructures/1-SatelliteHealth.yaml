@@ -3,6 +3,7 @@ purpose: Data structure for satellite health data packet used for beacon telemet
 template: |
   call_sign: {{call_sign}}
   battery_health: {{battery_health}}
+  temperature_battery: {{temperature_battery}}
   mode: {{mode}}
   tle_data: {{tle_data}}
 elements:
@@ -15,6 +16,11 @@ elements:
     type: float
     itemType: ''
     description: Percent value indicating the remaining charge of the batteries.
+    derivedFrom: ''
+  - key: temperature_battery
+    type: float
+    itemType: ''
+    description: The temperature of the battery. Units in Kelvin.
     derivedFrom: ''
   - key: mode
     type: integer
