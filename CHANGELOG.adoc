@@ -1,5 +1,6 @@
 === Release 5.0.0 - Critical Design Review (CDR)
 
+* update dilophos to v0.1.0
 * add battery temperature data to health packet 
 * add user story for requesting mission data
 * add user story 4.2 in derivedFrom in MissionData
