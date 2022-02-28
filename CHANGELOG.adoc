@@ -22,7 +22,7 @@
 * update user story 3 to include any interrupt timer
 * bump major version no. in package.json
 * add user story for requesting to set MM duration
-* remove user stories 6-6 for payload scheduler
+* remove user stories 5-6 for payload scheduler
 
 === Release 4.0.0 - Critical Design Review (CDR)
 
