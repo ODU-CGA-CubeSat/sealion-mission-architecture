@@ -6,4 +6,4 @@ rationale: verify/validate AODS sensors & GPS data are within nominal parameters
 derivedFrom:
 - "2-UserStories/4-RequestTelemetryData.yaml"
 - "1-StakeholderNeeds/1.2-PrimaryMissionObjective-A2.yaml"
-example: Request satellite health data packet via s-band radio to verify or validate TLE data corresponds to expected orbit profile based on pre-computed orbit propagation model
+example: Request satellite health data packet via s-band radio to verify or validate TLE data corresponding to expected orbit profile based on pre-computed orbit propagation model
