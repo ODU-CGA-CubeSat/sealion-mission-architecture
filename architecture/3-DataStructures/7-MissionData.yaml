@@ -28,3 +28,4 @@ elements:
     derivedFrom: []
 derivedFrom:
   - "2-UserStories/2-ViewBeaconData.yaml"
+  - "2-UserStories/4.2-RequestMissionData.yaml"
