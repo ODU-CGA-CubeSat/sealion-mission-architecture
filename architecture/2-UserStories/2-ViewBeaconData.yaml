@@ -1,7 +1,7 @@
 id: 2
 name: View Satellite Beacon Data
 actor: Ground Station Operator
-behavior: view satellite beacon data (alternating between health & mission) data, received via UHF
+behavior: view satellite beacon data (alternating between health & mission data), received via UHF
 rationale: verify that satellite is operating nominally
 derivedFrom:
 - "1-StakeholderNeeds/1.1-PrimaryMissionObjective-A1.yaml"
