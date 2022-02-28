@@ -131,7 +131,7 @@ Ping the satellite in order to establish UHF communication link with Virginia gr
 
 
 
-* xref:{doc-name}#_1_1_primary_mission_objective_a1[Primary Mission Objective A1]
+* xref:#_1_1_primary_mission_objective_a1[Primary Mission Objective A1]
 
 
 
@@ -153,42 +153,42 @@ View satellite beacon data (health or mission data) to verify that TLE's corresp
 
 
 
-* xref:{doc-name}#_1_1_primary_mission_objective_a1[Primary Mission Objective A1]
+* xref:#_1_1_primary_mission_objective_a1[Primary Mission Objective A1]
 
 
 
 
-* xref:{doc-name}#_1_3_primary_mission_objective_a3[Primary Mission Objective A3]
+* xref:#_1_3_primary_mission_objective_a3[Primary Mission Objective A3]
 
 
 
 
-* xref:{doc-name}#_1_5_primary_mission_objective_a5[Primary Mission Objective A5]
+* xref:#_1_5_primary_mission_objective_a5[Primary Mission Objective A5]
 
 
 
 
-* xref:{doc-name}#_2_1_secondary_mission_objective_b1[Secondary Mission Objective B1]
+* xref:#_2_1_secondary_mission_objective_b1[Secondary Mission Objective B1]
 
 
 
 
-* xref:{doc-name}#_2_2_secondary_mission_objective_b2[Secondary Mission Objective B2]
+* xref:#_2_2_secondary_mission_objective_b2[Secondary Mission Objective B2]
 
 
 
 
-* xref:{doc-name}#_3_1_tertiary_mission_objective_c1[Tertiary Mission Objective C1]
+* xref:#_3_1_tertiary_mission_objective_c1[Tertiary Mission Objective C1]
 
 
 
 
-* xref:{doc-name}#_3_2_tertiary_mission_objective_c2[Tertiary Mission Objective C2]
+* xref:#_3_2_tertiary_mission_objective_c2[Tertiary Mission Objective C2]
 
 
 
 
-* xref:{doc-name}#_3_3_tertiary_mission_objective_c3[Tertiary Mission Objective C3]
+* xref:#_3_3_tertiary_mission_objective_c3[Tertiary Mission Objective C3]
 
 
 
@@ -236,7 +236,7 @@ Request satellite health data packet to verify or validate TLE data correspondin
 
 
 
-* xref:{doc-name}#_4_request_telemetry_or_eventlog_data[Request Telemetry or EventLog Data]
+* xref:#_4_request_telemetry_or_eventlog_data[Request Telemetry or EventLog Data]
 
 
 
@@ -258,12 +258,12 @@ Request satellite health data packet via S-band radio to verify or validate TLE 
 
 
 
-* xref:{doc-name}#_4_request_telemetry_or_eventlog_data[Request Telemetry or EventLog Data]
+* xref:#_4_request_telemetry_or_eventlog_data[Request Telemetry or EventLog Data]
 
 
 
 
-* xref:{doc-name}#_1_2_primary_mission_objective_a2[Primary Mission Objective A2]
+* xref:#_1_2_primary_mission_objective_a2[Primary Mission Objective A2]
 
 
 
@@ -285,47 +285,47 @@ Request satellite mission data to verify that TLE's & AODS sensor data correspon
 
 
 
-* xref:{doc-name}#_4_request_telemetry_or_eventlog_data[Request Telemetry or EventLog Data]
+* xref:#_4_request_telemetry_or_eventlog_data[Request Telemetry or EventLog Data]
 
 
 
 
-* xref:{doc-name}#_1_1_primary_mission_objective_a1[Primary Mission Objective A1]
+* xref:#_1_1_primary_mission_objective_a1[Primary Mission Objective A1]
 
 
 
 
-* xref:{doc-name}#_1_3_primary_mission_objective_a3[Primary Mission Objective A3]
+* xref:#_1_3_primary_mission_objective_a3[Primary Mission Objective A3]
 
 
 
 
-* xref:{doc-name}#_1_5_primary_mission_objective_a5[Primary Mission Objective A5]
+* xref:#_1_5_primary_mission_objective_a5[Primary Mission Objective A5]
 
 
 
 
-* xref:{doc-name}#_2_1_secondary_mission_objective_b1[Secondary Mission Objective B1]
+* xref:#_2_1_secondary_mission_objective_b1[Secondary Mission Objective B1]
 
 
 
 
-* xref:{doc-name}#_2_2_secondary_mission_objective_b2[Secondary Mission Objective B2]
+* xref:#_2_2_secondary_mission_objective_b2[Secondary Mission Objective B2]
 
 
 
 
-* xref:{doc-name}#_3_1_tertiary_mission_objective_c1[Tertiary Mission Objective C1]
+* xref:#_3_1_tertiary_mission_objective_c1[Tertiary Mission Objective C1]
 
 
 
 
-* xref:{doc-name}#_3_2_tertiary_mission_objective_c2[Tertiary Mission Objective C2]
+* xref:#_3_2_tertiary_mission_objective_c2[Tertiary Mission Objective C2]
 
 
 
 
-* xref:{doc-name}#_3_3_tertiary_mission_objective_c3[Tertiary Mission Objective C3]
+* xref:#_3_3_tertiary_mission_objective_c3[Tertiary Mission Objective C3]
 
 
 
@@ -437,12 +437,12 @@ tle_data: {{tle_data}}
 
 
 
-* xref:{doc-name}#_2_view_satellite_beacon_data[View Satellite Beacon Data]
+* xref:#_2_view_satellite_beacon_data[View Satellite Beacon Data]
 
 
 
 
-* xref:{doc-name}#_4_1_request_satellite_health_data[Request Satellite Health Data]
+* xref:#_4_1_request_satellite_health_data[Request Satellite Health Data]
 
 
 
@@ -1169,12 +1169,12 @@ exit_tle: {{exit_tle}}
 
 
 
-* xref:{doc-name}#_2_view_satellite_beacon_data[View Satellite Beacon Data]
+* xref:#_2_view_satellite_beacon_data[View Satellite Beacon Data]
 
 
 
 
-* xref:{doc-name}#_4_2_request_satellite_mission_data[Request Satellite Mission Data]
+* xref:#_4_2_request_satellite_mission_data[Request Satellite Mission Data]
 
 
 
