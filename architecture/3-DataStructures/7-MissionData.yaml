@@ -1,0 +1,30 @@
+name: Mission Data
+purpose: Defines EVR (event) elements to be recorded to the eventLog during a mission mode
+template: |
+  entry_tle: {{entry_tle}}
+  obc_sensors: {{obc_sensors}}
+  mission_data: {{mission_data}}
+  exit_tle: {{exit_tle}}
+elements:
+  - key: entry_tle
+    type: TLE
+    itemType: ''
+    description: TLE at time of beginning of mission mode
+    derivedFrom: []
+  - key: obc_sensors
+    type: AODSSensorData
+    itemType: ''
+    description: AODS Sensor data
+    derivedFrom: []
+  - key: mission_data
+    type: string
+    itemType: ''
+    description: Data recorded during mission mode
+    derivedFrom: []
+  - key: exit_tle
+    type: TLE
+    itemType: ''
+    description: TLE at time of end of mission mode
+    derivedFrom: []
+derivedFrom:
+  - "2-UserStories/2-ViewBeaconData.yaml"
