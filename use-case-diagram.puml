@@ -1,0 +1,52 @@
+@startuml
+left to right direction
+skinparam linetype polyline
+
+/'
+skinparam linetype ortho
+'/
+
+frame "uc [ SeaLion Mission Architecture Use Case Diagram ]" {
+
+    rectangle gs as "Ground Station" {
+
+        
+        (Establish communication link with satellite)
+        
+        (verify that satellite is operating nominally)
+        
+        (finetune parameters for attitude or orbit analysis or to conserve power)
+        
+        (verify/validate health status or mission data)
+        
+        (verify/validate AODS sensors & GPS data are within nominal parameters)
+        
+        (verify/validate AODS sensors & GPS data are within nominal parameters)
+        
+        (validate in-orbit AODS and/or payload performance)
+        
+        (manage time spent per mission mode)
+        
+
+    }
+
+    
+    :Ground Station Operator: -- (Establish communication link with satellite)
+    
+    :Ground Station Operator: -- (verify that satellite is operating nominally)
+    
+    :Ground Station Operator: -- (finetune parameters for attitude or orbit analysis or to conserve power)
+    
+    :Ground Station Operator: -- (verify/validate health status or mission data)
+    
+    :Ground Station Operator: -- (verify/validate AODS sensors & GPS data are within nominal parameters)
+    
+    :Ground Station Operator: -- (verify/validate AODS sensors & GPS data are within nominal parameters)
+    
+    :Ground Station Operator: -- (validate in-orbit AODS and/or payload performance)
+    
+    :Ground Station Operator: -- (manage time spent per mission mode)
+    
+
+}
+@enduml

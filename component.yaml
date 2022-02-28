@@ -1,0 +1,364 @@
+name: sealion-mission-architecture
+version: 5.0.0
+description: SeaLion Mission Architecture
+license: MIT
+author: Sean Marquez <capsulecorplab@gmail.com> & contributors
+repository: 'https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture.git'
+dependencies:
+  js-yaml: ^3.12.0
+  liquidjs: ^6.1.1
+  minimist: ^1.2.0
+components:
+  sealion-cubesat:
+    name: sealion-cubesat
+    version: 0.1.0
+    description: Sealion Cubesat
+    license: MIT
+    author: Kevin Chiu <kchiu002@odu.edu> & contributors
+    repository: 'https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture.git'
+    dependencies: {}
+    components:
+      sealion-antenna:
+        name: sealion-antenna
+        version: 0.1.0
+        description: Sealion UHF and S-Band antenna
+        license: MIT
+        author: Bhagatji Jimesh jbhag001@odu.edu & contributors
+        dependencies: {}
+        components: {}
+        parts: {}
+        tools: {}
+      sealion-aods-sensors:
+        name: sealion-aods-sensors
+        version: 0.1.0
+        description: Sealion Attitude & Orbital Determination System (AODS) Sensors
+        license: MIT
+        author: Bhagatji Jimesh jbhag001@odu.edu & contributors
+        dependencies: {}
+        components: {}
+        parts: {}
+        tools: {}
+      sealion-cga-payload:
+        name: sealion-cga-payload
+        version: 0.1.0
+        description: Sealion U.S. Coast Guard Academy (CGA) Payload
+        license: MIT
+        author: Bhagatji Jimesh jbhag001@odu.edu & contributors
+        dependencies: {}
+        components: {}
+        parts: {}
+        tools: {}
+      sealion-communication-module:
+        name: sealion-communication-module
+        version: 0.1.0
+        description: Sealion Communication Module
+        license: MIT
+        author: Bhagatji Jimesh jbhag001@odu.edu & contributors
+        dependencies: {}
+        components: {}
+        parts: {}
+        tools: {}
+      sealion-obc:
+        name: sealion-obc
+        version: 0.1.0
+        description: Sealion On-Board Computer (OBC)
+        license: MIT
+        author: Bhagatji Jimesh jbhag001@odu.edu & contributors
+        dependencies: {}
+        components: {}
+        parts: {}
+        tools: {}
+      sealion-odu-payload:
+        name: sealion-odu-payload
+        version: 0.1.0
+        description: Sealion Old Dominion University (ODU) Payload
+        license: MIT
+        author: Bhagatji Jimesh jbhag001@odu.edu & contributors
+        dependencies: {}
+        components: {}
+        parts: {}
+        tools: {}
+      sealion-power-module:
+        name: sealion-power-module
+        version: 0.1.0
+        description: Sealion Power Module
+        license: MIT
+        author: Bhagatji Jimesh jbhag001@odu.edu & contributors
+        dependencies: {}
+        components: {}
+        parts: {}
+        tools: {}
+      sealion-structure:
+        name: sealion-structure
+        version: 0.1.0
+        description: Sealion Structure
+        license: MIT
+        author: Bhagatji Jimesh jbhag001@odu.edu & contributors
+        dependencies: {}
+        components: {}
+        parts: {}
+        tools: {}
+    parts:
+      structure:
+        id: structure
+        description: Stucture
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-structure
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'structure: Stucture'
+        descriptionSelected: 'structure: Stucture (Sealion Structure v0.1.0)'
+      power-module:
+        id: power-module
+        description: Power Module
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-power-module
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'power-module: Power Module'
+        descriptionSelected: 'power-module: Power Module (Sealion Power Module v0.1.0)'
+      communication-module:
+        id: communication-module
+        description: Communication Module
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-communication-module
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'communication-module: Communication Module'
+        descriptionSelected: >-
+          communication-module: Communication Module (Sealion Communication
+          Module v0.1.0)
+      obc:
+        id: obc
+        description: OBC
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-obc
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'obc: OBC'
+        descriptionSelected: 'obc: OBC (Sealion On-Board Computer (OBC) v0.1.0)'
+      odu-payload:
+        id: odu-payload
+        description: ODU Payload
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-odu-payload
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'odu-payload: ODU Payload'
+        descriptionSelected: >-
+          odu-payload: ODU Payload (Sealion Old Dominion University (ODU)
+          Payload v0.1.0)
+      cga-payload:
+        id: cga-payload
+        description: CGA Payload
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-cga-payload
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'cga-payload: CGA Payload'
+        descriptionSelected: >-
+          cga-payload: CGA Payload (Sealion U.S. Coast Guard Academy (CGA)
+          Payload v0.1.0)
+      aods-sensors:
+        id: aods-sensors
+        description: AODS Sensors
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-aods-sensors
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'aods-sensors: AODS Sensors'
+        descriptionSelected: >-
+          aods-sensors: AODS Sensors (Sealion Attitude & Orbital Determination
+          System (AODS) Sensors v0.1.0)
+      antenna:
+        id: antenna
+        description: Antenna
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-antenna
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'antenna: Antenna'
+        descriptionSelected: 'antenna: Antenna (Sealion UHF and S-Band antenna v0.1.0)'
+    tools: {}
+  sealion-ground-station:
+    name: sealion-ground-station
+    version: 0.1.0
+    description: Ground Station
+    license: MIT
+    author: Kevin Chiu <kchiu002@odu.edu> & contributors
+    repository: 'https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture.git'
+    dependencies: {}
+    components:
+      sealion-host-computer:
+        name: sealion-host-computer
+        version: 0.1.0
+        description: SeaLion Host Computer
+        license: MIT
+        author: Patrick Clark <pclar001@odu.edu> & contributors
+        repository: 'https://github.com/ODU-CGA-CubeSat/sealoin-mission-architecture.git'
+        dependencies: {}
+        components:
+          dell-optiplex-work-station:
+            name: dell-optiplex-work-station
+            version: 0.1.0
+            description: Dell Optiplex Work Station
+            license: MIT
+            author: Patrick Clark <pclar001@odu.edu> & contributors
+            repository: >-
+              https://github.com/ODU-CGA-CubeSat/sealoin-mission-architecture.git
+            dependencies: {}
+            components: {}
+            parts: {}
+            tools: {}
+          gnu-radio-software:
+            name: gnu-radio-software
+            version: 0.1.0
+            description: GNU Radio Software
+            license: MIT
+            author: Patrick Clark <pclar001@odu.edu> & contributors
+            repository: >-
+              https://github.com/ODU-CGA-CubeSat/sealoin-mission-architecture.git
+            dependencies: {}
+            components: {}
+            parts: {}
+            tools: {}
+          ubuntu-20.04-lts-operating-system:
+            name: ubuntu-20.04-lts-operating-system
+            version: 0.1.0
+            description: ubuntu 20.04 LTS Operating System
+            license: MIT
+            author: Patrick Clark <pclar001@odu.edu> & contributors
+            repository: >-
+              https://github.com/ODU-CGA-CubeSat/sealoin-mission-architecture.git
+            dependencies: {}
+            components: {}
+            parts: {}
+            tools: {}
+        parts:
+          sealion-host-computer:
+            id: sealion-host-computer
+            description: SeaLion Host Computer
+            quantity: 1
+            quantityUnits: unit
+            options:
+              - dell-optiplex-work-station
+            selectedOption: 0
+            notes: ''
+            descriptionLong: 'sealion-host-computer: SeaLion Host Computer'
+            descriptionSelected: >-
+              sealion-host-computer: SeaLion Host Computer (Dell Optiplex Work
+              Station v0.1.0)
+        tools: {}
+      sealion-sdr:
+        name: sealion-sdr
+        version: 0.1.0
+        description: SeaLion SDR
+        license: MIT
+        author: Patrick Clark <pclar001@odu.edu> & contributors
+        repository: 'https://github.com/ODU-CGA-CubeSat/sealoin-mission-architecture.git'
+        dependencies: {}
+        components:
+          ettus-usrp-b200:
+            name: ettus-usrp-b200
+            version: 0.1.0
+            description: Ettus USRP B200
+            license: MIT
+            author: Patrick Clark <pclar001@odu.edu> & contributors
+            repository: >-
+              https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture.git
+            dependencies: {}
+            components: {}
+            parts: {}
+            tools: {}
+          ettus-usrp-n200:
+            name: ettus-usrp-n200
+            version: 0.1.0
+            description: Ettus USRP N200
+            license: MIT
+            author: Patrick Clark <pclar001@odu.edu> & contributors
+            repository: >-
+              https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture.git
+            dependencies: {}
+            components: {}
+            parts: {}
+            tools: {}
+        parts:
+          sdr:
+            id: sdr
+            description: Software Defined Radio
+            quantity: 1
+            quantityUnits: unit
+            options:
+              - ettus-usrp-b200
+              - ettus-usrp-n200
+            selectedOption: 0
+            notes: Selection 0 is tentative.
+            descriptionLong: 'sdr: Software Defined Radio'
+            descriptionSelected: 'sdr: Software Defined Radio (Ettus USRP B200 v0.1.0)'
+        tools: {}
+      sealion-transceiver-switch:
+        name: sealion-transceiver-switch
+        version: 0.1.0
+        description: SeaLion Transceiver Switch
+        license: MIT
+        author: Patrick Clark <pclar001@odu.edu> & contributors
+        repository: 'https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture.git'
+        dependencies: {}
+        components: {}
+        parts: {}
+        tools: {}
+    parts:
+      sdr:
+        id: sdr
+        description: SDR
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-sdr
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'sdr: SDR'
+        descriptionSelected: 'sdr: SDR (SeaLion SDR v0.1.0)'
+      host-computer:
+        id: host-computer
+        description: Host Computer
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-host-computer
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'host-computer: Host Computer'
+        descriptionSelected: 'host-computer: Host Computer (SeaLion Host Computer v0.1.0)'
+      transceiver-switch:
+        id: transceiver-switch
+        description: Transceiver Switch
+        quantity: 1
+        quantityUnits: unit
+        options:
+          - sealion-transceiver-switch
+        selectedOption: 0
+        notes: ''
+        descriptionLong: 'transceiver-switch: Transceiver Switch'
+        descriptionSelected: >-
+          transceiver-switch: Transceiver Switch (SeaLion Transceiver Switch
+          v0.1.0)
+    tools: {}
+parts: {}
+tools: {}
