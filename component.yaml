@@ -65,7 +65,18 @@ components:
         license: MIT
         author: Bhagatji Jimesh jbhag001@odu.edu & contributors
         dependencies: {}
-        components: {}
+        components:
+          dilophos:
+            name: dilophos
+            version: 0.1.0
+            description: Dilophosaurus Operating System (DilophOS)
+            license: MIT
+            author: Sean Marquez capsulecorplab@gmail.com & contributors
+            repository: 'https://github.com/ODU-CGA-CubeSat/dilophos.git'
+            dependencies: {}
+            components: {}
+            parts: {}
+            tools: {}
         parts: {}
         tools: {}
       sealion-odu-payload:
