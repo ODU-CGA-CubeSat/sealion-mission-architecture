@@ -1,7 +1,0 @@
-id: 2
-name: View Satellite Health Data Packet
-actor: Ground Station Operator 
-behavior: view satellite health data packet
-rationale: validate that satellite is operating nominally
-derivedFrom: []
-example: View satellite health data packet to verify or validate AODS sensor & GPS data is within nominal range and/or corresponds to expected orbit profile

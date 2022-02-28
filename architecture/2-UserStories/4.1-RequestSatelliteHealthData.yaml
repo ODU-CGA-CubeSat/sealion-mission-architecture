@@ -5,4 +5,4 @@ behavior: request satellite health data packet
 rationale: verify/validate AODS sensors & GPS data are within nominal parameters
 derivedFrom:
 - "2-UserStories/4-RequestTelemetryData.yaml"
-example: Request satellite health data packet to verify or validate AODS sensors and GPS data correspond to expected attitude and/or orbit profile based on pre-computed attitude or orbit propagation model
+example: Request satellite health data packet to verify or validate TLE data corresponding to expected orbit profile based on pre-computed orbit propagation model
