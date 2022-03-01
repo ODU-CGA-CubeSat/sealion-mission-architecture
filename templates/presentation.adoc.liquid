@@ -20,53 +20,20 @@ The {presentation_title} follows a https://www.writethedocs.org/guide/docs-as-co
  
 The {presentation_title} is guided by a series of stakeholder needs...
 
-{% for need in architecture['1-StakeholderNeeds'] %}
-=== {{need.id}}: {{need.name}}
-****
-{{need.statement}}
-**** 
-
-{% if need.derivedFrom.length > 0 %}
-==== *Reference:*
-
-{% for derivedFromItem in need.derivedFrom %}
-{% if architecture['elements'][derivedFromItem].url %}
-* {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
-{% endif %}
-{% endfor %}
-{% endif %}
-
-{% endfor %}
+[plantuml, stakeholder-needs-mapping, svg]
+....
+include::./stakeholder-needs-mapping.puml[Stakeholder Needs Mapping]
+....
 
 == User Stories
 
 The {presentation_title}'s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.
 
-{% for us in architecture['2-UserStories'] %}
-=== {{us.id}}: {{us.name}}
+[plantuml, user-stories-mapping, svg]
+....
+include::./user-stories-mapping.puml[User Stories Mapping]
+....
 
-****
-As a *{{us.actor}}* I want to *{{us.behavior}}* so that I can *{{us.rationale}}*.
-****
-
-==== Example:
-
-{{us.example}}
-
-{% if us.derivedFrom.length > 0 %}
-==== *Derived From:*
-
-{% for derivedFromItem in us.derivedFrom %}
-{% if architecture['elements'][derivedFromItem].url %}
-* {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
-{% endif %}
-{% if architecture['elements'][derivedFromItem].name %}
-* xref:#_{{architecture['elements'][derivedFromItem].id | downcase | replace: " ", "_" | replace: ".", "_"}}_{{architecture['elements'][derivedFromItem].name | downcase | replace: " ", "_"}}[{{architecture['elements'][derivedFromItem].name}}]
-{% endif %}
-{% endfor %}
-{% endif %}
-
-{% endfor %}
 
 === User stories as Use Case Diagram
 
@@ -78,53 +45,10 @@ include::./use-case-diagram.puml[User Stories as Use Case Diagram]
 == Data Structures
 This section covers each data structure type in the *{presentation_title}*.
 
-{% for ds in architecture['3-DataStructures'] %}
-=== {{ds.name}}
-*Purpose:* {{ds.purpose}}
-
-=== {{ds.name}} Template
-----
-{{ds.template}}
-----
-
-=== {{ds.name}} Specification
-|===
-|Field |Type |Item Type |Description |Source
-
-{% for field in ds['elements'] %}
-|{{field.key}}
-|{{field.type}}
-{% if architecture['elements'][field.itemType].name %}
-|{{architecture['elements'][field.itemType].name}}
-{% else %}
-|{{field.itemType}}
-{% endif %}
-|{{field.description}}
-{% if field.derivedFrom.length > 0 %}
-a|{% for reference in field.derivedFrom %}
-* {{architecture['elements'][reference].url}}[{{architecture['elements'][reference].title}}]
-{% endfor %}
-{% else %}
-|
-{% endif %}
-
-{% endfor %}
-|===
-
-{% if ds.derivedFrom.length > 0 %}
-==== *Derived From:*
-
-{% for derivedFromItem in ds.derivedFrom %}
-{% if architecture['elements'][derivedFromItem].url %}
-* {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
-{% endif %}
-{% if architecture['elements'][derivedFromItem].name %}
-* xref:#_{{architecture['elements'][derivedFromItem].id | downcase | replace: " ", "_" | replace: ".", "_"}}_{{architecture['elements'][derivedFromItem].name | downcase | replace: " ", "_"}}[{{architecture['elements'][derivedFromItem].name}}]
-{% endif %}
-{% endfor %}
-{% endif %}
-
-{% endfor %}
+[plantuml, data-structures-mapping, svg]
+....
+include::./data-structures-mapping.puml[Data Structures Mapping]
+....
 
 == Finite State Machine
 

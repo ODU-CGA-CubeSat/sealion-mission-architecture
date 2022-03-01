@@ -33,6 +33,13 @@ The {{architecture.package.description}} is guided by a series of stakeholder ne
 
 {% endfor %}
 
+=== Stakeholder Needs Mapping
+
+[plantuml, stakeholder-needs-mapping, svg]
+....
+include::./stakeholder-needs-mapping.puml[Stakeholder Needs Mapping]
+....
+
 == User Stories
 
 The {{architecture.package.description}}'s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.
@@ -62,6 +69,13 @@ As a *{{us.actor}}* I want to *{{us.behavior}}* so that I can *{{us.rationale}}*
 {% endif %}
 
 {% endfor %}
+
+=== User Stories Mapping
+
+[plantuml, user-stories-mapping, svg]
+....
+include::./user-stories-mapping.puml[User Stories Mapping]
+....
 
 === User stories as Use Case Diagram
 
@@ -121,6 +135,13 @@ a|{% for reference in field.derivedFrom %}
 {% endif %}
 
 {% endfor %}
+
+=== Data Structures Mapping
+
+[plantuml, data-structures-mapping, svg]
+....
+include::./data-structures-mapping.puml[Data Structures Mapping]
+....
 
 == Finite State Machine
 
