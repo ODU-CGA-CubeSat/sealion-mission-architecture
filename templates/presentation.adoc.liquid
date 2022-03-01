@@ -29,31 +29,11 @@ include::./stakeholder-needs-mapping.puml[Stakeholder Needs Mapping]
 
 The {presentation_title}'s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.
 
-{% for us in architecture['2-UserStories'] %}
-=== {{us.id}}: {{us.name}}
+[plantuml, user-stories-mapping, svg]
+....
+include::./user-stories-mapping.puml[User Stories Mapping]
+....
 
-****
-As a *{{us.actor}}* I want to *{{us.behavior}}* so that I can *{{us.rationale}}*.
-****
-
-==== Example:
-
-{{us.example}}
-
-{% if us.derivedFrom.length > 0 %}
-==== *Derived From:*
-
-{% for derivedFromItem in us.derivedFrom %}
-{% if architecture['elements'][derivedFromItem].url %}
-* {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
-{% endif %}
-{% if architecture['elements'][derivedFromItem].name %}
-* xref:#_{{architecture['elements'][derivedFromItem].id | downcase | replace: " ", "_" | replace: ".", "_"}}_{{architecture['elements'][derivedFromItem].name | downcase | replace: " ", "_"}}[{{architecture['elements'][derivedFromItem].name}}]
-{% endif %}
-{% endfor %}
-{% endif %}
-
-{% endfor %}
 
 === User stories as Use Case Diagram
 

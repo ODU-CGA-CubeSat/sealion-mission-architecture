@@ -40,6 +40,10 @@ docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/bui
 echo "generating stakeholder needs mapping..."
 docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/stakeholder-needs-mapping.puml.liquid --out=dist/stakeholder-needs-mapping.puml'
 
+# generate user stories mapping
+echo "generating user stories mapping..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/user-stories-mapping.puml.liquid --out=dist/user-stories-mapping.puml'
+
 # generate use-case-diagrams.puml from liquid template
 echo "generating use-case-diagrams.puml from liquid template..."
 docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/use-case-diagram.puml.liquid --out=dist/use-case-diagram.puml'

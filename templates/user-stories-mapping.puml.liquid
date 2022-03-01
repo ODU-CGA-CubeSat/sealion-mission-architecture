@@ -1,0 +1,39 @@
+@startuml
+left to right direction
+skinparam linetype polyline
+
+/'
+skinparam linetype ortho
+'/
+
+frame "uc [ {{architecture.package.description}} User Stories Mapping ]" {
+
+    {% for sn in architecture['1-StakeholderNeeds'] %}
+        card sn{{sn.id | replace: ".", "_"}} [
+            <<stakeholder need>>
+            <b>{{sn.id}} {{sn.name}}</b>
+        ]
+    {% endfor %}
+
+    {% for us in architecture['2-UserStories'] %}
+        card us{{us.id | replace: ".", "_"}} [
+            <<user story>>
+            <b>{{us.id}} {{us.name}}</b>
+            --
+            As an <b>{{us.actor}}</b> I want to <b>{{us.behavior}}</b> so that I can <b>{{us.rationale | replace: ".", "_"}}</b>
+        ]
+
+        {% if us.derivedFrom.length > 0 %}
+            {% for derivedFromItem in us.derivedFrom %}
+                {% if architecture['elements'][derivedFromItem].statement %}
+                    sn{{architecture['elements'][derivedFromItem].id | replace: ".", "_"}} -- us{{us.id | replace: ".", "_"}}
+                {% endif %}
+                {% if architecture['elements'][derivedFromItem].behavior %}
+                    us{{architecture['elements'][derivedFromItem].id | replace: ".", "_"}} -- us{{us.id | replace: ".", "_"}}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+}
+@enduml
