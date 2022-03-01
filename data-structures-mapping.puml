@@ -1,0 +1,238 @@
+@startuml
+left to right direction
+skinparam linetype polyline
+
+/'
+skinparam linetype ortho
+'/
+
+frame "uc [ SeaLion Mission Architecture Data Structures Mapping ]" {
+
+    
+        card us1 [
+            <<user story>>
+            <b>1 Ping Satellite</b>
+        ]
+    
+        card us2 [
+            <<user story>>
+            <b>2 View Satellite Beacon Data</b>
+        ]
+    
+        card us3 [
+            <<user story>>
+            <b>3 Send Request to Set Interrupt Timer</b>
+        ]
+    
+        card us4 [
+            <<user story>>
+            <b>4 Request Telemetry or EventLog Data</b>
+        ]
+    
+        card us4_1 [
+            <<user story>>
+            <b>4.1 Request Satellite Health Data</b>
+        ]
+    
+        card us4_1_1 [
+            <<user story>>
+            <b>4.1.1 Request Satellite Health Data via S-Band Radio</b>
+        ]
+    
+        card us4_2 [
+            <<user story>>
+            <b>4.2 Request Satellite Mission Data</b>
+        ]
+    
+        card us5 [
+            <<user story>>
+            <b>5 Send Request to Set Mission Mode Duration</b>
+        ]
+    
+
+    
+        class "<b>Satellite Health Data Packet</b>" as dssatellite_health_data_packet {
+            
+                string call_sign
+            
+                float battery_health
+            
+                float temperature_battery
+            
+                integer mode
+            
+                TLE tle_data
+            
+        }
+
+        
+            
+                
+                    us2 -- dssatellite_health_data_packet
+                
+            
+                
+                    us4_1 -- dssatellite_health_data_packet
+                
+            
+        
+    
+        class "<b>Satellite GPS Data</b>" as dssatellite_gps_data {
+            
+                string time_stamp
+            
+                float altitude_data_GPS
+            
+                float lattitude_GPS
+            
+                float longitude_GPS
+            
+        }
+
+        
+    
+        class "<b>Satellite AODS Sensor Data</b>" as dssatellite_aods_sensor_data {
+            
+                float imu_gyro_x
+            
+                float imu_gyro_y
+            
+                float imu_gyro_z
+            
+                float imu_magnetometer_x
+            
+                float imu_magnetometer_y
+            
+                float imu_magnetometer_z
+            
+                float sun_sensor_pitch_pos
+            
+                float sun_sensor_pitch_neg
+            
+                float sun_sensor_yaw_pos
+            
+                float sun_sensor_yaw_neg
+            
+                float sun_sensor_roll_pos
+            
+                float sun_sensor_roll_neg
+            
+                string time_stamp
+            
+        }
+
+        
+            
+                
+            
+        
+    
+        class "<b>TLE</b>" as dstle {
+            
+                TLELine1 tle_line_1
+            
+                TLELine2 tle_line_2
+            
+        }
+
+        
+            
+                
+            
+        
+    
+        class "<b>TLE Line 1</b>" as dstle_line_1 {
+            
+                string line_number
+            
+                string satellite_number
+            
+                string classification
+            
+                string international_designator_1
+            
+                string international_designator_2
+            
+                string international_designator_3
+            
+                string epoch_year
+            
+                string epoch
+            
+                string first_dt
+            
+                string second_dt
+            
+                string bstar
+            
+                string eph_type
+            
+                string element_number
+            
+                string checksum
+            
+        }
+
+        
+            
+                
+            
+        
+    
+        class "<b>TLE Line 2</b>" as dstle_line_2 {
+            
+                string line_number
+            
+                string satellite_number
+            
+                string inclination
+            
+                string raan
+            
+                string ecc
+            
+                string perigee
+            
+                string mean_anomaly
+            
+                string mean_motion
+            
+                string rev_epoch
+            
+                string checksum
+            
+        }
+
+        
+            
+                
+            
+        
+    
+        class "<b>Mission Data</b>" as dsmission_data {
+            
+                TLE entry_tle
+            
+                AODSSensorData obc_sensors
+            
+                string mission_data
+            
+                TLE exit_tle
+            
+        }
+
+        
+            
+                
+                    us2 -- dsmission_data
+                
+            
+                
+                    us4_2 -- dsmission_data
+                
+            
+        
+    
+
+}
+@enduml

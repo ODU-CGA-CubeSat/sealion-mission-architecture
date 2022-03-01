@@ -1,0 +1,253 @@
+@startuml
+left to right direction
+skinparam linetype polyline
+
+/'
+skinparam linetype ortho
+'/
+
+frame "uc [ SeaLion Mission Architecture User Stories Mapping ]" {
+
+    
+        card sn1_1 [
+            <<stakeholder need>>
+            <b>1.1 Primary Mission Objective A1</b>
+        ]
+    
+        card sn1_2 [
+            <<stakeholder need>>
+            <b>1.2 Primary Mission Objective A2</b>
+        ]
+    
+        card sn1_3 [
+            <<stakeholder need>>
+            <b>1.3 Primary Mission Objective A3</b>
+        ]
+    
+        card sn1_4 [
+            <<stakeholder need>>
+            <b>1.4 Primary Mission Objective A4</b>
+        ]
+    
+        card sn1_5 [
+            <<stakeholder need>>
+            <b>1.5 Primary Mission Objective A5</b>
+        ]
+    
+        card sn2_1 [
+            <<stakeholder need>>
+            <b>2.1 Secondary Mission Objective B1</b>
+        ]
+    
+        card sn2_2 [
+            <<stakeholder need>>
+            <b>2.2 Secondary Mission Objective B2</b>
+        ]
+    
+        card sn3_1 [
+            <<stakeholder need>>
+            <b>3.1 Tertiary Mission Objective C1</b>
+        ]
+    
+        card sn3_2 [
+            <<stakeholder need>>
+            <b>3.2 Tertiary Mission Objective C2</b>
+        ]
+    
+        card sn3_3 [
+            <<stakeholder need>>
+            <b>3.3 Tertiary Mission Objective C3</b>
+        ]
+    
+
+    
+        card us1 [
+            <<user story>>
+            <b>1 Ping Satellite</b>
+            --
+            As an <b>Ground Station Operator</b> I want to <b>Ping satellite</b> so that I can <b>Establish communication link with satellite</b>
+        ]
+
+        
+            
+                
+                    sn1_1 -- us1
+                
+                
+            
+        
+    
+        card us2 [
+            <<user story>>
+            <b>2 View Satellite Beacon Data</b>
+            --
+            As an <b>Ground Station Operator</b> I want to <b>view satellite beacon data (alternating between health & mission data), received via UHF</b> so that I can <b>verify that satellite is operating nominally</b>
+        ]
+
+        
+            
+                
+                    sn1_1 -- us2
+                
+                
+            
+                
+                    sn1_3 -- us2
+                
+                
+            
+                
+                    sn1_5 -- us2
+                
+                
+            
+                
+                    sn2_1 -- us2
+                
+                
+            
+                
+                    sn2_2 -- us2
+                
+                
+            
+                
+                    sn3_1 -- us2
+                
+                
+            
+                
+                    sn3_2 -- us2
+                
+                
+            
+                
+                    sn3_3 -- us2
+                
+                
+            
+        
+    
+        card us3 [
+            <<user story>>
+            <b>3 Send Request to Set Interrupt Timer</b>
+            --
+            As an <b>Ground Station Operator</b> I want to <b>send a request to set count value at which interrupt timers (i.e., beacon, GPS ping, or orbit propagator) are triggered</b> so that I can <b>finetune parameters for attitude or orbit analysis or to conserve power</b>
+        ]
+
+        
+    
+        card us4 [
+            <<user story>>
+            <b>4 Request Telemetry or EventLog Data</b>
+            --
+            As an <b>Ground Station Operator</b> I want to <b>Request satellite telemetry or eventlog data</b> so that I can <b>verify/validate health status or mission data</b>
+        ]
+
+        
+    
+        card us4_1 [
+            <<user story>>
+            <b>4.1 Request Satellite Health Data</b>
+            --
+            As an <b>Ground Station Operator</b> I want to <b>request satellite health data packet</b> so that I can <b>verify/validate AODS sensors & GPS data are within nominal parameters</b>
+        ]
+
+        
+            
+                
+                
+                    us4 -- us4_1
+                
+            
+        
+    
+        card us4_1_1 [
+            <<user story>>
+            <b>4.1.1 Request Satellite Health Data via S-Band Radio</b>
+            --
+            As an <b>Ground Station Operator</b> I want to <b>request satellite health data packet via S-band radio</b> so that I can <b>verify/validate AODS sensors & GPS data are within nominal parameters</b>
+        ]
+
+        
+            
+                
+                
+                    us4 -- us4_1_1
+                
+            
+                
+                    sn1_2 -- us4_1_1
+                
+                
+            
+        
+    
+        card us4_2 [
+            <<user story>>
+            <b>4.2 Request Satellite Mission Data</b>
+            --
+            As an <b>Ground Station Operator</b> I want to <b>request satellite mission data</b> so that I can <b>validate in-orbit AODS and/or payload performance</b>
+        ]
+
+        
+            
+                
+                
+                    us4 -- us4_2
+                
+            
+                
+                    sn1_1 -- us4_2
+                
+                
+            
+                
+                    sn1_3 -- us4_2
+                
+                
+            
+                
+                    sn1_5 -- us4_2
+                
+                
+            
+                
+                    sn2_1 -- us4_2
+                
+                
+            
+                
+                    sn2_2 -- us4_2
+                
+                
+            
+                
+                    sn3_1 -- us4_2
+                
+                
+            
+                
+                    sn3_2 -- us4_2
+                
+                
+            
+                
+                    sn3_3 -- us4_2
+                
+                
+            
+        
+    
+        card us5 [
+            <<user story>>
+            <b>5 Send Request to Set Mission Mode Duration</b>
+            --
+            As an <b>Ground Station Operator</b> I want to <b>send a request to set mission mode duration</b> so that I can <b>manage time spent per mission mode</b>
+        ]
+
+        
+    
+
+}
+@enduml

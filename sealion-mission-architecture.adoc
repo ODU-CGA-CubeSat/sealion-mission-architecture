@@ -105,6 +105,13 @@ The SeaLion shall verify DeCS in-orbit behavior performance.
 
 
 
+=== Stakeholder Needs Mapping
+
+[plantuml, stakeholder-needs-mapping, svg]
+....
+include::./stakeholder-needs-mapping.puml[Stakeholder Needs Mapping]
+....
+
 == User Stories
 
 The SeaLion Mission Architecture's stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.
@@ -339,6 +346,13 @@ send a request to set Mission Mode 1 duration to 25 minutes
 
 
 
+
+=== User Stories Mapping
+
+[plantuml, user-stories-mapping, svg]
+....
+include::./user-stories-mapping.puml[User Stories Mapping]
+....
 
 === User stories as Use Case Diagram
 
@@ -1182,6 +1196,13 @@ exit_tle: {{exit_tle}}
 
 
 
+
+=== Data Structures Mapping
+
+[plantuml, data-structures-mapping, svg]
+....
+include::./data-structures-mapping.puml[Data Structures Mapping]
+....
 
 == Finite State Machine
 
