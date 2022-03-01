@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+skinparam linetype polyline
+
+/'
+skinparam linetype ortho
+'/
+
+frame "uc [ {{architecture.package.description}} Stakeholder Needs Mapping ]" {
+
+    actor "ODU/CGA" <<stakeholder>> as sh
+
+    {% for sn in architecture['1-StakeholderNeeds'] %}
+        card sn{{sn.id | replace: ".", "_"}} [
+            <<stakeholder need>>
+            <b>{{sn.id}} {{sn.name}}</b>
+            --
+            {{sn.statement}}
+        ]
+        sh -- sn{{sn.id | replace: ".", "_"}}
+    {% endfor %}
+
+}
+@enduml

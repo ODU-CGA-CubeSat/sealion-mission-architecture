@@ -20,23 +20,10 @@ The {presentation_title} follows a https://www.writethedocs.org/guide/docs-as-co
  
 The {presentation_title} is guided by a series of stakeholder needs...
 
-{% for need in architecture['1-StakeholderNeeds'] %}
-=== {{need.id}}: {{need.name}}
-****
-{{need.statement}}
-**** 
-
-{% if need.derivedFrom.length > 0 %}
-==== *Reference:*
-
-{% for derivedFromItem in need.derivedFrom %}
-{% if architecture['elements'][derivedFromItem].url %}
-* {{architecture['elements'][derivedFromItem].url}}[{{architecture['elements'][derivedFromItem].title}}]
-{% endif %}
-{% endfor %}
-{% endif %}
-
-{% endfor %}
+[plantuml, stakeholder-needs-mapping, svg]
+....
+include::./stakeholder-needs-mapping.puml[Stakeholder Needs Mapping]
+....
 
 == User Stories
 

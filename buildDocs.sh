@@ -36,6 +36,10 @@ docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node dof-helpers/pa
 echo "Building the unified model..."
 docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/buildUnifiedModel.js && cp dist/architecture.yaml dist/architecture.yml'
 
+# generate stakeholder needs mapping
+echo "generating stakeholder needs mapping..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/stakeholder-needs-mapping.puml.liquid --out=dist/stakeholder-needs-mapping.puml'
+
 # generate use-case-diagrams.puml from liquid template
 echo "generating use-case-diagrams.puml from liquid template..."
 docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/use-case-diagram.puml.liquid --out=dist/use-case-diagram.puml'
