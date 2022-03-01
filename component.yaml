@@ -262,19 +262,41 @@ components:
             parts: {}
             tools: {}
         parts:
-          sealion-host-computer:
-            id: sealion-host-computer
-            description: SeaLion Host Computer
+          host-computer:
+            id: host-computer
+            description: Host Computer
             quantity: 1
             quantityUnits: unit
             options:
               - dell-optiplex-work-station
             selectedOption: 0
             notes: ''
-            descriptionLong: 'sealion-host-computer: SeaLion Host Computer'
+            descriptionLong: 'host-computer: Host Computer'
+            descriptionSelected: 'host-computer: Host Computer (Dell Optiplex Work Station v0.1.0)'
+          radio-software:
+            id: radio-software
+            description: Radio Software
+            quantity: 1
+            quantityUnits: unit
+            options:
+              - gnu-radio-software
+            selectedOption: 0
+            notes: ''
+            descriptionLong: 'radio-software: Radio Software'
+            descriptionSelected: 'radio-software: Radio Software (GNU Radio Software v0.1.0)'
+          linux-operating-system:
+            id: linux-operating-system
+            description: Linux Operating System
+            quantity: 1
+            quantityUnits: unit
+            options:
+              - ubuntu-20.04-lts-operating-system
+            selectedOption: 0
+            notes: ''
+            descriptionLong: 'linux-operating-system: Linux Operating System'
             descriptionSelected: >-
-              sealion-host-computer: SeaLion Host Computer (Dell Optiplex Work
-              Station v0.1.0)
+              linux-operating-system: Linux Operating System (ubuntu 20.04 LTS
+              Operating System v0.1.0)
         tools: {}
       sealion-sdr:
         name: sealion-sdr
