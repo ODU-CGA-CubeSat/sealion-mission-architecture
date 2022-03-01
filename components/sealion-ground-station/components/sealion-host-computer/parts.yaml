@@ -1,9 +1,27 @@
-sealion-host-computer:
-  id: sealion-host-computer
-  description: SeaLion Host Computer
+host-computer:
+  id: host-computer
+  description: Host Computer
   quantity: 1
   quantityUnits: unit
   options:
   - dell-optiplex-work-station
+  selectedOption: 0
+  notes: ''
+radio-software:
+  id: radio-software
+  description: Radio Software
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - gnu-radio-software
+  selectedOption: 0
+  notes: ''
+linux-operating-system:
+  id: linux-operating-system
+  description: Linux Operating System
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - ubuntu-20.04-lts-operating-system
   selectedOption: 0
   notes: ''
