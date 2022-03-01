@@ -48,6 +48,10 @@ docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/gen
 echo "generating use-case-diagrams.puml from liquid template..."
 docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/use-case-diagram.puml.liquid --out=dist/use-case-diagram.puml'
 
+# generate data structure mapping
+echo "generating data structure mapping..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/data-structures-mapping.puml.liquid --out=dist/data-structures-mapping.puml'
+
 # generate sealion-mission-architecture.adoc from liquid template
 echo "generating sealion-mission-architecture.adoc from liquid template..."
 docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/sealion-mission-architecture.adoc.liquid --out=dist/sealion-mission-architecture.adoc'

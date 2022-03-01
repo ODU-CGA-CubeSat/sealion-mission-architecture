@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+skinparam linetype polyline
+
+/'
+skinparam linetype ortho
+'/
+
+frame "uc [ {{architecture.package.description}} Data Structures Mapping ]" {
+
+    {% for us in architecture['2-UserStories'] %}
+        card us{{us.id | replace: ".", "_"}} [
+            <<user story>>
+            <b>{{us.id}} {{us.name}}</b>
+        ]
+    {% endfor %}
+
+    {% for ds in architecture['3-DataStructures'] %}
+        class "<b>{{ds.name}}</b>" as ds{{ds.name | downcase | replace: " ", "_"}} {
+            {% for element in ds.elements %}
+                {{element.type}} {{element.key}}
+            {% endfor %}
+        }
+
+        {% if ds.derivedFrom.length > 0 %}
+            {% for derivedFromItem in ds.derivedFrom %}
+                {% if architecture['elements'][derivedFromItem].behavior %}
+                    us{{architecture['elements'][derivedFromItem].id | replace: ".", "_"}} -- ds{{ds.name | downcase | replace: " ", "_"}}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+}
+@enduml
