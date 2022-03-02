@@ -78,3 +78,43 @@ echo "Generating presentation.adoc..."
 docker run --rm -v $PWD:/src -w /src node node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/presentation.adoc.liquid --out=dist/presentation.adoc
 echo "Generating presentation.html..."
 docker run --rm -v $PWD:/documents asciidoctor/docker-asciidoctor bash -c "cd dist && asciidoctor-revealjs -r asciidoctor-diagram -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0 -a revealjs_transition=slide -a revealjs_slideNumber=true -a revealjs_width=1100 -a revealjs_height=700 -D . 'presentation.adoc' -o 'presentation.html'"
+
+# generate components/sealion-cubesat/dist/component.yaml
+if [ ! -r ./components/sealion-cubesat/dist ]; then
+    echo "Creating components/sealion-cubesat/dist/ directory..."
+    mkdir components/sealion-cubesat/dist/
+fi
+echo "generating components/sealion-cubesat/dist/component.yaml..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'cd components/sealion-cubesat && node ../../dof-helpers/parseComponent.js'
+
+# generate dist/sealion-cubesat-assembly-instructions.adoc
+echo "generating dist/sealion-cubesat-assembly-instructions.adoc..."
+docker run --rm -v $PWD:/src -w /src node bash -c 'cd components/sealion-cubesat && node ../../dof-helpers/generateAssemblyInstructions.js && mv dist/assemblyInstructions.adoc ../../dist/sealion-cubesat-assembly-instructions.adoc'
+
+# generate dist/sealion-cubesat-assembly-instructions.html
+echo "generating dist/sealion-cubesat-assembly-instructions.html..."
+docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asciidoctor dist/sealion-cubesat-assembly-instructions.adoc -o dist/sealion-cubesat-assembly-instructions.html
+
+# generate dist/sealion-cubesat-assembly-instructions.pdf
+echo "generating dist/sealion-cubesat-assembly-instructions.pdf..."
+docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asciidoctor dist/sealion-cubesat-assembly-instructions.adoc -o dist/sealion-cubesat-assembly-instructions.pdf -r asciidoctor-pdf -b pdf
+
+# generate components/sealion-ground-station/dist/component.yaml
+if [ ! -r ./components/sealion-ground-station/dist ]; then
+    echo "Creating components/sealion-ground-station/dist/ directory..."
+    mkdir components/sealion-ground-station/dist/
+fi
+echo "generating components/sealion-ground-station/dist/component.yaml..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'cd components/sealion-ground-station && node ../../dof-helpers/parseComponent.js'
+
+# generate dist/sealion-ground-station-assembly-instructions.adoc
+echo "generating dist/sealion-ground-station-assembly-instructions.adoc..."
+docker run --rm -v $PWD:/src -w /src node bash -c 'cd components/sealion-ground-station && node ../../dof-helpers/generateAssemblyInstructions.js && mv dist/assemblyInstructions.adoc ../../dist/sealion-ground-station-assembly-instructions.adoc'
+
+# generate dist/sealion-ground-station-assembly-instructions.html
+echo "generating dist/sealion-ground-station-assembly-instructions.html..."
+docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asciidoctor dist/sealion-ground-station-assembly-instructions.adoc -o dist/sealion-ground-station-assembly-instructions.html
+
+# generate dist/sealion-ground-station-assembly-instructions.pdf
+echo "generating dist/sealion-ground-station-assembly-instructions.pdf..."
+docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asciidoctor dist/sealion-ground-station-assembly-instructions.adoc -o dist/sealion-ground-station-assembly-instructions.pdf -r asciidoctor-pdf -b pdf
