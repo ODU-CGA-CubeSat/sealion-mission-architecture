@@ -1,0 +1,26 @@
+= Model-Based CubeSat Flight-Software Architecture using a Docs-as-Code approach
+:bibtex-file: references.bib
+:bibtex-style: ieee
+:bibtex-order: appearance
+
+== Abstract
+
+Model-Based Systems Engineering (MBSE) is an approach to systems engineering whereby models,
+as opposed to documents,
+serve as the _authoritative source of truth_ for conducting systems engineering activities,
+such as the design, specification, analysis, verification & validation of a sytem cite:[architecting_spacecraft].
+
+For the SeaLion Mission, a joint CubeSat mission between the Old Dominion University and Coast Guard Academy,
+the flight software team adopted an MBSE approach to flight software architecture,
+using a docs-as-code approach,
+whereby the same tools and methodologies for managing software are also used for configuration management of documentation.
+Applying both an MBSE and docs-as-code approach means that aspects of the mission architecture,
+such as stakeholder needs, user stories, and data structures pertaining to the CubeSat mission,
+are captured are within a model that is both human-readable and machine-queryable.
+
+This article presents the modeling language, tools, and technical approach used to fascilitate the configuration management, design, specification, & implementation of the SeaLion mission architecture for the flight software. 
+
+== References
+
+bibliography::[]
+
