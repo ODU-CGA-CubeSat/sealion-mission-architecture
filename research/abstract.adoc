@@ -12,7 +12,7 @@ such as the design, specification, analysis, verification & validation of a syte
 
 For the SeaLion Mission, a joint CubeSat mission between the Old Dominion University and Coast Guard Academy,
 the flight software team adopted an MBSE approach to flight software architecture,
-using a docs-as-code approach,
+using a docs-as-code approach cite:[docs_as_code],
 whereby the same tools and methodologies for managing software are also used for configuration management of documentation.
 Applying both an MBSE and docs-as-code approach means that aspects of the mission architecture,
 such as stakeholder needs, user stories, and data structures pertaining to the CubeSat mission,
