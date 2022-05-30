@@ -3,12 +3,16 @@
 :bibtex-style: ieee
 :bibtex-order: appearance
 
-== Abstract
+== Introduction
 
 Model-Based Systems Engineering (MBSE) is an approach to systems engineering whereby models,
 as opposed to documents,
 serve as the _authoritative source of truth_ for conducting systems engineering activities,
 such as the design, specification, analysis, verification & validation of a sytem cite:[architecting_spacecraft].
+
+The NASA handbook on systems engineering can be applied to CubeSat Mission design,
+in effort to facilitate a top-down design methodology from mission concept to specification of subsystem components,
+including flight software architecture cite:[asundi13_cubes].
 
 For the SeaLion Mission, a joint CubeSat mission between the Old Dominion University and Coast Guard Academy,
 the flight software team adopted an MBSE approach to flight software architecture,
