@@ -102,18 +102,19 @@ The SeaLion Mission Architecture’s stakeholder needs are then used to identify
 
 include::tabulated-user-stories.adoc[]
 
-== Data Structures
+== Example Data Structure
 
-This section covers each data structure type in the SeaLion Mission Architecture.
+An example data structure can be derived from user stories.
 
 include::satellite-health-data.adoc[]
 
 == Conclusion & Future Works
 
-The methodology presented in this article is an effort to make the development process of a CubeSat more efficient.
-The ever growing number of CubeSat projects in existence means that a standardized and easy approach to systems engineering is required to ensure success despite their respective variability.
-Using a docs-as-code approach to flight software to manage both software and documentation has provided a highly organized template to base future developments on for the SeaLion project.
-Future actions include validating this approach as the flight software is created based on the docs-as-code approach.
+The methodology presented in this article is an effort to reduce the painpoints associated with traditional systems engineering for the CubeSat developers.
+The ever growing number of CubeSat projects in existence demands a lightweight model-based approach that can be adopted for implementing flight software, while minimizing configuration management overhead.
+Using a docs-as-code approach to flight software a means of tight coupling between both software and documentation,
+as well as providing a highly structured template to base future developments on for the CubeSat community.
+Future actions include validating this approach as the flight software is created based on the model-based docs-as-code approach.
 
 == References
 
