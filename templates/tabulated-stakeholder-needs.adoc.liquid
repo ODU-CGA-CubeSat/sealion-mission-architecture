@@ -1,0 +1,10 @@
+.Stakeholder Needs
+|===
+| ID / Name | Statement
+
+{% for need in architecture['1-StakeholderNeeds'] %}
+| *{{need.id}}*: {{need.name}}
+| {{need.statement}}{% if need.derivedFrom.length > 0 %}{% for derivedFromItem in need.derivedFrom %}{% if architecture['elements'][derivedFromItem].url %}footnote:{{derivedFromItem | replace: '0-References/', '' | replace: '.yaml', '' }}[{{architecture['elements'][derivedFromItem].title}} {{architecture['elements'][derivedFromItem].url}}]{% endif %}{% endfor %}{% endif %}
+
+{% endfor %}
+|===
