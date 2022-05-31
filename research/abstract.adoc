@@ -3,6 +3,10 @@
 :bibtex-style: ieee
 :bibtex-order: appearance
 
+ifndef::backend-pdf[]
+image:https://img.shields.io/badge/Download%20-PDF-blue[Download PDF, link=abstract.pdf]
+endif::[]
+
 == Introduction
 
 Model-Based Systems Engineering (MBSE) is an approach to systems engineering whereby models,
