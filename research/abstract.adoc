@@ -24,6 +24,44 @@ are captured are within a model that is both human-readable and machine-queryabl
 
 This article presents the modeling language, tools, and technical approach used to fascilitate the configuration management, design, specification, & implementation of the SeaLion mission architecture for the flight software. 
 
+== Background
+
+Information in Systems Engineering today is
+mostly captured informally,
+not authored based on a methodology,
+configuration managed in silo tools,
+adhocly and infrequently integrated,
+not easily traceable to its provenance,
+not properly configuration managed,
+not properly changed managed,
+and not effectively shared with stakeholders.
+
+The goal of the SeaLion CubeSat flight software architecture was to capture the data structures and expected behaviors of the flight software,
+such that it can be unambiguiously understood enough to be implemented,
+as well as provide full traceability and rationale for architectural elements with minimal configuration management overhead.
+
+The MBSE approach was of interest to SeaLion CubeSat flight software team,
+as to yield the benefits of reducing ambiguity that usually comes with using informal language for specifying aspects of a system,
+as well as minimizing duplication of content that tends to accumulate in a document-based systems engineering approach.
+
+Furthermore,
+it was also of interest to adopt a docs-as-code approach,
+as to yield the benefits of utilizing the same tools used to configuration manage code,
+using version control tools, s.a., Git,
+for the configuration management of flight software architecture documentation,
+captured in a model-based approach.
+
+Selection of a modeling language,
+modeling tool,
+and technical approach need be taken into consideration,
+in order to proper adopt an MBSE approach.
+
+Other considerations include overhead incurred with training the team,
+as well as technical overhead with setting up and maintaining the modeling tools.
+
+For the aforementioned reasons,
+the SeaLion CubeSat flight software team downselecting the Mach30 modeling language for specifying the SeaLion CubeSat flight software architecture.
+
 == References
 
 bibliography::[]
