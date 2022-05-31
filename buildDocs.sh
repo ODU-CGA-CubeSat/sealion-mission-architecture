@@ -78,3 +78,27 @@ echo "Generating presentation.adoc..."
 docker run --rm -v $PWD:/src -w /src node node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/presentation.adoc.liquid --out=dist/presentation.adoc
 echo "Generating presentation.html..."
 docker run --rm -v $PWD:/documents asciidoctor/docker-asciidoctor bash -c "cd dist && asciidoctor-revealjs -r asciidoctor-diagram -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0 -a revealjs_transition=slide -a revealjs_slideNumber=true -a revealjs_width=1100 -a revealjs_height=700 -D . 'presentation.adoc' -o 'presentation.html'"
+
+# generate tabulated-stakeholder-needs.adoc from liquid template for extended abstract
+echo "generating tabulated-stakeholder-needs.adoc from liquid template..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/tabulated-stakeholder-needs.adoc.liquid --out=dist/tabulated-stakeholder-needs.adoc'
+
+# create symbolic link for tabulated-stakeholder-needs.adoc
+echo "create symbolic link for tabulated-stakeholder-needs.adoc in research/..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/tabulated-stakeholder-needs.adoc research/tabulated-stakeholder-needs.adoc'
+
+# generate tabulated-user-stories.adoc from liquid template for extended abstract
+echo "generating tabulated-user-stories.adoc from liquid template..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/tabulated-user-stories.adoc.liquid --out=dist/tabulated-user-stories.adoc'
+
+# create symbolic link for tabulated-user-stories.adoc
+echo "create symbolic link for tabulated-user-stories.adoc in research/..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/tabulated-user-stories.adoc research/tabulated-user-stories.adoc'
+
+# generate abstract.html from liquid template for extended abstract
+echo "generating abstract.html..."
+docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asciidoctor research/abstract.adoc -o dist/abstract.html -r asciidoctor-pdf -r asciidoctor-diagram -r asciidoctor-bibtex
+
+# generate abstract.pdf from liquid template for extended abstract
+echo "generating abstract.pdf..."
+docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asciidoctor research/abstract.adoc -o dist/abstract.pdf -r asciidoctor-pdf -r asciidoctor-diagram -r asciidoctor-bibtex -b pdf
