@@ -95,6 +95,14 @@ docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/gen
 echo "create symbolic link for tabulated-user-stories.adoc in research/..."
 docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/tabulated-user-stories.adoc research/tabulated-user-stories.adoc'
 
+# generate satellite-health-data.adoc from liquid template for extended abstract
+echo "generating satellite-health-data.adoc from liquid template..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/satellite-health-data.adoc.liquid --out=dist/satellite-health-data.adoc'
+
+# create symbolic link for satellite-health-data.adoc
+echo "create symbolic link for satellite-health-data.adoc in research/..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/satellite-health-data.adoc research/satellite-health-data.adoc'
+
 # generate abstract.html from liquid template for extended abstract
 echo "generating abstract.html..."
 docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asciidoctor research/abstract.adoc -o dist/abstract.html -r asciidoctor-pdf -r asciidoctor-diagram -r asciidoctor-bibtex
