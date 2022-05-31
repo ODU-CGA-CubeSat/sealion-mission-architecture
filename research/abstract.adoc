@@ -62,6 +62,14 @@ as well as technical overhead with setting up and maintaining the modeling tools
 For the aforementioned reasons,
 the SeaLion CubeSat flight software team downselecting the Mach30 modeling language for specifying the SeaLion CubeSat flight software architecture.
 
+== Stakeholder Needs
+
+include::tabulated-stakeholder-needs.adoc[]
+
+== User Stories
+
+include::tabulated-user-stories.adoc[]
+
 == References
 
 bibliography::[]
