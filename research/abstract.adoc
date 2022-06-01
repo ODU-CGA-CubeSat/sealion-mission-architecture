@@ -113,7 +113,7 @@ include::satellite-health-data.adoc[]
 The methodology presented in this article is an effort to reduce the painpoints associated with traditional systems engineering for the CubeSat developers.
 The ever growing number of CubeSat projects in existence demands a lightweight model-based approach that can be adopted for implementing flight software, while minimizing configuration management overhead.
 Using a docs-as-code approach to flight software a means of tight coupling between both software and documentation,
-as well as providing a highly structured template to base future developments on for the CubeSat community.
+as well as providing a highly structured template to base future developments on for the CubeSat community cite:[sealion_mission_architecture].
 Future actions include validating this approach as the flight software is created based on the model-based docs-as-code approach.
 
 == References
