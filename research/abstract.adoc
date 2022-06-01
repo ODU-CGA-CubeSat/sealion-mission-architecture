@@ -4,7 +4,12 @@
 :bibtex-order: appearance
 
 [.text-center]
-Sharan Asundi <sasundi@odu.edu>, Sean Marquez <sean@space.coop>, Kevin Chiu <kchiu002@odu.edu>
+Sharan Asundi <sasundi@odu.edu>,
+Sean Marquez <sean@space.coop>,
+Kevin Chiu <kchiu002@odu.edu>,
+Gus Williams <awill098@odu.edu>,
+Jimesh D. Bhagatji <jbhag001@odu.edu>,
+Patrick Clark <pclar001@odu.edu>
 
 ifndef::backend-pdf[]
 image:https://img.shields.io/badge/Download%20-PDF-blue[Download PDF, link=abstract.pdf]
