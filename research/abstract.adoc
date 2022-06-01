@@ -9,23 +9,23 @@ endif::[]
 
 == Introduction
 
-Model-Based Systems Engineering is an approach to systems engineering
+Model-Based Systems Engineering (MBSE) is an approach to systems engineering
 whereby models serve as the _authoritative source of truth_ for conducting systems engineering activities,
-such as the design, specification, analysis, verification & validation of a sytem cite:[architecting_spacecraft].
+such as the design, specification, analysis, verification, and validation of a system cite:[architecting_spacecraft].
 
 The NASA handbook on systems engineering can be applied to CubeSat Mission design,
 in effort to facilitate a top-down design methodology from mission concept to specification of subsystem components,
 including flight software architecture cite:[asundi13_cubes].
 
 The SeaLion Mission,
-a joint CubeSat mission between the Old Dominion University and Coast Guard Academy,
+a joint CubeSat mission between the Old Dominion University (ODU) and Coast Guard Academy (CGA),
 adopted both a model-based and docs-as-code approach to developing a flight software architecture
-as a means to minimize configuration management overhead,
-while providing full traceability of requirements and component specifications of the flight software,
+as a means to minimize configuration management overhead.
+While also providing full traceability of requirements and component specifications of the flight software,
 such as stakeholder needs, user stories, and data structures pertaining to the CubeSat mission,
-are captured are within a model that yields deduplication of content both human-readable and machine-queryable.
+which are captured are within a model that yields deduplication of content both human-readable and machine-queryable.
 
-This article presents the modeling language, tools, and technical approach used to fascilitate the configuration management, design, specification, & implementation of the SeaLion mission architecture for the flight software. 
+This article presents the modeling language, tools, and technical approach used to fascilitate the configuration management, design, specification, and implementation of the SeaLion mission architecture for the flight software. 
 
 == Background
 
@@ -54,41 +54,41 @@ The goal of the SeaLion CubeSat flight software architecture was to capture the 
 such that it can be unambiguiously understood enough to be implemented,
 as well as provide full traceability and rationale for architectural elements with minimal configuration management overhead.
 
-The MBSE approach was of interest to SeaLion CubeSat flight software team,
+The MBSE approach was of interest to the SeaLion CubeSat flight software team,
 as to yield the benefits of reducing ambiguity that usually comes with using informal language for specifying aspects of a system,
 as well as minimizing duplication of content that tends to accumulate in a document-based systems engineering approach.
 
 Furthermore,
 it was also of interest to adopt a docs-as-code approach,
-as to yield the benefits of utilizing the same tools used to configuration manage code,
-using version control tools, s.a., Git cite:[docs_as_code].
+as to yield the benefits of utilizing the same tools used to manage code,
+using version control tools (e.g., Git),
 for the configuration management of flight software architecture documentation,
-captured in a model-based approach.
+captured in a model-based approach cite:[docs_as_code].
 
 Selection of a modeling language,
 modeling tool,
-and technical approach need be taken into consideration,
-in order to proper adopt an MBSE approach.
+and technical approach needs to be taken into consideration,
+in order to properly adopt a MBSE approach.
 
 Other considerations include overhead incurred with training the team,
 as well as technical overhead with setting up and maintaining the modeling tools.
 
 == Modeling Language, Tool, & Methodology
 
-The Mach30 modeling language is a YAML-based modeling language for defining a software architecture.
-Since YAML is a lightweight, highly-structured, human-readable, machine queryable, & line-oriented markup language,
+The Mach30 modeling language (m30ml) is a YAML-based modeling language for defining a software architecture.
+Since YAML is a lightweight, highly-structured, human-readable, machine queryable, and line-oriented markup language,
 it was ideal for document generation use cases,
-as well as use with version control tools like, Git.
+as well as use with version control tools like Git.
 
-Mach30's modeling language also had minimal technical overhead, as it was compatible with modern doctools,
+Mach30 also had minimal technical overhead as it was compatible with modern doc tools
 such as asciidoctor & bibtex.
 
-Mach30's modeling language also provided modeling elements familiar in agile software development,
-such as stakeholder needs, user stories, & data structures,
+Mach30 also provided modeling elements familiar in agile software development,
+such as stakeholder needs, user stories, and data structures,
 with relationship elements for defining traceability between modeling elements.
 
 For the aforementioned reasons,
-the SeaLion CubeSat flight software team downselected the Mach30 modeling language (m30ml) for specifying the SeaLion CubeSat flight software architecture cite:[mach30_git].
+the SeaLion CubeSat flight software team downselected m30ml for specifying the SeaLion CubeSat flight software architecture cite:[mach30_git].
 
 == Stakeholder Needs
 
@@ -98,21 +98,21 @@ include::tabulated-stakeholder-needs.adoc[]
 
 == User Stories
 
-The SeaLion Mission Architecture’s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.  These are created from the perspective of the ground station operator to define the tasks that need to be completed to satisfy the user stories.
+The SeaLion Mission Architecture’s stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions.  These are created from the perspective of the ground station operator to define the tasks that need to be completed to satisfy the user stories.  These user stories are listed in the following Table 2.
 
 include::tabulated-user-stories.adoc[]
 
 == Example Data Structure
 
-An example data structure can be derived from user stories.
+An example data structure can be derived from user stories as presented in Table 3.
 
 include::satellite-health-data.adoc[]
 
 == Conclusion & Future Works
 
 The methodology presented in this article is an effort to reduce the painpoints associated with traditional systems engineering for the CubeSat developers.
-The ever growing number of CubeSat projects in existence demands a lightweight model-based approach that can be adopted for implementing flight software, while minimizing configuration management overhead.
-Using a docs-as-code approach to flight software a means of tight coupling between both software and documentation,
+The ever growing number of CubeSat projects in existence demands a lightweight model-based approach that can be adopted for implementing flight software while minimizing configuration management overhead.
+Docs-as-code can be used as an approach to flight software for tight coupling between both software and documentation
 as well as providing a highly structured template to base future developments on for the CubeSat community cite:[sealion_mission_architecture].
 Future actions include validating this approach as the flight software is created based on the model-based docs-as-code approach.
 
