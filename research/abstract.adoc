@@ -55,7 +55,7 @@ and sharing with stakeholders.
 
 The goal of the SeaLion CubeSat flight software architecture was to capture the data structures and expected behaviors of the flight software,
 such that it can be unambiguiously understood enough to be implemented,
-as well as provide full traceability and rationale for architectural elements with minimal configuration management overhead.
+as well as provide full traceability and rationale for architectural elements with minimal configuration management overhead cite:[sealion_mission_architecture].
 
 The MBSE approach was of interest to the SeaLion CubeSat flight software team,
 as to yield the benefits of reducing ambiguity that usually comes with using informal language for specifying aspects of a system,
