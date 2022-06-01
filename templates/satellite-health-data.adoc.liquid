@@ -1,7 +1,7 @@
 {% assign ds = architecture['elements']['3-DataStructures/1-SatelliteHealth.yaml'] %}
 .{{ds.name}} Specification
 
-[cols="1,1,1,5,1"]
+[cols="1,1,1,5"]
 |===
 |Field |Type |Item Type |Description
 
@@ -19,7 +19,7 @@
 |===
 
 {% if ds.derivedFrom.length > 0 %}
-==== *Derived From:*
+*Derived From:*
 
 {% for derivedFromItem in ds.derivedFrom %}
 {% if architecture['elements'][derivedFromItem].url %}
