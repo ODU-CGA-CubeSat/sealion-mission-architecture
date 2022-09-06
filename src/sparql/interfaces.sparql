@@ -1,0 +1,16 @@
+PREFIX base:        <http://opencaesar.io/tutorial/vocabulary/base#>
+PREFIX mission:     <http://opencaesar.io/tutorial/vocabulary/mission#>
+
+SELECT DISTINCT ?c_id ?c_name ?i_id ?i_name
+
+WHERE {
+  [] a mission:Component ;
+    base:hasIdentifier ?c_id ;
+    base:hasCanonicalName ?c_name ;
+    mission:presents [
+      a mission:Interface ;
+      base:hasIdentifier ?i_id ;
+      base:hasCanonicalName ?i_name ;
+    ]
+}
+ORDER BY ?c_id ?i_id

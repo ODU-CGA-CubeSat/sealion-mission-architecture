@@ -1,0 +1,19 @@
+PREFIX base:        <http://opencaesar.io/tutorial/vocabulary/base#>
+PREFIX mission:     <http://opencaesar.io/tutorial/vocabulary/mission#>
+
+SELECT DISTINCT ?j_id ?j_name ?i1_id ?i1_name ?i2_id ?i2_name
+
+WHERE {
+  [] a mission:Junction ;
+    base:hasIdentifier ?j_id ;
+    base:hasCanonicalName ?j_name ;
+    mission:joins1 [
+      base:hasIdentifier ?i1_id ;
+      base:hasCanonicalName ?i1_name ;
+    ] ;
+    mission:joins2 [
+      base:hasIdentifier ?i2_id ;
+      base:hasCanonicalName ?i2_name ;
+    ] ;
+}
+ORDER BY ?j_id ?i1_id ?i2_id

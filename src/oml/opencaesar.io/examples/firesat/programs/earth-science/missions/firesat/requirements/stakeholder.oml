@@ -1,0 +1,24 @@
+@dc:title "FireSat Stakeholder Requirements"
+description <http://opencaesar.io/examples/firesat/programs/earth-science/missions/firesat/requirements/stakeholder#> as firesat-stakeholder-reqs {
+	
+	uses <http://purl.org/dc/elements/1.1/> as dc
+
+	uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+
+	uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+	
+	@rdfs:label "On-Orbit Design Lifetime"
+	ci OnOrbitDesignLifetime : mission:Requirement
+
+	@rdfs:label "LCC Budget"
+	ci LCCBudget : mission:Requirement [
+		mission:refines OnOrbitDesignLifetime
+	]
+
+	@rdfs:label "Ground System Interface"
+	ci GroundSystemInterface : mission:Requirement
+
+	@rdfs:label "Initial/Full Operational Capability"
+	ci InitialFullOperationalCapability : mission:Requirement
+
+}
