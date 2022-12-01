@@ -30,20 +30,18 @@ PLACEHOLDER
 
 {\renewcommand\arraystretch{1.0}
 \noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
-$A$  & amplitude of oscillation \\
-$a$ &    cylinder diameter \\
-$C_p$& pressure coefficient \\
-$Cx$ & force coefficient in the \textit{x} direction \\
-$Cy$ & force coefficient in the \textit{y} direction \\
-c   & chord \\
-d$t$ & time step \\
-$Fx$ & $X$ component of the resultant pressure force acting on the vehicle \\
-$Fy$ & $Y$ component of the resultant pressure force acting on the vehicle \\
-$f, g$   & generic functions \\
-$h$  & height \\
-$i$  & time index during navigation \\
-$j$  & waypoint index \\
-$K$  & trailing-edge (TE) nondimensional angular deflection rate
+$1U$ 1-Unit \\
+$3U$ 3-Unit \\
+$BOM$  & Bill of Materials \\
+$ConOps$  & Concept of Operations \\
+$DOF$  & Distributed OSHW Framework  \\
+$m30ml$  & mach30 modeling language \\
+$MBSE$ &    model-based systems engineering  \\
+$ODU$& Old Dominion University \\
+$OML$  & Ontological Modeling Language \\
+$OSHW$ & Open Source Hardware \\
+$USCGA$ & United Stated Coast Guard Academy \\
+$WFF$   & Wallops Flight Facility  
 \end{longtable*}}
 
 \section{Introduction}
@@ -51,11 +49,11 @@ $K$  & trailing-edge (TE) nondimensional angular deflection rate
 
 The m30ml was created based on a model-based systems engineering (MBSE) approach to systems engineering whereby models, as opposed to documents, serve as the authoritative source of truth for conducting systems engineering activities, such as the design, specification, analysis, verification & validation of a system \cite:{architecting_spacecraft}.
 
-For the SeaLion Mission, a joint CubeSat mission between the Old Dominion University and Coast Guard Academy, the flight software team adopted an MBSE approach to flight software architecture, using a docs-as-code approach \cite:{docs_as_code}, whereby the same tools and methodologies for managing software are also used for configuration management of documentation. Applying both an MBSE and docs-as-code approach means that aspects of the mission architecture, such as stakeholder needs, user stories, and data structures pertaining to the CubeSat mission, are captured are within a model that is both human-readable and machine-queryable.
+For the SeaLion Mission, a joint CubeSat mission between the Old Dominion University (ODU), Coast Guard Academy (USCGA), and the Air Force Institute of Technology (AFIT), the flight software team adopted an MBSE approach to flight software architecture, using a docs-as-code approach \cite:{docs_as_code}, whereby the same tools and methodologies for managing software are also used for configuration management of documentation. Applying both an MBSE and docs-as-code approach means that aspects of the mission architecture, such as stakeholder needs, user stories, and data structures pertaining to the CubeSat mission, are captured are within a model that is both human-readable and machine-queryable.
 
 \section{SeaLion Mission}
 
-The SeaLion mission is a collaborative mission between Old Dominion University (ODU), the United Stated Coast Guard Academy (USCGA), and the Air Force Institute of Technology (AFIT) to design and produce a 3-Unit (3U) CubeSat.
+The SeaLion mission is a collaborative mission between ODU, USCGA, and the AFIT to design and produce a 3-Unit (3U) CubeSat.
 
 SeaLion consists of three payloads for on-orbit validation.  ODU provided one payload while the USCGA and AFIT provided the other two payloads.  SeaLion is planned to fly as a secondary payload on a Northrop Grumman Antares Rocket from Wallops Flight Facility (WFF), currently scheduled for March, 2023 \cite:{sealion_cdr}.
 
@@ -86,19 +84,31 @@ Selection of a modeling language, modeling tool, and technical approach needs to
 
 Other considerations include overhead incurred with training the team, as well as technical overhead with setting up and maintaining the modeling tools.
 
+To achieve these goals m30ml should be able to perform the following:
+
+\begin{itemize}
+    \item Documents (both for mission and flight architecture) should be able to persist on a local system.
+    
+    \item Documents should be in plaintext as to be compatible with modern distributed version control system (e.g., git) and for ease of use.
+    
+    \item Documents should be able to sit alongside code and speak to one another.
+    
+    \item Documents should be model-based as to have a separation of concerns between content and formatting as well as be both human and machine-readable for querying and generating views.
+\end{itemize}
+
 \subsection{Model-Based Systems Engineering}
 
 Traditional approaches use documents as their authoritative source of truth for conducting system engineering activities \cite:{architecting_spacecraft}.  However, these documents often do not have a living relationship with other documents or to other corresponding elements; thus, changes to one document require manual changes to other documents \cite:{ibm_mbse}.  Models provide the following key advantages over document-based approaches \cite:{ibm_mbse}:
 
-\begin{enumerate}
-\item Information is readily communicated and shared within the project \cite:{ibm_mbse}.
-
-\item Changes are easily accommodated \cite:{ibm_mbse}.
-
-\item Traceability is automated \cite:{ibm_mbse}.
-
-\item PLACEHOLDER
-\end{enumerate}
+\begin{itemize}
+    \item Information is readily communicated and shared within the project \cite:{ibm_mbse}.
+    
+    \item Changes are easily accommodated \cite:{ibm_mbse}.
+    
+    \item Traceability is automated \cite:{ibm_mbse}.
+    
+    \item PLACEHOLDER
+\end{itemize}
 
 The m30ml MBSE approach uses the Docs as Code and the Ontological Modeling Language (OML) as its basis of design.
 
