@@ -80,7 +80,7 @@ The goal of the SeaLion CubeSat flight software architecture was to capture the 
 
 The MBSE approach was of interest to the SeaLion CubeSat flight software team, as to yield the benefits of reducing ambiguity that usually comes with using informal language for specifying aspects of a system, as well as minimizing duplication of content that tends to accumulate in a document-based systems engineering approach.
 
-Selection of a modeling language, modeling tool, and technical approach needs to be taken into consideration, in order to properly adopt a MBSE approach.  The m30ml MBSE approach uses the Docs as Code and the Ontological Modeling Language (OML) as its basis of design.
+Selection of a modeling language, modeling tool, and technical approach needs to be taken into consideration, in order to properly adopt a MBSE approach.  The m30ml MBSE approach uses the documentation as code, or also know as docs-as-code, approach and the Ontological Modeling Language (OML) as its basis of design.
 
 Other considerations include overhead incurred with training the team, as well as technical overhead with setting up and maintaining the modeling tools.
 
@@ -101,20 +101,18 @@ To achieve these goals m30ml should be able to perform the following:
 Traditional approaches use documents as their authoritative source of truth for conducting system engineering activities \cite:{architecting_spacecraft}.  However, these documents often do not have a living relationship with other documents or to other corresponding elements; thus, changes to one document require manual changes to other documents \cite:{ibm_mbse}.  Models provide the following key advantages over document-based approaches \cite:{ibm_mbse}:
 
 \begin{itemize}
-    \item Information is readily communicated and shared within the project \cite:{ibm_mbse}.
+    \item Information is readily communicated and shared within the project.
     
-    \item Changes are easily accommodated \cite:{ibm_mbse}.
+    \item Changes are easily accommodated.
     
-    \item Traceability is automated \cite:{ibm_mbse}.
-    
-    \item PLACEHOLDER
+    \item Traceability is automated.
 \end{itemize}
 
-The m30ml MBSE approach uses the Docs as Code and the Ontological Modeling Language (OML) as its basis of design.
+As mentioned prior, the m30ml MBSE approach uses the docs-as-code, approach and OML as its basis of design.
 
 \subsection{Docs As Code Approach}
 
-Documentation as Code, or also known as Docs as Code, refers to a philosophy that you should be writing documentation with the same tools as code \cite:{docs_as_code}.  These tools may include version control (e.g., Git), issue trackers, code tools, etc.
+Docs-as-code refers to a philosophy that team members should be writing documentation with the same tools as code \cite:{docs_as_code}.  These tools may include version control (e.g., Git), issue trackers, code tools, etc.
 
 \begin{quoting}
     This means following the same workflows as development teams, and being integrated in the product team. It enables a culture where writers and developers both feel ownership of documentation, and work together to make it as good as possible \cite:{docs_as_code}. 
@@ -128,13 +126,20 @@ PLACEHOLDER
 
 \section{Mach30 Modelling Language}
 
-The SeaLion Architecture uses m30ml to specify references, stakeholder needs, user stories, & data structures for facilitating traceability of design decisions within the Mission ConOps \cite:{mach30_git}.  The SeaLion repository is also structured as a Distributed OSHW Framework (DOF)-component for defining the contents of the Mission ConOps as a collection of nested subcomponents, component interfaces, and component functions for generating bill of materials (BOMs), assembly instructions, and/or usage documentation.
+The SeaLion Architecture uses m30ml to specify references, stakeholder needs, user stories, & data structures for facilitating traceability of design decisions within the Mission ConOps \cite:{mach30_git}.  The SeaLion repository is also structured as a Distributed Open Source Hardware (OSHW) Framework (DOF)-component for defining the contents of the Mission ConOps as a collection of nested subcomponents, component interfaces, and component functions for generating bill of materials (BOMs), assembly instructions, and/or usage documentation.
 
 This is all done in an effort to execute the project via a documentation as code philosophy. A philosophy in which documentation is written with the same tools as code \cite:{docs_as_code}. This allows for workflows between development teams to be more closely integrated.
 
 \subsection{Modeling Language, Tool, & Methodology}
 
-The Mach30 modeling language (m30ml) is a YAML-based modeling language for defining a software architecture. Since YAML is a lightweight, highly-structured, human-readable, machine queryable, and line-oriented markup language, it was ideal for document generation use cases, as well as use with version control tools like Git.
+The m30ml is a YAML-based modeling language for defining a software architecture. Since YAML is a lightweight, highly-structured, human-readable, machine queryable, and line-oriented markup language, it was ideal for document generation use cases, as well as use with version control tools like Git. The following \ref{user_story} showcases the simplicity of the YAML file.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=.5\textwidth]{ping_satellite}
+    \caption{An example YAML file for a user story.}
+    \label{user_story}
+\end{figure}
 
 Mach30 also had minimal technical overhead as it was compatible with modern doc tools such as asciidoctor & bibtex.
 
@@ -142,9 +147,15 @@ Mach30 also provided modeling elements familiar in agile software development, s
 
 For the aforementioned reasons, the SeaLion CubeSat flight software team downselected m30ml for specifying the SeaLion CubeSat flight software architecture \cite:{mach30_git}.
 
+\subsection{File Structure and Generation}
+
+The m30ml file structure for architecture is simple and easy to use. Architecture is split into the four folders of references, stakeholder needs, user stories, and datastructures. Datastructures are derived from user stories which are subsequently derived from stakeholder needs with their respective references. The continued link between their respective YAML files allows for continous path from which documents can be updated.
+
+The following PLACEHOLDER TABLE, PLACEHOLDER TABLE, and PLACEHOLDER TABLE are all automatically generated using the m30ml structure and injected directly into this article. Should any changes be made to the SeaLion architecture repository, the tables can be immediately regenerated for continous updates.
+
 \subsection{Stakeholder Needs}
 
-The SeaLion project's methodology documentation uses m30ml based on YAML architecture modeling tools. The first step to build the architecture is to define the stakeholder needs. The two stakeholders for Sealion are ODU and CGA with their respective needs categorized on priority from primary to secondary to tertiary. These stakeholder needs are listed in the following Table PLACEHOLDER.
+The SeaLion project's methodology documentation uses m30ml based on YAML architecture modeling tools. The first step to build the architecture is to define the stakeholder needs. The two primary stakeholders for Sealion are ODU and CGA with their respective needs categorized on priority from primary to secondary to tertiary. These stakeholder needs are listed in the following Table PLACEHOLDER.
 
 PLACEHOLDER TABLE
 
