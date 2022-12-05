@@ -17,13 +17,13 @@
 #    echo "Installing dof-helpers/node_modules..."
 #    docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'cd dof-helpers && npm ci'
 #fi
-#
-## Create dist/ directory, if none exists
-#if [ ! -r ./dist ]; then
-#    echo "Creating dist/ directory..."
-#    mkdir dist/
-#fi
-#
+
+# Create dist/ directory, if none exists
+if [ ! -r ./dist ]; then
+    echo "Creating dist/ directory..."
+    mkdir dist/
+fi
+
 ## copy operating-mode-as-fsm.puml to dist/...
 #echo "copying operating-mode-as-fsm.puml to dist/..."
 #docker run --rm -v $PWD:/src -w /src node bash -c 'cp ./components/sealion-cubesat/components/sealion-obc/components/dilophos/fsw-architecture/operating-mode-as-fsm.puml dist/'
