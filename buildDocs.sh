@@ -111,7 +111,7 @@
 #echo "generating abstract.pdf..."
 #docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asciidoctor research/abstract.adoc -o dist/abstract.pdf -r asciidoctor-pdf -r asciidoctor-diagram -r asciidoctor-bibtex -b pdf
 
-#### generate manuscript ####
+#### generate example manuscript ####
 # for linkml docker command usage, see https://hub.docker.com/r/linkml/linkml
 
 clitool="linkml-validate"
@@ -149,6 +149,55 @@ cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls 
 
 # https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
 cmd="pdflatex manuscript-example.tex && bibtex manuscript-example.aux && pdflatex manuscript-example.tex && pdflatex manuscript-example.tex"
+dockercmd="docker run --rm -v $PWD/dist:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
+condition="$clitool -version | grep '3.14159265-2.6-1.40.19' > /dev/null"
+
+if ! eval $condition; then
+    echo "Generating PDF document from LaTeX document of manuscript via docker..."
+    eval $(echo $dockercmd)
+else
+    echo "Generating PDF document from LaTeX document of manuscript..."
+    eval $cmd
+fi
+
+#### generate manuscript ####
+# for linkml docker command usage, see https://hub.docker.com/r/linkml/linkml
+
+clitool="linkml-validate"
+cmdargs="-s manuscript-metamodel.yaml manuscript.yaml"
+cmd="$clitool $cmdargs"
+dockercmd="docker run --rm -v $PWD/manuscript:/work -w /work linkml/linkml:1.3.14 $cmd"
+condition="$clitool --help | grep 'Validates instance data' > /dev/null"
+
+if ! eval $condition; then
+    echo "Validating linkml model of example manuscript via docker..."
+    eval $(echo $dockercmd)
+else
+    echo "Validating linkml model of example manuscript..."
+    eval $cmd
+fi
+
+clitool="jinja2"
+cmdargs="-o dist/manuscript.tex --format yaml templates/manuscript.tex.jinja2 manuscript/manuscript.yaml"
+#cmdargs="-o dist/title.tex --format yaml templates/title.tex.jinja2 manuscript/manuscript.yaml"
+cmd="$clitool $cmdargs"
+dockercmd="docker run --rm -v $PWD:/work -w /work roquie/docker-jinja2-cli $cmdargs"
+condition="$clitool --version | grep 'v0.8.2' > /dev/null"
+
+if ! eval $condition; then
+    echo "Generating LaTeX document from example manuscript linkml model and jinja2 template via docker..."
+    eval $(echo $dockercmd)
+else
+    echo "Generating LaTeX document from example manuscript linkml model and jinja2 template..."
+    eval $cmd
+fi
+
+echo "Copy LaTeX files and assets (required for generating PDF document) to dist/..."
+
+cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls assets/*
+
+# https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
+cmd="pdflatex manuscript.tex && bibtex manuscript.aux && pdflatex manuscript.tex && pdflatex manuscript.tex"
 dockercmd="docker run --rm -v $PWD/dist:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
 condition="$clitool -version | grep '3.14159265-2.6-1.40.19' > /dev/null"
 
