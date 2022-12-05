@@ -1,0 +1,37 @@
+id: https://github.com/odu-cga-cubesat/sealion-mission-architecture/tree/main/manuscript/manuscript-metamodel.yaml
+name: manuscript-metamodel
+prefixes:
+  linkml: https://w3id.org/linkml/
+imports:
+  - linkml:types
+default_range: string
+
+classes:
+  SharedAuthor:
+    attributes:
+      full_name:
+      footnote:
+  Author:
+    attributes:
+      author:
+        multivalued: true
+        inlined_as_list: true
+        range: SharedAuthor
+      affiliation:
+  Section:
+    attributes:
+      title: # string used for section name
+      content: # string containing LaTeX syntax, s.a., for a table of acronyms
+  Manuscript:
+    tree_root: true
+    attributes:
+      title:
+      authors:
+        multivalued: true
+        inlined_as_list: true
+        range: Author
+      abstract:
+      sections:
+        multivalued: true
+        inlined_as_list: true
+        range: Section
