@@ -1,22 +1,17 @@
 title: "Model-Based CubeSat Flight-Software Architecture using a Docs-as-Code Approach"
 authors:
   - author: 
-    - full_name: Sean Marquez and Kevin Chiu
-      footnote: Old Dominion University, Norfolk, VA, 23529
-    - full_name: Second B. Author Jr.
-      footnote: Insert Job Title, Department Name, Address/Mail Stop, and AIAA Member Grade (if any) for second author.
+    - full_name: Sean Marquez
+      footnote: 
+    - full_name: Kevin Chiu
+      footnote: 
     affiliation: Old Dominion University, Norfolk, VA, 23529
   - author:
     - full_name: Sharan Asundi, Ph.D.
       footnote: Assistant Professor, Department of Mechanical & Aerospace Engineering, Old Dominion University
-    - full_name: Third C. Author
-      footnote: Insert Job Title, Department Name, Address/Mail Stop, and AIAA Member Grade (if any) for third author.
     affiliation: Old Dominion University, Norfolk, VA, 23529
-  - author:
-    - full_name: Fourth D. Author
-      footnote: Insert Job Title, Department Name, Address/Mail Stop, and AIAA Member Grade (if any) for fourth author.
 abstract: |
-  These instructions give you guidelines for preparing papers for AIAA Technical Papers using \LaTeX{}. Define all symbols used in the abstract. Do not cite references in the abstract. The footnote on the first page should list the Job Title and AIAA Member Grade for each author, if known Authors do not have to be AIAA members.
+  This article presents a model-based systems engineering approach in conjunction with a docs-as-code approach for the SeaLion CubeSat misison. CubeSats are of inceasing population and thus, there is a need to have easy and ready to use tools for new developers such as students to use. A model-based approach allows allows models to be the authorative source of truth in place of documents and thus, allows for interconnectivity. The docs-as-code approach allows for local model building and allows code and documents to talk to one another. The Mach 30 Modeling Language was chosen as the basis for the SeaLion approach with the conjoined philosophies and its reseults are presented here with this very article being generated useing Mach30 as well.
 sections:
   - title: Nomenclature
     content: |
