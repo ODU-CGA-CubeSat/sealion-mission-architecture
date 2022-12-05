@@ -147,40 +147,15 @@ echo "Copy LaTeX files and assets (required for generating PDF document) to dist
 
 cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls assets/*
 
-## https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
-#cmd="pdflatex manuscript-example.tex"
-#dockercmd="docker run --rm -v $PWD/dist:/srv -w /srv embix/pdflatex:latest $cmd"
-#condition="$clitool -version | grep '3.14159265-2.6-1.40.19' > /dev/null"
-#
-#if ! eval $condition; then
-#    echo "Generating PDF document from LaTeX document of manuscript via docker..."
-#    eval $(echo $dockercmd)
-#else
-#    echo "Generating PDF document from LaTeX document of manuscript..."
-#    eval $cmd
-#fi
-#
-#cmd="bibtex new-aiaa.aux"
-#dockercmd="docker run --rm -v $PWD/dist:/srv -w /srv embix/bibtex:latest $cmd"
-#condition="$clitool -version | grep '3.14159265-2.6-1.40.19' > /dev/null"
-#
-#if ! eval $condition; then
-#    echo "Generating PDF document from LaTeX document of manuscript via docker..."
-#    eval $(echo $dockercmd)
-#else
-#    echo "Generating PDF document from LaTeX document of manuscript..."
-#    eval $cmd
-#fi
-#
-#cmd="pdflatex manuscript-example.tex && pdflatex manuscript-example.tex"
-#dockercmd="docker run --rm -v $PWD/dist:/srv -w /srv embix/pdflatex:latest $cmd"
-#condition="$clitool -version | grep '3.14159265-2.6-1.40.19' > /dev/null"
-#
-#if ! eval $condition; then
-#    echo "Generating PDF document from LaTeX document of manuscript via docker..."
-#    eval $(echo $dockercmd)
-#else
-#    echo "Generating PDF document from LaTeX document of manuscript..."
-#    eval $cmd
-#fi
+# https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
+cmd="pdflatex manuscript-example.tex && bibtex manuscript-example.aux && pdflatex manuscript-example.tex && pdflatex manuscript-example.tex"
+dockercmd="docker run --rm -v $PWD/dist:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
+condition="$clitool -version | grep '3.14159265-2.6-1.40.19' > /dev/null"
 
+if ! eval $condition; then
+    echo "Generating PDF document from LaTeX document of manuscript via docker..."
+    eval $(echo $dockercmd)
+else
+    echo "Generating PDF document from LaTeX document of manuscript..."
+    eval $cmd
+fi
