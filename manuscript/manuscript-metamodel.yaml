@@ -8,9 +8,9 @@ default_range: string
 
 classes:
   SharedAuthor:
-    attributes:
-      full_name:
-      footnote:
+    slots:
+      - full_name
+      - footnote
   Author:
     attributes:
       author:
@@ -35,3 +35,7 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: Section
+
+slots:
+  full_name:
+  footnote:
