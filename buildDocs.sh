@@ -160,9 +160,8 @@ cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls 
 cmd="pdflatex manuscript-example.tex && bibtex manuscript-example.aux && pdflatex manuscript-example.tex && pdflatex manuscript-example.tex"
 workdir=$project_root/dist
 dockercmd="docker run --rm -v $workdir:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
-condition="$clitool -version | grep '3.14159265-2.6-1.40.19' > /dev/null"
 
-if ! eval $condition; then
+if [ ! $(pdflatex -version | grep '3.14159265-2.6-1.40.19' > /dev/null) ] && [ ! $(bibtex -version | grep '0.99d' > /dev/null) ]; then
     echo "Generating PDF document from LaTeX document of manuscript via docker..."
     cd $project_root
     eval $(echo $dockercmd)
@@ -218,9 +217,8 @@ cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls 
 cmd="pdflatex manuscript.tex && bibtex manuscript.aux && pdflatex manuscript.tex && pdflatex manuscript.tex"
 workdir=$project_root/dist
 dockercmd="docker run --rm -v $workdir:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
-condition="pdflatex -version | grep '3.14159265-2.6-1.40.19' > /dev/null"
 
-if ! eval $condition; then
+if [ ! $(pdflatex -version | grep '3.14159265-2.6-1.40.19' > /dev/null) ] && [ ! $(bibtex -version | grep '0.99d' > /dev/null) ]; then
     echo "Generating PDF document from LaTeX document of manuscript via docker..."
     cd $project_root
     eval $(echo $dockercmd)
