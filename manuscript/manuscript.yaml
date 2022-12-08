@@ -8,7 +8,7 @@ authors:
     affiliation: Old Dominion University, Norfolk, VA, 23529
   - author:
     - full_name: Sharan Asundi, Ph.D.
-      footnote: Assistant Professor, Department of Mechanical & Aerospace Engineering, Old Dominion University
+      footnote: Assistant Professor, Department of Mechanical \& Aerospace Engineering, Old Dominion University
     affiliation: Old Dominion University, Norfolk, VA, 23529
 abstract: |
   This article presents a model-based systems engineering approach in conjunction with a docs-as-code approach for the SeaLion CubeSat misison. CubeSats are of inceasing population and thus, there is a need to have easy and ready to use tools for new developers such as students to use. A model-based approach allows allows models to be the authorative source of truth in place of documents and thus, allows for interconnectivity. The docs-as-code approach allows for local model building and allows code and documents to talk to one another. The Mach 30 Modeling Language was chosen as the basis for the SeaLion approach with the conjoined philosophies and its reseults are presented here with this very article being generated useing Mach30 as well.
@@ -34,9 +34,9 @@ sections:
       \end{longtable*}}
   - title: Introduction
     content: |
-      \lettrine{T}{his} article presents the modeling language, tools, and technical approach used to facilitate the configuration management, design, specification, & implementation of the SeaLion mission architecture for the flight software using a model-based approach.
+      \lettrine{T}{his} article presents the modeling language, tools, and technical approach used to facilitate the configuration management, design, specification, \& implementation of the SeaLion mission architecture for the flight software using a model-based approach.
 
-      A model-based systems engineering (MBSE) approach to systems engineering is where models, as opposed to documents, serve as the authoritative source of truth for conducting systems engineering activities, such as the design, specification, analysis, verification & validation of a system \cite{architecting_spacecraft}. The NASA handbook on systems engineering can be applied to CubeSat Mission design, in effort to facilitate a top-down design methodology from mission concept to specification of subsystem components, including flight software architecture cite{asundi13_cubes}.
+      A model-based systems engineering (MBSE) approach to systems engineering is where models, as opposed to documents, serve as the authoritative source of truth for conducting systems engineering activities, such as the design, specification, analysis, verification \& validation of a system \cite{architecting_spacecraft}. The NASA handbook on systems engineering can be applied to CubeSat Mission design, in effort to facilitate a top-down design methodology from mission concept to specification of subsystem components, including flight software architecture cite{asundi13_cubes}.
 
       For the SeaLion Mission, the flight software team adopted an MBSE approach to flight software architecture using a document as code, also known as docs-as-code, approach \cite{docs_as_code}. This approach is where the same tools and methodologies for managing software are also used for configuration management of documentation. Applying both a MBSE and docs-as-code approach means that aspects of the mission architecture, such as stakeholder needs, user stories, and data structures pertaining to the CubeSat mission, are captured are within a model that is both human-readable and machine-queryable while minimizing configuration management overhead. A docs-as-code toolchain is also a file-based approach that allows for models to be persistent on local file systems without the additional use of cloud-based software or services.
   - title: SeaLion Mission
@@ -117,7 +117,7 @@ sections:
 
       M30ML was developed using the Ontological Modeling Language (OML) as its basis. OML is a language that "enables defining systems engineering vocabularies and using them to describe systems \cite{oml_language}." OML, inspired by Web Ontology Language 2 (OWL2) and the Semantic Web Rule Language (SWRL), is meant to be a more gentler and more disciplined method of afformentioned standard for use in systems engineering \cite{oml_language}. OML was created in part since OWL2 does not conform easily to individual modelling rules without tooling support; OML is a tool to improve speed of modeling and the quality of models while in a more concise and human-friendly high-level external representation \cite{oml_origin_and_rationale}.
 
-      \subsection{Modeling Language, Tool, & Methodology}
+      \subsection{Modeling Language, Tool, \& Methodology}
 
       The M30ML is a YAML-based modeling language for defining a software architecture. Since YAML is a lightweight, highly-structured, human-readable, machine queryable, and line-oriented markup language, it was ideal for document generation use cases, as well as use with version control tools like Git. The following \ref{user_story} showcases the simplicity of the YAML file.
 
@@ -128,7 +128,7 @@ sections:
           \label{user_story}
       \end{figure}
 
-      M30ML also had minimal technical overhead as it was compatible with modern doc tools such as asciidoctor & bibtex. M30ML also provided modeling elements familiar in agile software development, such as stakeholder needs, user stories, and data structures, with relationship elements for defining traceability between modeling elements \cite{mach30_git}.
+      M30ML also had minimal technical overhead as it was compatible with modern doc tools such as asciidoctor \& bibtex. M30ML also provided modeling elements familiar in agile software development, such as stakeholder needs, user stories, and data structures, with relationship elements for defining traceability between modeling elements \cite{mach30_git}.
 
       \subsection{File Structure and Generation}
 
