@@ -244,3 +244,7 @@ else
     cd $workdir
     eval $cmd
 fi
+
+gitdescribe=$(git describe --always --tags HEAD)
+newmanuscriptname=manuscript-$gitdescribe.pdf
+mv $workdir/manuscript.pdf $workdir/$newmanuscriptname
