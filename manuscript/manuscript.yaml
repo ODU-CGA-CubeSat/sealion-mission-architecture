@@ -115,7 +115,7 @@ sections:
 
       \subsection{Ontological Modeling Language}
 
-      M30ML was developed using the Ontological Modeling Language (OML) as its basis. OML is a language that "enables defining systems engineering vocabularies and using them to describe systems \cite{oml_language}." OML, inspired by Web Ontology Language 2 (OWL2) and the Semantic Web Rule Language (SWRL), is meant to be a more gentler and more disciplined method of afformentioned standard for use in systems engineering \cite{oml_language}. OML was created in part since OWL2 does not conform easily to individual modelling rules without tooling support; OML is a tool to improve speed of modeling and the quality of models while in a more concise and human-friendly high-level external representation \cite{oml_origin_and_rationale}.
+      M30ML was developed using the Ontological Modeling Language (OML) as its basis. OML is a language that \"enables defining systems engineering vocabularies and using them to describe systems \cite{oml_language}.\" OML, inspired by Web Ontology Language 2 (OWL2) and the Semantic Web Rule Language (SWRL), is meant to be a more gentler and more disciplined method of afformentioned standard for use in systems engineering \cite{oml_language}. OML was created in part since OWL2 does not conform easily to individual modelling rules without tooling support; OML is a tool to improve speed of modeling and the quality of models while in a more concise and human-friendly high-level external representation \cite{oml_origin_and_rationale}.
 
       \subsection{Modeling Language, Tool, \& Methodology}
 
