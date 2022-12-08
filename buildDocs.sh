@@ -216,16 +216,31 @@ cd $project_root
 cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls assets/*
 
 # https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
-cmd="pdflatex manuscript.tex && bibtex manuscript.aux && pdflatex manuscript.tex && pdflatex manuscript.tex"
+cmd="pdflatex manuscript.tex && bibtex manuscript.aux"
 workdir=$project_root/dist
 dockercmd="docker run --rm -v $workdir:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
 
 if [ ! $(pdflatex -version | grep '3.14159265-2.6-1.40.19' > /dev/null) ] && [ ! $(bibtex -version | grep '0.99d' > /dev/null) ]; then
-    echo "Generating PDF document from LaTeX document of manuscript via docker..."
+    echo "Pre-Processing LaTeX document with BibTeX of manuscript via docker..."
     cd $project_root
     eval $(echo $dockercmd)
 else
-    echo "Generating PDF document from LaTeX document of manuscript..."
+    echo "Pre-Processing LaTeX document with BibTeX of manuscript..."
+    cd $workdir
+    eval $cmd
+fi
+
+# https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
+cmd="pdflatex manuscript.tex && pdflatex manuscript.tex"
+workdir=$project_root/dist
+dockercmd="docker run --rm -v $workdir:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
+
+if [ ! $(pdflatex -version | grep '3.14159265-2.6-1.40.19' > /dev/null) ] && [ ! $(bibtex -version | grep '0.99d' > /dev/null) ]; then
+    echo "Generating PDF document from LaTeX/BibTeX document of manuscript via docker..."
+    cd $project_root
+    eval $(echo $dockercmd)
+else
+    echo "Generating PDF document from LaTeX/BibTeX document of manuscript..."
     cd $workdir
     eval $cmd
 fi
