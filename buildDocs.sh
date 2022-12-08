@@ -199,7 +199,7 @@ cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls 
 # https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
 cmd="pdflatex manuscript.tex && bibtex manuscript.aux && pdflatex manuscript.tex && pdflatex manuscript.tex"
 dockercmd="docker run --rm -v $PWD/dist:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
-condition="$clitool -version | grep '3.14159265-2.6-1.40.19' > /dev/null"
+condition="pdflatex -version | grep '3.14159265-2.6-1.40.19' > /dev/null"
 
 if ! eval $condition; then
     echo "Generating PDF document from LaTeX document of manuscript via docker..."
