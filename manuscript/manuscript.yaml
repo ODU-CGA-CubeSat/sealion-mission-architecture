@@ -134,13 +134,18 @@ sections:
 
       The M30ML file structure for architecture is simple and easy to use. Architecture is split into the four folders of references, stakeholder needs, user stories, and datastructures. Datastructures are derived from user stories which are subsequently derived from stakeholder needs with their respective references. The continued link between their respective YAML files allows for continous path from which documents can be updated.
 
-      The following PLACEHOLDER TABLE, PLACEHOLDER TABLE, and PLACEHOLDER TABLE are all automatically generated using the M30ML structure and injected directly into this article. Should any changes be made to the SeaLion architecture repository, the tables can be immediately regenerated for continous updates.
+      The following \ref{stakeholder-needs-mapping}, PLACEHOLDER TABLE, and PLACEHOLDER TABLE are all automatically generated using the M30ML structure and injected directly into this article. Should any changes be made to the SeaLion architecture repository, the tables can be immediately regenerated for continous updates.
 
       \subsection{Stakeholder Needs}
 
       The SeaLion project's methodology documentation uses M30ML based on YAML architecture modeling tools. The first step to build the architecture is to define the stakeholder needs. The two primary stakeholders for Sealion are ODU and CGA with their respective needs categorized on priority from primary to secondary to tertiary. These stakeholder needs are listed in the following Table PLACEHOLDER.
 
-      PLACEHOLDER TABLE
+      \begin{figure}[hbt!]
+          \centering
+          \includegraphics[width=.5\textwidth]{stakeholder-needs-mapping}
+          \caption{a view describing mapping of stakeholders to stakeholder needs in UML}
+          \label{stakeholder-needs-mapping}
+      \end{figure}
 
       \subsection{User Stories}
 
