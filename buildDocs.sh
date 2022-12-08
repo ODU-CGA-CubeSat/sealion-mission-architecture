@@ -183,11 +183,11 @@ dockercmd="docker run --rm -v $workdir/manuscript:/work -w /work linkml/linkml:1
 condition="$clitool --help | grep 'Validates instance data' > /dev/null"
 
 if ! eval $condition; then
-    echo "Validating linkml model of example manuscript via docker..."
+    echo "Validating linkml model of manuscript via docker..."
     cd $project_root
     eval $(echo $dockercmd)
 else
-    echo "Validating linkml model of example manuscript..."
+    echo "Validating linkml model of manuscript..."
     cd $workdir
     eval $cmd
 fi
@@ -201,11 +201,11 @@ dockercmd="docker run --rm -v $workdir:/work -w /work roquie/docker-jinja2-cli $
 condition="$clitool --version | grep 'v0.8.2' > /dev/null"
 
 if ! eval $condition; then
-    echo "Generating LaTeX document from example manuscript linkml model and jinja2 template via docker..."
+    echo "Generating LaTeX document from manuscript linkml model and jinja2 template via docker..."
     cd $project_root
     eval $(echo $dockercmd)
 else
-    echo "Generating LaTeX document from example manuscript linkml model and jinja2 template..."
+    echo "Generating LaTeX document from manuscript linkml model and jinja2 template..."
     cd $workdir
     eval $cmd
 fi
