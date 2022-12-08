@@ -154,6 +154,7 @@ fi
 
 echo "Copy LaTeX files and assets (required for generating PDF document) to dist/..."
 
+cd $project_root
 cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls assets/*
 
 # https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
@@ -211,6 +212,7 @@ fi
 
 echo "Copy LaTeX files and assets (required for generating PDF document) to dist/..."
 
+cd $project_root
 cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls assets/*
 
 # https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
