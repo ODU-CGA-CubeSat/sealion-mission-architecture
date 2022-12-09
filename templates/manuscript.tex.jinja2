@@ -17,7 +17,7 @@
 \title{ {{- title -}} }
 
 {% for author in authors %}
-\author{ {%- for author_line in author.author %}{{- author_line.full_name -}} \footnote{ {{- author_line.footnote -}} } {% if not loop.last %}and {% endif %}{% endfor -%} }
+\author{ {%- for author_line in author.author %}{{- author_line.full_name -}} {% if author_line.footnote %}\footnote{ {{- author_line.footnote -}} }{% endif %} {% if not loop.last %}and {% endif %}{% endfor -%} }
 \affil{ {{- author.affiliation -}} }
 {% endfor %}
 
