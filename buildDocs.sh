@@ -28,9 +28,9 @@ fi
 echo "copying operating-mode-as-fsm.puml to dist/..."
 docker run --rm -v $PWD:/src -w /src node bash -c 'cp ./components/sealion-cubesat/components/sealion-obc/components/dilophos/fsw-architecture/operating-mode-as-fsm.puml dist/'
 
-# generate dist/component.yaml & symlink to architecture/ directory
-echo "generating dist/component.yaml & symlink to architecture/ directory..."
-docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node dof-helpers/parseComponent.js && mkdir architecture/4-Components && ln -srv dist/component.yaml architecture/4-Components'
+## generate dist/component.yaml & symlink to architecture/ directory
+#echo "generating dist/component.yaml & symlink to architecture/ directory..."
+#docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node dof-helpers/parseComponent.js && mkdir architecture/4-Components && ln -srv dist/component.yaml architecture/4-Components'
 
 # Build the unified model
 echo "Building the unified model..."
@@ -83,25 +83,25 @@ docker run --rm -v $PWD:/documents asciidoctor/docker-asciidoctor bash -c "cd di
 echo "generating tabulated-stakeholder-needs.adoc from liquid template..."
 docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/tabulated-stakeholder-needs.adoc.liquid --out=dist/tabulated-stakeholder-needs.adoc'
 
-# create symbolic link for tabulated-stakeholder-needs.adoc
-echo "create symbolic link for tabulated-stakeholder-needs.adoc in research/..."
-docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/tabulated-stakeholder-needs.adoc research/tabulated-stakeholder-needs.adoc'
+## create symbolic link for tabulated-stakeholder-needs.adoc
+#echo "create symbolic link for tabulated-stakeholder-needs.adoc in research/..."
+#docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/tabulated-stakeholder-needs.adoc research/tabulated-stakeholder-needs.adoc'
 
 # generate tabulated-user-stories.adoc from liquid template for extended abstract
 echo "generating tabulated-user-stories.adoc from liquid template..."
 docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/tabulated-user-stories.adoc.liquid --out=dist/tabulated-user-stories.adoc'
 
-# create symbolic link for tabulated-user-stories.adoc
-echo "create symbolic link for tabulated-user-stories.adoc in research/..."
-docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/tabulated-user-stories.adoc research/tabulated-user-stories.adoc'
+## create symbolic link for tabulated-user-stories.adoc
+#echo "create symbolic link for tabulated-user-stories.adoc in research/..."
+#docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/tabulated-user-stories.adoc research/tabulated-user-stories.adoc'
 
 # generate satellite-health-data.adoc from liquid template for extended abstract
 echo "generating satellite-health-data.adoc from liquid template..."
 docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/satellite-health-data.adoc.liquid --out=dist/satellite-health-data.adoc'
 
-# create symbolic link for satellite-health-data.adoc
-echo "create symbolic link for satellite-health-data.adoc in research/..."
-docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/satellite-health-data.adoc research/satellite-health-data.adoc'
+## create symbolic link for satellite-health-data.adoc
+#echo "create symbolic link for satellite-health-data.adoc in research/..."
+#docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/satellite-health-data.adoc research/satellite-health-data.adoc'
 
 # generate abstract.html from liquid template for extended abstract
 echo "generating abstract.html..."
