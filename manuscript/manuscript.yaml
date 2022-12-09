@@ -11,7 +11,7 @@ authors:
       footnote: Assistant Professor, Department of Mechanical \& Aerospace Engineering, Old Dominion University
     affiliation: Old Dominion University, Norfolk, VA, 23529
 abstract: |
-  This article presents a model-based systems engineering approach in conjunction with a docs-as-code approach for the SeaLion CubeSat misison. CubeSats are of inceasing population and thus, there is a need to have easy and ready to use tools for new developers such as students to use. A model-based approach allows allows models to be the authorative source of truth in place of documents and thus, allows for interconnectivity. The docs-as-code approach allows for local model building and allows code and documents to talk to one another. The Mach 30 Modeling Language was chosen as the basis for the SeaLion approach with the conjoined philosophies and its reseults are presented here with this very article being generated useing Mach30 as well.
+  With the growing community of CubeSat developers has emerged a need for a technical approach that would provide a means of fast-tracking the lifecycle development process of CubeSats, including the need to minimize design and development time repeating prior engineering efforts. In addition to a technical approach, there is also the need for a language and toolchain with a demand for both minimal training and minimal IT overhead to configure. A model-based approach has become a topic of interest in addressing much of these systems engineering painpoints. However, the current state-of-the-art tools demand either considerable investment in training and/or IT overhead, making it difficult for CubeSat developers of small startups or academia to participate. This article presents a model-based technical approach in conjunction with a docs-as-code approach, used to fascilitate flight software architecture development, intended to guide an implementation, for the SeaLion CubeSat mission - a joint CubeSat mission between the Old Dominion University and Coast Guard Academy..
 sections:
   - title: Nomenclature
     content: |
@@ -38,7 +38,7 @@ sections:
 
       A model-based systems engineering (MBSE) approach to systems engineering is where models, as opposed to documents, serve as the authoritative source of truth for conducting systems engineering activities, such as the design, specification, analysis, verification \& validation of a system \cite{architecting_spacecraft}. The NASA handbook on systems engineering can be applied to CubeSat Mission design, in effort to facilitate a top-down design methodology from mission concept to specification of subsystem components, including flight software architecture \cite{asundi13_cubes}.
 
-      For the SeaLion Mission, the flight software team adopted an MBSE approach to flight software architecture using a document as code, also known as docs-as-code, approach \cite{docs_as_code}. This approach is where the same tools and methodologies for managing software are also used for configuration management of documentation. Applying both a MBSE and docs-as-code approach means that aspects of the mission architecture, such as stakeholder needs, user stories, and data structures pertaining to the CubeSat mission, are captured are within a model that is both human-readable and machine-queryable while minimizing configuration management overhead. A docs-as-code toolchain is also a file-based approach that allows for models to be persistent on local file systems without the additional use of cloud-based software or services.
+      For the SeaLion Mission, the flight software team adopted an MBSE approach to flight software architecture using a documentation as code, also known as docs-as-code, approach \cite{docs_as_code}. This approach adopts the principles and practices of good modern software development for configuration management of documentation. A docs-as-code approach also ensures source code and documentation can remain in sync, by virtue of treating the documentation as part of the software source code using the same version control system to manage both. Applying both a MBSE and docs-as-code approach means that aspects of the mission architecture, such as stakeholder needs, user stories, and data structures pertaining to the CubeSat mission, are captured within a human and machine-readable model, while minimizing configuration management overhead. A docs-as-code approach is also file-based, allowing data to persistent on the local filesystem, as opposed to a cloud database, eliminating the need for a constant internet connection, which is a considerable bottleneck for teams or teammates in conditions where an internet connection is otherwise inaccessible.
   - title: SeaLion Mission
     content: |
       The SeaLion mission is a a joint CubeSat mission between the Old Dominion University (ODU), Coast Guard Academy (USCGA), and the Air Force Institute of Technology (AFIT) to design and produce a 3-Unit (3U) CubeSat.
@@ -104,22 +104,18 @@ sections:
           This means following the same workflows as development teams, and being integrated in the product team. It enables a culture where writers and developers both feel ownership of documentation, and work together to make it as good as possible \cite{docs_as_code}. 
       \end{quoting}
 
-      It was of interest to adopt a docs-as-code approach, as to yield the benefits of utilizing the same tools used to manage code, using version control tools (e.g., Git), for the configuration management of flight software architecture documentation, captured in a model-based approach \cite{docs_as_code}. It also allows for models to be persistent on a local file system without use of cloud-based services or software.
-  - title: Mach30 Modelling Language
+      It was of interest to adopt a docs-as-code approach, as to yield the benefits of utilizing the same principles and practices used to manage software, using modern version control tools (e.g., Git), for the configuration management of flight software architecture documentation, captured in a model-based approach \cite{docs_as_code}. It also allows for models to be persistent on a local file system without use of cloud-based services or software.
+  - title: Modeling Language, Tool, \& Methodology
     content: |
-      The flight software team conducted a trade study to downselect a suitable modeling language for the afformentioned goals. The languages considered with SysML V1, SysML V2, PlantUML, and the Mach 30 modelling language (M30ML). M30ML was chosen since it had extensible ontology language, supports both textual and graphical view generation, lightweight textual syntax, and relatively minimal overhead with modern doctools. The other candidates lacked in many regards compared to M30ML in these criteria and thus, M30ML was selected.
-
-      The SeaLion Architecture uses M30ML to specify references, stakeholder needs, user stories, and data structures for facilitating traceability of design decisions within the Mission Concept of Operations (ConOps) \cite{mach30_git}. The SeaLion repository is also structured as a Distributed Open Source Hardware (OSHW) Framework (DOF)-component for defining the contents of the Mission ConOps as a collection of nested subcomponents, component interfaces, and component functions for generating bill of materials (BOMs), assembly instructions, and/or usage documentation.
-
-      This is all done in an effort to execute the project via a docs-as-code philosophy. A philosophy in which documentation is written with the same tools as code \cite{docs_as_code}. This allows for workflows between development teams to be more closely integrated.
+      The flight software team conducted a trade study to downselect a suitable modeling language for the afformentioned goals. The languages considered were SysML V1, SysML V2, PlantUML, and the Mach 30 modelling language (M30ML). M30ML was chosen for its lightweight human and machine-readable textual syntax, file-based model-interchange support (for persisting models directly on the local filesystem), ability to generate both textual and graphical views, and relatively minimal overhead with modern doctools \cite{mach30_git}. The other candidates lacked in many regards compared to M30ML in these criteria and thus, M30ML was selected.
 
       \subsection{Ontological Modeling Language}
 
       M30ML was developed using the Ontological Modeling Language (OML) as its basis. OML is a language that \"enables defining systems engineering vocabularies and using them to describe systems \cite{oml_language}.\" OML, inspired by Web Ontology Language 2 (OWL2) and the Semantic Web Rule Language (SWRL), is meant to be a more gentler and more disciplined method of afformentioned standard for use in systems engineering \cite{oml_language}. OML was created in part since OWL2 does not conform easily to individual modelling rules without tooling support; OML is a tool to improve speed of modeling and the quality of models while in a more concise and human-friendly high-level external representation \cite{oml_origin_and_rationale}.
 
-      \subsection{Modeling Language, Tool, \& Methodology}
+      \subsection{Mach30 Modelling Language}
 
-      The M30ML is a YAML-based modeling language for defining a software architecture. Since YAML is a lightweight, highly-structured, human-readable, machine queryable, and line-oriented markup language, it was ideal for document generation use cases, as well as use with version control tools like Git. The following \ref{user_story} showcases the simplicity of the YAML file.
+      M30ML is a language for modeling an architecture YAML-based modeling. Since YAML is a lightweight, highly-structured, human-readable, machine queryable, and line-oriented markup language, it was ideal for document generation use cases, as well as use with version control tools like Git. The following \ref{user_story} showcases the simplicity of the YAML file.
 
       \begin{figure}[hbt!]
           \centering
@@ -134,30 +130,41 @@ sections:
 
       The M30ML file structure for architecture is simple and easy to use. Architecture is split into the four folders of references, stakeholder needs, user stories, and datastructures. Datastructures are derived from user stories which are subsequently derived from stakeholder needs with their respective references. The continued link between their respective YAML files allows for continous path from which documents can be updated.
 
-      The following \ref{stakeholder-needs-mapping}, PLACEHOLDER TABLE, and PLACEHOLDER TABLE are all automatically generated using the M30ML structure and injected directly into this article. Should any changes be made to the SeaLion architecture repository, the tables can be immediately regenerated for continous updates.
+      The following \ref{stakeholder-needs-mapping}, \ref{user-stories-mapping}, and \ref{data-structures-mapping} UML diagrams are auto-generated artifacts rendered from the M30ML modeling language and formatted using the Liquid template language. Should any changes be made to the SeaLion mission architecture model, these tables and diagrams can be immediately regenerated for continous updates, ensuring changes affecting dependencies within the mission architecture are kept in sync.
 
       \subsection{Stakeholder Needs}
 
-      The SeaLion project's methodology documentation uses M30ML based on YAML architecture modeling tools. The first step to build the architecture is to define the stakeholder needs. The two primary stakeholders for Sealion are ODU and CGA with their respective needs categorized on priority from primary to secondary to tertiary. These stakeholder needs are listed in the following Table PLACEHOLDER.
+      The SeaLion project's methodology documentation uses M30ML based on YAML architecture modeling tools. The first step to build the architecture is to define the stakeholder needs. The two primary stakeholders for Sealion are ODU and CGA with their respective needs categorized on priority from primary to secondary to tertiary. These stakeholder needs are listed in the following \ref{stakeholder-needs-mapping}.
 
       \begin{figure}[hbt!]
           \centering
           \includegraphics[width=.5\textwidth]{stakeholder-needs-mapping}
-          \caption{a view describing mapping of stakeholders to stakeholder needs in UML}
+          \caption{a view describing a mapping of stakeholders to stakeholder needs as a UML diagram}
           \label{stakeholder-needs-mapping}
       \end{figure}
 
       \subsection{User Stories}
 
-      The SeaLion Mission Architecture's stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions. These are created from the perspective of the ground station operator to define the tasks that need to be completed to satisfy the user stories. These user stories are listed in the following Table PLACEHOLDER.
+      The SeaLion Mission Architecture's stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions. These are created from the perspective of the ground station operator to define the tasks that need to be completed to satisfy the user stories. These user stories are listed in the following \ref{user-stories-mapping}.
 
-      PLACEHOLDER TABLE
+      \begin{figure}[hbt!]
+          \centering
+          \includegraphics[width=.5\textwidth]{user-stories-mapping}
+          \caption{a view describing a mapping of stakeholder needs to their derived user stories as a UML diagram}
+          \label{user-stories-mapping}
+      \end{figure}
 
       \subsection{Example Data Structure}
 
-      An example data structure can be derived from user stories as presented in Table PLACEHOLDER.
+      An example data structure can be derived from user stories as presented in \ref{data-structures-mapping}.
 
-      PLACEHOLDER TABLE
+      \begin{figure}[hbt!]
+          \centering
+          \includegraphics[width=.5\textwidth]{data-structures-mapping}
+          \caption{a view describing a mapping of user stories to their derived data structures as a UML diagram}
+          \label{data-structures-mapping}
+      \end{figure}
+
   - title: Conclusion
     content: |
       The approach and methodology presented in this article is done as an effort to reduce the painpoints associated with traditional systems engineering for the CubeSat developers. The ever growing number of CubeSat projects in existence demands a lightweight model-based approach that can be adopted for implementing flight software while minimizing configuration management overhead. Especially as many CubeSat developers will be new to the development environment. Docs-as-code combined with MBSE can be used as an approach to flight software for tight coupling between both software and documentation as well as providing a highly structured template to base future developments on for the CubeSat community \cite{sealion_mission_architecture}. Future actions include validating this approach as the flight software is created based on the model-based docs-as-code approach with the upcoming SeaLion launch as well as further expanding the potential users of M30ML.
