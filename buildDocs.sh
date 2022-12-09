@@ -135,7 +135,7 @@ else
 fi
 
 clitool="jinja2"
-cmdargs="-o dist/manuscript-example.tex --format yaml templates/manuscript-example.tex.jinja2 manuscript/manuscript-example.yaml"
+cmdargs="-o dist/manuscript-example.tex --format yaml templates/manuscript.tex.jinja2 manuscript/manuscript-example.yaml"
 workdir=$project_root
 #cmdargs="-o dist/title.tex --format yaml templates/title.tex.jinja2 manuscript/manuscript-example.yaml"
 cmd="$clitool $cmdargs"
