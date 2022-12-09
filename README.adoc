@@ -1,13 +1,18 @@
-= SeaLion Mission ConOps
+= SeaLion Mission Architecture
 
-This repository (repo) contains the source code & documentation for the SeaLion Mission Concept of Operations (ConOps) - a joint CubeSat mission between Old Dominion University (ODU) & Coast Guard Academy (CGA).
+The SeaLion Mission Architecture is a model of the Sealion Flight Software architecture, intended to guide an implementation, for the SeaLion Mission - a joint CubeSat mission between Old Dominion University (ODU) & Coast Guard Academy (CGA).
 
-The repo contains an architecture, modeled using the Mach30 modeling language (https://github.com/Mach30/m30ml[m30ml]), for specifying references, stakeholder needs, user stories, & data structures for fascilitating traceability of design decisions within the Mission ConOps (s.a., the packet definition used for carrying telemetry data).
-The repo itself is also structured as a https://mach30.github.io/dof/#_component[DOF-component] for defining the contents of the Mission ConOps as a collection of nested subcomponents, component interfaces, and component functions for generating bill of materials (BOMs), assembly instructions, and/or usage documentation.
+The SeaLion Mission Architecture is modeled using the Mach30 modeling language (https://github.com/Mach30/m30ml[m30ml]) for specifying references, stakeholder needs, user stories, & data structures, s.a., the https://odu-cga-cubesat.github.io/sealion-mission-architecture/#_satellite_health_data_packet[satellite health data packet].
+
+This repository (repo) also structured as a https://mach30.github.io/dof/#_component[DOF-component] for defining the contents of the Mission ConOps as a collection of nested subcomponents, component interfaces, and component functions for generating bill of materials (BOMs) and assembly instructions for the SeaLion CubeSat.
 
 Full documentation is available on https://odu-cga-cubesat.github.io/sealion-mission-architecture/.
 
-This project follows a https://www.writethedocs.org/guide/docs-as-code/[docs-as-code] & https://www.writethedocs.org/videos/portland/2019/lessons-learned-in-a-year-of-docs-driven-development-jessica-parsons/[docs-driven development] approach, using the https://asciidoctor.org/docs/what-is-asciidoc/[asciidoc] markup language.
+This project also follows a https://www.writethedocs.org/guide/docs-as-code/[docs-as-code] approach, applying the same principles and practices of software development for documentation.
+
+== Work-In-Progress
+
+This project is currently undergoing a refactor, whereby the core modeling language will rebuild on top of https://linkml.io/linkml/index.html[LinkML] - a linked data modeling language, with considerations for mappings to the web ontology language (OWL) via the https://github.com/linkml/linkml-owl[linkml-owl] extension.
 
 == Contribute
 
