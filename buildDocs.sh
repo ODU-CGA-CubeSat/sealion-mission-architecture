@@ -114,63 +114,78 @@ docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asci
 #### set environment variable for project root ####
 project_root=$PWD
 
-##### generate example manuscript ####
-## for linkml docker command usage, see https://hub.docker.com/r/linkml/linkml
-#
-#clitool="linkml-validate"
-#cmdargs="-s manuscript-metamodel.yaml manuscript-example.yaml"
-#cmd="$clitool $cmdargs"
-#workdir=$project_root/manuscript
-#dockercmd="docker run --rm -v $workdir:/work -w /work linkml/linkml:1.3.14 $cmd"
-#condition="$clitool --help | grep 'Validates instance data' > /dev/null"
-#
-#if ! eval $condition; then
-#    echo "Validating linkml model of example manuscript via docker..."
-#    cd $project_root
-#    eval $(echo $dockercmd)
-#else
-#    echo "Validating linkml model of example manuscript..."
-#    cd $workdir
-#    eval $cmd
-#fi
-#
-#clitool="jinja2"
-#cmdargs="-o dist/manuscript-example.tex --format yaml templates/manuscript-example.tex.jinja2 manuscript/manuscript-example.yaml"
-#workdir=$project_root
-##cmdargs="-o dist/title.tex --format yaml templates/title.tex.jinja2 manuscript/manuscript-example.yaml"
-#cmd="$clitool $cmdargs"
-#dockercmd="docker run --rm -v $workdir:/work -w /work roquie/docker-jinja2-cli $cmdargs"
-#condition="$clitool --version | grep 'v0.8.2' > /dev/null"
-#
-#if ! eval $condition; then
-#    echo "Generating LaTeX document from example manuscript linkml model and jinja2 template via docker..."
-#    cd $project_root
-#    eval $(echo $dockercmd)
-#else
-#    echo "Generating LaTeX document from example manuscript linkml model and jinja2 template..."
-#    cd $workdir
-#    eval $cmd
-#fi
-#
-#echo "Copy LaTeX files and assets (required for generating PDF document) to dist/..."
-#
-#cd $project_root
-#cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls assets/*
-#
-## https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
-#cmd="pdflatex manuscript-example.tex && bibtex manuscript-example.aux && pdflatex manuscript-example.tex && pdflatex manuscript-example.tex"
-#workdir=$project_root/dist
-#dockercmd="docker run --rm -v $workdir:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
-#
-#if [ ! $(pdflatex -version | grep '3.14159265-2.6-1.40.19' > /dev/null) ] && [ ! $(bibtex -version | grep '0.99d' > /dev/null) ]; then
-#    echo "Generating PDF document from LaTeX document of manuscript via docker..."
-#    cd $project_root
-#    eval $(echo $dockercmd)
-#else
-#    echo "Generating PDF document from LaTeX document of manuscript..."
-#    cd $workdir
-#    eval $cmd
-#fi
+#### generate example manuscript ####
+# for linkml docker command usage, see https://hub.docker.com/r/linkml/linkml
+
+clitool="linkml-validate"
+cmdargs="-s manuscript-metamodel.yaml manuscript-example.yaml"
+cmd="$clitool $cmdargs"
+workdir=$project_root/manuscript
+dockercmd="docker run --rm -v $workdir:/work -w /work linkml/linkml:1.3.14 $cmd"
+condition="$clitool --help | grep 'Validates instance data' > /dev/null"
+
+if ! eval $condition; then
+    echo "Validating linkml model of example manuscript via docker..."
+    cd $project_root
+    eval $(echo $dockercmd)
+else
+    echo "Validating linkml model of example manuscript..."
+    cd $workdir
+    eval $cmd
+fi
+
+clitool="jinja2"
+cmdargs="-o dist/manuscript-example.tex --format yaml templates/manuscript-example.tex.jinja2 manuscript/manuscript-example.yaml"
+workdir=$project_root
+#cmdargs="-o dist/title.tex --format yaml templates/title.tex.jinja2 manuscript/manuscript-example.yaml"
+cmd="$clitool $cmdargs"
+dockercmd="docker run --rm -v $workdir:/work -w /work roquie/docker-jinja2-cli $cmdargs"
+condition="$clitool --version | grep 'v0.8.2' > /dev/null"
+
+if ! eval $condition; then
+    echo "Generating LaTeX document from example manuscript linkml model and jinja2 template via docker..."
+    cd $project_root
+    eval $(echo $dockercmd)
+else
+    echo "Generating LaTeX document from example manuscript linkml model and jinja2 template..."
+    cd $workdir
+    eval $cmd
+fi
+
+echo "Copy LaTeX files and assets (required for generating PDF document) to dist/..."
+
+cd $project_root
+cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls assets/*
+
+# https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
+cmd="pdflatex manuscript-example.tex && bibtex manuscript-example.aux"
+workdir=$project_root/dist
+dockercmd="docker run --rm -v $workdir:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
+
+if [ ! $(pdflatex -version | grep '3.14159265-2.6-1.40.19' > /dev/null) ] && [ ! $(bibtex -version | grep '0.99d' > /dev/null) ]; then
+    echo "Pre-Processing LaTeX document with BibTeX of example manuscript via docker..."
+    cd $project_root
+    eval $(echo $dockercmd)
+else
+    echo "Pre-Processing LaTeX document with BibTeX of example manuscript..."
+    cd $workdir
+    eval $cmd
+fi
+
+# https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
+cmd="pdflatex manuscript-example.tex && pdflatex manuscript-example.tex"
+workdir=$project_root/dist
+dockercmd="docker run --rm -v $workdir:/srv -w /srv nanozoo/pdflatex:3.14159265--f2f4a3f bash -c '$cmd'"
+
+if [ ! $(pdflatex -version | grep '3.14159265-2.6-1.40.19' > /dev/null) ] && [ ! $(bibtex -version | grep '0.99d' > /dev/null) ]; then
+    echo "Generating PDF document from LaTeX/BibTeX document of example manuscript via docker..."
+    cd $project_root
+    eval $(echo $dockercmd)
+else
+    echo "Generating PDF document from LaTeX/BibTeX document of example manuscript..."
+    cd $workdir
+    eval $cmd
+fi
 
 #### generate manuscript ####
 # for linkml docker command usage, see https://hub.docker.com/r/linkml/linkml
