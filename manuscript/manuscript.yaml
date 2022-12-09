@@ -15,6 +15,7 @@ abstract: |
 sections:
   - title: Nomenclature
     content: |
+      \begin{center}
       {\renewcommand\arraystretch{1.0}
       \noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
       $1U$ & 1-Unit \\
@@ -32,6 +33,7 @@ sections:
       $USCGA$ & United Stated Coast Guard Academy \\
       $WFF$   & Wallops Flight Facility  
       \end{longtable*}}
+      \end{center}
   - title: Introduction
     content: |
       \lettrine{T}{his} article presents the modeling language, tools, and technical approach used to facilitate the configuration management, design, specification, \& implementation of the SeaLion mission architecture for the flight software using a model-based approach.
