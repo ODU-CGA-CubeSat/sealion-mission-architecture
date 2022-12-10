@@ -59,7 +59,7 @@ sections:
 
       \begin{figure}[hbt!]
           \centering
-          \includegraphics[width=.5\textwidth]{swartwout_data_graph}
+          \includegraphics[width=.8\textwidth]{swartwout_data_graph}
           \caption{Nanosatellite launch data provided by M. Swartwout \cite{swartwout_data}.}
           \label{swartwout_data_graph}
       \end{figure}
@@ -121,7 +121,7 @@ sections:
 
       \begin{figure}[hbt!]
           \centering
-          \includegraphics[width=.5\textwidth]{ping_satellite}
+          \includegraphics[width=.8\textwidth]{ping_satellite}
           \caption{An example YAML file for a user story.}
           \label{user_story}
       \end{figure}
@@ -140,7 +140,7 @@ sections:
 
       \begin{figure}[hbt!]
           \centering
-          \includegraphics[width=.5\textwidth]{stakeholder-needs-mapping}
+          \includegraphics[width=.8\textwidth]{stakeholder-needs-mapping}
           \caption{a view describing a mapping of stakeholders to stakeholder needs as a UML diagram}
           \label{stakeholder-needs-mapping}
       \end{figure}
@@ -151,7 +151,7 @@ sections:
 
       \begin{figure}[hbt!]
           \centering
-          \includegraphics[width=.5\textwidth]{user-stories-mapping}
+          \includegraphics[width=.8\textwidth]{user-stories-mapping}
           \caption{a view describing a mapping of stakeholder needs to their derived user stories as a UML diagram}
           \label{user-stories-mapping}
       \end{figure}
@@ -159,7 +159,7 @@ sections:
       Alternative views can also be rendered from a model. For example, the user stories can also be rendered as a use case diagram \ref{use-case-diagram}.
       \begin{figure}[hbt!]
           \centering
-          \includegraphics[width=.5\textwidth]{use-case-diagram}
+          \includegraphics[width=.8\textwidth]{use-case-diagram}
           \caption{a view describing user stories as a usecase diagram}
           \label{use-case-diagram}
       \end{figure}
@@ -170,7 +170,7 @@ sections:
 
       \begin{figure}[hbt!]
           \centering
-          \includegraphics[width=.5\textwidth]{data-structures-mapping}
+          \includegraphics[width=.8\textwidth]{data-structures-mapping}
           \caption{a view describing a mapping of user stories to their derived data structures as a UML diagram}
           \label{data-structures-mapping}
       \end{figure}
