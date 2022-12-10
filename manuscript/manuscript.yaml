@@ -53,7 +53,7 @@ sections:
 
       \subsection{CubeSat Users}
 
-      CubeSats were initially conceived as educational tools for space systems engineering \cite{heidt_new}.  Now, their roles have been expanded to not only just educational tools but for observation, technology demonstrations, and research, that were previous monopolized by much larger satellites, due to the low cost of production and launch of these satellites.  As such, there has been increasing popularity for CubeSats as seen by the increasing number of launches in \ref{swartwout_data_graph} since inception \cite{swartwout_data}.
+      CubeSats were initially conceived as educational tools for space systems engineering \cite{heidt_new}.  Now, their roles have been expanded to not only just educational tools but for observation, technology demonstrations, and research, that were previous monopolized by much larger satellites, due to the low cost of production and launch of these satellites.  As such, there has been increasing popularity for CubeSats as seen by the increasing number of launches in figure \ref{swartwout_data_graph} since inception \cite{swartwout_data}.
 
       University groups especially are a large contributor in the overall number of launches of CubeSats yearly with university groups consistently maintaining plurality on total launches \cite{swartwout_data}. Thus, a need for readily available and easily learnable system engineering approachs and tools, for students especially, exists for those who are new to either CubeSat design and systems engineering.
 
@@ -117,7 +117,7 @@ sections:
 
       \subsection{Mach30 Modelling Language}
 
-      M30ML is a language for modeling an architecture YAML-based modeling. Since YAML is a lightweight, highly-structured, human-readable, machine queryable, and line-oriented markup language, it was ideal for document generation use cases, as well as use with version control tools like Git. The following \ref{user_story} showcases the simplicity of the YAML file.
+      M30ML is a language for modeling an architecture YAML-based modeling. Since YAML is a lightweight, highly-structured, human-readable, machine queryable, and line-oriented markup language, it was ideal for document generation use cases, as well as use with version control tools like Git. The following figure \ref{user_story} showcases the simplicity of the YAML file.
 
       \begin{figure}[hbt!]
           \centering
@@ -132,11 +132,11 @@ sections:
 
       The M30ML file structure for architecture is simple and easy to use. Architecture is split into the four folders of references, stakeholder needs, user stories, and datastructures. Datastructures are derived from user stories which are subsequently derived from stakeholder needs with their respective references. The continued link between their respective YAML files allows for continous path from which documents can be updated.
 
-      The following \ref{stakeholder-needs-mapping}, \ref{user-stories-mapping}, and \ref{data-structures-mapping} UML diagrams are auto-generated artifacts rendered from the M30ML modeling language and formatted using the Liquid template language. Should any changes be made to the SeaLion mission architecture model, these tables and diagrams can be immediately regenerated for continous updates, ensuring changes affecting dependencies within the mission architecture are kept in sync.
+      The following figure \ref{stakeholder-needs-mapping}, figure \ref{user-stories-mapping}, and figure \ref{data-structures-mapping} UML diagrams are auto-generated artifacts rendered from the M30ML modeling language and formatted using the Liquid template language. Should any changes be made to the SeaLion mission architecture model, these tables and diagrams can be immediately regenerated for continous updates, ensuring changes affecting dependencies within the mission architecture are kept in sync.
 
       \subsection{Stakeholder Needs}
 
-      The SeaLion project's methodology documentation uses M30ML based on YAML architecture modeling tools. The first step to build the architecture is to define the stakeholder needs. The two primary stakeholders for Sealion are ODU and CGA with their respective needs categorized on priority from primary to secondary to tertiary. These stakeholder needs are listed in the following \ref{stakeholder-needs-mapping}.
+      The SeaLion project's methodology documentation uses M30ML based on YAML architecture modeling tools. The first step to build the architecture is to define the stakeholder needs. The two primary stakeholders for Sealion are ODU and CGA with their respective needs categorized on priority from primary to secondary to tertiary. These stakeholder needs are listed in the following figure \ref{stakeholder-needs-mapping}.
 
       \begin{figure}[hbt!]
           \centering
@@ -147,7 +147,7 @@ sections:
 
       \subsection{User Stories}
 
-      The SeaLion Mission Architecture's stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions. These are created from the perspective of the ground station operator to define the tasks that need to be completed to satisfy the user stories. These user stories are listed in the following \ref{user-stories-mapping}.
+      The SeaLion Mission Architecture's stakeholder needs are then used to identify a series of user stories which then lead to design decisions captured in data structure and activity definitions. These are created from the perspective of the ground station operator to define the tasks that need to be completed to satisfy the user stories. These user stories are listed in the following figure \ref{user-stories-mapping}.
 
       \begin{figure}[hbt!]
           \centering
@@ -158,7 +158,7 @@ sections:
 
       \subsection{Example Data Structure}
 
-      An example data structure can be derived from user stories as presented in \ref{data-structures-mapping}.
+      An example data structure can be derived from user stories as presented in figure \ref{data-structures-mapping}.
 
       \begin{figure}[hbt!]
           \centering
