@@ -95,9 +95,9 @@ docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/gen
 #echo "create symbolic link for tabulated-user-stories.adoc in research/..."
 #docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'ln -srv dist/tabulated-user-stories.adoc research/tabulated-user-stories.adoc'
 
-# generate satellite-health-data.adoc from liquid template for extended abstract
-echo "generating satellite-health-data.adoc from liquid template..."
-docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/satellite-health-data.adoc.liquid --out=dist/satellite-health-data.adoc'
+## generate satellite-health-data.adoc from liquid template for extended abstract
+#echo "generating satellite-health-data.adoc from liquid template..."
+#docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/satellite-health-data.adoc.liquid --out=dist/satellite-health-data.adoc'
 
 ## create symbolic link for satellite-health-data.adoc
 #echo "create symbolic link for satellite-health-data.adoc in research/..."
@@ -110,6 +110,10 @@ docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asci
 # generate abstract.pdf from liquid template for extended abstract
 echo "generating abstract.pdf..."
 docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asciidoctor research/abstract.adoc -o dist/abstract.pdf -r asciidoctor-pdf -r asciidoctor-diagram -r asciidoctor-bibtex -b pdf
+
+#### generate LaTeX code for satellite health data packet table ####
+echo "generating satellite-health-data-packet.tex from liquid template..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/satellite-health-data-packet-as-table.tex.liquid --out=dist/satellite-health-data-packet-as-table.tex'
 
 #### set environment variable for project root ####
 project_root=$PWD
