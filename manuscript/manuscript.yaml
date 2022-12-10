@@ -158,7 +158,7 @@ sections:
 
       \subsection{Example Data Structure}
 
-      An example data structure can be derived from user stories as presented in figure \ref{data-structures-mapping}.
+      A colletion of data structures can be derived from user stories as presented in figure \ref{data-structures-mapping}.
 
       \begin{figure}[hbt!]
           \centering
@@ -166,6 +166,12 @@ sections:
           \caption{a view describing a mapping of user stories to their derived data structures as a UML diagram}
           \label{data-structures-mapping}
       \end{figure}
+
+      Because models are both human and machine readable, thus, a specification document can also be generated. For example, the following is a table rendering of the data structure of the satellite health data packet:
+
+      \begin{center}
+      \include{satellite-health-data-packet-as-table}
+      \end{center}
 
   - title: Conclusion
     content: |
