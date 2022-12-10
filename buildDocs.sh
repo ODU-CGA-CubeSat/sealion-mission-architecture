@@ -28,9 +28,9 @@ fi
 echo "copying operating-mode-as-fsm.puml to dist/..."
 docker run --rm -v $PWD:/src -w /src node bash -c 'cp ./components/sealion-cubesat/components/sealion-obc/components/dilophos/fsw-architecture/operating-mode-as-fsm.puml dist/'
 
-## generate dist/component.yaml & symlink to architecture/ directory
-#echo "generating dist/component.yaml & symlink to architecture/ directory..."
-#docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node dof-helpers/parseComponent.js && mkdir architecture/4-Components && ln -srv dist/component.yaml architecture/4-Components'
+# generate dist/component.yaml & symlink to architecture/ directory
+echo "generating dist/component.yaml & symlink to architecture/ directory..."
+docker run --rm --volume "$PWD:/src" -w "/src" node bash -c 'node dof-helpers/parseComponent.js && mkdir architecture/4-Components && ln -srv dist/component.yaml architecture/4-Components'
 
 # Build the unified model
 echo "Building the unified model..."
