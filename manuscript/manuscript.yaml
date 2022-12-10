@@ -156,6 +156,14 @@ sections:
           \label{user-stories-mapping}
       \end{figure}
 
+      Alternative views can also be rendered from a model. For example, the user stories can also be rendered as a use case diagram \ref{use-case-diagram}.
+      \begin{figure}[hbt!]
+          \centering
+          \includegraphics[width=.5\textwidth]{use-case-diagram}
+          \caption{a view describing user stories as a usecase diagram}
+          \label{use-case-diagram}
+      \end{figure}
+
       \subsection{Example Data Structure}
 
       A colletion of data structures can be derived from user stories as presented in figure \ref{data-structures-mapping}.
