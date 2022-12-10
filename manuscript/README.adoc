@@ -23,9 +23,9 @@ From the project root directory, run the following `linkml-validate` command to 
 linkml-validate -s manuscript/manuscript-metamodel.yaml manuscript/manuscript-example.yaml
 ----
 
-=== Generate LaTeX and PDF document of manuscript
+=== Generate LaTeX and PDF document of example manuscript
 
-From project root directory, run the following `jinja2` command to generate a LaTeX document from the manuscript model:
+From project root directory, run the following `jinja2` command to generate a LaTeX document from the example manuscript model:
 
 [source,bash]
 ----
@@ -44,5 +44,28 @@ From the `dist/` directory, run the following `pdflatex` command to generate a P
 [source,bash]
 ----
 pdflatex manuscript-example.tex && bibtex manuscript-example.tex && pdflatex manuscript-example.tex && pdflatex manuscript-example.tex
+----
+
+=== Generate LaTeX and PDF document of manuscript
+
+From project root directory, run the following `jinja2` command to generate a LaTeX document from the manuscript model:
+
+[source,bash]
+----
+jinja2 -o dist/manuscript.tex templates/manuscript.tex.jinja2 manuscript/manuscript.yaml
+----
+
+Copy files needed for LaTeX formatting to the `dist/` directory:
+
+[source,bash]
+----
+cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls assets/*
+----
+
+From the `dist/` directory, run the following `pdflatex` command to generate a PDF document of from the LaTeX manuscript, using pdflatex template:
+
+[source,bash]
+----
+pdflatex manuscript.tex && bibtex manuscript.tex && pdflatex manuscript.tex && pdflatex manuscript.tex
 ----
 
