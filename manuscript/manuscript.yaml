@@ -181,6 +181,7 @@ sections:
       Because models are both human and machine readable, thus, a specification document can also be generated. For example, the following table \ref{satellite-health-data-packet} rendering of the data structure of the satellite health data packet:
 
       \begin{table}
+          \centering
           \include{satellite-health-data-packet-as-table}
           \caption{Satellite Health Data Packet}
           \label{satellite-health-data-packet}
