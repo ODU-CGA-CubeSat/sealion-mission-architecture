@@ -4,12 +4,12 @@ authors:
     - full_name: Sean Marquez
       footnote: 
     - full_name: Kevin Chiu
-      footnote: 
-    affiliation: Old Dominion University, Norfolk, VA, 23529
+      footnote: Graduate Student, Mechanical and Aerospace Engineering.
+    affiliation: Old Dominion University, Norfolk, VA, 23529, USA
   - author:
-    - full_name: Sharan Asundi, Ph.D.
-      footnote: Assistant Professor, Department of Mechanical \& Aerospace Engineering, Old Dominion University
-    affiliation: Old Dominion University, Norfolk, VA, 23529
+    - full_name: Sharanabasaweshwara Asundi
+      footnote: Assistant Professor, Mechanical and Aerospace Engineering, and AIAA Professional Member.
+    affiliation: Old Dominion University, Norfolk, VA, 23529, USA
 abstract: |
   With the growing community of CubeSat developers has emerged a need for a technical approach that would provide a means of fast-tracking the lifecycle development process of CubeSats, including the need to minimize design and development time repeating prior engineering efforts. In addition to a technical approach, there is also the need for a language and toolchain with a demand for both minimal training and minimal IT overhead to configure. A model-based approach has become a topic of interest in addressing much of these systems engineering painpoints. However, the current state-of-the-art tools demand either considerable investment in training and/or IT overhead, making it difficult for CubeSat developers of small startups or academia to participate. This article presents a model-based technical approach in conjunction with a docs-as-code approach, used to fascilitate flight software architecture development, intended to guide an implementation, for the SeaLion CubeSat mission - a joint CubeSat mission between the Old Dominion University and Coast Guard Academy. The technical approach discussed in this paper was also used to model and generate the paper as itself.
 sections:
@@ -163,7 +163,10 @@ sections:
           \caption{a view describing user stories as a usecase diagram}
           \label{use-case-diagram}
       \end{figure}
-
+      \\
+      \\
+      \\
+      \\
       \subsection{Example Data Structure}
 
       A colletion of data structures can be derived from user stories as presented in figure \ref{data-structures-mapping}.
@@ -175,11 +178,13 @@ sections:
           \label{data-structures-mapping}
       \end{figure}
 
-      Because models are both human and machine readable, thus, a specification document can also be generated. For example, the following is a table rendering of the data structure of the satellite health data packet:
+      Because models are both human and machine readable, thus, a specification document can also be generated. For example, the following table \ref{satellite-health-data-packet} rendering of the data structure of the satellite health data packet:
 
-      \begin{center}
-      \include{satellite-health-data-packet-as-table}
-      \end{center}
+      \begin{table}
+          \include{satellite-health-data-packet-as-table}
+          \caption{Satellite Health Data Packet}
+          \label{satellite-health-data-packet}
+      \end{table}
 
       This manuscript document itself was also modeled and generated using the m30ml modeling language and toolchain.
 
