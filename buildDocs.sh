@@ -73,11 +73,11 @@ docker run --rm --volume $PWD:/src -w "/src" asciidoctor/docker-asciidoctor asci
 echo "removing architecture/4-Components..."
 docker run --rm --volume $PWD:/src -w "/src" node bash -c 'rm -rf architecture/4-Components'
 
-# Generate presentation.html
-echo "Generating presentation.adoc..."
-docker run --rm -v $PWD:/src -w /src node node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/presentation.adoc.liquid --out=dist/presentation.adoc
-echo "Generating presentation.html..."
-docker run --rm -v $PWD:/documents asciidoctor/docker-asciidoctor bash -c "cd dist && asciidoctor-revealjs -r asciidoctor-diagram -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0 -a revealjs_transition=slide -a revealjs_slideNumber=true -a revealjs_width=1100 -a revealjs_height=700 -D . 'presentation.adoc' -o 'presentation.html'"
+## Generate presentation.html
+#echo "Generating presentation.adoc..."
+#docker run --rm -v $PWD:/src -w /src node node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/presentation.adoc.liquid --out=dist/presentation.adoc
+#echo "Generating presentation.html..."
+#docker run --rm -v $PWD:/documents asciidoctor/docker-asciidoctor bash -c "cd dist && asciidoctor-revealjs -r asciidoctor-diagram -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0 -a revealjs_transition=slide -a revealjs_slideNumber=true -a revealjs_width=1100 -a revealjs_height=700 -D . 'presentation.adoc' -o 'presentation.html'"
 
 # generate tabulated-stakeholder-needs.adoc from liquid template for extended abstract
 echo "generating tabulated-stakeholder-needs.adoc from liquid template..."
