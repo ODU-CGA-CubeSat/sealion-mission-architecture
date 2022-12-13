@@ -1,0 +1,176 @@
+= Model-Based CubeSat Flight-Software Architecture: using a Docs-as-Code Approach
+//:revealjs_customtheme: themes/css/reveal-zenika.css
+:revealjs_customtheme: themes/css/reveal-aiaa.css
+
+**Sean Marquez & Kevin Chiu**
+
+**Sharanabasaweshwara Asundi**
+
+**Old Dominion University**
+
+**SciTech Conference, 23–27 January 2023**
+
+[.notes]
+--
+Hello,
+my name is Sean Marquez,
+and on behalf of my co-author,
+Kevin Chiu
+and advisor for this project,
+Dr. Sharan Asundi
+I'll be presenting on the topic of Model-Based CubeSat Flight-Software Architecture,
+using a docs-as-code approach,
+developed for the SeaLion Mission.
+--
+
+<<<
+== SeaLion Mission
+
+_a joint CubeSat mission between the Old Dominion University (ODU), Coast Guard Academy (USCGA), and the Air Force Institute of Technology (AFIT)_
+
+- 3U CubeSat carrying three payloads for on-orbit validation
+- to be launched as a secondary payload on a Northrop Grumman Antares Rocket from Wallops Flight Facility (WFF), scheduled for March, 2023
+
+[.notes]
+--
+As a brief background,
+The SeaLion Mission is joint CubeSat mission between the Old Dominion University (ODU), Coast Guard Academy (USCGA), and the Air Force Institute of Technology (AFIT).
+the SeaLion Mission is a 3U CubeSat carrying three science experiments,
+to be launched as a secondary payload on a Northrop Grumman Antares Rocket from Wallops Flight Facility (WFF),
+scheduled for March, 2023
+--
+
+<<<
+== Technical approach: Desired Outcomes
+
+[%step]
+- should able to guide an implementation
+- should provide a traceable mapping between stakeholder needs and software system requirements
+- should provide a means to keep requirements and implementation in sync if/when requirements change
+- should provide a means to produce human and machine readable views
+
+[.notes]
+--
+Before writing a single line of code,
+the flight software development team and myself decided very early on that it might be good idea to define what exactly this spacecraft needed to do.
+In doing so,
+we discovered the need to adopt a technical approach,
+one that would address a set of desired outcomes...
+--
+
+== Model-Based + Docs-as-Code Approach
+
+[%step]
+**Docs-as-Code Approach**
+[%step]
+_Principle of writing documentation using the same principles & practices used for developing/maintaining good software_
+[%step]
+- i.e., content persists in plaintext, as to be version controlled and managed along side code on the local filesystem
+
+[%step]
+**Model-Based Approach**
+[%step]
+_Capturing the contents of the system in a **model**, as opposed to a document_
+[%step]
+- i.e., content persists in a data model that is both human-readable and machine-queryable
+
+[.notes]
+--
+To accomplish these desired outcomes,
+the team and myself adopted the following approaches...
+The first being Docs-as-Code Approach;
+Principle of writing documentation,
+using the same practices and tools used for developing/maintaining good software.
+i.e., content persists in plaintext, as to be version controlled and managed along side code on the local filesystem
+The second being the Model-Based Approach;
+Capturing the contents of the system architecture in a **model**, as opposed to a document.
+i.e., content persists in a data model that is both human-readable and machine-queryable
+Using this approach, we were able to downselect a modeling language that allowed us to achieve the desired outcomes...
+--
+
+<<<
+=== Stakeholder Needs
+ 
+The SeaLion mission architecture is guided by a series of stakeholder needs...
+
+[plantuml, stakeholder-needs-mapping, svg]
+....
+include::./stakeholder-needs-mapping.puml[Stakeholder Needs Mapping]
+....
+
+[.notes]
+--
+Using a filesystem-based modeling language,
+developed by the Mach 30 Foundation,
+we were able to model a set of stakeholder needs,
+which in the context of our CubeSat mission are the mission objectives.
+The stakeholder needs represent the desires of our stakeholders,
+which are then used to derive requirements in a language that is familiar to software developers...
+--
+
+=== User Stories
+
+The stakeholder needs are then used to identify a series of user stories...
+
+[plantuml, user-stories-mapping, svg]
+....
+include::./user-stories-mapping.puml[User Stories Mapping]
+....
+
+[.notes]
+--
+As derived requirements, we then created user stories.
+User stories are an approach to capturing software requirements,
+familiar to practitioners of Agile software engineering,
+represented as a set of use cases performed by a user,
+in this case, the ground station operator
+--
+
+=== User stories as Use Case Diagram
+
+[plantuml, use-case-diagram, svg]
+....
+include::./use-case-diagram.puml[User Stories as Use Case Diagram]
+....
+
+[.notes]
+--
+Because user stories are both human and machine readable model elements,
+we can auto-generate an alternative view of the user stories as a use case diagram.
+--
+
+=== Data Structures
+
+Data structure can also be described and mapped to user stories in the architecture.
+
+[plantuml, data-structures-mapping, svg]
+....
+include::./data-structures-mapping.puml[Data Structures Mapping]
+....
+
+[.notes]
+--
+Data structure can also be described and mapped to user stories in the architecture.
+--
+
+=== Example Data Structure
+
+include::./satellite-health-data.adoc[Satellite Health Data Packet as table]
+
+[.notes]
+--
+For example,
+the following data structure specifies the satellite health data packet,
+derived from our a user story.
+--
+
+== Conclusion
+
+with a model-based + docs-as-code approach, flight software architecture can: 
+[%step]
+- guide an implementation directly from stakeholder needs
+- ensure traceability between stake holder needs and system requirements
+- provide a means to keep requirements and implementation in sync if/when requirements change
+- provide a means to produce human and machine readable views (including this presentation!)
+
+== The End

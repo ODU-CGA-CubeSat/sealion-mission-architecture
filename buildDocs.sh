@@ -267,3 +267,14 @@ fi
 gitdescribe=$(git describe --always --tags HEAD)
 newmanuscriptname=manuscript-$gitdescribe.pdf
 mv $workdir/manuscript.pdf $workdir/$newmanuscriptname
+
+#### generate manuscript ####
+# Copy scitech-presentation.adoc to dist/
+cp -t dist/ manuscript/scitech-presentation.adoc assets/* -r themes/
+
+# Generate scitech-presentation.html
+echo "Generating scitech-presentation.html..."
+docker run --rm -v $project_root/dist:/documents asciidoctor/docker-asciidoctor asciidoctor-revealjs -r asciidoctor-diagram -a revealjs_transition=slide -a revealjs_slideNumber=true -a revealjs_width=1100 -a revealjs_height=700 'scitech-presentation.adoc' -o 'scitech-presentation.html'
+
+# Copy reveal.js to dist/
+cp -r reveal.js/ dist/
