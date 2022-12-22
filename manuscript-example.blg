@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: manuscript-example.aux
+The style file: new-aiaa.bst
+Database file #1: sample.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty pages in peyret2012computational
+Warning--empty chapter and pages in oates1997aerothermodynamics
+You've used 9 entries,
+            3319 wiz_defined-function locations,
+            743 strings with 6731 characters,
+and the built_in function-call counts, 5121 in all, are:
+= -- 382
+> -- 106
+< -- 22
++ -- 48
+- -- 31
+* -- 384
+:= -- 683
+add.period$ -- 17
+call.type$ -- 9
+change.case$ -- 38
+chr.to.int$ -- 13
+cite$ -- 11
+duplicate$ -- 463
+empty$ -- 476
+format.name$ -- 48
+if$ -- 1077
+int.to.chr$ -- 1
+int.to.str$ -- 10
+missing$ -- 77
+newline$ -- 39
+num.names$ -- 30
+pop$ -- 173
+preamble$ -- 1
+purify$ -- 36
+quote$ -- 0
+skip$ -- 180
+stack$ -- 0
+substring$ -- 287
+swap$ -- 265
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 50
+warning$ -- 2
+while$ -- 37
+width$ -- 0
+write$ -- 111
+(There were 2 warnings)

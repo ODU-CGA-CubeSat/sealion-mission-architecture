@@ -1,0 +1,73 @@
+\begin{thebibliography}{13}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{\discretionary{}{}{}https://doi.org/#1}\else
+  \providecommand{\doi}[1]{\discretionary{}{}{}\urlstyle{rm}\url{https://doi.org/#1}}\fi
+
+\bibitem[{Friedenthal and Oster(2017)}]{architecting_spacecraft}
+Friedenthal, S., and Oster, C., \emph{Architecting spacecraft with SysML},
+  2017.
+
+\bibitem[{Asundi and Fitz-Coy(2013)}]{asundi13_cubes}
+Asundi, S.~A., and Fitz-Coy, N.~G., \enquote{CubeSat mission design based on a
+  systems engineering approach,} \emph{2013 IEEE Aerospace Conference}, 2013,
+  p. nil.
+\newblock \doi{10.1109/aero.2013.6496900},
+  \urlprefix\url{http://dx.doi.org/10.1109/AERO.2013.6496900}.
+
+\bibitem[{Holscher(2022)}]{docs_as_code}
+Holscher, E., \enquote{Docs as Code,} 2022.
+\newblock \urlprefix\url{https://www.writethedocs.org/guide/docs-as-code/}.
+
+\bibitem[{Academy(2022)}]{sealion_cdr}
+Academy, O. D. U. . U. S. C.~G., \enquote{Critical Design Review: Mission
+  SeaLion - ODU/CGA 3U CubeSat,} , 2022.
+
+\bibitem[{cds(2022)}]{cds_rev14}
+\emph{CubeSat Design Specification Rev. 14}, The CubeSat Program, Cal Poly SLO,
+  2022.
+\newblock \urlprefix\url{https://www.cubesat.org/s/CDS-REV14_1-2022-02-09.pdf}.
+
+\bibitem[{Heidt et~al.(2000)Heidt, Puig-Suari, Moore, Nakasuka, and
+  Twiggs}]{heidt_new}
+Heidt, H., Puig-Suari, J., Moore, A.~S., Nakasuka, S., and Twiggs, R.~J.,
+  \enquote{CubeSat - A new generation of picosatellite for education and
+  industry low-cost space experimentation,} , 08 2000.
+
+\bibitem[{Swartwout(2021)}]{swartwout_data}
+Swartwout, M., \enquote{CubeSat Database,} , 2021.
+\newblock
+  \urlprefix\url{https://sites.google.com/a/slu.edu/swartwout/cubesat-database}.
+
+\bibitem[{sea(2022)}]{sealion_mission_architecture}
+\enquote{SeaLion Mission Architecture,} 2022.
+\newblock
+  \urlprefix\url{https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture}.
+
+\bibitem[{David~Wagner(2020)}]{caesar_model_based_approach}
+David~Wagner, A. J. M. E. N. R. S.~J., So Young~Kim, \enquote{CAESAR
+  Model-Based Approach to Harness Design,} \emph{Proceedings of IEEE Aerospace
+  Conference}, 2020.
+
+\bibitem[{Brown(2011)}]{ibm_mbse}
+Brown, B., \enquote{Model-based systems engineering: Revolution or evolution?}
+  Tech. rep., 12 2011.
+
+\bibitem[{Simmons(2022)}]{mach30_git}
+Simmons, J., \enquote{Mach30 Modeling Language,} 2022.
+\newblock \urlprefix\url{https://github.com/Mach30/m30ml}.
+
+\bibitem[{Maged~Elaasar(2022)}]{oml_language}
+Maged~Elaasar, N.~R., \enquote{Ontological Modeling Language: Origin and
+  Rationale,} 2022.
+\newblock \urlprefix\url{http://www.opencaesar.io/oml/}.
+
+\bibitem[{Jenkinis(2022)}]{oml_origin_and_rationale}
+Jenkinis, S., \enquote{Ontological Modeling Language 1.4,} 2022.
+\newblock
+  \urlprefix\url{http://www.opencaesar.io/imce/2021/06/19/OML-Origin-and-Rationale.html}.
+
+\end{thebibliography}

@@ -39,7 +39,7 @@ frame "uc [ SeaLion Mission Architecture Stakeholder Needs Mapping ]" {
             <<stakeholder need>>
             <b>1.4 Primary Mission Objective A4</b>
             --
-            The SeaLion mission shall adhere to CubeSat standards as per CDS Rev. 13
+            The SeaLion mission shall adhere to CubeSat standards.
         ]
         sh -- sn1_4
     

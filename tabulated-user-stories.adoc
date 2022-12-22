@@ -1,0 +1,156 @@
+.User Stories
+|===
+| ID / Name | Statement | Derived From
+
+
+| *1*: Ping Satellite
+| [[ping_satellite]] As a *Ground Station Operator* I want to *Ping satellite* so that I can *Establish communication link with satellite*.
+| 
+
+
+
+<<primary_mission_objective_a1, Primary Mission Objective A1>>
+
+
+
+
+
+
+| *2*: View Satellite Beacon Data
+| [[view_satellite_beacon_data]] As a *Ground Station Operator* I want to *view satellite beacon data (alternating between health & mission data), received via UHF* so that I can *verify that satellite is operating nominally*.
+| 
+
+
+
+<<primary_mission_objective_a1, Primary Mission Objective A1>>
+
+
+
+<<primary_mission_objective_a3, Primary Mission Objective A3>>
+
+
+
+<<primary_mission_objective_a5, Primary Mission Objective A5>>
+
+
+
+<<secondary_mission_objective_b1, Secondary Mission Objective B1>>
+
+
+
+<<secondary_mission_objective_b2, Secondary Mission Objective B2>>
+
+
+
+<<tertiary_mission_objective_c1, Tertiary Mission Objective C1>>
+
+
+
+<<tertiary_mission_objective_c2, Tertiary Mission Objective C2>>
+
+
+
+<<tertiary_mission_objective_c3, Tertiary Mission Objective C3>>
+
+
+
+
+
+
+| *3*: Send Request to Set Interrupt Timer
+| [[send_request_to_set_interrupt_timer]] As a *Ground Station Operator* I want to *send a request to set count value at which interrupt timers (i.e., beacon, GPS ping, or orbit propagator) are triggered* so that I can *finetune parameters for attitude or orbit analysis or to conserve power*.
+| 
+
+
+
+
+| *4*: Request Telemetry or EventLog Data
+| [[request_telemetry_or_eventlog_data]] As a *Ground Station Operator* I want to *Request satellite telemetry or eventlog data* so that I can *verify/validate health status or mission data*.
+| 
+
+
+
+
+| *4.1*: Request Satellite Health Data
+| [[request_satellite_health_data]] As a *Ground Station Operator* I want to *request satellite health data packet* so that I can *verify/validate AODS sensors & GPS data are within nominal parameters*.
+| 
+
+
+
+<<request_telemetry_or_eventlog_data, Request Telemetry or EventLog Data>>
+
+
+
+
+
+
+| *4.1.1*: Request Satellite Health Data via S-Band Radio
+| [[request_satellite_health_data_via_s-band_radio]] As a *Ground Station Operator* I want to *request satellite health data packet via S-band radio* so that I can *verify/validate AODS sensors & GPS data are within nominal parameters*.
+| 
+
+
+
+<<request_telemetry_or_eventlog_data, Request Telemetry or EventLog Data>>
+
+
+
+<<primary_mission_objective_a2, Primary Mission Objective A2>>
+
+
+
+
+
+
+| *4.2*: Request Satellite Mission Data
+| [[request_satellite_mission_data]] As a *Ground Station Operator* I want to *request satellite mission data* so that I can *validate in-orbit AODS and/or payload performance*.
+| 
+
+
+
+<<request_telemetry_or_eventlog_data, Request Telemetry or EventLog Data>>
+
+
+
+<<primary_mission_objective_a1, Primary Mission Objective A1>>
+
+
+
+<<primary_mission_objective_a3, Primary Mission Objective A3>>
+
+
+
+<<primary_mission_objective_a5, Primary Mission Objective A5>>
+
+
+
+<<secondary_mission_objective_b1, Secondary Mission Objective B1>>
+
+
+
+<<secondary_mission_objective_b2, Secondary Mission Objective B2>>
+
+
+
+<<tertiary_mission_objective_c1, Tertiary Mission Objective C1>>
+
+
+
+<<tertiary_mission_objective_c2, Tertiary Mission Objective C2>>
+
+
+
+<<tertiary_mission_objective_c3, Tertiary Mission Objective C3>>
+
+
+
+
+
+
+| *5*: Send Request to Set Mission Mode Duration
+| [[send_request_to_set_mission_mode_duration]] As a *Ground Station Operator* I want to *send a request to set mission mode duration* so that I can *manage time spent per mission mode*.
+| 
+
+
+
+
+|===

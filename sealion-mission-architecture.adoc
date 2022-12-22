@@ -42,7 +42,7 @@ The SeaLion mission shall successfully transmit “mission data” defined above
 
 === 1.4: Primary Mission Objective A4
 ****
-The SeaLion mission shall adhere to CubeSat standards as per CDS Rev. 13
+The SeaLion mission shall adhere to CubeSat standards.
 **** 
 
 
@@ -107,7 +107,7 @@ The SeaLion shall verify DeCS in-orbit behavior performance.
 
 === Stakeholder Needs Mapping
 
-[plantuml, stakeholder-needs-mapping, svg]
+[plantuml, stakeholder-needs-mapping, png]
 ....
 include::./stakeholder-needs-mapping.puml[Stakeholder Needs Mapping]
 ....
@@ -349,14 +349,14 @@ send a request to set Mission Mode 1 duration to 25 minutes
 
 === User Stories Mapping
 
-[plantuml, user-stories-mapping, svg]
+[plantuml, user-stories-mapping, png]
 ....
 include::./user-stories-mapping.puml[User Stories Mapping]
 ....
 
 === User stories as Use Case Diagram
 
-[plantuml, use-case-diagram, svg]
+[plantuml, use-case-diagram, png]
 ....
 include::./use-case-diagram.puml[User Stories as Use Case Diagram]
 ....
@@ -1199,14 +1199,14 @@ exit_tle: {{exit_tle}}
 
 === Data Structures Mapping
 
-[plantuml, data-structures-mapping, svg]
+[plantuml, data-structures-mapping, png]
 ....
 include::./data-structures-mapping.puml[Data Structures Mapping]
 ....
 
 == Finite State Machine
 
-[plantuml, fsm, svg]
+[plantuml, fsm, png]
 ....
 include::./operating-mode-as-fsm.puml[Finite State Machine]
 ....

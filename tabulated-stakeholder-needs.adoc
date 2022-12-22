@@ -1,0 +1,46 @@
+.Stakeholder Needs
+|===
+| ID / Name | Statement
+
+
+| *1.1*: Primary Mission Objective A1
+| [[primary_mission_objective_a1]] The SeaLion mission shall establish UHF communication link with Virginia ground station
+
+
+| *1.2*: Primary Mission Objective A2
+| [[primary_mission_objective_a2]] The SeaLion mission shall establish S-Band communication link with MC3 ground station
+
+
+| *1.3*: Primary Mission Objective A3
+| [[primary_mission_objective_a3]] The SeaLion mission shall successfully transmit “mission data” defined above to ground stations on the Earth.
+
+
+| *1.4*: Primary Mission Objective A4
+| [[primary_mission_objective_a4]] The SeaLion mission shall adhere to CubeSat standards.footnote:2-CubeSatDesignSpecificationRev13[CubeSat Design Specification Rev. 13 https://www.cubesat.org/s/cds_rev13_final2.pdf]
+
+
+| *1.5*: Primary Mission Objective A5
+| [[primary_mission_objective_a5]] The SeaLion mission shall validate the operation of the Impedance Probe (IP) as a primary payload in-orbit.
+
+
+| *2.1*: Secondary Mission Objective B1
+| [[secondary_mission_objective_b1]] The SeaLion mission shall provide a means to validate a Multi-spectral Sensor (Ms-S) in-orbit
+
+
+| *2.2*: Secondary Mission Objective B2
+| [[secondary_mission_objective_b2]] The SeaLion mission shall provide a means to validate a deployable composite structure (DeCS) in-orbit
+
+
+| *3.1*: Tertiary Mission Objective C1
+| [[tertiary_mission_objective_c1]] The SeaLion mission shall qualify on-orbit the deployment and functioning of the newly developed UHF antenna system and its deployment.
+
+
+| *3.2*: Tertiary Mission Objective C2
+| [[tertiary_mission_objective_c2]] The SeaLion mission shall qualify a CubeSat bus architecture for very-low Earth orbit (VLEO)
+
+
+| *3.3*: Tertiary Mission Objective C3
+| [[tertiary_mission_objective_c3]] The SeaLion shall verify DeCS in-orbit behavior performance.
+
+
+|===

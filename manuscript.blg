@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: manuscript.aux
+The style file: new-aiaa.bst
+A level-1 auxiliary file: satellite-health-data-packet-as-table.aux
+Database file #1: manuscript-references.bib
+Warning--string name "https://www.proquest.com/conference-papers-proceedings/cubesat-new-generation-picosatellite-education/docview/27219077/se-2" is undefined
+--line 46 of file manuscript-references.bib
+Warning--entry type for "swartwout_data" isn't style-file defined
+--line 49 of file manuscript-references.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Too many commas in name 1 of "David Wagner, So Young Kim, Alejandro Jimenez, Maged Elaasar, Nicolas Rouquette, Steven Jenkins" for entry caesar_model_based_approach
+while executing---line 1578 of file new-aiaa.bst
+Too many commas in name 1 of "David Wagner, So Young Kim, Alejandro Jimenez, Maged Elaasar, Nicolas Rouquette, Steven Jenkins" for entry caesar_model_based_approach
+while executing---line 1578 of file new-aiaa.bst
+Too many commas in name 1 of "David Wagner, So Young Kim, Alejandro Jimenez, Maged Elaasar, Nicolas Rouquette, Steven Jenkins" for entry caesar_model_based_approach
+while executing---line 1578 of file new-aiaa.bst
+Warning--missing publisher in architecting_spacecraft
+Warning--empty journal in docs_as_code
+Warning--empty author in sealion_mission_architecture
+Warning--empty journal in sealion_mission_architecture
+Too many commas in name 1 of "David Wagner, So Young Kim, Alejandro Jimenez, Maged Elaasar, Nicolas Rouquette, Steven Jenkins" for entry caesar_model_based_approach
+while executing---line 1670 of file new-aiaa.bst
+Too many commas in name 1 of "David Wagner, So Young Kim, Alejandro Jimenez, Maged Elaasar, Nicolas Rouquette, Steven Jenkins" for entry caesar_model_based_approach
+while executing---line 1670 of file new-aiaa.bst
+Too many commas in name 1 of "David Wagner, So Young Kim, Alejandro Jimenez, Maged Elaasar, Nicolas Rouquette, Steven Jenkins" for entry caesar_model_based_approach
+while executing---line 1670 of file new-aiaa.bst
+Too many commas in name 1 of "David Wagner, So Young Kim, Alejandro Jimenez, Maged Elaasar, Nicolas Rouquette, Steven Jenkins" for entry caesar_model_based_approach
+while executing---line 1670 of file new-aiaa.bst
+Too many commas in name 1 of "David Wagner, So Young Kim, Alejandro Jimenez, Maged Elaasar, Nicolas Rouquette, Steven Jenkins" for entry caesar_model_based_approach
+while executing---line 1670 of file new-aiaa.bst
+Too many commas in name 1 of "David Wagner, So Young Kim, Alejandro Jimenez, Maged Elaasar, Nicolas Rouquette, Steven Jenkins" for entry caesar_model_based_approach
+while executing---line 1670 of file new-aiaa.bst
+Warning--missing institution in ibm_mbse
+Warning--empty journal in mach30_git
+Warning--empty journal in oml_language
+Warning--empty journal in oml_origin_and_rationale
+You've used 13 entries,
+            3319 wiz_defined-function locations,
+            742 strings with 7375 characters,
+and the built_in function-call counts, 5043 in all, are:
+= -- 364
+> -- 116
+< -- 11
++ -- 60
+- -- 35
+* -- 360
+:= -- 775
+add.period$ -- 32
+call.type$ -- 13
+change.case$ -- 53
+chr.to.int$ -- 14
+cite$ -- 25
+duplicate$ -- 468
+empty$ -- 447
+format.name$ -- 55
+if$ -- 975
+int.to.chr$ -- 1
+int.to.str$ -- 14
+missing$ -- 84
+newline$ -- 57
+num.names$ -- 33
+pop$ -- 226
+preamble$ -- 1
+purify$ -- 52
+quote$ -- 0
+skip$ -- 164
+stack$ -- 0
+substring$ -- 164
+swap$ -- 190
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 76
+warning$ -- 8
+while$ -- 23
+width$ -- 0
+write$ -- 146
+(There were 9 error messages)

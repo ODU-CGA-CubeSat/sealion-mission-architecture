@@ -1,0 +1,51 @@
+\begin{thebibliography}{9}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{\discretionary{}{}{}https://doi.org/#1}\else
+  \providecommand{\doi}[1]{\discretionary{}{}{}\urlstyle{rm}\url{https://doi.org/#1}}\fi
+
+\bibitem[{Vatistas et~al.(1986)Vatistas, Lin, and Kwok}]{vatistas1986reverse}
+Vatistas, G.~H., Lin, S., and Kwok, C.~K., \enquote{Reverse Flow Radius in
+  Vortex Chambers,} \emph{AIAA Journal}, Vol.~24, No.~11, 1986, pp. 1872, 1873.
+\newblock \doi{10.2514/3.13046}.
+
+\bibitem[{Dornheim(1996)}]{dornheim1996planetary}
+Dornheim, M.~A., \enquote{Planetary Flight Surge Faces Budget Realities,}
+  \emph{Aviation Week \& Space Technology}, Vol. 145, No.~24, 1996, pp. 44--46.
+
+\bibitem[{Terster(1997)}]{terster1997nasa}
+Terster, W., \enquote{NASA Considers Switch to Delta 2,} \emph{Space News},
+  Vol.~8, No.~2, 1997, pp. 13--19.
+
+\bibitem[{Peyret and Taylor(1983)}]{peyret2012computational}
+Peyret, R., and Taylor, T.~D., \emph{Computational Methods for Fluid Flow},
+  2\textsuperscript{nd} ed., Springer-Verlag, New York, 1983, Chaps. 7, 14.
+
+\bibitem[{Oates(1984)}]{oates1997aerothermodynamics}
+Oates, G.~C. (ed.), \emph{Aerothermodynamics of Gas Turbine and Rocket
+  Propulsion}, AIAA Education Series, AIAA, New York, 1984, pp. 19, 136.
+
+\bibitem[{Volpe(1994)}]{volpe1994techniques}
+Volpe, R., \enquote{Techniques for Collision Prevention, Impact Stability, and
+  Force Control by Space Manipulators,} \emph{Teleoperation and Robotics in
+  Space}, edited by S.~B. Skaar and C.~F. Ruoff, Progress in Astronautics and
+  Aeronautics, AIAA, Washington, DC, 1994, pp. 175--212.
+
+\bibitem[{Thompson(1989)}]{thompsonspacecraft}
+Thompson, C.~M., \enquote{Spacecraft Thermal Control, Design, and Operation,}
+  \emph{AIAA Guidance, Navigation, and Control Conference}, CP849, Vol.~1,
+  AIAA, Washington, DC, 1989, pp. 103--115.
+
+\bibitem[{Chi(1993)}]{chi1993fluid}
+Chi, Y. (ed.), \emph{Fluid Mechanics Proceedings}, NASA SP-255, 1993.
+
+\bibitem[{Brandis et~al.(June 2016)Brandis, Johnston, and
+  Cruden}]{brandis2016nonequi}
+Brandis, A.~M., Johnston, C.~O., and Cruden, B.~A., \enquote{Nonequilibrium
+  Radiation for Earth Entry,} \emph{AIAA Paper 2016--3690}, June 2016.
+\newblock \doi{10.2514/6.2016-3690}.
+
+\end{thebibliography}

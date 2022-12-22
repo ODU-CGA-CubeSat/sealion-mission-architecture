@@ -1,0 +1,65 @@
+
+.Satellite Health Data Packet Specification
+
+[cols="1,1,1,5"]
+|===
+|Field |Type |Item Type |Description
+
+
+|call_sign
+|string
+
+|
+
+|Identifying call sign for the Sealion mission.
+
+
+|battery_health
+|float
+
+|
+
+|Percent value indicating the remaining charge of the batteries.
+
+
+|temperature_battery
+|float
+
+|
+
+|The temperature of the battery. Units in Kelvin.
+
+
+|mode
+|integer
+
+|
+
+|Integer value indicating current mission mode. 0 = Safe, 1 = mission mode 1, 2 = mission mode 2, 3 = mission mode 3.
+
+
+|tle_data
+|TLE
+
+|
+
+|TLE data from orbit propogator at time of beacon.
+
+
+|===
+
+
+*Derived From:*
+
+
+
+
+* xref:sealion-mission-architecture#_2_view_satellite_beacon_data[View Satellite Beacon Data]
+
+
+
+
+* xref:sealion-mission-architecture#_4_1_request_satellite_health_data[Request Satellite Health Data]
+
+
+
