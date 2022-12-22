@@ -35,6 +35,8 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: Section
+      bibtex:
+        description: name of bib file containing references
 
 slots:
   full_name:
