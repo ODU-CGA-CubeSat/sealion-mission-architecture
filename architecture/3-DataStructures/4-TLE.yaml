@@ -1,18 +1,41 @@
-name: TLE
-purpose: Data structure for the TLE data computed from GPS data or orbit propagator
+name: ECIStateVector
+purpose: Data structure for the earth-centered inertial (ECI) state vector in cartesian coordinates computed from GPS data or orbit propagator
 template: |
-  tle_line_1: {{tle_line_1}}
-  tle_line_2: {{tle_line_2}}
+  x: {{x}}
+  y: {{y}}
+  z: {{z}}
+  xd: {{xd}}
+  yd: {{yd}}
+  zd: {{zd}}
 elements:
-  - key: tle_line_1
-    type: TLELine1
+  - key: x
+    type: integer
     itemType: ''
-    description: Data for TLE line 1
+    description: position in kilometers (km) along x-axis
     derivedFrom: ''
-  - key: tle_line_2
-    type: TLELine2
+  - key: y
+    type: integer
     itemType: ''
-    description: Data for TLE line 2
+    description: position in kilometers (km) along y-axis
     derivedFrom: ''
-derivedFrom:
-- "0-References/8-TwoLineElementData.yaml"
+  - key: z
+    type: integer
+    itemType: ''
+    description: position in kilometers (km) along z-axis
+    derivedFrom: ''
+  - key: xd
+    type: integer
+    itemType: ''
+    description: velocity in kilometers per second (km/s) along x-axis
+    derivedFrom: ''
+  - key: yd
+    type: integer
+    itemType: ''
+    description: velocity in kilometers per second (km/s) along y-axis
+    derivedFrom: ''
+  - key: zd
+    type: integer
+    itemType: ''
+    description: velocity in kilometers per second (km/s) along z-axis
+    derivedFrom: ''
+derivedFrom: []
