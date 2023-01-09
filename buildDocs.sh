@@ -127,12 +127,20 @@ workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
 condition="$clitool --version | grep 'v17'"
 
+#### generate pdf-theme.yml from jinja2 template ####
+clitool="jinja2"
+cmdargs="-o dist/pdf-theme.yml --format yaml templates/pdf-theme.yml.jinja2 dist/architecture.yml"
+workdir=$project_root
+cmd="$clitool $cmdargs"
+podmancmd="podman run --rm -v $workdir:/work -w /work docker.io/roquie/docker-jinja2-cli $cmdargs"
+condition="$clitool --version | grep 'v0.8.2' > /dev/null"
+
 if ! eval $condition; then
-    echo "Building the unified model from liquid template via podman..."
+    echo "Generating pdf-theme.yml from jinja2 template via podman..."
     cd $project_root
     eval $(echo $podmancmd)
 else
-    echo "Building the unified model from liquid template..."
+    echo "Generating pdf-theme.yml from jinja2 template..."
     cd $workdir
     eval $cmd
 fi
