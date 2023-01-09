@@ -101,24 +101,6 @@ echo "Create symlink to dist/component.yaml in architecture/4-Components..."
 mkdir architecture/4-Components
 ln -srv dist/component.yaml architecture/4-Components
 
-#### generate assembly instructions ####
-clitool="node"
-cmdargs="dof-helpers/generateAssemblyInstructions.js"
-cmd="$clitool $cmdargs"
-workdir=$project_root
-podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
-
-if ! eval $condition; then
-    echo "generating assembly instructions via podman..."
-    cd $project_root
-    eval $(echo $podmancmd)
-else
-    echo "generating assembly instructions..."
-    cd $workdir
-    eval $cmd
-fi
-
 #### Build the unified model from liquid template ####
 clitool="node"
 cmdargs="m30mlTools/buildUnifiedModel.js"
@@ -127,20 +109,12 @@ workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
 condition="$clitool --version | grep 'v17'"
 
-#### generate pdf-theme.yml from jinja2 template ####
-clitool="jinja2"
-cmdargs="-o dist/pdf-theme.yml --format yaml templates/pdf-theme.yml.jinja2 dist/architecture.yml"
-workdir=$project_root
-cmd="$clitool $cmdargs"
-podmancmd="podman run --rm -v $workdir:/work -w /work docker.io/roquie/docker-jinja2-cli $cmdargs"
-condition="$clitool --version | grep 'v0.8.2' > /dev/null"
-
 if ! eval $condition; then
-    echo "Generating pdf-theme.yml from jinja2 template via podman..."
+    echo "Building the unified model from liquid template via podman..."
     cd $project_root
     eval $(echo $podmancmd)
 else
-    echo "Generating pdf-theme.yml from jinja2 template..."
+    echo "Building the unified model from liquid template..."
     cd $workdir
     eval $cmd
 fi
