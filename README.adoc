@@ -26,10 +26,10 @@ Note: It is recommended you run the following instructions on a Linux/Unix-like 
 
 === Installing requirements
 
-You will need https://git-scm.com/[git] to clone the project contents and https://www.docker.com/[docker] to run the docker image that contains the dependencies needed for building the documentation.
+You will need https://git-scm.com/[git] to clone the project contents and https://podman.io/getting-started/installation[podman] to run the podman image that contains the dependencies needed for building the documentation.
 
 . https://git-scm.com/downloads[git].
-. https://docs.docker.com/get-docker/[docker].
+. https://podman.io/getting-started/installation[podman].
 
 === Cloning the repo
 
@@ -45,7 +45,7 @@ Note: If you accidentally cloned without using `--recurse-submodules`, you can r
 
 === Building the documentation
 
-Once you've cloned the repo & installed docker, run the `buildDocs.sh` script in the project root directory (Note: Linux users may need to prepend this command `sudo`). This will build a docker image, as well as install node modules, needed for generating the `sealion-mission-architecture` page locally. You can view all locally installed docker images by running `docker images`.
+Once you've cloned the repo & installed podman, run the `buildDocs.sh` script in the project root directory (Note: Linux users may need to prepend this command `sudo`). This will pull the podman images, as well as install node modules, needed for generating the `sealion-mission-architecture` page locally. You can view all locally installed podman images by running `podman images`.
 
 [source,bash]
 ----
