@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#### set environment variable for project root ####
+project_root=$PWD
+
 # Install node_modules, if not already installed
 if [ ! -r ./node_modules ]; then
     echo "Installing node_modules..."
@@ -56,10 +59,23 @@ podman run --rm --volume "$PWD:/src" -w "/src" docker.io/node bash -c 'node m30m
 echo "generating sealion-mission-architecture.adoc from liquid template..."
 podman run --rm --volume "$PWD:/src" -w "/src" docker.io/node bash -c 'node m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --template=templates/sealion-mission-architecture.adoc.liquid --out=dist/sealion-mission-architecture.adoc'
 
-# generate pdf-theme.yml from liquid template
-echo "generating pdf-theme.yml from liquid template..."
-podman run --rm --volume "$PWD:/src" -w "/src" docker.io/capsulecorplab/asciidoctor-extended:liquidoc 'bundle exec liquidoc -d dist/architecture.yml -t templates/pdf-theme.yml.liquid -o dist/pdf-theme.yml'
-#podman run --rm --volume "$PWD:/src" -w "/src" node bash -c 'bundle exec liquidoc -d dist/architecture.yml -t templates/pdf-theme.yml.liquid -o dist/pdf-theme.yml'
+#### generate pdf-theme.yml from jinja2 template ####
+clitool="jinja2"
+cmdargs="-o dist/pdf-theme.yml --format yaml templates/pdf-theme.yml.jinja2 dist/architecture.yml"
+workdir=$project_root
+cmd="$clitool $cmdargs"
+podmancmd="podman run --rm -v $workdir:/work -w /work docker.io/roquie/docker-jinja2-cli $cmdargs"
+condition="$clitool --version | grep 'v0.8.2' > /dev/null"
+
+if ! eval $condition; then
+    echo "Generating pdf-theme.yml from jinja2 template via podman..."
+    cd $project_root
+    eval $(echo $podmancmd)
+else
+    echo "Generating pdf-theme.yml from jinja2 template..."
+    cd $workdir
+    eval $cmd
+fi
 
 # generate index.html
 echo "generating index.html..."
