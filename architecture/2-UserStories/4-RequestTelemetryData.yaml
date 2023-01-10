@@ -1,0 +1,7 @@
+id: 4
+name: Request Telemetry or EventLog Data
+actor: Ground Station Operator
+behavior: Request satellite telemetry or eventlog data
+rationale: verify/validate health status or mission data
+derivedFrom: ""
+example: Request satellite telemetry packets for local verification/validation of onboard AODS computations

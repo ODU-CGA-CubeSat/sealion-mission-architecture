@@ -1,0 +1,7 @@
+id: 5.0
+name: Send Request to Set Mission Mode Duration
+actor: Ground Station Operator
+behavior: send a request to set mission mode duration
+rationale: manage time spent per mission mode
+derivedFrom: []
+example: send a request to set Mission Mode 1 duration to 25 minutes

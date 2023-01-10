@@ -1,0 +1,15 @@
+= Manuscript
+
+This directory contains the metamodel (LinkML schema) and model (LinkML data) used validating and generating manuscript documents for the SciTech conference.
+
+Note: Do not edit `manuscript-example.yaml` as it is used for testing the schema validator and document generators.
+
+== Requirements
+
+- https://github.com/linkml/linkml[LinkML]
+- https://github.com/mattrobenolt/jinja2-cli[jinja2-cli]
+- https://www.tug.org/texlive/[TeX Live] - required for generating PDF documents from LaTeX
+
+== Usage
+
+Run the `buildDocs.sh` script, found in the project root directory, to validate and generate a PDF document of the SciTech manuscript.

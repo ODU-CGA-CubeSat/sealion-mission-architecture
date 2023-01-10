@@ -1,0 +1,90 @@
+name: TLE Line 1
+purpose: Data structure for the first line of the TLE data
+template: |
+  line_number: {{line_number}}
+  satellite_number: {{satellite_number}}
+  classification: {{classification}}
+  international_designator_1: {{international_designator_1}}
+  international_designator_2: {{international_designator_2}}
+  international_designator_3: {{international_designator_3}}
+  epoch_year: {{epoch_year}}
+  epoch: {{epoch}}
+  first_dt: {{first_dt}}
+  second_dt: {{second_dt}}
+  bstar: {{bstar}}
+  eph_type: {{eph_type}}
+  element_number: {{element_number}}
+  checksum: {{checksum}}
+elements:
+  - key: line_number
+    type: string
+    itemType: ''
+    description: Line number of element data (Column 01) 
+    derivedFrom: ''
+  - key: satellite_number
+    type: string
+    itemType: ''
+    description: Satellite number (Column 03-07)
+    derivedFrom: ''
+  - key: classification
+    type: string
+    itemType: ''
+    description: Classification of satellite (Column 08)
+    derivedFrom: ''
+  - key: international_designator_1
+    type: string
+    itemType: ''
+    description: International designator 1 (last two digits of launch year) (Column 10-11)
+    derivedFrom: ''
+  - key: international_designator_2
+    type: string
+    itemType: ''
+    description: International designator 2 (launch number of the year) (Column 12-14)
+    derivedFrom: ''
+  - key: international_designator_3
+    type: string
+    itemType: ''
+    description: International designator 3 (piece of the launch) (Column 15-17)
+    derivedFrom: ''
+  - key: epoch_year
+    type: string
+    itemType: ''
+    description: Epoch year (last two digits of year) (Column 19-20)
+    derivedFrom: ''
+  - key: epoch
+    type: string
+    itemType: ''
+    description: Epoch (day of the year and fractional portion of the day) (Column 21-32)
+    derivedFrom: ''
+  - key: first_dt
+    type: string
+    itemType: ''
+    description: First time derivative of the mean motion (Column 34-43)
+    derivedFrom: ''
+  - key: second_dt
+    type: string
+    itemType: ''
+    description: Second time derivative of the mean motion (leading decimal point assumed) (Column 45-52)
+    derivedFrom: ''
+  - key: bstar
+    type: string
+    itemType: ''
+    description: BSTAR drag term (leading decimal point assumed) (Column 54-61)
+    derivedFrom: ''
+  - key: eph_type
+    type: string
+    itemType: ''
+    description: Ephemeris type (Column 63)
+    derivedFrom: ''
+  - key: element_number
+    type: string
+    itemType: ''
+    description: Element number (Column 65-68)
+    derivedFrom: ''
+  - key: checksum
+    type: string
+    itemType: ''
+    description: "Checksum (modulo 10) (letters, blanks, periods, plus signs = 0; minus signs = 1) (Column 69)"
+    derivedFrom: ''
+derivedFrom:
+- "0-References/8-TwoLineElementData.yaml"

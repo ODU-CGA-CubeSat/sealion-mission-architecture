@@ -4,3 +4,9 @@
 [submodule "dof-helpers"]
 	path = dof-helpers
 	url = git@github.com:capsulecorplab/dof-helpers.git
+[submodule "components/sealion-cubesat/components/sealion-obc/components/dilophos"]
+	path = components/sealion-cubesat/components/sealion-obc/components/dilophos
+	url = https://github.com/ODU-CGA-CubeSat/dilophos.git
+[submodule "reveal.js"]
+	path = reveal.js
+	url = git@github.com:hakimel/reveal.js.git

@@ -1,0 +1,16 @@
+id: 4.2
+name: Request Satellite Mission Data
+actor: Ground Station Operator
+behavior: request satellite mission data
+rationale: validate in-orbit AODS and/or payload performance
+derivedFrom:
+- "2-UserStories/4-RequestTelemetryData.yaml"
+- "1-StakeholderNeeds/1.1-PrimaryMissionObjective-A1.yaml"
+- "1-StakeholderNeeds/1.3-PrimaryMissionObjective-A3.yaml"
+- "1-StakeholderNeeds/1.5-PrimaryMissionObjective-A5.yaml"
+- "1-StakeholderNeeds/2.1-SecondaryMissionObjective-B1.yaml"
+- "1-StakeholderNeeds/2.2-SecondaryMissionObjective-B2.yaml"
+- "1-StakeholderNeeds/3.1-TertiaryMissionObjective-C1.yaml"
+- "1-StakeholderNeeds/3.2-TertiaryMissionObjective-C2.yaml"
+- "1-StakeholderNeeds/3.3-TertiaryMissionObjective-C3.yaml"
+example: Request satellite mission data to verify that TLE's & AODS sensor data correspond with expected orbit profile and/or validate that a mission mode was successful

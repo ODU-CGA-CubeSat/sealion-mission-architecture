@@ -1,14 +1,14 @@
 {
     "name": "sealion-mission-architecture",
-    "version": "3.0.1",
+    "version": "5.0.0",
     "description": "SeaLion Mission Architecture",
     "keywords": [
         "cubesat",
-        "mission-conops",
+        "sealion-mission-architecture",
         "model-based-systems-engineering"
     ],
-    "repository": "https://github.com/ODU-CGA-CubeSat/mission-conops.git",
-    "homepage": "https://ODU-CGA-CubeSat.github.io/mission-conops",
+    "repository": "https://github.com/ODU-CGA-CubeSat/sealion-mission-architecture.git",
+    "homepage": "https://ODU-CGA-CubeSat.github.io/sealion-mission-architecture",
     "author": "Sean Marquez <capsulecorplab@gmail.com> & contributors",
     "license": "MIT",
     "dependencies": {

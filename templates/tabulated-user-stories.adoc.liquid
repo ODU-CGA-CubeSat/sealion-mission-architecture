@@ -1,0 +1,19 @@
+.User Stories
+|===
+| ID / Name | Statement | Derived From
+
+{% for us in architecture['2-UserStories'] %}
+| *{{us.id}}*: {{us.name}}
+| [[{{us.name | downcase | replace: " ", "_"}}]] As a *{{us.actor}}* I want to *{{us.behavior}}* so that I can *{{us.rationale}}*.
+| 
+{% if us.derivedFrom.length > 0 %}
+{% for derivedFromItem in us.derivedFrom %}
+{% if architecture['elements'][derivedFromItem].name %}
+<<{{architecture['elements'][derivedFromItem].name | downcase | replace: " ", "_"}}, {{architecture['elements'][derivedFromItem].name}}>>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+|===

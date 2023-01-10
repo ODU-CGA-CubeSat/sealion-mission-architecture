@@ -1,0 +1,41 @@
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\documentclass[conf]{new-aiaa}
+%\documentclass[journal]{new-aiaa} for journal papers
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage{longtable,tabularx}
+\setlength\LTleft{0pt} 
+
+\title{ {{- title -}} }
+
+{% for author in authors %}
+\author{ {%- for author_line in author.author %}{{- author_line.full_name -}} {% if author_line.footnote %}\footnote{ {{- author_line.footnote -}} }{% endif %} {% if not loop.last %}and {% endif %}{% endfor -%} }
+\affil{ {{- author.affiliation -}} }
+{% endfor %}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+{{ abstract }}
+\end{abstract}
+
+{% for section in sections %}
+\section{ {{- section.title -}} }
+
+{{ section.content }}
+{% endfor %}
+
+\bibliography{ {{- bibtex -}} }
+
+\end{document}
+

@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'architecture/**'
-      - 'templates/**'
-      - 'buildDocs.sh'
 
 jobs:
   deploy:

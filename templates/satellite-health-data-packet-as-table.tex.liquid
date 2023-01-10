@@ -1,0 +1,9 @@
+{% assign ds = architecture['elements']['3-DataStructures/1-SatelliteHealth.yaml'] %}
+\begin{tabular}{ | m{3cm} | m{1cm}| m{1cm} | m{4cm} | } 
+  \hline
+  \textbf{Field} & \textbf{Type} & \textbf{Item Type} & \textbf{Description} \\
+  \hline
+  {% for field in ds['elements'] %}{{field.key | replace: "_", "" }} & {{field.type}} & {% if architecture['elements'][field.itemType].name %} {{architecture['elements'][field.itemType].name}} & {% else %}{{field.itemType}} & {% endif %}{{field.description}} \\
+  \hline
+  {% endfor %}
+\end{tabular}

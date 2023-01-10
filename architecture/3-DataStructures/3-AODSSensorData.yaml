@@ -1,0 +1,84 @@
+name: Satellite AODS Sensor Data
+purpose: Data structure for satellite AODS sensor data used for attitude determination or incremental orbit propogation
+template: |
+  imu_gyro_x: {{imu_gyro_x}}
+  imu_gyro_y: {{imu_gyro_y}}
+  imu_gyro_z: {{imu_gyro_z}}
+  imu_magnetometer_x: {{imu_magnetometer_x}}
+  imu_magnetometer_y: {{imu_magnetometer_y}}
+  imu_magnetometer_z: {{imu_magnetometer_z}}
+  sun_sensor_pitch_pos: {{sun_sensor_pitch_pos}}
+  sun_sensor_pitch_neg: {{sun_sensor_pitch_neg}}
+  sun_sensor_yaw_pos: {{sun_sensor_yaw_pos}}
+  sun_sensor_yaw_neg: {{sun_sensor_yaw_neg}}
+  sun_sensor_roll_pos: {{sun_sensor_roll_pos}}
+  sun_sensor_roll_neg: {{sun_sensor_roll_neg}}
+  time_stamp: {{time_stamp}}
+elements:
+  - key: imu_gyro_x
+    type: float
+    itemType: ''
+    description: The angular rate of the body with to respective to the x-axis in the IMU's reference frame.
+    derivedFrom: ''
+  - key: imu_gyro_y
+    type: float
+    itemType: ''
+    description: The angular rate of the body with to respective to the y-axis in the IMU's reference frame.
+    derivedFrom: ''
+  - key: imu_gyro_z
+    type: float
+    itemType: ''
+    description: The angular rate of the body with to respective to the z-axis in the IMU's reference frame.
+    derivedFrom: ''
+  - key: imu_magnetometer_x
+    type: float
+    itemType: ''
+    description: The magnetic field strength with respective to the x-axis in the IMU's reference frame.
+    derivedFrom: ''
+  - key: imu_magnetometer_y
+    type: float
+    itemType: ''
+    description: The magnetic field strength with respective to the y-axis in the IMU's reference frame.
+    derivedFrom: ''
+  - key: imu_magnetometer_z
+    type: float
+    itemType: ''
+    description: The magnetic field strength with respective to the z-axis in the IMU's reference frame.
+    derivedFrom: ''
+  - key: sun_sensor_pitch_pos
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to positive pitch angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: sun_sensor_pitch_neg
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to negative pitch angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: sun_sensor_yaw_pos
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to positive yaw angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: sun_sensor_yaw_neg
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to negative yaw angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: sun_sensor_roll_pos
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to positive roll angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: sun_sensor_roll_neg
+    type: float
+    itemType: ''
+    description: Sun sensor measurement with respect to negative roll angle.
+    derivedFrom: '2-UserStories/2.2-ViewADSRawData.yaml'
+  - key: time_stamp
+    type: string
+    itemType: ''
+    description: Time stamp of the last transmission.
+    derivedFrom: ''
+derivedFrom:
+- "2-UserStories/4.2-RequestSatelliteAODSSensorData.yaml"
