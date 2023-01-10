@@ -1,27 +1,46 @@
-plate:
+top plate:
   id: plate
+  description: Top Plate
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - top-plate
+  selectedOption: 0
+  notes: ''
+bottom plate:
+  id: bottom-plate
+  description: Bottom Plate with integrated tabs
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - bottom-plate-monopole
+  - bottom-plate-patch
+  selectedOption: 0
+  notes: ''
+right bracket:
+  id: right-bracket
+  description: Right Bracket
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - right-bracket
+  selectedOption: 0
+  notes: ''
+left bracket:
+  id: left-bracket
+  description: Left Bracket
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - left-bracket
+  selectedOption: 0
+  notes: ''
+ejection plate:
+  id: ejection-plate
   description: Plate
-  quantity: 2
+  quantity: 1
   quantityUnits: unit
   options:
-  - sealion-plate
-  selectedOption: 0
-  notes: ''
-rail:
-  id: rail
-  description: Rail
-  quantity: 8
-  quantityUnits: unit
-  options:
-  - sealion-rail
-  selectedOption: 0
-  notes: ''
-screw:
-  id: screw
-  description: Screw
-  quantity: 16
-  quantityUnits: unit
-  options:
-  - screw
+  - ejection-plate
   selectedOption: 0
   notes: ''
