@@ -101,6 +101,24 @@ echo "Create symlink to dist/component.yaml in architecture/4-Components..."
 mkdir architecture/4-Components
 ln -srv dist/component.yaml architecture/4-Components
 
+#### generate assembly instructions ####
+clitool="node"
+cmdargs="dof-helpers/generateAssemblyInstructions.js"
+cmd="$clitool $cmdargs"
+workdir=$project_root
+podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
+condition="$clitool --version | grep 'v17'"
+
+if ! eval $condition; then
+    echo "generating assembly instructions via podman..."
+    cd $project_root
+    eval $(echo $podmancmd)
+else
+    echo "generating assembly instructions..."
+    cd $workdir
+    eval $cmd
+fi
+
 #### Build the unified model from liquid template ####
 clitool="node"
 cmdargs="m30mlTools/buildUnifiedModel.js"
