@@ -16,7 +16,7 @@ bottom plate:
   - sealion-bottom-plate-monopole
   - sealion-bottom-plate-patch
   selectedOption: 0
-  notes: ''
+  notes: 'Bottom Plate with integrated tabs'
 right bracket:
   id: right-bracket
   description: Right Bracket
@@ -25,7 +25,7 @@ right bracket:
   options:
   - sealion-right-bracket
   selectedOption: 0
-  notes: ''
+  notes: 'Right Bracket to hold the MsS and Sun Sensor'
 left bracket:
   id: left-bracket
   description: Left Bracket
@@ -37,11 +37,29 @@ left bracket:
   notes: ''
 ejection plate:
   id: ejection-plate
-  description: Plate
+  description: Ejection Plate
   quantity: 1
   quantityUnits: unit
   options:
   - sealion-ejection-plate
+  selectedOption: 0
+  notes: ''
+ejection plate standoff:
+  id: ejection-plate-standoff
+  description: Ejection Plate Standoff
+  quantity: 3
+  quantityUnits: unit
+  options:
+  - sealion-ejection-plate-standoff
+  selectedOption: 0
+  notes: ''
+separation connector mounting bracket:
+  id: separation-connector-mounting-bracket
+  description: Separation Connector Mounting Bracket
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-separation-connector-mounting-bracket
   selectedOption: 0
   notes: ''
 #Beginning of DeCS
@@ -56,14 +74,14 @@ side plate:
   notes: ''
 bottom mount plate:
   id: sealion-deco-bottom-mount-plate
-  description: DeCo Bottom Mount Plate for DeCS
+  description: DeCo Bottom Mount Plate
   quantity: 2
   quantityUnits: unit
   options:
   - sealion-deco-bottom-mount-plate
   selectedOption: 0
-  notes: ''
-  plastic ratcheting gear:
+  notes: 'DeCo Bottom Mount Plate for DeCS'
+plastic ratcheting gear:
   id: plastic-ratcheting-gear
   description: Plastic Ratcheting Gear
   quantity: 1
@@ -72,57 +90,57 @@ bottom mount plate:
   - plastic-ratcheting-gear
   selectedOption: 0
   notes: ''
-  spool:
+spool:
   id: deco-spool
-  description: DeCo Spool for boom deployment mechanism
+  description: DeCo Spool
   quantity: 1
   quantityUnits: unit
   options:
   - sealion-deco-spool
   selectedOption: 0
-  notes: ''
+  notes: 'DeCo Spool for boom deployment mechanism'
 spool clamp:
   id: deco-spool-clamp
-  description: DeCo Spool Clamp to attatch Carbon Fiber boom to DeCo Spool
+  description: DeCo Spool Clamp
   quantity: 1
   quantityUnits: unit
   options:
   - sealion-deco-spool-clamp
   selectedOption: 0
-  notes: ''
+  notes: 'DeCo Spool Clamp to attatch Carbon Fiber boom to DeCo Spool'
 bearing spin spool:
   id: deco-bearing-spin-spool
-  description: DeCo Bearing Spin Spool allowing DeCo Spool to rotate for deployment
+  description: DeCo Bearing Spin Spool
   quantity: 1
   quantityUnits: unit
   options:
-  - deco-bearing-spin-spool
+  - sealion-deco-bearing-spin-spool
   selectedOption: 0
-  notes: ''
+  notes: 'DeCo Bearing Spin Spool allowing DeCo Spool to rotate for deployment'
 flanged sleeve bearing:
   id: flanged-sleeve-bearing
-  description: Flanged Sleeve Bearing for high temperatures and dry environments
+  description: Flanged Sleeve Bearing
   quantity: 1
   quantityUnits: unit
   options:
   - flanged-sleeve-bearing
   selectedOption: 0
-  notes: ''
+  notes: 'Flanged Sleeve Bearing for high temperatures and dry environments'
 latch lever:
   id: latch-lever
-  description: Latch Lever to interact with the burnwire mechanism and sprinloaded bolts to open DeCS doors
+  description: Latch Lever
   quantity: 1
   quantityUnits: unit
   options:
-  - latch-lever
+  - sealion-latch-lever
   selectedOption: 0
-  notes: ''
+  notes: 'Latch Lever to interact with the burnwire mechanism and sprinloaded bolts to open DeCS doors'
 door latch pin hole sleeve:
   id: door-latch-pin-hole-sleeve
-  description: Door Latch Pin Hole Sleeve to constrain the Bearing Pin Spool
+  description: Door Latch Pin Hole Sleeve
   quantity: 1
   quantityUnits: unit
   options:
   - door-latch-pin-hole-sleeve
   selectedOption: 0
-  notes: ''
+  notes: 'Door Latch Pin Hole Sleeve to constrain the Bearing Pin Spool'

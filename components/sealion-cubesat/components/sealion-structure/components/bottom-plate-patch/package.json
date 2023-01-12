@@ -1,9 +1,0 @@
-{
-    "name": "bottom-plate-patch",
-    "version": "0.1.0",
-    "description": "Bottom plate with integrated tabs: SBand option",
-    "license": "MIT",
-    "author": "contributors",
-    "dependencies": {
-    }
-}
