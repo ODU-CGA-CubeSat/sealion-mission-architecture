@@ -20,6 +20,7 @@ if [ ! -r ./node_modules ]; then
         echo "Installing node_modules..."
         cd $workdir
         eval $cmd
+        cd $project_root
     fi
 fi
 
@@ -40,6 +41,7 @@ if [ ! -r ./node_modules ]; then
         echo "Installing node_modules..."
         cd $workdir
         eval $cmd
+        cd $project_root
     fi
 fi
 
@@ -60,11 +62,9 @@ if [ ! -r ./dof-helpers/node_modules ]; then
         echo "Installing dof-helpers/node_modules..."
         cd $workdir
         eval $cmd
+        cd $project_root
     fi
 fi
-
-# cd back into project root
-cd $project_root
 
 #### Create dist/ directory, if none exists ####
 if [ ! -r ./dist ]; then
@@ -92,10 +92,8 @@ else
     echo "generating dist/component.yaml..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
-
-# cd back into project root
-cd $project_root
 
 echo "Create symlink to dist/component.yaml in architecture/4-Components..."
 mkdir architecture/4-Components
@@ -117,6 +115,7 @@ else
     echo "generating assembly instructions..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### Build the unified model from liquid template ####
@@ -135,10 +134,8 @@ else
     echo "Building the unified model from liquid template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
-
-# cd back into project root
-cd $project_root
 
 # Create symlink to dist/architecture.yaml as dist/architecture.yml
 echo "Creating symlink to dist/architecture.yaml as dist/architecture.yml..."
@@ -160,6 +157,7 @@ else
     echo "Generating stakeholder needs from liquid template mapping..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### Generate user stories mapping from liquid template ####
@@ -178,6 +176,7 @@ else
     echo "Generating user stories mapping from liquid template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### Generate use-case-diagrams.puml from liquid template ####
@@ -196,6 +195,7 @@ else
     echo "Generating use-case-diagrams.puml from liquid template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### Generate data structure mapping from liquid template ####
@@ -214,6 +214,7 @@ else
     echo "Generating data structure mapping from liquid template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### Generate sealion-mission-architecture.adoc from liquid template ####
@@ -232,6 +233,7 @@ else
     echo "Generating sealion-mission-architecture.adoc from liquid template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### generate pdf-theme.yml from liquid template ####
@@ -250,6 +252,7 @@ else
     echo "Generating pdf-theme.yml from jinja2 template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### Generate index.html from dist/sealion-mission-architecture.adoc ####
@@ -268,6 +271,7 @@ else
     echo "Generating index.html from dist/sealion-mission-architecture.adoc..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### Generate sealion-mission-architecture.pdf from dist/sealion-mission-architecture.adoc ####
@@ -286,10 +290,8 @@ else
     echo "Generate sealion-mission-architecture.pdf from dist/sealion-mission-architecture.adoc..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
-
-# cd back into project root
-cd $project_root
 
 # remove architecture/4-Components
 echo "removing architecture/4-Components..."
@@ -317,6 +319,7 @@ else
     echo "Generating tabulated-stakeholder-needs.adoc from liquid template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 ## create symbolic link for tabulated-stakeholder-needs.adoc
@@ -339,6 +342,7 @@ else
     echo "Generating tabulated-user-stories.adoc from liquid template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 ## create symbolic link for tabulated-user-stories.adoc
@@ -361,6 +365,7 @@ else
     echo "Generating satellite-health-data.adoc from liquid template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### Generate satellite-health-data.adoc from liquid template ####
@@ -379,6 +384,7 @@ else
     echo "Generating satellite-health-data.adoc from liquid template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### Generate LaTeX code for satellite health data packet table ####
@@ -397,6 +403,7 @@ else
     echo "Generating satellite-health-data-packet.tex from liquid template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### generate example manuscript ####
@@ -416,6 +423,7 @@ else
     echo "Validating linkml model of example manuscript..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 clitool="jinja2"
@@ -434,11 +442,11 @@ else
     echo "Generating LaTeX document from example manuscript linkml model and jinja2 template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 echo "Copy LaTeX files and assets (required for generating PDF document) to dist/..."
 
-cd $project_root
 cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls assets/*
 
 # https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
@@ -456,6 +464,7 @@ else
     echo "Pre-Processing LaTeX document with BibTeX of example manuscript..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 # https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
@@ -471,6 +480,7 @@ else
     echo "Generating PDF document from LaTeX/BibTeX document of example manuscript..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 #### generate manuscript ####
@@ -490,6 +500,7 @@ else
     echo "Validating linkml model of manuscript..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 clitool="jinja2"
@@ -508,11 +519,11 @@ else
     echo "Generating LaTeX document from manuscript linkml model and jinja2 template..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 echo "Copy LaTeX files and assets (required for generating PDF document) to dist/..."
 
-cd $project_root
 cp -t dist/ manuscript/*.tex manuscript/*.bib manuscript/*.bst manuscript/*.cls assets/*
 
 # https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
@@ -528,6 +539,7 @@ else
     echo "Pre-Processing LaTeX document with BibTeX of manuscript..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 # https://tex.stackexchange.com/questions/43325/citations-not-showing-up-in-text-and-bibliography
@@ -543,6 +555,7 @@ else
     echo "Generating PDF document from LaTeX/BibTeX document of manuscript..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 gitdescribe=$(git describe --always --tags HEAD)
@@ -568,6 +581,7 @@ else
     echo "Generate scitech-presentation.html from dist/sealion-mission-architecture.adoc..."
     cd $workdir
     eval $cmd
+    cd $project_root
 fi
 
 # Copy reveal.js to dist/
