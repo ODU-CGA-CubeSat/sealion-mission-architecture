@@ -4,7 +4,7 @@ top plate:
   quantity: 1
   quantityUnits: unit
   options:
-  - top-plate
+  - sealion-top-plate
   selectedOption: 0
   notes: ''
 bottom plate:
@@ -13,8 +13,8 @@ bottom plate:
   quantity: 1
   quantityUnits: unit
   options:
-  - bottom-plate-monopole
-  - bottom-plate-patch
+  - sealion-bottom-plate-monopole
+  - sealion-bottom-plate-patch
   selectedOption: 0
   notes: ''
 right bracket:
@@ -23,7 +23,7 @@ right bracket:
   quantity: 1
   quantityUnits: unit
   options:
-  - right-bracket
+  - sealion-right-bracket
   selectedOption: 0
   notes: ''
 left bracket:
@@ -32,7 +32,7 @@ left bracket:
   quantity: 1
   quantityUnits: unit
   options:
-  - left-bracket
+  - sealion-left-bracket
   selectedOption: 0
   notes: ''
 ejection plate:
@@ -41,6 +41,88 @@ ejection plate:
   quantity: 1
   quantityUnits: unit
   options:
-  - ejection-plate
+  - sealion-ejection-plate
+  selectedOption: 0
+  notes: ''
+#Beginning of DeCS
+side plate:
+  id: deco-side-plate
+  description: DeCo Side Plate with integrated tabs
+  quantity: 2
+  quantityUnits: unit
+  options:
+  - sealion-deco-side-plate
+  selectedOption: 0
+  notes: ''
+bottom mount plate:
+  id: sealion-deco-bottom-mount-plate
+  description: DeCo Bottom Mount Plate for DeCS
+  quantity: 2
+  quantityUnits: unit
+  options:
+  - sealion-deco-bottom-mount-plate
+  selectedOption: 0
+  notes: ''
+  plastic ratcheting gear:
+  id: plastic-ratcheting-gear
+  description: Plastic Ratcheting Gear
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - plastic-ratcheting-gear
+  selectedOption: 0
+  notes: ''
+  spool:
+  id: deco-spool
+  description: DeCo Spool for boom deployment mechanism
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-deco-spool
+  selectedOption: 0
+  notes: ''
+spool clamp:
+  id: deco-spool-clamp
+  description: DeCo Spool Clamp to attatch Carbon Fiber boom to DeCo Spool
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-deco-spool-clamp
+  selectedOption: 0
+  notes: ''
+bearing spin spool:
+  id: deco-bearing-spin-spool
+  description: DeCo Bearing Spin Spool allowing DeCo Spool to rotate for deployment
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - deco-bearing-spin-spool
+  selectedOption: 0
+  notes: ''
+flanged sleeve bearing:
+  id: flanged-sleeve-bearing
+  description: Flanged Sleeve Bearing for high temperatures and dry environments
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - flanged-sleeve-bearing
+  selectedOption: 0
+  notes: ''
+latch lever:
+  id: latch-lever
+  description: Latch Lever to interact with the burnwire mechanism and sprinloaded bolts to open DeCS doors
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - latch-lever
+  selectedOption: 0
+  notes: ''
+door latch pin hole sleeve:
+  id: door-latch-pin-hole-sleeve
+  description: Door Latch Pin Hole Sleeve to constrain the Bearing Pin Spool
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - door-latch-pin-hole-sleeve
   selectedOption: 0
   notes: ''
