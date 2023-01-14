@@ -25,7 +25,7 @@ if [ ! -r ./node_modules ]; then
 fi
 
 #### Install m30mlTools/node_modules, if not already installed ####
-if [ ! -r ./node_modules ]; then
+if [ ! -r ./m30mlTools/node_modules ]; then
     clitool="npm"
     cmdargs="ci"
     cmd="$clitool $cmdargs"
