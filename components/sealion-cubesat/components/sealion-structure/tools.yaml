@@ -1,38 +1,38 @@
 screwdriver:
   id: screwdriver
-  description: Screwdriver with TBD specs
+  description: Screwdriver
   quantity: 1
   quantityUnits: unit
   options:
-  - hex
-  - philips
+  - hex-screwdriver-generic
+  - philips-screwdriver-generic
   selectedOption: 0
   notes: ''
-clean box:
+clean-box:
   id: clean-box
-  description: Creates a positive pressure environment to prevent particulate accumulation
+  description: Clean Box
   quantity: 1
   quantityUnits: unit
   options:
-  - clean-box
+  - clean-box-brand
   selectedOption: 0
-  notes: ''
+  notes: 'Creates a positive pressure environment to prevent particulate accumulation'
 plier:
   id: plier
   description: Plier
   quantity: 1
   quantityUnits: unit
   options:
-  - plier-needle-nose
+  - plier-needle-nose-generic
   - plier-generic
   selectedOption: 0
   notes: ''
 caliper:
   id: caliper
-  description: Electronic Caliper to measure dimensions
+  description: Electronic Caliper
   quantity: 1
   quantityUnits: unit
   options:
-  - caliper
+  - caliper-electronic-generic
   selectedOption: 0
-  notes: ''
+  notes: 'Electronic Caliper to measure dimensions'

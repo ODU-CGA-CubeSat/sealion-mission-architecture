@@ -1,9 +1,9 @@
 {
-    "name": "screwdriver",
+    "name": "hex-screwdriver-generic",
     "version": "0.1.0",
     "description": "Screwdriver",
     "license": "MIT",
-    "author": "Bhagatji Jimesh jbhag001@odu.edu & contributors",
+    "author": "3rd party - DETERMINE WHO",
     "dependencies": {
     }
 }

@@ -1,0 +1,9 @@
+{
+    "name": "sealion-separation-connector-mounting-bracket",
+    "version": "0.1.0",
+    "description": "Separation connector mounting bracket",
+    "license": "(CERN-OHL-1.2 AND Unlicense AND CC-BY-SA-3.0)",
+    "author": "Schappi Christopher <cscha010@odu.edu>",
+    "dependencies": {
+    }
+}

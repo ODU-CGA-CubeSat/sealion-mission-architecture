@@ -1,0 +1,9 @@
+{
+    "name": "sealion-deco-spool",
+    "version": "0.1.0",
+    "description": "Deco spool",
+    "license": "(CERN-OHL-1.2 AND Unlicense AND CC-BY-SA-3.0)",
+    "author": "Bhagatji Jimesh <jbhag001@odu.edu> & contributors ",
+    "dependencies": {
+    }
+}
