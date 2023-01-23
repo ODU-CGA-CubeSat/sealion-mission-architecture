@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+################################################################
+# Build script for building unified model, architecture (spec doc), AIAA manuscript, & assembly instructions in dist/
+################################################################
 
 #### set environment variable for project root ####
 project_root=$PWD
