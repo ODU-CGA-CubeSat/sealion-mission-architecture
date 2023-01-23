@@ -140,6 +140,25 @@ else
     cd $project_root
 fi
 
+#### generate assembly instructions as pdf ####
+clitool="asciidoctor"
+cmdargs="assemblyInstructions.adoc -o assemblyInstructions.pdf -r asciidoctor-pdf -b pdf"
+cmd="$clitool $cmdargs"
+workdir=$project_root/dist
+podmancmd="podman run --rm -v $workdir:/srv -w /srv docker.io/asciidoctor/docker-asciidoctor $cmd"
+condition="$clitool --version | grep '2.0.17'"
+
+if ! eval $condition; then
+    echo "generating assembly instructions as pdf via podman..."
+    cd $project_root
+    eval $(echo $podmancmd)
+else
+    echo "generating assembly instructions as pdf..."
+    cd $workdir
+    eval $cmd
+    cd $project_root
+fi
+
 #### Build the unified model from liquid template ####
 clitool="node"
 cmdargs="m30mlTools/buildUnifiedModel.js"
