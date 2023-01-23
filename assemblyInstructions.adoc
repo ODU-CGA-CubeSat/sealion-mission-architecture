@@ -1,0 +1,22 @@
+= SeaLion Mission Architecture Assembly Instructions
+Sean Marquez <capsulecorplab@gmail.com> & contributors
+:revnumber: v5.0.0
+:revdate: 1/23/2023
+:sectnums:
+:toc:
+
+// github specific things
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+:imagesdir: undefined
+endif::[]
+
+// non-github specific things
+ifndef::env-github[]
+:imagesdir: ./images
+endif::[]
+
