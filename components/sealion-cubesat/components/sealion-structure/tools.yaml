@@ -8,31 +8,31 @@ screwdriver:
   - philips-screwdriver-generic
   selectedOption: 0
   notes: ''
-clean-box:
-  id: clean-box
-  description: Clean Box
-  quantity: 1
-  quantityUnits: unit
-  options:
-  - clean-box-brand
-  selectedOption: 0
-  notes: 'Creates a positive pressure environment to prevent particulate accumulation'
-plier:
-  id: plier
-  description: Plier
-  quantity: 1
-  quantityUnits: unit
-  options:
-  - plier-needle-nose-generic
-  - plier-generic
-  selectedOption: 0
-  notes: ''
-caliper:
-  id: caliper
-  description: Electronic Caliper
-  quantity: 1
-  quantityUnits: unit
-  options:
-  - caliper-electronic-generic
-  selectedOption: 0
-  notes: 'Electronic Caliper to measure dimensions'
+#  clean-box:
+#    id: clean-box
+#    description: Clean Box
+#    quantity: 1
+#    quantityUnits: unit
+#    options:
+#    - clean-box-brand
+#    selectedOption: 0
+#    notes: 'Creates a positive pressure environment to prevent particulate accumulation'
+# plier:
+  # id: plier
+  # description: Plier
+  # quantity: 1
+  # quantityUnits: unit
+  # options:
+  # - plier-needle-nose-generic
+  # - plier-generic
+  # selectedOption: 0
+  # notes: ''
+# caliper:
+#   id: caliper
+#   description: Electronic Caliper
+#   quantity: 1
+#   quantityUnits: unit
+#   options:
+#   - caliper-electronic-generic
+#   selectedOption: 0
+#   notes: 'Electronic Caliper to measure dimensions'

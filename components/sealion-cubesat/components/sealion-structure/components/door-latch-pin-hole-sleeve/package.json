@@ -2,7 +2,7 @@
     "name": "door-latch-pin-hole-sleeve",
     "version": "0.1.0",
     "description": "Door latch pin hole sleeve",
-    "license": "(CERN-OHL-1.2 AND Unlicense AND CC-BY-SA-3.0)",
+    "license": "Unlicense",
     "author": "3rd party - DETERMINE WHO",
     "dependencies": {
     }

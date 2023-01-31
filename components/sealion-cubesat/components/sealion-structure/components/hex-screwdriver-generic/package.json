@@ -2,7 +2,7 @@
     "name": "hex-screwdriver-generic",
     "version": "0.1.0",
     "description": "Screwdriver",
-    "license": "MIT",
+    "license": "Unlicense",
     "author": "3rd party - DETERMINE WHO",
     "dependencies": {
     }
