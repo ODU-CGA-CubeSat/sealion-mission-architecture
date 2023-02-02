@@ -1,0 +1,9 @@
+{
+    "name": "plier-needle-nose-generic",
+    "version": "0.1.0",
+    "description": "Plier needle nose generic",
+    "license": "Unlicense",
+    "author": "Schappi Christopher <cscha010@odu.edu>",
+    "dependencies": {
+    }
+}

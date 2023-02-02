@@ -1,0 +1,9 @@
+{
+    "name": "sealion-sheetmetal-antenna-bracket-patch",
+    "version": "0.1.0",
+    "description": "Sheetmetal antenna bracket: patch",
+    "license": "(CERN-OHL-P-2.0 AND CC-BY-4.0)",
+    "author": "Schappi Christopher <cscha010@odu.edu> & CGA",
+    "dependencies": {
+    }
+}
