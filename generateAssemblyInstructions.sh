@@ -13,13 +13,13 @@ clitool="node"
 cmdargs="dof-helpers/parseComponent.js"
 cmd="$clitool $cmdargs"
 workdir=$project_root
-podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
+podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmdargs"
 condition="$clitool --version | grep 'v17'"
 
 if ! eval $condition; then
     echo "generating dist/component.yaml via podman..."
     cd $project_root
-    eval $(echo $podmancmd)
+    eval $podmancmd
 else
     echo "generating dist/component.yaml..."
     cd $workdir
@@ -32,13 +32,13 @@ clitool="node"
 cmdargs="dof-helpers/generateAssemblyInstructions.js"
 cmd="$clitool $cmdargs"
 workdir=$project_root
-podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
+podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmdargs"
 condition="$clitool --version | grep 'v17'"
 
 if ! eval $condition; then
     echo "generating assembly instructions as asciidoc via podman..."
     cd $project_root
-    eval $(echo $podmancmd)
+    eval $podmancmd
 else
     echo "generating assembly instructions as asciidoc..."
     cd $workdir
