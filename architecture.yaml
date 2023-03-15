@@ -123,9 +123,9 @@ elements:
       - 1-StakeholderNeeds/3.2-TertiaryMissionObjective-C2.yaml
       - 1-StakeholderNeeds/3.3-TertiaryMissionObjective-C3.yaml
     example: >-
-      View satellite beacon data (health or mission data) to verify that TLE's
-      correspond with expected orbit profile and/or to validate that a mission
-      mode was successful
+      View satellite beacon data (health or mission data) to verify that state
+      vector correspond with expected orbit profile and/or to validate that a
+      mission mode was successful
   2-UserStories/3-SetInterruptTimer.yaml: &ref_20
     id: 3
     name: Send Request to Set Interrupt Timer
@@ -155,7 +155,7 @@ elements:
     derivedFrom:
       - 2-UserStories/4-RequestTelemetryData.yaml
     example: >-
-      Request satellite health data packet to verify or validate TLE data
+      Request satellite health data packet to verify or validate state vector
       corresponding to expected orbit profile based on pre-computed orbit
       propagation model
   2-UserStories/4.1.1-RequestSatelliteHealthDataSBand.yaml: &ref_23
@@ -169,7 +169,7 @@ elements:
       - 1-StakeholderNeeds/1.2-PrimaryMissionObjective-A2.yaml
     example: >-
       Request satellite health data packet via S-band radio to verify or
-      validate TLE data corresponding to expected orbit profile based on
+      validate state vector corresponding to expected orbit profile based on
       pre-computed orbit propagation model
   2-UserStories/4.2-RequestMissionData.yaml: &ref_24
     id: 4.2
@@ -188,9 +188,9 @@ elements:
       - 1-StakeholderNeeds/3.2-TertiaryMissionObjective-C2.yaml
       - 1-StakeholderNeeds/3.3-TertiaryMissionObjective-C3.yaml
     example: >-
-      Request satellite mission data to verify that TLE's & AODS sensor data
-      correspond with expected orbit profile and/or validate that a mission mode
-      was successful
+      Request satellite mission data to verify that state vector & AODS sensor
+      data correspond with expected orbit profile and/or validate that a mission
+      mode was successful
   2-UserStories/5-SetMissionModeDuration.yaml: &ref_25
     id: 5
     name: Send Request to Set Mission Mode Duration
@@ -207,7 +207,7 @@ elements:
       battery_health: {{battery_health}}
       temperature_battery: {{temperature_battery}}
       mode: {{mode}}
-      tle_data: {{tle_data}}
+      state_vector: {{state_vector}}
     elements:
       - key: call_sign
         type: string
@@ -231,10 +231,10 @@ elements:
           Integer value indicating current mission mode. 0 = Safe, 1 = mission
           mode 1, 2 = mission mode 2, 3 = mission mode 3.
         derivedFrom: ''
-      - key: tle_data
-        type: TLE
+      - key: state_vector
+        type: ECIStateVector
         itemType: ''
-        description: TLE data from orbit propogator at time of beacon.
+        description: ECI state vector from orbit propogator at time of beacon.
         derivedFrom: ''
     derivedFrom:
       - 2-UserStories/2-ViewBeaconData.yaml
@@ -369,193 +369,50 @@ elements:
     derivedFrom:
       - 2-UserStories/4.2-RequestSatelliteAODSSensorData.yaml
   3-DataStructures/4-TLE.yaml: &ref_29
-    name: TLE
-    purpose: Data structure for the TLE data computed from GPS data or orbit propagator
+    name: ECIStateVector
+    purpose: >-
+      Data structure for the earth-centered inertial (ECI) state vector in
+      cartesian coordinates computed from GPS data or orbit propagator
     template: |
-      tle_line_1: {{tle_line_1}}
-      tle_line_2: {{tle_line_2}}
+      x: {{x}}
+      y: {{y}}
+      z: {{z}}
+      xd: {{xd}}
+      yd: {{yd}}
+      zd: {{zd}}
     elements:
-      - key: tle_line_1
-        type: TLELine1
+      - key: x
+        type: integer
         itemType: ''
-        description: Data for TLE line 1
+        description: position in kilometers (km) along x-axis
         derivedFrom: ''
-      - key: tle_line_2
-        type: TLELine2
+      - key: 'y'
+        type: integer
         itemType: ''
-        description: Data for TLE line 2
+        description: position in kilometers (km) along y-axis
         derivedFrom: ''
-    derivedFrom:
-      - 0-References/8-TwoLineElementData.yaml
-  3-DataStructures/5-TLELine1.yaml: &ref_30
-    name: TLE Line 1
-    purpose: Data structure for the first line of the TLE data
-    template: |
-      line_number: {{line_number}}
-      satellite_number: {{satellite_number}}
-      classification: {{classification}}
-      international_designator_1: {{international_designator_1}}
-      international_designator_2: {{international_designator_2}}
-      international_designator_3: {{international_designator_3}}
-      epoch_year: {{epoch_year}}
-      epoch: {{epoch}}
-      first_dt: {{first_dt}}
-      second_dt: {{second_dt}}
-      bstar: {{bstar}}
-      eph_type: {{eph_type}}
-      element_number: {{element_number}}
-      checksum: {{checksum}}
-    elements:
-      - key: line_number
-        type: string
+      - key: z
+        type: integer
         itemType: ''
-        description: Line number of element data (Column 01)
+        description: position in kilometers (km) along z-axis
         derivedFrom: ''
-      - key: satellite_number
-        type: string
+      - key: xd
+        type: integer
         itemType: ''
-        description: Satellite number (Column 03-07)
+        description: velocity in kilometers per second (km/s) along x-axis
         derivedFrom: ''
-      - key: classification
-        type: string
+      - key: yd
+        type: integer
         itemType: ''
-        description: Classification of satellite (Column 08)
+        description: velocity in kilometers per second (km/s) along y-axis
         derivedFrom: ''
-      - key: international_designator_1
-        type: string
+      - key: zd
+        type: integer
         itemType: ''
-        description: >-
-          International designator 1 (last two digits of launch year) (Column
-          10-11)
+        description: velocity in kilometers per second (km/s) along z-axis
         derivedFrom: ''
-      - key: international_designator_2
-        type: string
-        itemType: ''
-        description: International designator 2 (launch number of the year) (Column 12-14)
-        derivedFrom: ''
-      - key: international_designator_3
-        type: string
-        itemType: ''
-        description: International designator 3 (piece of the launch) (Column 15-17)
-        derivedFrom: ''
-      - key: epoch_year
-        type: string
-        itemType: ''
-        description: Epoch year (last two digits of year) (Column 19-20)
-        derivedFrom: ''
-      - key: epoch
-        type: string
-        itemType: ''
-        description: >-
-          Epoch (day of the year and fractional portion of the day) (Column
-          21-32)
-        derivedFrom: ''
-      - key: first_dt
-        type: string
-        itemType: ''
-        description: First time derivative of the mean motion (Column 34-43)
-        derivedFrom: ''
-      - key: second_dt
-        type: string
-        itemType: ''
-        description: >-
-          Second time derivative of the mean motion (leading decimal point
-          assumed) (Column 45-52)
-        derivedFrom: ''
-      - key: bstar
-        type: string
-        itemType: ''
-        description: BSTAR drag term (leading decimal point assumed) (Column 54-61)
-        derivedFrom: ''
-      - key: eph_type
-        type: string
-        itemType: ''
-        description: Ephemeris type (Column 63)
-        derivedFrom: ''
-      - key: element_number
-        type: string
-        itemType: ''
-        description: Element number (Column 65-68)
-        derivedFrom: ''
-      - key: checksum
-        type: string
-        itemType: ''
-        description: >-
-          Checksum (modulo 10) (letters, blanks, periods, plus signs = 0; minus
-          signs = 1) (Column 69)
-        derivedFrom: ''
-    derivedFrom:
-      - 0-References/8-TwoLineElementData.yaml
-  3-DataStructures/6-TLELine2.yaml: &ref_31
-    name: TLE Line 2
-    purpose: Data structure for the second line of the TLE data
-    template: |
-      line_number: {{line_number}}
-      satellite_number: {{satellite_number}}
-      inclination: {{inclination}}
-      raan: {{raan}}
-      ecc: {{ecc}}
-      perigee: {{perigee}}
-      mean_anomaly: {{mean_anomaly}}
-      mean_motion: {{mean_motion}}
-      rev_epoch: {{rev_epoch}}
-      checksum: {{checksum}}
-    elements:
-      - key: line_number
-        type: string
-        itemType: ''
-        description: Line number of element data (Column 01)
-        derivedFrom: ''
-      - key: satellite_number
-        type: string
-        itemType: ''
-        description: Satellite number (Column 03-07)
-        derivedFrom: ''
-      - key: inclination
-        type: string
-        itemType: ''
-        description: Inclination (degrees) (Column 09-16)
-        derivedFrom: ''
-      - key: raan
-        type: string
-        itemType: ''
-        description: Right ascension of the ascending node (degrees) (Column 18-25)
-        derivedFrom: ''
-      - key: ecc
-        type: string
-        itemType: ''
-        description: Eccentricity (leading decimal point assumed) (Column 27-33)
-        derivedFrom: ''
-      - key: perigee
-        type: string
-        itemType: ''
-        description: Argument of perigee (degrees) (Column 35-42)
-        derivedFrom: ''
-      - key: mean_anomaly
-        type: string
-        itemType: ''
-        description: Mean anomaly (degrees) (Column 44-51)
-        derivedFrom: ''
-      - key: mean_motion
-        type: string
-        itemType: ''
-        description: Mean motion (revs per day) (Column 53-63)
-        derivedFrom: ''
-      - key: rev_epoch
-        type: string
-        itemType: ''
-        description: Revolution number at epoch (revs) (Column 64-68)
-        derivedFrom: ''
-      - key: checksum
-        type: string
-        itemType: ''
-        description: >-
-          Checksum (modulo 10) (letters, blanks, periods, plus signs = 0; minus
-          signs = 1) (Column 69)
-        derivedFrom: ''
-    derivedFrom:
-      - 0-References/8-TwoLineElementData.yaml
-  3-DataStructures/7-MissionData.yaml: &ref_32
+    derivedFrom: []
+  3-DataStructures/5-MissionData.yaml: &ref_30
     name: Mission Data
     purpose: >-
       Defines EVR (event) elements to be recorded to the eventLog during a
@@ -567,9 +424,9 @@ elements:
       exit_tle: {{exit_tle}}
     elements:
       - key: entry_tle
-        type: TLE
+        type: ECIStateVector
         itemType: ''
-        description: TLE at time of beginning of mission mode
+        description: ECIStateVector at time of beginning of mission mode
         derivedFrom: []
       - key: obc_sensors
         type: AODSSensorData
@@ -582,14 +439,14 @@ elements:
         description: Data recorded during mission mode
         derivedFrom: []
       - key: exit_tle
-        type: TLE
+        type: ECIStateVector
         itemType: ''
-        description: TLE at time of end of mission mode
+        description: ECIStateVector at time of end of mission mode
         derivedFrom: []
     derivedFrom:
       - 2-UserStories/2-ViewBeaconData.yaml
       - 2-UserStories/4.2-RequestMissionData.yaml
-  4-Components/component.yaml: &ref_33
+  4-Components/component.yaml: &ref_31
     name: sealion-mission-architecture
     version: 5.0.0
     description: SeaLion Mission Architecture
@@ -1008,7 +865,7 @@ package:
     js-yaml: ^3.12.0
     liquidjs: ^6.1.1
     minimist: ^1.2.0
-generationDate: 1/23/2023
+generationDate: 3/15/2023
 0-References:
   - *ref_0
   - *ref_1
@@ -1044,7 +901,5 @@ generationDate: 1/23/2023
   - *ref_28
   - *ref_29
   - *ref_30
-  - *ref_31
-  - *ref_32
 4-Components:
-  - *ref_33
+  - *ref_31

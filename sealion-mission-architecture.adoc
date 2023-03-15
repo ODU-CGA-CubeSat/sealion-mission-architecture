@@ -147,7 +147,7 @@ As a *Ground Station Operator* I want to *view satellite beacon data (alternatin
 
 ==== Example:
 
-View satellite beacon data (health or mission data) to verify that TLE's correspond with expected orbit profile and/or to validate that a mission mode was successful
+View satellite beacon data (health or mission data) to verify that state vector correspond with expected orbit profile and/or to validate that a mission mode was successful
 
 
 ==== *Derived From:*
@@ -230,7 +230,7 @@ As a *Ground Station Operator* I want to *request satellite health data packet* 
 
 ==== Example:
 
-Request satellite health data packet to verify or validate TLE data corresponding to expected orbit profile based on pre-computed orbit propagation model
+Request satellite health data packet to verify or validate state vector corresponding to expected orbit profile based on pre-computed orbit propagation model
 
 
 ==== *Derived From:*
@@ -252,7 +252,7 @@ As a *Ground Station Operator* I want to *request satellite health data packet v
 
 ==== Example:
 
-Request satellite health data packet via S-band radio to verify or validate TLE data corresponding to expected orbit profile based on pre-computed orbit propagation model
+Request satellite health data packet via S-band radio to verify or validate state vector corresponding to expected orbit profile based on pre-computed orbit propagation model
 
 
 ==== *Derived From:*
@@ -279,7 +279,7 @@ As a *Ground Station Operator* I want to *request satellite mission data* so tha
 
 ==== Example:
 
-Request satellite mission data to verify that TLE's & AODS sensor data correspond with expected orbit profile and/or validate that a mission mode was successful
+Request satellite mission data to verify that state vector & AODS sensor data correspond with expected orbit profile and/or validate that a mission mode was successful
 
 
 ==== *Derived From:*
@@ -374,7 +374,7 @@ call_sign: {{call_sign}}
 battery_health: {{battery_health}}
 temperature_battery: {{temperature_battery}}
 mode: {{mode}}
-tle_data: {{tle_data}}
+state_vector: {{state_vector}}
 
 ----
 
@@ -428,12 +428,12 @@ tle_data: {{tle_data}}
 
 
 
-|tle_data
-|TLE
+|state_vector
+|ECIStateVector
 
 |
 
-|TLE data from orbit propogator at time of beacon.
+|ECI state vector from orbit propogator at time of beacon.
 
 |
 
@@ -719,398 +719,93 @@ a|
 
 
 
-=== TLE
-*Purpose:* Data structure for the TLE data computed from GPS data or orbit propagator
+=== ECIStateVector
+*Purpose:* Data structure for the earth-centered inertial (ECI) state vector in cartesian coordinates computed from GPS data or orbit propagator
 
-.TLE Template
+.ECIStateVector Template
 ----
-tle_line_1: {{tle_line_1}}
-tle_line_2: {{tle_line_2}}
+x: {{x}}
+y: {{y}}
+z: {{z}}
+xd: {{xd}}
+yd: {{yd}}
+zd: {{zd}}
 
 ----
 
-.TLE Specification
+.ECIStateVector Specification
 [cols="1,1,1,5,1"]
 |===
 |Field |Type |Item Type |Description |Source
 
 
-|tle_line_1
-|TLELine1
+|x
+|integer
 
 |
 
-|Data for TLE line 1
-
-|
-
-
-
-|tle_line_2
-|TLELine2
-
-|
-
-|Data for TLE line 2
+|position in kilometers (km) along x-axis
 
 |
 
 
 
-|===
-
-
-==== *Derived From:*
-
-
-
-* https://www.celestrak.com/NORAD/documentation/tle-fmt.php[Two-Line Element Data]
-
-
-
-
-
-
-=== TLE Line 1
-*Purpose:* Data structure for the first line of the TLE data
-
-.TLE Line 1 Template
-----
-line_number: {{line_number}}
-satellite_number: {{satellite_number}}
-classification: {{classification}}
-international_designator_1: {{international_designator_1}}
-international_designator_2: {{international_designator_2}}
-international_designator_3: {{international_designator_3}}
-epoch_year: {{epoch_year}}
-epoch: {{epoch}}
-first_dt: {{first_dt}}
-second_dt: {{second_dt}}
-bstar: {{bstar}}
-eph_type: {{eph_type}}
-element_number: {{element_number}}
-checksum: {{checksum}}
-
-----
-
-.TLE Line 1 Specification
-[cols="1,1,1,5,1"]
-|===
-|Field |Type |Item Type |Description |Source
-
-
-|line_number
-|string
+|y
+|integer
 
 |
 
-|Line number of element data (Column 01)
+|position in kilometers (km) along y-axis
 
 |
 
 
 
-|satellite_number
-|string
+|z
+|integer
 
 |
 
-|Satellite number (Column 03-07)
-
-|
-
-
-
-|classification
-|string
-
-|
-
-|Classification of satellite (Column 08)
+|position in kilometers (km) along z-axis
 
 |
 
 
 
-|international_designator_1
-|string
+|xd
+|integer
 
 |
 
-|International designator 1 (last two digits of launch year) (Column 10-11)
-
-|
-
-
-
-|international_designator_2
-|string
-
-|
-
-|International designator 2 (launch number of the year) (Column 12-14)
+|velocity in kilometers per second (km/s) along x-axis
 
 |
 
 
 
-|international_designator_3
-|string
+|yd
+|integer
 
 |
 
-|International designator 3 (piece of the launch) (Column 15-17)
-
-|
-
-
-
-|epoch_year
-|string
-
-|
-
-|Epoch year (last two digits of year) (Column 19-20)
+|velocity in kilometers per second (km/s) along y-axis
 
 |
 
 
 
-|epoch
-|string
+|zd
+|integer
 
 |
 
-|Epoch (day of the year and fractional portion of the day) (Column 21-32)
-
-|
-
-
-
-|first_dt
-|string
-
-|
-
-|First time derivative of the mean motion (Column 34-43)
-
-|
-
-
-
-|second_dt
-|string
-
-|
-
-|Second time derivative of the mean motion (leading decimal point assumed) (Column 45-52)
-
-|
-
-
-
-|bstar
-|string
-
-|
-
-|BSTAR drag term (leading decimal point assumed) (Column 54-61)
-
-|
-
-
-
-|eph_type
-|string
-
-|
-
-|Ephemeris type (Column 63)
-
-|
-
-
-
-|element_number
-|string
-
-|
-
-|Element number (Column 65-68)
-
-|
-
-
-
-|checksum
-|string
-
-|
-
-|Checksum (modulo 10) (letters, blanks, periods, plus signs = 0; minus signs = 1) (Column 69)
+|velocity in kilometers per second (km/s) along z-axis
 
 |
 
 
 
 |===
-
-
-==== *Derived From:*
-
-
-
-* https://www.celestrak.com/NORAD/documentation/tle-fmt.php[Two-Line Element Data]
-
-
-
-
-
-
-=== TLE Line 2
-*Purpose:* Data structure for the second line of the TLE data
-
-.TLE Line 2 Template
-----
-line_number: {{line_number}}
-satellite_number: {{satellite_number}}
-inclination: {{inclination}}
-raan: {{raan}}
-ecc: {{ecc}}
-perigee: {{perigee}}
-mean_anomaly: {{mean_anomaly}}
-mean_motion: {{mean_motion}}
-rev_epoch: {{rev_epoch}}
-checksum: {{checksum}}
-
-----
-
-.TLE Line 2 Specification
-[cols="1,1,1,5,1"]
-|===
-|Field |Type |Item Type |Description |Source
-
-
-|line_number
-|string
-
-|
-
-|Line number of element data (Column 01)
-
-|
-
-
-
-|satellite_number
-|string
-
-|
-
-|Satellite number (Column 03-07)
-
-|
-
-
-
-|inclination
-|string
-
-|
-
-|Inclination (degrees) (Column 09-16)
-
-|
-
-
-
-|raan
-|string
-
-|
-
-|Right ascension of the ascending node (degrees) (Column 18-25)
-
-|
-
-
-
-|ecc
-|string
-
-|
-
-|Eccentricity (leading decimal point assumed) (Column 27-33)
-
-|
-
-
-
-|perigee
-|string
-
-|
-
-|Argument of perigee (degrees) (Column 35-42)
-
-|
-
-
-
-|mean_anomaly
-|string
-
-|
-
-|Mean anomaly (degrees) (Column 44-51)
-
-|
-
-
-
-|mean_motion
-|string
-
-|
-
-|Mean motion (revs per day) (Column 53-63)
-
-|
-
-
-
-|rev_epoch
-|string
-
-|
-
-|Revolution number at epoch (revs) (Column 64-68)
-
-|
-
-
-
-|checksum
-|string
-
-|
-
-|Checksum (modulo 10) (letters, blanks, periods, plus signs = 0; minus signs = 1) (Column 69)
-
-|
-
-
-
-|===
-
-
-==== *Derived From:*
-
-
-
-* https://www.celestrak.com/NORAD/documentation/tle-fmt.php[Two-Line Element Data]
-
-
 
 
 
@@ -1134,11 +829,11 @@ exit_tle: {{exit_tle}}
 
 
 |entry_tle
-|TLE
+|ECIStateVector
 
 |
 
-|TLE at time of beginning of mission mode
+|ECIStateVector at time of beginning of mission mode
 
 |
 
@@ -1167,11 +862,11 @@ exit_tle: {{exit_tle}}
 
 
 |exit_tle
-|TLE
+|ECIStateVector
 
 |
 
-|TLE at time of end of mission mode
+|ECIStateVector at time of end of mission mode
 
 |
 

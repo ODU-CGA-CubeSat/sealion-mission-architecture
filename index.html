@@ -479,9 +479,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_satellite_health_data_packet">Satellite Health Data Packet</a></li>
 <li><a href="#_satellite_gps_data">Satellite GPS Data</a></li>
 <li><a href="#_satellite_aods_sensor_data">Satellite AODS Sensor Data</a></li>
-<li><a href="#_tle">TLE</a></li>
-<li><a href="#_tle_line_1">TLE Line 1</a></li>
-<li><a href="#_tle_line_2">TLE Line 2</a></li>
+<li><a href="#_ecistatevector">ECIStateVector</a></li>
 <li><a href="#_mission_data">Mission Data</a></li>
 <li><a href="#_data_structures_mapping">Data Structures Mapping</a></li>
 </ul>
@@ -672,7 +670,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_example_2">Example:</h4>
 <div class="paragraph">
-<p>View satellite beacon data (health or mission data) to verify that TLE&#8217;s correspond with expected orbit profile and/or to validate that a mission mode was successful</p>
+<p>View satellite beacon data (health or mission data) to verify that state vector correspond with expected orbit profile and/or to validate that a mission mode was successful</p>
 </div>
 </div>
 <div class="sect3">
@@ -751,7 +749,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_example_5">Example:</h4>
 <div class="paragraph">
-<p>Request satellite health data packet to verify or validate TLE data corresponding to expected orbit profile based on pre-computed orbit propagation model</p>
+<p>Request satellite health data packet to verify or validate state vector corresponding to expected orbit profile based on pre-computed orbit propagation model</p>
 </div>
 </div>
 <div class="sect3">
@@ -777,7 +775,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_example_6">Example:</h4>
 <div class="paragraph">
-<p>Request satellite health data packet via S-band radio to verify or validate TLE data corresponding to expected orbit profile based on pre-computed orbit propagation model</p>
+<p>Request satellite health data packet via S-band radio to verify or validate state vector corresponding to expected orbit profile based on pre-computed orbit propagation model</p>
 </div>
 </div>
 <div class="sect3">
@@ -806,7 +804,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_example_7">Example:</h4>
 <div class="paragraph">
-<p>Request satellite mission data to verify that TLE&#8217;s &amp; AODS sensor data correspond with expected orbit profile and/or validate that a mission mode was successful</p>
+<p>Request satellite mission data to verify that state vector &amp; AODS sensor data correspond with expected orbit profile and/or validate that a mission mode was successful</p>
 </div>
 </div>
 <div class="sect3">
@@ -896,7 +894,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 battery_health: {{battery_health}}
 temperature_battery: {{temperature_battery}}
 mode: {{mode}}
-tle_data: {{tle_data}}</pre>
+state_vector: {{state_vector}}</pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -947,10 +945,10 @@ tle_data: {{tle_data}}</pre>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tle_data</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TLE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">state_vector</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECIStateVector</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TLE data from orbit propogator at time of beacon.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECI state vector from orbit propogator at time of beacon.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
@@ -1210,19 +1208,23 @@ time_stamp: {{time_stamp}}</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tle">TLE</h3>
+<h3 id="_ecistatevector">ECIStateVector</h3>
 <div class="paragraph">
-<p><strong>Purpose:</strong> Data structure for the TLE data computed from GPS data or orbit propagator</p>
+<p><strong>Purpose:</strong> Data structure for the earth-centered inertial (ECI) state vector in cartesian coordinates computed from GPS data or orbit propagator</p>
 </div>
 <div class="listingblock">
-<div class="title">TLE Template</div>
+<div class="title">ECIStateVector Template</div>
 <div class="content">
-<pre>tle_line_1: {{tle_line_1}}
-tle_line_2: {{tle_line_2}}</pre>
+<pre>x: {{x}}
+y: {{y}}
+z: {{z}}
+xd: {{xd}}
+yd: {{yd}}
+zd: {{zd}}</pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 4. TLE Specification</caption>
+<caption class="title">Table 4. ECIStateVector Specification</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 11.1111%;">
@@ -1241,307 +1243,49 @@ tle_line_2: {{tle_line_2}}</pre>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tle_line_1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TLELine1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data for TLE line 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">position in kilometers (km) along x-axis</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tle_line_2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TLELine2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data for TLE line 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">position in kilometers (km) along y-axis</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">position in kilometers (km) along z-axis</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">velocity in kilometers per second (km/s) along x-axis</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">velocity in kilometers per second (km/s) along y-axis</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">zd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">velocity in kilometers per second (km/s) along z-axis</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div class="sect3">
-<h4 id="_derived_from_8"><strong>Derived From:</strong></h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.celestrak.com/NORAD/documentation/tle-fmt.php">Two-Line Element Data</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tle_line_1">TLE Line 1</h3>
-<div class="paragraph">
-<p><strong>Purpose:</strong> Data structure for the first line of the TLE data</p>
-</div>
-<div class="listingblock">
-<div class="title">TLE Line 1 Template</div>
-<div class="content">
-<pre>line_number: {{line_number}}
-satellite_number: {{satellite_number}}
-classification: {{classification}}
-international_designator_1: {{international_designator_1}}
-international_designator_2: {{international_designator_2}}
-international_designator_3: {{international_designator_3}}
-epoch_year: {{epoch_year}}
-epoch: {{epoch}}
-first_dt: {{first_dt}}
-second_dt: {{second_dt}}
-bstar: {{bstar}}
-eph_type: {{eph_type}}
-element_number: {{element_number}}
-checksum: {{checksum}}</pre>
-</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. TLE Line 1 Specification</caption>
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 55.5555%;">
-<col style="width: 11.1112%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Item Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Source</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">line_number</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Line number of element data (Column 01)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">satellite_number</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Satellite number (Column 03-07)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">classification</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Classification of satellite (Column 08)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">international_designator_1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">International designator 1 (last two digits of launch year) (Column 10-11)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">international_designator_2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">International designator 2 (launch number of the year) (Column 12-14)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">international_designator_3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">International designator 3 (piece of the launch) (Column 15-17)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epoch_year</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Epoch year (last two digits of year) (Column 19-20)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epoch</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Epoch (day of the year and fractional portion of the day) (Column 21-32)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">first_dt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">First time derivative of the mean motion (Column 34-43)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">second_dt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Second time derivative of the mean motion (leading decimal point assumed) (Column 45-52)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">bstar</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BSTAR drag term (leading decimal point assumed) (Column 54-61)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">eph_type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ephemeris type (Column 63)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">element_number</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Element number (Column 65-68)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">checksum</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Checksum (modulo 10) (letters, blanks, periods, plus signs = 0; minus signs = 1) (Column 69)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<div class="sect3">
-<h4 id="_derived_from_9"><strong>Derived From:</strong></h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.celestrak.com/NORAD/documentation/tle-fmt.php">Two-Line Element Data</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tle_line_2">TLE Line 2</h3>
-<div class="paragraph">
-<p><strong>Purpose:</strong> Data structure for the second line of the TLE data</p>
-</div>
-<div class="listingblock">
-<div class="title">TLE Line 2 Template</div>
-<div class="content">
-<pre>line_number: {{line_number}}
-satellite_number: {{satellite_number}}
-inclination: {{inclination}}
-raan: {{raan}}
-ecc: {{ecc}}
-perigee: {{perigee}}
-mean_anomaly: {{mean_anomaly}}
-mean_motion: {{mean_motion}}
-rev_epoch: {{rev_epoch}}
-checksum: {{checksum}}</pre>
-</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 6. TLE Line 2 Specification</caption>
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 55.5555%;">
-<col style="width: 11.1112%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Item Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Source</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">line_number</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Line number of element data (Column 01)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">satellite_number</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Satellite number (Column 03-07)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">inclination</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inclination (degrees) (Column 09-16)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">raan</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Right ascension of the ascending node (degrees) (Column 18-25)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ecc</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Eccentricity (leading decimal point assumed) (Column 27-33)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">perigee</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Argument of perigee (degrees) (Column 35-42)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean_anomaly</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mean anomaly (degrees) (Column 44-51)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mean_motion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mean motion (revs per day) (Column 53-63)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rev_epoch</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Revolution number at epoch (revs) (Column 64-68)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">checksum</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Checksum (modulo 10) (letters, blanks, periods, plus signs = 0; minus signs = 1) (Column 69)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<div class="sect3">
-<h4 id="_derived_from_10"><strong>Derived From:</strong></h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.celestrak.com/NORAD/documentation/tle-fmt.php">Two-Line Element Data</a></p>
-</li>
-</ul>
-</div>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_mission_data">Mission Data</h3>
@@ -1558,7 +1302,7 @@ exit_tle: {{exit_tle}}</pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 7. Mission Data Specification</caption>
+<caption class="title">Table 5. Mission Data Specification</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 11.1111%;">
@@ -1578,9 +1322,9 @@ exit_tle: {{exit_tle}}</pre>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">entry_tle</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TLE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECIStateVector</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TLE at time of beginning of mission mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECIStateVector at time of beginning of mission mode</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -1599,15 +1343,15 @@ exit_tle: {{exit_tle}}</pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">exit_tle</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TLE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECIStateVector</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TLE at time of end of mission mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECIStateVector at time of end of mission mode</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="_derived_from_11"><strong>Derived From:</strong></h4>
+<h4 id="_derived_from_8"><strong>Derived From:</strong></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1624,7 +1368,7 @@ exit_tle: {{exit_tle}}</pre>
 <h3 id="_data_structures_mapping">Data Structures Mapping</h3>
 <div class="imageblock">
 <div class="content">
-<img src="data-structures-mapping.png" alt="data structures mapping" width="1210" height="1350">
+<img src="data-structures-mapping.png" alt="data structures mapping" width="1162" height="801">
 </div>
 </div>
 </div>
@@ -1644,7 +1388,7 @@ exit_tle: {{exit_tle}}</pre>
 <div id="footer">
 <div id="footer-text">
 Version v5.0.0<br>
-Last updated 2023-01-23 22:35:28 UTC
+Last updated 2023-03-15 23:43:02 UTC
 </div>
 </div>
 </body>

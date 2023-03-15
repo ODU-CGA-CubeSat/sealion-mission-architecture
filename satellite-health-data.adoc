@@ -38,12 +38,12 @@
 |Integer value indicating current mission mode. 0 = Safe, 1 = mission mode 1, 2 = mission mode 2, 3 = mission mode 3.
 
 
-|tle_data
-|TLE
+|state_vector
+|ECIStateVector
 
 |
 
-|TLE data from orbit propogator at time of beacon.
+|ECI state vector from orbit propogator at time of beacon.
 
 
 |===

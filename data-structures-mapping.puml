@@ -61,7 +61,7 @@ frame "uc [ SeaLion Mission Architecture Data Structures Mapping ]" {
             
                 integer mode
             
-                TLE tle_data
+                ECIStateVector state_vector
             
         }
 
@@ -127,97 +127,33 @@ frame "uc [ SeaLion Mission Architecture Data Structures Mapping ]" {
             
         
     
-        class "<b>TLE</b>" as dstle {
+        class "<b>ECIStateVector</b>" as dsecistatevector {
             
-                TLELine1 tle_line_1
+                integer x
             
-                TLELine2 tle_line_2
+                integer y
             
-        }
-
-        
+                integer z
             
-                
+                integer xd
             
-        
-    
-        class "<b>TLE Line 1</b>" as dstle_line_1 {
+                integer yd
             
-                string line_number
-            
-                string satellite_number
-            
-                string classification
-            
-                string international_designator_1
-            
-                string international_designator_2
-            
-                string international_designator_3
-            
-                string epoch_year
-            
-                string epoch
-            
-                string first_dt
-            
-                string second_dt
-            
-                string bstar
-            
-                string eph_type
-            
-                string element_number
-            
-                string checksum
+                integer zd
             
         }
 
-        
-            
-                
-            
-        
-    
-        class "<b>TLE Line 2</b>" as dstle_line_2 {
-            
-                string line_number
-            
-                string satellite_number
-            
-                string inclination
-            
-                string raan
-            
-                string ecc
-            
-                string perigee
-            
-                string mean_anomaly
-            
-                string mean_motion
-            
-                string rev_epoch
-            
-                string checksum
-            
-        }
-
-        
-            
-                
-            
         
     
         class "<b>Mission Data</b>" as dsmission_data {
             
-                TLE entry_tle
+                ECIStateVector entry_tle
             
                 AODSSensorData obc_sensors
             
                 string mission_data
             
-                TLE exit_tle
+                ECIStateVector exit_tle
             
         }
 

@@ -1,7 +1,7 @@
 = SeaLion Mission Architecture Assembly Instructions
 Sean Marquez <capsulecorplab@gmail.com> & contributors
 :revnumber: v5.0.0
-:revdate: 1/23/2023
+:revdate: 3/15/2023
 :sectnums:
 :toc:
 
