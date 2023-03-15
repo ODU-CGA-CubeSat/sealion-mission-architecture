@@ -1,0 +1,8 @@
+{
+    "name": "battery-pack-8-cell",
+    "version": "0.1.0",
+    "description": "Battery pack 8 cell",
+    "license": "Unlicense",
+    "dependencies": {
+    }
+}

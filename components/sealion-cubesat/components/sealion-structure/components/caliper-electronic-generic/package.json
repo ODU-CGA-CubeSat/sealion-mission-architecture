@@ -1,7 +1,7 @@
 {
     "name": "caliper-electronic-generic",
     "version": "0.1.0",
-    "description": "Caliper eletronic generic",
+    "description": "Caliper electronic generic",
     "license": "Unlicense",
     "author": "Schappi Christopher <cscha010@odu.edu>",
     "dependencies": {

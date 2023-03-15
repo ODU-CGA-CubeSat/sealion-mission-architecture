@@ -1,0 +1,9 @@
+{
+    "name": "sealion-board-assembly",
+    "version": "0.1.0",
+    "description": "Sealion Board Assembly",
+    "license": "MIT",
+    "author": "Christopher Schappi <cscha010@odu.edu>",
+    "dependencies": {
+    }
+}

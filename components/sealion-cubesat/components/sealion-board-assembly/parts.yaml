@@ -1,0 +1,36 @@
+communication-module:
+  id: communication-module
+  description: Communication Module
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-communication-module
+  selectedOption: 0
+  notes: ''
+obc:
+  id: obc
+  description: OnBoard Computer
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-obc
+  selectedOption: 0
+  notes: ''
+power-module:
+  id: power-module
+  description: Power Module
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-power-module
+  selectedOption: 0
+  notes: ''
+interface-module:
+  id: interface-module
+  description: Interface Module
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-interface-module
+  selectedOption: 0
+  notes: ''

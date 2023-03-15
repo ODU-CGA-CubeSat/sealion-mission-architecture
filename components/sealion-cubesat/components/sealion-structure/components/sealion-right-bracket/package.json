@@ -1,9 +1,0 @@
-{
-    "name": "sealion-right-bracket",
-    "version": "0.1.0",
-    "description": "Right bracket",
-    "license": "(CERN-OHL-P-2.0 AND CC-BY-4.0)",
-    "author": "Schappi Christopher <cscha010@odu.edu>",
-    "dependencies": {
-    }
-}

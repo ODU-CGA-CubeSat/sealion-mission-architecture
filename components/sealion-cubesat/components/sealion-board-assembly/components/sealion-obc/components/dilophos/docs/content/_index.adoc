@@ -1,0 +1,25 @@
+
+---
+title: "Documentation"
+weight: 0
+---
+
+Welcome to the DilophOS documentation!
+
+Documentation is organized into the following categories:
+
+[cols="1, 2, 2"]
+|===
+|
+|Most useful when studying
+|Most useful when working
+
+|Practical
+|link:./tutorials/[Tutorials]: Learning-oriented
+|link:./how-to-guides/[How-To Guides]: Problem-oriented
+
+|Theoretical
+|link:./key-topics/[Key Topics]: Understanding-oriented
+|link:./references/[References]: Information-oriented
+|=== 
+

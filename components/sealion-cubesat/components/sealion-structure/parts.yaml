@@ -29,33 +29,17 @@ sheetmetal-antenna-bracket:
   - sealion-sheetmetal-antenna-bracket-patch
   selectedOption: 0
   notes: "Adapter plate for sheetmetal bottom plate's antenna"
-battery-case-adapter:
-  id: battery-case-adapter
-  description: Battery Case Adapter
+triside-bracket:                #new
+  id: triside-bracket
+  description: TriSide Bracket
   quantity: 2
   quantityUnits: unit
   options:
-  - sealion-battery-case-adapter
+  - sealion-triside-bracket-a
+  - sealion-triside-bracket-b
+  - sealion-triside-bracket-c
   selectedOption: 0
-  notes: ''
-right-bracket:
-  id: right-bracket
-  description: Right Bracket
-  quantity: 1
-  quantityUnits: unit
-  options:
-  - sealion-right-bracket
-  selectedOption: 0
-  notes: 'Right Bracket to hold the MsS and Sun Sensor'
-left-bracket:
-  id: left-bracket
-  description: Left Bracket
-  quantity: 1
-  quantityUnits: unit
-  options:
-  - sealion-left-bracket
-  selectedOption: 0
-  notes: ''
+  notes: 'Interior brackets to folded TriSide sheetmetal assembly'
 ejection-plate:
   id: ejection-plate
   description: Ejection Plate
@@ -74,13 +58,31 @@ ejection-plate-standoff:
   - sealion-ejection-plate-standoff
   selectedOption: 0
   notes: ''
-separation-connector-mounting-bracket:
-  id: separation-connector-mounting-bracket
-  description: Separation Connector Mounting Bracket
+battery-pack:
+  id: battery-pack
+  description: Battery Pack
   quantity: 1
   quantityUnits: unit
   options:
-  - sealion-separation-connector-mounting-bracket
+  - battery-pack-8-cell
+  selectedOption: 0
+  notes: ''
+uhf-antenna:
+  id: uhf-antenna
+  description: UHF Antenna
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - uhf-antenna
+  selectedOption: 0
+  notes: ''
+magnetometer:
+  id: magnetometer
+  description: Magnetometer
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - magnetometer
   selectedOption: 0
   notes: ''
 #Beginning of DeCS

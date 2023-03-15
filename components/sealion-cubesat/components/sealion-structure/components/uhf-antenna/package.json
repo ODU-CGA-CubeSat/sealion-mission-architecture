@@ -1,0 +1,8 @@
+{
+    "name": "uhf-antenna",
+    "version": "0.1.0",
+    "description": "UHF Antenna",
+    "license": "Unlicense",
+    "dependencies": {
+    }
+}

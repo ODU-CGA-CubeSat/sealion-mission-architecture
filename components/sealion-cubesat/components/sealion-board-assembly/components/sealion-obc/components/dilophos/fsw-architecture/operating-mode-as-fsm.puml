@@ -1,0 +1,93 @@
+@startuml
+
+[*] --> FiniteStateMachine
+state FiniteStateMachine {
+      state AntennaDeployment
+            AntennaDeployment : Turn on current supply to antenna
+            AntennaDeployment : burnwire mechanism for 1 minute
+            AntennaDeployment : Record deployment time to event log
+      state SafeHold
+            SafeHold : Transmit SeaLion Beacon
+      note right of SafeHold : alternate beacon between satellite health telemetry & eventlog (mission data)
+      state QueryReceiver
+            QueryReceiver : Listen for ground station
+            QueryReceiver : command for next 2 minutes
+      state TelemetrySender
+            TelemetrySender : Downlink requested telemetry packet
+      state EventLogSender
+            EventLogSender : Downlink requested event log
+      state TimerUpdater
+      TimerUpdater : Set timer rate as per query
+      note bottom of TimerUpdater : e.g., BeaconTimer, GPSTimer, OrbitPropagatorTimer
+      state MissionMode1
+            MissionMode1 : Record TLE upon entering MM1
+            MissionMode1 : Record AODS data to event log
+            MissionMode1 : Record impedence probe data to event log
+            MissionMode1 : for next 2 minutes at 1 second intervals
+            MissionMode1 : Record TLE upon existing MM1
+      state MissionMode2
+            MissionMode2 : Record TLE upon entering MM2
+            MissionMode2 : Record AODS data to event log
+            MissionMode2 : Turn on current supply to DeCs burnwire
+            MissionMode2 : mechanism for 1 minute
+            MissionMode2 : Record DeCS strain gauge data to event
+            MissionMode2 : log for next 2 minutes at 1 second intervals
+            MissionMode2 : Record TLE upon existing MM2
+      state MissionMode3
+            MissionMode3 : Record TLE entering MM3
+            MissionMode3 : Record AODS data to event log
+            MissionMode3 : Record multi-spectral sensor data to event
+            MissionMode3 : log for next 2 minutes at 1 second intervals
+            MissionMode3 : Record TLE upon existing MM3
+      state TaskDispatcher
+            TaskDispatcher : Check runqueue for scheduled task
+      state QueryHandler
+            QueryHandler : Process query from ground station
+      state TaskScheduler
+            TaskScheduler : Add scheduled task to runqueue
+
+      [*] --> AntennaDeployment : Power on EPS & CDS \n Wait 45 mins
+      AntennaDeployment --> SafeHold
+      SafeHold --> QueryReceiver
+      QueryReceiver --> QueryHandler : Ground station command received
+      QueryHandler --> TelemetrySender : Telemetry requested
+      QueryHandler --> EventLogSender : Event log requested
+      QueryHandler --> TaskScheduler : Task scheduling requested
+      QueryHandler --> TimerUpdater
+      TimerUpdater --> QueryReceiver
+      TelemetrySender --> QueryReceiver
+      EventLogSender --> QueryReceiver
+      TaskScheduler --> QueryReceiver
+      QueryReceiver --> TaskDispatcher : No ground station command
+      TaskDispatcher --> TaskDispatcher : no scheduled tasks
+      TaskDispatcher --> MissionMode1 : scheduled for MM1
+      TaskDispatcher --> MissionMode2 : scheduled for MM2
+      TaskDispatcher --> MissionMode3 : scheduled for MM3
+      TaskDispatcher --> EventLogSender : scheduled event log downlink
+      TaskDispatcher --> TelemetrySender : scheduled for telemetry downlink
+      TaskDispatcher --> SafeHold : scheduled for Beacon
+      MissionMode1 --> TaskDispatcher
+      MissionMode2 --> TaskDispatcher
+      MissionMode3 --> TaskDispatcher
+      --
+      state WatchdogTimer
+            WatchdogTimer : pre-empt current task to reset OBC (default: every 30 minutes)
+      [*] --> WatchdogTimer
+      WatchdogTimer --> WatchdogTimer
+      --
+      state BeaconTimer
+            BeaconTimer : pre-empt current task to add scheduled beacon to runqueue (default: every 1 minute)
+      [*] --> BeaconTimer
+      BeaconTimer --> BeaconTimer
+      --
+      state GPSTimer
+            GPSTimer : pre-empt current task to ping and store latest lattitude, longitude, & altitude data to memory (default: every 10 minutes)
+      [*] --> GPSTimer
+      GPSTimer --> GPSTimer
+      --
+      state OrbitPropagatorTimer
+            OrbitPropagatorTimer : pre-empt current task to compute and store latest TLE to memory (default: every 1 second), using orbit propagator
+      [*] --> OrbitPropagatorTimer
+      OrbitPropagatorTimer --> OrbitPropagatorTimer
+}
+@enduml
