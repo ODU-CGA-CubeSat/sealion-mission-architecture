@@ -13,4 +13,4 @@ derivedFrom:
 - "1-StakeholderNeeds/3.1-TertiaryMissionObjective-C1.yaml"
 - "1-StakeholderNeeds/3.2-TertiaryMissionObjective-C2.yaml"
 - "1-StakeholderNeeds/3.3-TertiaryMissionObjective-C3.yaml"
-example: Request satellite mission data to verify that TLE's & AODS sensor data correspond with expected orbit profile and/or validate that a mission mode was successful
+example: Request satellite mission data to verify that state vector & AODS sensor data correspond with expected orbit profile and/or validate that a mission mode was successful

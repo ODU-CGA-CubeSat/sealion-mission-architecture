@@ -5,7 +5,7 @@ template: |
   battery_health: {{battery_health}}
   temperature_battery: {{temperature_battery}}
   mode: {{mode}}
-  tle_data: {{tle_data}}
+  state_vector: {{state_vector}}
 elements:
   - key: call_sign
     type: string
@@ -27,10 +27,10 @@ elements:
     itemType: ''
     description: "Integer value indicating current mission mode. 0 = Safe, 1 = mission mode 1, 2 = mission mode 2, 3 = mission mode 3."
     derivedFrom: ''
-  - key: tle_data
-    type: TLE
+  - key: state_vector
+    type: ECIStateVector
     itemType: ''
-    description: TLE data from orbit propogator at time of beacon.
+    description: ECI state vector from orbit propogator at time of beacon.
     derivedFrom: ''
 derivedFrom:
 - "2-UserStories/2-ViewBeaconData.yaml"

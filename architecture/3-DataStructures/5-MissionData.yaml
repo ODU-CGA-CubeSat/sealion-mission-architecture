@@ -7,9 +7,9 @@ template: |
   exit_tle: {{exit_tle}}
 elements:
   - key: entry_tle
-    type: TLE
+    type: ECIStateVector
     itemType: ''
-    description: TLE at time of beginning of mission mode
+    description: ECIStateVector at time of beginning of mission mode
     derivedFrom: []
   - key: obc_sensors
     type: AODSSensorData
@@ -22,9 +22,9 @@ elements:
     description: Data recorded during mission mode
     derivedFrom: []
   - key: exit_tle
-    type: TLE
+    type: ECIStateVector
     itemType: ''
-    description: TLE at time of end of mission mode
+    description: ECIStateVector at time of end of mission mode
     derivedFrom: []
 derivedFrom:
   - "2-UserStories/2-ViewBeaconData.yaml"
