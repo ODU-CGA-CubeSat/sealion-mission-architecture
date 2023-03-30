@@ -1,4 +1,4 @@
-conops-1-energy-consumption:
+conops-1-energy-consumption-s-band:
   - operatingMode: safehold
     parameters:
       duration:
@@ -10,11 +10,100 @@ conops-1-energy-consumption:
       maxEnergyConsumption:
         value: "{{ maxPowerConsumption * duration }}"
         units: watthours
+  - operatingMode: mission-mode-1 # impediance probe
+    parameters:
+      duration:
+        value: 10
+        units: minutes
+      maxPowerConsumption:
+        value: 8398.444
+        units: milliwatts
+      maxEnergyConsumption:
+        value: "{{ maxPowerConsumption * duration }}"
+        units: watthours
   - operatingMode: comms
     parameters:
       duration:
-        value: 3.08
+        value: 10
+        units: minutes
+      maxPowerConsumption:
+        value: 16456.02
+        units: milliwatts
+      maxEnergyConsumption:
+        value: "{{ maxPowerConsumption * duration }}"
+        units: watthours
+  - operatingMode: mission-mode-2 # multispectral sensor
+    parameters:
+      duration:
+        value: 10
+        units: minutes
+      maxPowerConsumption:
+        value: 8398.444
+        units: milliwatts
+      maxEnergyConsumption:
+        value: "{{ maxPowerConsumption * duration }}"
+        units: watthours
+  - operatingMode: comms
+    parameters:
+      duration:
+        value: 10
+        units: minutes
+      maxPowerConsumption:
+        value: 16456.02
+        units: milliwatts
+      maxEnergyConsumption:
+        value: "{{ maxPowerConsumption * duration }}"
+        units: watthours
+conops-1-energy-consumption-uhf:
+  - operatingMode: safehold
+    parameters:
+      duration:
+        value: 20.92
         units: hours
+      maxPowerConsumption:
+        value: 8398.444
+        units: milliwatts
+      maxEnergyConsumption:
+        value: "{{ maxPowerConsumption * duration }}"
+        units: watthours
+  - operatingMode: mission-mode-1 # impediance probe
+    parameters:
+      duration:
+        value: 10
+        units: minutes
+      maxPowerConsumption:
+        value: 8398.444
+        units: milliwatts
+      maxEnergyConsumption:
+        value: "{{ maxPowerConsumption * duration }}"
+        units: watthours
+  - operatingMode: comms
+    parameters:
+      duration:
+        value: 10
+        units: minutes
+      maxPowerConsumption:
+        value: 20140.02
+        units: milliwatts
+      maxEnergyConsumption:
+        value: "{{ maxPowerConsumption * duration }}"
+        units: watthours
+  - operatingMode: mission-mode-2 # multispectral sensor
+    parameters:
+      duration:
+        value: 10
+        units: minutes
+      maxPowerConsumption:
+        value: 8398.444
+        units: milliwatts
+      maxEnergyConsumption:
+        value: "{{ maxPowerConsumption * duration }}"
+        units: watthours
+  - operatingMode: comms
+    parameters:
+      duration:
+        value: 10
+        units: minutes
       maxPowerConsumption:
         value: 20140.02
         units: milliwatts
