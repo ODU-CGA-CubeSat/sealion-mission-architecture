@@ -1,0 +1,46 @@
+conops-1-energy-consumption:
+  - operatingMode: safehold
+    parameters:
+      duration:
+        value: 20.92
+        units: hours
+      maxPowerConsumption:
+        value: 8398.444
+        units: milliwatts
+      maxEnergyConsumption:
+        value: "{{ maxPowerConsumption * duration }}"
+        units: watthours
+  - operatingMode: comms
+    parameters:
+      duration:
+        value: 3.08
+        units: hours
+      maxPowerConsumption:
+        value: 20140.02
+        units: milliwatts
+      maxEnergyConsumption:
+        value: "{{ maxPowerConsumption * duration }}"
+        units: watthours
+conops-1-energy-generation:
+  - operatingMode: charging
+    parameters:
+      duration:
+        value: 12
+        units: hours
+      minPowerGeneration:
+        value: 13.45 # as per https://www.sjsu.edu/ae/docs/project-thesis/Daniel.Hernandez%20S15.pdf
+        units: watts
+      minEnergyStored:
+        value: "{{ minPowerGeneration * duration }}"
+        units: watthours
+  - operatingMode: not-charging
+    parameters:
+      duration:
+        value: 12
+        units: minutes
+      minPowerGeneration:
+        value: 0.0
+        units: watts
+      minEnergyStored:
+        value: "{{ minPowerGeneration * duration }}"
+        units: watthours
