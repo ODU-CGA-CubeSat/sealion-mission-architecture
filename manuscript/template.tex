@@ -302,7 +302,7 @@ In contrast, a MBSE approach supports capturing information in a highly structur
 As an example of the efficiency gains that MBSE can achieve with a side-by-side comparison between MBSE and non-MBSE approaches.  Using an architecting process, of 4,858 information element transfers, noted that all of these transfers were done manually with non-MBSE approaches; however, 13\% of these transfers with automated with MBSE with the potential of up to 81\% should it be used for trade study and peer review tasks \cite{younse_cameron_bradley_2021}.  The SeaLion mission architecture team seeks to take advantage of these efficiency gains that MBSE can achieve.  Usage of MBSE for space-related projects is not without precedent either.  Projects have been taking advantage of MBSE such as the ExoMars mission, Euclid, Galileo, and nanosatellite programs \cite{mazzini}, \cite{esa}, \cite{nottage_corns_2012}.  CubeSat projects have also been using MBSE and have shown to “hold promise of reducing the burden of system engineering tasks” and can “promote uniformity and consistency across future CubeSat models” \cite{kaslow}.  These attributes are important to reduce workload amongst team members and also to facilitate new team members as they join future projects.  Especially useful for universities since students are not available long term due to events such as graduation.
 
 \subsection{Documents-As-Code Approach}
-Documents-as-code (Docs-as-code) refers to a philosophy that team members should be writing documentation with the same tools as code \cite{ibm_mbse}.  This allows for documentation to updated seamlessly without additional work with document tools (doctools).  The code tools would include version control (e.g., Git), issues trackers, code tools (e.g., Visual Studio Code), etc.  To do so would mean that the “following the same workflows as development teams, and being integrated in the product team. It enables a culture where writers and developers both feel ownership of documentation, and work together to make it as good as possible” \cite{ibm_mbse}.  The SeaLion team taking advantage of the aforementioned philosophy would realize the benefits of utilizing the same principles and practices used to manage software, using modern version control tools (e.g., Git), for the configuration management of mission and flight software architecture documentation, and captured in a model-based approach \cite{ibm_mbse}.  In addition, these models can stored and used persistently on a local file system without the use of cloud based services.  Proprietary services are not required to generate documentation, modify documentation, or modify models.  Similar approaches have been seen as Structurizr \cite{structurizr} and F Prime Prime (FPP) \cite{f_prime_prime}.  FPP is based on F Prime which is an open-source software framework developed by NASA's Jet Propulsion Laboratory \cite{f_prime}.  While docs-as-code has precedent, the methodologies noted are not easily accesible to those without a sufficient background in programming.
+Documents-as-code (Docs-as-code) refers to a philosophy that team members should be writing documentation with the same tools as code \cite{docs_as_code}.  This allows for documentation to updated seamlessly without additional work with document tools (doctools).  The code tools would include version control (e.g., Git), issues trackers, code tools (e.g., Visual Studio Code), etc.  To do so would mean that the “following the same workflows as development teams, and being integrated in the product team. It enables a culture where writers and developers both feel ownership of documentation, and work together to make it as good as possible” \cite{docs_as_code}.  The SeaLion team taking advantage of the aforementioned philosophy would realize the benefits of utilizing the same principles and practices used to manage software, using modern version control tools (e.g., Git), for the configuration management of mission and flight software architecture documentation, and captured in a model-based approach \cite{docs_as_code}.  In addition, these models can stored and used persistently on a local file system without the use of cloud based services.  Proprietary services are not required to generate documentation, modify documentation, or modify models.  Similar approaches have been seen as Structurizr \cite{structurizr} and F Prime Prime (FPP) \cite{f_prime_prime}.  FPP is based on F Prime which is an open-source software framework developed by NASA's Jet Propulsion Laboratory \cite{f_prime}; it is a model-driven approach for producing flight software code that can be compiled directly onto flight hardware.  While docs-as-code has precedent, the methodologies noted are not easily accesible to those without a sufficient background in programming.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Modelling Language and Methodology}
@@ -335,7 +335,7 @@ M30ML was developed using the Ontological Modeling Language (OML) as its basis. 
 M30ML is a language for modeling an architecture with YAML-based modeling.  YAML is especially important as a file structure since it is a highly structured, machine queryable, human-readable, lightweight, and line-oriented markup language.  This makes it ideal for document generation use cases as well as use with version control tools like Git.  The simple line by line structure as shown in figure \ref{fig:example_yaml} exemplifies its simplicity.  Users are easily able to read, interpret, and edit documents using the YAML file format so as long they are taught what each line element is.  Doctools such as asciidoctor and bibtex were made compatible easily with minimal technical overhead which was taken advantage of for the submission to the AIAA SciTech 2023 Forum \cite{scitech_proceeding}.  M30ML also provided modeling elements familiar in agile software development, such as stakeholder needs, user stories, data structures, and with relationship elements for defining traceability between modeling elements \cite{mach30_git}.
 
 \begin{figure}[H]
-    \includegraphics[width=10.5 cm]{assets/user_story.png}
+    \includegraphics[width=12 cm]{assets/user_story.png}
     \caption{Example YAML file}
 	\label{fig:example_yaml}
     \end{figure}   
@@ -359,7 +359,7 @@ The SeaLion mission architecture is organized into two main folders of architect
 References are simply stored reference material such as standards, specifications books, etc.  They are very simple two-line YAML files as shown in figure \ref{fig:reference_yaml}.  This creates a continued link between the YAML files within their respective folders from which documents can be updated seamlessly.  Information changed within one file can interact with other files.  All YAML references files in the mission architecture at the time of article's publication is listed within and figure \ref{fig:reference_file}. 
 
 \begin{figure}[H]
-    \includegraphics[width=10.5 cm]{assets/reference.png}
+    \includegraphics[width=10 cm]{assets/reference.png}
     \caption{References YAML file}
 	\label{fig:reference_yaml}
     \end{figure}   
@@ -395,7 +395,7 @@ Stakeholder YAML files are stored in '1-StakeholderNeeds' shown in figure \ref{f
 Figure \ref{fig:uml_stakeholder} presents all the stakeholder needs via a unified modelling language (UML) diagram generated from the YAML files within the '1-StakeholderNeeds' folder.  The two primary stakeholders being ODU and the USCGA.  The generation of these diagrams via the YAML files presented herein showcases the docs-as-code approach.  YAML files structured as a code are then converted into easily human readable documents for presentation.
 
 \begin{figure}[H]
-    \includegraphics[width=10.5 cm]{assets/uml_stakeholder.png}
+    \includegraphics[width=12 cm]{assets/uml_stakeholder.png}
     \caption{Stakeholder UML Diagram}
 	\label{fig:uml_stakeholder}
     \end{figure}   
@@ -425,14 +425,14 @@ As an example, the second user story desire is to “verify that satellite is op
 Figure \ref{fig:uml_userstory} and figure \ref{fig:uml_userstory2} are UML diagrams generated using the YAML files stored in '2-UserStories' folder.  Figure \ref{fig:uml_userstory} is a mapping of stakeholder needs to user stories.  Figure \ref{fig:uml_userstory2} is the user stories presented in a use case diagram to showcase what the ground station operator needs to perform.  The generation of these diagrams via the YAML files presented herein showcases the docs-as-code approach.  YAML files structured as a code are then converted into easily human readable documents for presentation.
 
 \begin{figure}[H]
-    \includegraphics[width=10.5 cm]{assets/uml_userstory.png}
+    \includegraphics[width=12 cm]{assets/uml_userstory.png}
     \caption{UML diagram of user stories}
 	\label{fig:uml_userstory}
     \end{figure}   
 \unskip
 
 \begin{figure}[H]
-    \includegraphics[width=10.5 cm]{assets/uml_userstory2.png}
+    \includegraphics[width=12 cm]{assets/uml_userstory2.png}
     \caption{UML diagram of ground station operator}
 	\label{fig:uml_userstory2}
     \end{figure}   
@@ -459,7 +459,7 @@ User stories once identified will then lead to design decisions captured in data
 \end{table}
 
 \begin{figure}[H]
-    \includegraphics[width=10.5 cm]{assets/datastructure.png}
+    \includegraphics[width=12 cm]{assets/datastructure.png}
     \caption{Satellite Health Data Structure}
 	\label{fig:datastructure}
     \end{figure}   
@@ -478,14 +478,14 @@ As shown in figure \ref{fig:datastructure}, the data structure, with YAML file n
 Figure \ref{fig:uml_datastructure} is a UML diagram of mapping of user stories to data structures generated from the YAML file shown in figure \ref{fig:datastructure}.  The generation of this diagram and the tables via the YAML files presented herein showcases the docs-as-code approach.  YAML files structured as a code are then converted into easily human readable documents for presentation.
 
 \begin{figure}[H]
-    \includegraphics[width=10.5 cm]{assets/uml_datastructure.png}
+    \includegraphics[width=12 cm]{assets/uml_datastructure.png}
     \caption{UML Diagram of Data Structures}
 	\label{fig:uml_datastructure}
     \end{figure}   
 \unskip
 
 \subsection{Document Generation}
-As noted multiple times throughout this article, there have been a number of figures and tables generated from the YAML files placed within the SeaLion mission architecture GitHub repository.  Many of the figures are UML diagrams that are auto-generated artifacts rendered from the M30ML modeling language and formatted using the Liquid template language.  This is the link for the docs-as-code approach.  YAML code files are used to generate documents for information sharing between group members.  This means that any changes made to the SeaLion mission architecture model can immediately be used to generate new documents.  Whether it be diagrams, tables, or text, continuous updating is ensured that any changes affecting dependencies within the mission architecture are kept in sync.  YAML files are automatically processed using templates langauge (e.g., Jinja2) via a build shell script.  This also means that content of the model and formatting of documents are decoupled.  The model is formatting-agnostic for documentation purposes as this is handled by template language.  A conference proceeding manuscript presented in AIAA SciTech 2023 was created purely by a docs-as-code format \cite{scitech_proceeding}.  The team used a LaTeX template to automatically format the manuscript to the conference guidelines and subsequently inject items such as the generated diagrams, tables, and references directly into the manuscript.
+As noted multiple times throughout this article, there have been a number of figures and tables generated from the YAML files placed within the SeaLion mission architecture GitHub repository.  Many of the figures are UML diagrams that are auto-generated artifacts rendered from the M30ML modeling language and formatted using the Liquid template language.  This is how the docs-as-code approach is implemented.  YAML code files are used to generate documents for information sharing between group members.  This means that any changes made to the SeaLion mission architecture model can immediately be used to generate new documents.  Whether it be diagrams, tables, or text, continuous updating is ensured that any changes affecting dependencies within the mission architecture are kept in sync.  YAML files are automatically processed using templates langauge (e.g., Jinja2) via a build shell script.  This also means that content of the model and formatting of documents are decoupled.  The model is formatting-agnostic for documentation purposes as this is handled by the template language.  A conference proceeding manuscript presented in AIAA SciTech 2023 was created purely by a docs-as-code format \cite{scitech_proceeding}.  The team used a LaTeX template to automatically format the manuscript to the conference guidelines and subsequently inject items such as the generated diagrams, tables, and references directly into the manuscript.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{M30ML Extensions for Component Implementation}
@@ -504,7 +504,7 @@ The implementation of M30ML for components, at the time of this article's public
 \unskip
 
 \begin{figure}[H]
-    \includegraphics[width=10.5 cm]{assets/components.png}
+    \includegraphics[width=5 cm]{assets/components.png}
     \caption{Component YAML File}
 	\label{fig:components}
     \end{figure}   
@@ -574,7 +574,7 @@ The SeaLion mission architecture team used MBSE with docs-as-code approach to th
 
 %\dataavailability{We encourage all authors of articles published in MDPI journals to share their research data. In this section, please provide details regarding where data supporting reported results can be found, including links to publicly archived datasets analyzed or generated during the study. Where no new data were created, or where data is unavailable due to privacy or ethical re-strictions, a statement is still required. Suggested Data Availability Statements are available in section “MDPI Research Data Policies” at \url{https://www.mdpi.com/ethics}.} 
 
-\acknowledgments{Special thanks to Dr. Sharan Asundi, PhD., Sean Marquez, and the SeaLion Project Team}
+\acknowledgments{Special thanks to the SeaLion Project Team}
 
 \conflictsofinterest{The authors declare no conflict of interest.} 
 
@@ -602,6 +602,7 @@ DOA &	Dead on Arrival\\
 doctools &	Dcoument Tools\\
 DOF &	Distributed OSHW Framework \\
 EVR &	Event\\
+FPP &	F Prime Prime\\
 GPS &	Global Positioning System\\
 ISS &	International Space Station\\
 M30ML &	Mach 30 Modelling Language\\
