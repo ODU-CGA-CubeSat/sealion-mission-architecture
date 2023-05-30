@@ -10,3 +10,6 @@
 [submodule "reveal.js"]
 	path = reveal.js
 	url = git@github.com:hakimel/reveal.js.git
+[submodule "manuscript/Defintions"]
+	path = manuscript/Definitions
+	url = https://github.com/ODU-CGA-CubeSat/mdpi-template.git
