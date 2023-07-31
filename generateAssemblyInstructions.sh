@@ -8,6 +8,30 @@ if [ ! -r ./dist ]; then
     mkdir dist/
 fi
 
+#### Install node_modules, if not already installed ####
+if [ ! -r ./node_modules ]; then
+    clitool="npm"
+    cmdargs="ci"
+    cmd="$clitool $cmdargs"
+    workdir=$project_root
+    podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
+    condition="$clitool --help | grep 'npm <command>'"
+
+    if ! eval $condition; then
+        echo "Installing node_modules via podman..."
+        cd $project_root
+        eval $(echo $podmancmd)
+    else
+        echo "Installing node_modules..."
+        cd $workdir
+        eval $cmd
+        cd $project_root
+    fi
+fi
+
+# copy node_modules into dist/
+cp -r ./node_modules ./dist
+
 #### generate dist/component.yaml & symlink to architecture/ directory ####
 clitool="node"
 cmdargs="dof-helpers/parseComponent.js"
@@ -47,7 +71,7 @@ else
 fi
 
 #### generate assembly instructions as html ####
-clitool="asciidoctor"
+clitool="./node_modules/.bin/asciidoctor"
 cmdargs="assemblyInstructions.adoc -o assemblyInstructions.html"
 cmd="$clitool $cmdargs"
 workdir=$project_root/dist
@@ -66,7 +90,7 @@ else
 fi
 
 #### generate assembly instructions as pdf ####
-clitool="asciidoctor"
+clitool="./node_modules/.bin/asciidoctor"
 cmdargs="assemblyInstructions.adoc -o assemblyInstructions.pdf -r asciidoctor-pdf -b pdf"
 cmd="$clitool $cmdargs"
 workdir=$project_root/dist
