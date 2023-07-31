@@ -85,7 +85,7 @@ cmdargs="dof-helpers/parseComponent.js"
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "generating dist/component.yaml via podman..."
@@ -108,7 +108,7 @@ cmdargs="dof-helpers/generateAssemblyInstructions.js"
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "generating assembly instructions as asciidoc via podman..."
@@ -165,7 +165,7 @@ cmdargs="m30mlTools/buildUnifiedModel.js"
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Building the unified model from liquid template via podman..."
@@ -188,7 +188,7 @@ cmdargs="m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --templ
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Generating stakeholder needs mapping from liquid template via podman..."
@@ -207,7 +207,7 @@ cmdargs="m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --templ
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Generating user stories mapping from liquid template via podman..."
@@ -226,7 +226,7 @@ cmdargs="m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --templ
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Generating use-case-diagrams.puml from liquid template via podman..."
@@ -245,7 +245,7 @@ cmdargs="m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --templ
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Generating data structure mapping from liquid template via podman..."
@@ -264,7 +264,7 @@ cmdargs="m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --templ
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Generating sealion-mission-architecture.adoc from liquid template via podman..."
@@ -350,7 +350,7 @@ cmdargs="m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --templ
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Generating tabulated-stakeholder-needs.adoc from liquid template via podman..."
@@ -373,7 +373,7 @@ cmdargs="m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --templ
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Generating tabulated-user-stories.adoc from liquid template via podman..."
@@ -396,7 +396,7 @@ cmdargs="m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --templ
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Generating satellite-health-data.adoc from liquid template via podman..."
@@ -415,7 +415,7 @@ cmdargs="m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --templ
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Generating satellite-health-data.adoc from liquid template via podman..."
@@ -434,7 +434,7 @@ cmdargs="m30mlTools/generateDoc.js --unifiedModel=dist/architecture.yaml --templ
 cmd="$clitool $cmdargs"
 workdir=$project_root
 podmancmd="podman run --rm --volume $workdir:/srv -w /srv docker.io/node $cmd"
-condition="$clitool --version | grep 'v17'"
+condition="$clitool --version | grep 'v18.5.0'"
 
 if ! eval $condition; then
     echo "Generating satellite-health-data-packet.tex from liquid template via podman..."
