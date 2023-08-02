@@ -12,8 +12,6 @@
     "author": "Sean Marquez <capsulecorplab@gmail.com> & contributors",
     "license": "MIT",
     "dependencies": {
-        "asciidoctor": "^3.0.2",
-        "asciidoctor-pdf": "^1.0.0-alpha.16",
         "js-yaml": "^3.12.0",
         "liquidjs": "^6.1.1",
         "minimist": "^1.2.0"
