@@ -4,7 +4,7 @@
 project_root=$PWD
 node_modules_path=$(readlink -f node_modules)
 dof_helpers_path=$(readlink -f dof-helpers)
-asciidoctor_path=$node_modules_path/.bin/asciidoctor
+asciidoctor_path="asciidoctor"
 
 # Make dist/ directory, if none exists
 if [ ! -r ./dist ]; then
@@ -79,7 +79,7 @@ cmdargs="assemblyInstructions.adoc -o assemblyInstructions.html"
 cmd="$clitool $cmdargs"
 workdir=$project_root/dist
 podmancmd="podman run --rm -v $workdir:/srv -w /srv docker.io/asciidoctor/docker-asciidoctor $cmd"
-condition="$clitool --version | grep '2.0.17'"
+condition="$clitool --version | grep '2.0.18'"
 
 if ! eval $condition; then
     echo "generating assembly instructions as html via podman..."
@@ -98,7 +98,7 @@ cmdargs="assemblyInstructions.adoc -o assemblyInstructions.pdf -r asciidoctor-pd
 cmd="$clitool $cmdargs"
 workdir=$project_root/dist
 podmancmd="podman run --rm -v $workdir:/srv -w /srv docker.io/asciidoctor/docker-asciidoctor $cmd"
-condition="$clitool --version | grep '2.0.17'"
+condition="$clitool --version | grep '2.0.18'"
 
 if ! eval $condition; then
     echo "generating assembly instructions as pdf via podman..."
