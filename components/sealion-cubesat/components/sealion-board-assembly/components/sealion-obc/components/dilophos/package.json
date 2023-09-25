@@ -1,0 +1,16 @@
+{
+    "name": "dilophos",
+    "version": "0.1.0",
+    "description": "Dilophosaurus Operating System (DilophOS)",
+    "license": "MIT",
+    "keywords": [
+        "cubesat",
+        "flight-software",
+        "model-based-systems-engineering"
+    ],
+    "repository": "https://github.com/ODU-CGA-CubeSat/dilophos.git",
+    "homepage": "https://ODU-CGA-CubeSat.github.io/dilophos",
+    "author": "Sean Marquez capsulecorplab@gmail.com & contributors",
+    "dependencies": {
+    }
+}

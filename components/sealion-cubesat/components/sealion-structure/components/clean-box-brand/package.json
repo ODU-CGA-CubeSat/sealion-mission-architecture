@@ -1,0 +1,9 @@
+{
+    "name": "clean-box-brand",
+    "version": "0.1.0",
+    "description": "Clean box",
+    "license": "Unlicense",
+    "author": "Schappi Christopher <cscha010@odu.edu>",
+    "dependencies": {
+    }
+}

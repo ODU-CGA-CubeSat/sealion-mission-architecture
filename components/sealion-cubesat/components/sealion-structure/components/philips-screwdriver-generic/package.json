@@ -1,0 +1,9 @@
+{
+    "name": "plastic-ratcheting-gear",
+    "version": "0.1.0",
+    "description": "Plastic ratcheting gear",
+    "license": "Unlicense",
+    "author": "3rd party - DETERMINE WHO",
+    "dependencies": {
+    }
+}

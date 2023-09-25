@@ -1,0 +1,169 @@
+top-plate:
+  id: plate
+  description: Top Plate
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-top-plate
+  - sealion-top-plate-bracketed-sheetmetal
+  selectedOption: 0
+  notes: ''
+bottom-plate:
+  id: bottom-plate
+  description: Bottom Plate with integrated tabs
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-bottom-plate-monopole
+  - sealion-bottom-plate-patch
+  - sealion-bottom-plate-sheetmetal
+  selectedOption: 2
+  notes: 'Bottom Plate with integrated tabs'
+sheetmetal-antenna-bracket:
+  id: sheetmetal-antenna-bracket
+  description: Sheetmetal Antenna Bracket
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-sheetmetal-antenna-bracket-monopole
+  - sealion-sheetmetal-antenna-bracket-patch
+  selectedOption: 0
+  notes: "Adapter plate for sheetmetal bottom plate's antenna"
+triside-bracket:                #new
+  id: triside-bracket
+  description: TriSide Bracket
+  quantity: 2
+  quantityUnits: unit
+  options:
+  - sealion-triside-bracket-a
+  - sealion-triside-bracket-b
+  - sealion-triside-bracket-c
+  selectedOption: 0
+  notes: 'Interior brackets to folded TriSide sheetmetal assembly'
+ejection-plate:
+  id: ejection-plate
+  description: Ejection Plate
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-ejection-plate
+  selectedOption: 0
+  notes: ''
+ejection-plate-standoff:
+  id: ejection-plate-standoff
+  description: Ejection Plate Standoff
+  quantity: 3
+  quantityUnits: unit
+  options:
+  - sealion-ejection-plate-standoff
+  selectedOption: 0
+  notes: ''
+battery-pack:
+  id: battery-pack
+  description: Battery Pack
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - battery-pack-8-cell
+  selectedOption: 0
+  notes: ''
+uhf-antenna:
+  id: uhf-antenna
+  description: UHF Antenna
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - uhf-antenna
+  selectedOption: 0
+  notes: ''
+magnetometer:
+  id: magnetometer
+  description: Magnetometer
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - magnetometer
+  selectedOption: 0
+  notes: ''
+#Beginning of DeCS
+deco-side-plate:
+  id: deco-side-plate
+  description: DeCo Side Plate with integrated tabs
+  quantity: 2
+  quantityUnits: unit
+  options:
+  - sealion-deco-side-plate
+  selectedOption: 0
+  notes: ''
+deco-bottom-mount-plate:
+  id: sealion-deco-bottom-mount-plate
+  description: DeCo Bottom Mount Plate
+  quantity: 2
+  quantityUnits: unit
+  options:
+  - sealion-deco-bottom-mount-plate
+  selectedOption: 0
+  notes: 'DeCo Bottom Mount Plate for DeCS'
+plastic-ratcheting-gear:
+  id: plastic-ratcheting-gear
+  description: Plastic Ratcheting Gear
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - plastic-ratcheting-gear
+  selectedOption: 0
+  notes: ''
+deco-spool:
+  id: deco-spool
+  description: DeCo Spool
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-deco-spool
+  selectedOption: 0
+  notes: 'DeCo Spool for boom deployment mechanism'
+deco-spool-clamp:
+  id: deco-spool-clamp
+  description: DeCo Spool Clamp
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-deco-spool-clamp
+  selectedOption: 0
+  notes: 'DeCo Spool Clamp to attatch Carbon Fiber boom to DeCo Spool'
+deco-bearing-spin-spool:
+  id: deco-bearing-spin-spool
+  description: DeCo Bearing Spin Spool
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-deco-bearing-spin-spool
+  selectedOption: 0
+  notes: 'DeCo Bearing Spin Spool allowing DeCo Spool to rotate for deployment'
+flanged-sleeve-bearing:
+  id: flanged-sleeve-bearing
+  description: Flanged Sleeve Bearing
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - flanged-sleeve-bearing
+  selectedOption: 0
+  notes: 'Flanged Sleeve Bearing for high temperatures and dry environments'
+latch-lever:
+  id: latch-lever
+  description: Latch Lever
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-latch-lever
+  selectedOption: 0
+  notes: 'Latch Lever to interact with the burnwire mechanism and sprinloaded bolts to open DeCS doors'
+door-latch-pin-hole-sleeve:
+  id: door-latch-pin-hole-sleeve
+  description: Door Latch Pin Hole Sleeve
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - door-latch-pin-hole-sleeve
+  selectedOption: 0
+  notes: 'Door Latch Pin Hole Sleeve to constrain the Bearing Pin Spool'

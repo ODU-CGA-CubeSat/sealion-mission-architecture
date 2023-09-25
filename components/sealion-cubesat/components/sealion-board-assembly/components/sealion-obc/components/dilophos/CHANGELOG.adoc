@@ -1,0 +1,3 @@
+=== Pre-Release 0.1.0 - Critical Design Review (CDR)
+
+* This is the initial release of the Dilophosaurus Operating System (DilophOS). See license file for terms of use.

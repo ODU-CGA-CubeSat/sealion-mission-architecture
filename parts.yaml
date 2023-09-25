@@ -1,0 +1,9 @@
+cubesat:
+  id: cubesat
+  description: CubeSat
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-cubesat
+  selectedOption: 0
+  notes: ''

@@ -1,0 +1,9 @@
+{
+    "name": "plier-generic",
+    "version": "0.1.0",
+    "description": "Plier generic",
+    "license": "Unlicense",
+    "author": "Schappi Christopher <cscha010@odu.edu>",
+    "dependencies": {
+    }
+}

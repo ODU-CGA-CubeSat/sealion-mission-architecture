@@ -1,0 +1,9 @@
+{
+    "name": "flanged-sleeve-bearing",
+    "version": "0.1.0",
+    "description": "Flanged sleeve bearing",
+    "license": "Unlicense",
+    "author": "3rd party - DETERMINE WHO",
+    "dependencies": {
+    }
+}

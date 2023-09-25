@@ -1,0 +1,34 @@
+- summary: Attach {{parts.bottom-plate.description}} to {{parts.left-bracket.description}}
+  requiredParts:
+    - bottom-plate
+    - left-bracket
+    # - screw
+  requiredTools: []
+   # - screwdriver
+  details: |
+    . Place the *{{parts.bottom-plate.description}}* on flat surface
+    . Place the *{{parts.left-bracket.description}}* into the longitudinal side of *{{parts.bottom-plate.description}}*
+  # . Screw the *{{parts.screw.descriptionSelected}}* in mounting holes to secure the *{{parts.rail.descriptionSelected}}* and *{{parts.plate.descriptionSelected}}* together
+  # . Screw the *{{parts.screw.descriptionSelected}}* into the mounting holes to secure the *{{parts.rail.descriptionSelected}}* and *{{parts.plate.descriptionSelected}}* together
+- summary: Attach {{parts.ejection-plate.description}} to {{parts.left-bracket.description}}
+  requiredParts:
+    - ejection-plate
+    - left-bracket
+    # - screw
+  requiredTools: []
+   # - screwdriver
+  details: |
+    . Place the *{{parts.left-bracket.description}}* on flat surface
+    . Orient the *{{parts.ejection-plate.description}}* with the two limit switches vertically aligned with the *{{parts.left-bracket.description}}*
+    . Screw the *{{parts.ejection-plate.description}}* to the *{{parts.left-bracket.description}}* via the four mounting holes
+- summary: Attach {{parts.triside-bracket.description}} to {{parts.top-plate.description}}
+  requiredParts:
+    - triside-bracket
+    - top-plate
+    # - screw
+  requiredTools: []
+   # - screwdriver
+  details: |
+    . Place the *{{parts.top-plate.description}}* on flat surface
+    . Seat each *{{parts.triside-bracket.description}}* inside of the *{{parts.top-plate.description}}*
+    . Use a nut and bolt to secure each *{{parts.triside-bracket.description}}* with the *{{parts.top-plate.description}}*

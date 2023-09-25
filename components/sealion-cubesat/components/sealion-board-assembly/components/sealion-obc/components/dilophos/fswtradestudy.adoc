@@ -1,0 +1,64 @@
+.fswtradestudy
+|===
+|Criteria |https://docs.kubos.com/1.21.0/index.html[KubOS]	|https://nasa.github.io/fprime/[F']	|https://brightascension.com/[Bright Ascension]
+
+|Technical Documentation	
+|Yes	
+|Yes
+|Yes
+
+|Architecture 	
+|Standard services, mission apps	
+|Layered, components, ports, topologies
+|Component-based, in terms of service
+
+|Demo/Training	
+|SDK	
+|Yes
+|Some tutorials
+
+|Flight Heritage	
+|Yes	
+|Yes
+|Yes
+
+|Formal Specification	
+|Some
+|Yes
+|Flexible
+
+|Semantics Definition	
+|Some
+|Yes
+|"Standard services for important activities,
+permit operators to work at a
+higher semantic level"
+
+|Modularity	
+|Yes	
+|Yes
+|Yes
+
+|Portability	
+|FreeRTOS, Linux	
+|"Just about any embedded system"
+|"Supports a range of systems from FreeRTOS, Linux to RTEMS"
+
+|Support	
+|KubOS community	
+|F' community
+|BA tech support
+
+|Language	
+|Python, Rust, C	
+|C++
+|Java, Python
+
+|===
+		
+Resources +		
+https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9486943 +		
+https://www.scielo.br/j/jatm/a/ZNY8mTKcbh8MT5xvbvyytqG/?format=pdf&lang=en +		
+https://llis.nasa.gov/lesson/2218 +		
+https://nasa.github.io/fprime/Architecture/FPrimeArchitectureShort.pdf +
+https://brightascension.com/wp-content/uploads/2021/06/A4_2pp_FSDK_DSH_01-JUL-21_v1.pdf +

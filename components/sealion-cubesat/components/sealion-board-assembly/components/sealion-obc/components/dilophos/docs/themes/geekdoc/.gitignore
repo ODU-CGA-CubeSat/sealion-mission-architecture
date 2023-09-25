@@ -1,0 +1,27 @@
+# local environments
+.swp
+.env*
+dist/
+build/
+node_modules/
+lhci_reports/
+exampleSite/themes/
+exampleSite/public/
+CHANGELOG.md
+
+# auto-generated files
+assets/sprites/
+assets/*.css
+assets/js/darkmode.min.js
+static/*.css
+!static/custom.css
+static/js/*.js
+static/favicon/
+static/fonts/GeekdocIcons.*
+resources/
+exampleSite/resources/
+exampleSite/data/sprites/
+data/assets.json
+
+# testing
+.lighthouseci/

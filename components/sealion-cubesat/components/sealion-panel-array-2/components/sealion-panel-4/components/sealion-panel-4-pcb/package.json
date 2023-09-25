@@ -1,0 +1,9 @@
+{
+    "name": "sealion-panel-4-pcb",
+    "version": "0.1.0",
+    "description": "PCB of Sealion Solar Panel #4",
+    "license": "CC-BY-4.0",
+    "author": "William Harris Buhrig IV (wbuhr001@odu.edu)",
+    "dependencies": {
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "sealion-deco-bottom-mount-plate",
+    "version": "0.1.0",
+    "description": "Deco bottom mount plate",
+    "license": "(CERN-OHL-P-2.0 AND CC-BY-4.0)",
+    "author": "Bhagatji Jimesh <jbhag001@odu.edu> & contributors ",
+    "dependencies": {
+    }
+}

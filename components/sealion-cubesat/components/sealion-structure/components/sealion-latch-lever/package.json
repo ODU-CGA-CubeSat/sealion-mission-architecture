@@ -1,0 +1,9 @@
+{
+    "name": "sealion-latch-lever",
+    "version": "0.1.0",
+    "description": "Latch lever",
+    "license": "(CERN-OHL-P-2.0 AND CC-BY-4.0)",
+    "author": "Bhagatji Jimesh <jbhag001@odu.edu> & contributors ",
+    "dependencies": {
+    }
+}
