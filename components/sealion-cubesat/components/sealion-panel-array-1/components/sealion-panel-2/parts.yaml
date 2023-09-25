@@ -1,0 +1,18 @@
+panel-2-pcb:
+  id: panel-2-pcb
+  description: panel-2-pcb
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-panel-2-pcb
+  selectedOption: 0
+  notes: ''
+utj-solarcell:
+  id: utj-solarcell
+  description: utj-solarcell
+  quantity: 8
+  quantityUnits: unit
+  options:
+  - spectralab-utj-solarcell
+  selectedOption: 0
+  notes: ''

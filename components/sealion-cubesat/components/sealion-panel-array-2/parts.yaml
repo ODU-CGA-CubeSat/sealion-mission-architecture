@@ -1,0 +1,18 @@
+panel-3:
+  id: panel-3
+  description: panel-3
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-panel-3
+  selectedOption: 0
+  notes: ''
+panel-4:
+  id: panel-4
+  dscription: panel-4
+  quantity: 1
+  quantityUnits: unit
+  options:
+  - sealion-panel-4
+  selectedOption: 0
+  notes: ''

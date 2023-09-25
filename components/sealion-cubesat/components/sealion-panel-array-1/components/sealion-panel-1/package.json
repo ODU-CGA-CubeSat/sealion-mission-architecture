@@ -1,0 +1,9 @@
+{
+    "name": "sealion-panel-1",
+    "version": "0.1.0",
+    "description": "Sealion Solar Panel #1",
+    "license": "CC-BY-4.0",
+    "author": "William Harris Buhrig IV (wbuhr001@odu.edu)",
+    "dependencies": {
+    }
+}

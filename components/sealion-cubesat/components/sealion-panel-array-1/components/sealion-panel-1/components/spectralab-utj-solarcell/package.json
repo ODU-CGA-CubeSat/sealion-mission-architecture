@@ -1,0 +1,9 @@
+{
+    "name": "spectralab-utj-solarcell",
+    "version": "0.1.0",
+    "description": "Solarcell produced by SpectraLab",
+    "license": "CC-BY-4.0",
+    "author": "William Harris Buhrig IV (wbuhr001@odu.edu)",
+    "dependencies": {
+    }
+}
